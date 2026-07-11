@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --color-navy-brand: #0B1B3D;
+  --color-bej-bg: #FAF6F0;
+  --color-sky-accent: #A2D2FF;
+  --color-bej-card: #FFFFFF;
+}
+
+/* Hide default horizontal scrollbar on utility top-bar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Contact Page Core CSS from the original HTML files */
+.contact-box {
+  background: var(--color-navy-brand);
+  color: var(--color-bej-bg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(11, 27, 61, 0.1);
+}
+
+.contact-info {
+  padding: 60px;
+  background: linear-gradient(135deg, #0B1B3D 0%, #152b5c 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-details {
+  margin-top: auto;
+  border-top: 1px solid rgba(162, 210, 255, 0.2);
+  padding-top: 30px;
+}
+
+.contact-detail-item {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(245, 235, 224, 0.8);
+}
+
+.contact-detail-item strong {
+  color: var(--color-bej-bg);
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.contact-form-container {
+  padding: 60px;
+  background: var(--color-bej-card);
+  color: var(--color-navy-brand);
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 15px;
+  background: var(--color-bej-bg);
+  border: 1px solid rgba(11, 27, 61, 0.1);
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: var(--color-navy-brand);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-navy-brand);
+  background: var(--color-bej-card);
+}
+
+select.form-control {
+  cursor: pointer;
+  height: 50px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  background: var(--color-sky-accent);
+  color: var(--color-navy-brand);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-sky-accent);
+}
+
+.btn-submit:hover {
+  background: transparent;
+  color: var(--color-sky-accent);
+}
+
+@media (max-width: 900px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+  .contact-info,
+  .contact-form-container {
+    padding: 40px 20px;
+  }
+}
+

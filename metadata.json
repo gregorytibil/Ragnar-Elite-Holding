@@ -1,0 +1,6 @@
+{
+  "name": "Ragnar Elite Holding",
+  "description": "The Standard of Strategic Leadership. Precision in Investment, Authority in Growth. Managing a premium multi-sector global portfolio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
