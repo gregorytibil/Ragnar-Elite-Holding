@@ -58,9 +58,9 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
   ];
 
   return (
-    <div className="pt-[110px] min-h-screen bg-bej-bg text-navy-brand">
+    <div className="pt-[115px] sm:pt-[125px] md:pt-[135px] min-h-screen bg-bej-bg text-navy-brand">
       {/* Header Specific */}
-      <section className="bg-navy-brand text-[#FAF6F0] text-center py-[80px] px-6 border-b border-[#FAF6F0]/10">
+      <section className="bg-navy-brand text-[#FAF6F0] text-center py-14 sm:py-20 md:py-[80px] px-6 border-b border-[#FAF6F0]/10">
         <div className="max-w-[700px] mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}

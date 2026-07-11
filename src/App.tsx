@@ -52,7 +52,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5EFEB] flex flex-col justify-between selection:bg-[#C8D9E6] selection:text-[#2F4156] overflow-x-hidden">
+    <div className="min-h-screen bg-bej-bg flex flex-col justify-between selection:bg-sky-accent selection:text-navy-brand overflow-x-hidden">
       {/* Dynamic Header */}
       <Header
         currentLang={lang}

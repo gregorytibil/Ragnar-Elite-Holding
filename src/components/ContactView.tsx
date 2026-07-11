@@ -33,7 +33,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
   };
 
   return (
-    <div className="pt-[110px] min-h-screen bg-bej-bg text-navy-brand flex items-center justify-center p-6 md:p-12">
+    <div className="pt-[115px] sm:pt-[125px] md:pt-[135px] min-h-screen bg-bej-bg text-navy-brand flex items-center justify-center p-6 md:p-12">
       <div className="max-w-[1100px] w-full contact-box">
         
         {/* Left Column - Contact info */}

@@ -39,13 +39,13 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
   ];
 
   return (
-    <footer className="bg-[#2F4156] text-[#FAF6F0] border-t-4 border-[#C8D9E6] pt-16 pb-8 px-6 md:px-12">
+    <footer className="bg-navy-brand text-[#FAF6F0] border-t-3 border-sky-accent pt-16 pb-8 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-[#FAF6F0]/10">
         
         {/* Column 1 - Brand Summary */}
         <div className="space-y-4">
           <div className="flex items-center gap-2.5">
-            <Landmark className="w-6 h-6 text-[#C8D9E6]" />
+            <Landmark className="w-6 h-6 text-sky-accent" />
             <span className="font-serif text-lg font-bold tracking-wider">
               RAGNAR ELITE
             </span>
@@ -57,14 +57,14 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
 
         {/* Column 2 - Navigation links */}
         <div>
-          <h4 className="font-serif text-sm font-bold text-[#C8D9E6] uppercase tracking-wider mb-5">
+          <h4 className="font-serif text-sm font-bold text-sky-accent uppercase tracking-wider mb-5">
             {currentLang === 'ro' ? 'Navigare' : 'Navigation'}
           </h4>
           <ul className="space-y-3 text-xs font-light text-stone-300 list-none">
             <li>
               <button
                 onClick={() => setActiveTab('home')}
-                className="hover:text-[#C8D9E6] transition-colors cursor-pointer"
+                className="hover:text-sky-accent transition-colors cursor-pointer text-left"
               >
                 {t.navHome}
               </button>
@@ -72,7 +72,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
             <li>
               <button
                 onClick={() => setActiveTab('holding')}
-                className="hover:text-[#C8D9E6] transition-colors cursor-pointer"
+                className="hover:text-sky-accent transition-colors cursor-pointer text-left"
               >
                 {t.navHolding}
               </button>
@@ -80,7 +80,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
             <li>
               <button
                 onClick={() => setActiveTab('portfolio')}
-                className="hover:text-[#C8D9E6] transition-colors cursor-pointer"
+                className="hover:text-sky-accent transition-colors cursor-pointer text-left"
               >
                 {t.navPortfolio}
               </button>
@@ -88,7 +88,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
             <li>
               <button
                 onClick={() => setActiveTab('services')}
-                className="hover:text-[#C8D9E6] transition-colors cursor-pointer"
+                className="hover:text-sky-accent transition-colors cursor-pointer text-left"
               >
                 {t.navServices}
               </button>
@@ -98,14 +98,14 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
 
         {/* Column 3 - Legal Links */}
         <div>
-          <h4 className="font-serif text-sm font-bold text-[#C8D9E6] uppercase tracking-wider mb-5">
+          <h4 className="font-serif text-sm font-bold text-sky-accent uppercase tracking-wider mb-5">
             {t.footerLegalHeader}
           </h4>
           <ul className="space-y-3 text-xs font-light text-stone-300 list-none">
             <li>
               <button
                 onClick={() => setActiveTab('legal')}
-                className="hover:text-[#C8D9E6] transition-colors cursor-pointer"
+                className="hover:text-sky-accent transition-colors cursor-pointer text-left"
               >
                 {t.footerTerms}
               </button>
@@ -113,7 +113,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
             <li>
               <button
                 onClick={() => setActiveTab('legal')}
-                className="hover:text-[#C8D9E6] transition-colors cursor-pointer"
+                className="hover:text-sky-accent transition-colors cursor-pointer text-left"
               >
                 {t.footerGdpr}
               </button>
@@ -121,9 +121,9 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
             <li>
               <button
                 onClick={() => setActiveTab('contact')}
-                className="hover:text-[#C8D9E6] transition-colors cursor-pointer flex items-center gap-1.5"
+                className="hover:text-sky-accent transition-colors cursor-pointer flex items-center gap-1.5 text-left"
               >
-                <ShieldCheck className="w-3.5 h-3.5 text-[#C8D9E6]" />
+                <ShieldCheck className="w-3.5 h-3.5 text-sky-accent" />
                 {t.footerSecureAccess}
               </button>
             </li>
@@ -132,7 +132,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
 
         {/* Column 4 - Social Networks & Connections */}
         <div>
-          <h4 className="font-serif text-sm font-bold text-[#C8D9E6] uppercase tracking-wider mb-5">
+          <h4 className="font-serif text-sm font-bold text-sky-accent uppercase tracking-wider mb-5">
             {currentLang === 'ro' ? 'Conexiuni Media' : 'Media Connections'}
           </h4>
           <p className="text-xs text-stone-300 font-light mb-4 text-justify max-w-sm">
@@ -148,7 +148,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
                 target="_blank"
                 rel="noreferrer"
                 title={soc.label}
-                className="p-2 bg-[#FAF6F0]/5 hover:bg-[#C8D9E6] text-[#FAF6F0] hover:text-[#2F4156] rounded-full transition-all border border-[#FAF6F0]/10 flex items-center justify-center shadow-sm"
+                className="p-2 bg-[#FAF6F0]/5 hover:bg-sky-accent text-[#FAF6F0] hover:text-navy-brand rounded-full transition-all border border-[#FAF6F0]/10 flex items-center justify-center shadow-sm"
               >
                 {soc.icon}
               </a>
@@ -162,7 +162,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
       <div className="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] sm:text-xs text-stone-400 font-light font-mono tracking-wider">
         <span>{t.footerCopyright}</span>
         <span className="flex items-center gap-1 opacity-65">
-          <ShieldCheck className="w-4 h-4 text-[#C8D9E6]" />
+          <ShieldCheck className="w-4 h-4 text-sky-accent" />
           SECURED PLATFORM
         </span>
       </div>

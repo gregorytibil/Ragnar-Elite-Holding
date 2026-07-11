@@ -37,9 +37,9 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
   ];
 
   return (
-    <div className="pt-[110px] min-h-screen bg-bej-bg text-navy-brand">
+    <div className="pt-[115px] sm:pt-[125px] md:pt-[135px] min-h-screen bg-bej-bg text-navy-brand">
       {/* Header Specific */}
-      <section className="bg-navy-brand text-[#FAF6F0] text-center py-[100px] px-6 border-b-3 border-sky-accent">
+      <section className="bg-navy-brand text-[#FAF6F0] text-center py-16 md:py-[100px] px-6 border-b-3 border-sky-accent">
         <div className="max-w-[700px] mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -67,7 +67,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-bej-card p-8 md:p-[60px] rounded-[4px] shadow-[0_10px_30px_rgba(11,27,61,0.02)] -mt-[50px] relative z-10 border-l-4 border-navy-brand mb-16"
+          className="bg-bej-card p-6 md:p-[60px] rounded-[4px] shadow-[0_10px_30px_rgba(11,27,61,0.02)] -mt-8 md:-mt-[50px] relative z-10 border-l-4 border-navy-brand mb-16"
         >
           <h2 className="font-serif text-2xl md:text-[2.2rem] font-bold mb-[25px] text-navy-brand">
             {t.philosophyTitle}

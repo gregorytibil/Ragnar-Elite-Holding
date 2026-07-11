@@ -24,9 +24,9 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
   ];
 
   return (
-    <div className="pt-[110px] min-h-screen bg-bej-bg text-navy-brand">
+    <div className="pt-[115px] sm:pt-[125px] md:pt-[135px] min-h-screen bg-bej-bg text-navy-brand">
       {/* Header Specific */}
-      <section className="bg-navy-brand text-[#FAF6F0] text-center py-[80px] px-6 border-b border-[#FAF6F0]/10 header-servicii">
+      <section className="bg-navy-brand text-[#FAF6F0] text-center py-14 sm:py-20 md:py-[80px] px-6 border-b border-[#FAF6F0]/10 header-servicii">
         <div className="max-w-[700px] mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -74,7 +74,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 whileHover={{ x: 5 }}
-                className="bg-bej-card p-6 md:p-[45px] rounded-[4px] border-l-5 border-navy-brand shadow-[0_10px_35px_rgba(11,27,61,0.02)] hover:shadow-[0_15px_40px_rgba(11,27,61,0.04)] hover:border-l-sky-accent transition-all duration-300 serviciu-card"
+                className="bg-bej-card p-6 md:p-[45px] rounded-[4px] border-l-[5px] border-navy-brand shadow-[0_10px_35px_rgba(11,27,61,0.02)] hover:shadow-[0_15px_40px_rgba(11,27,61,0.04)] hover:border-l-sky-accent transition-all duration-300 serviciu-card"
               >
                 <h3 className="font-serif text-lg md:text-[1.6rem] font-bold mb-[15px] text-navy-brand flex items-center gap-[15px] serviciu-title">
                   {srv.title}
@@ -102,7 +102,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 whileHover={{ x: 5 }}
-                className="bg-bej-card p-6 md:p-[45px] rounded-[4px] border-l-5 border-navy-brand shadow-[0_10px_35px_rgba(11,27,61,0.02)] hover:shadow-[0_15px_40px_rgba(11,27,61,0.04)] hover:border-l-sky-accent transition-all duration-300 serviciu-card"
+                className="bg-bej-card p-6 md:p-[45px] rounded-[4px] border-l-[5px] border-navy-brand shadow-[0_10px_35px_rgba(11,27,61,0.02)] hover:shadow-[0_15px_40px_rgba(11,27,61,0.04)] hover:border-l-sky-accent transition-all duration-300 serviciu-card"
               >
                 <h3 className="font-serif text-lg md:text-[1.6rem] font-bold mb-[15px] text-navy-brand flex items-center gap-[15px] serviciu-title">
                   {srv.title}

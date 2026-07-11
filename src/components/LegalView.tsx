@@ -19,7 +19,7 @@ export default function LegalView({ currentLang }: LegalViewProps) {
   ];
 
   return (
-    <div className="pt-[110px] min-h-screen bg-bej-bg text-navy-brand py-[60px]">
+    <div className="pt-[115px] sm:pt-[125px] md:pt-[135px] min-h-screen bg-bej-bg text-navy-brand py-12 md:py-[60px]">
       <div className="max-w-[1000px] mx-auto px-6">
         
         {/* Main Card wrapper */}

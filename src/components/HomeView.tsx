@@ -31,7 +31,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
   ];
 
   return (
-    <div className="pt-[110px] min-h-screen bg-bej-bg text-navy-brand">
+    <div className="pt-[115px] sm:pt-[125px] md:pt-[135px] min-h-screen bg-bej-bg text-navy-brand">
       {/* Hero Section */}
       <section className="relative hero bg-[#0B1B3D] text-[#FAF6F0] min-h-[75vh] flex items-center justify-center text-center px-6 py-10 md:py-20 border-b-3 border-sky-accent">
         {/* Subtle decorative video placeholder/background overlay as in the HTML code */}
