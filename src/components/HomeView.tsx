@@ -66,7 +66,11 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-bej-bg bg-grid-pattern text-navy-brand">
+    <div 
+      className="min-h-screen bg-bej-bg bg-grid-pattern text-navy-brand"
+      itemScope 
+      itemType="https://schema.org/Corporation"
+    >
       {/* Hero Section */}
       <section className="relative hero bg-[#0B1B3D] text-[#FAF6F0] h-[100dvh] min-h-[580px] flex items-center justify-center text-center px-6 pt-[100px] pb-16 sm:pt-[120px] md:pt-[140px] border-b border-[#FAF6F0]/10 overflow-hidden">
         {/* Cinematic short background video loop (muted, no sound) */}
@@ -75,6 +79,8 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
           loop
           muted
           playsInline
+          preload="auto"
+          aria-label="Cinematic aerial night view representing global connection and strategic movement"
           className="absolute inset-0 w-full h-full object-cover opacity-20 z-0 pointer-events-none scale-105"
         >
           <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-streets-at-night-41926-large.mp4" type="video/mp4" />
@@ -104,8 +110,9 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-3xl sm:text-5xl md:text-[3.8rem] lg:text-[4.2rem] font-bold uppercase tracking-[0.06em] mb-6 sm:mb-10 leading-[1.15] text-white"
+            className="font-serif text-3xl sm:text-5xl md:text-[3.8rem] lg:text-[4.2rem] font-bold uppercase tracking-[0.06em] mb-5 sm:mb-8 leading-[1.15] text-white"
             id="hero-heading"
+            itemProp="name"
           >
             {t.heroTitle}
           </motion.h1>
@@ -114,7 +121,8 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="font-sans font-light text-sm sm:text-lg md:text-[1.25rem] text-[#FAF6F0]/85 mb-8 sm:mb-14 tracking-[1px] leading-[1.7] sm:leading-[1.8] max-w-2xl mx-auto"
+            className="font-sans font-light text-xs sm:text-sm md:text-base text-[#FAF6F0]/80 mb-10 sm:mb-16 tracking-[0.18em] sm:tracking-[0.25em] uppercase leading-relaxed max-w-3xl mx-auto"
+            itemProp="slogan"
           >
             {t.heroSubtitle}
           </motion.h2>
@@ -136,7 +144,11 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
       </section>
 
       {/* About Quote Section (Ultra-Polished Editorial Layout) */}
-      <section id="about-section" className="bg-bej-card py-24 px-6 border-b border-navy-brand/5 relative overflow-hidden flex items-center justify-center">
+      <section 
+        id="about-section" 
+        className="bg-bej-card py-24 px-6 border-b border-navy-brand/5 relative overflow-hidden flex items-center justify-center"
+        itemProp="description"
+      >
         {/* Sophisticated design lines */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-16 bg-gradient-to-b from-sky-accent to-transparent"></div>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-16 bg-gradient-to-t from-sky-accent to-transparent"></div>
@@ -200,7 +212,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
           <div className="w-16 h-0.5 bg-navy-brand/80 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]" role="list" aria-label={t.pillarsTitle}>
           {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
             return (
@@ -215,6 +227,8 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
                   boxShadow: '0 30px 60px rgba(11,27,61,0.06)',
                 }}
                 className={`bg-white/95 backdrop-blur-md p-10 rounded-[14px] border border-navy-brand/10 transition-all duration-500 group cursor-default relative overflow-hidden flex flex-col justify-between h-full ${pillar.hoverBorder}`}
+                itemProp="knowsAbout"
+                role="listitem"
               >
                 {/* Custom top bar gradient reveal on hover */}
                 <div className={`absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r ${pillar.accentClass} transform origin-left scale-x-30 group-hover:scale-x-100 transition-transform duration-500`} />

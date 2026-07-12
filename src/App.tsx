@@ -10,29 +10,63 @@ import ServiciiView from './components/ServiciiView';
 import InsightsView from './components/InsightsView';
 import ContactView from './components/ContactView';
 import LegalView from './components/LegalView';
+import TermsView from './components/TermsView';
+import SEOMetadata from './components/SEOMetadata';
+import { initAnalytics, trackPageView, trackScrollDepth } from './lib/analytics';
 
 export default function App() {
   const [lang, setLang] = useState<Language>('ro');
   const [activeTab, setActiveTab] = useState<string>('home');
 
-  // Dynamic SEO Friendly Titles
+  // Initialize analytics on component mount
   useEffect(() => {
-    const baseTitle = 'Ragnar Elite Holding';
-    const subTitles: Record<string, string> = {
-      home: 'The Standard of Strategic Leadership',
-      holding: 'The Holding - Business Philosophy & Heritage',
-      portfolio: 'Asset Portfolio - 13 Active Divisions',
-      services: 'Strategic Services & Corporate Enablement',
-      insights: 'Strategic Insights & Market Analysis',
-      contact: 'Strategic Partnerships & Inquiries',
-      legal: 'Global Governance & GDPR Terms',
+    initAnalytics();
+  }, []);
+
+  // Handle page views on active tab or language change
+  useEffect(() => {
+    const tabNames: Record<string, string> = {
+      home: 'Home | Ragnar Elite',
+      holding: 'Holding & Board | Ragnar Elite',
+      portfolio: 'Strategic Portfolio | Ragnar Elite',
+      services: 'Corporate Services | Ragnar Elite',
+      insights: 'Market Insights & Intelligence | Ragnar Elite',
+      contact: 'Global Contact & Propose Dossier | Ragnar Elite',
+      legal: 'Legal Notice & Security | Ragnar Elite',
+      terms: 'Terms of Engagement | Ragnar Elite',
+    };
+    const pageName = tabNames[activeTab] || `${activeTab} | Ragnar Elite`;
+    const path = activeTab === 'home' ? '/' : `/${activeTab}`;
+    
+    trackPageView(pageName, path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activeTab, lang]);
+
+  // Handle scroll depth tracking (passive and optimized to run once per threshold per page view)
+  useEffect(() => {
+    const firedThresholds = new Set<number>();
+    
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+      const thresholds = [25, 50, 75, 90];
+      
+      for (const threshold of thresholds) {
+        if (scrollPercent >= threshold && !firedThresholds.has(threshold)) {
+          firedThresholds.add(threshold);
+          trackScrollDepth(threshold);
+        }
+      }
     };
     
-    document.title = `${baseTitle} | ${subTitles[activeTab] || 'Corporate'}`;
-    
-    // Automatically scroll to top on tab changes
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [activeTab]);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [activeTab, lang]);
 
   const renderActiveView = () => {
     switch (activeTab) {
@@ -50,6 +84,8 @@ export default function App() {
         return <ContactView currentLang={lang} />;
       case 'legal':
         return <LegalView currentLang={lang} />;
+      case 'terms':
+        return <TermsView currentLang={lang} />;
       default:
         return <HomeView currentLang={lang} setActiveTab={setActiveTab} />;
     }
@@ -57,6 +93,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-bej-bg flex flex-col justify-between selection:bg-sky-accent selection:text-navy-brand overflow-x-hidden">
+      {/* Search Engine Optimization (SEO), Metadata, and JSON-LD Structured Data */}
+      <SEOMetadata activeTab={activeTab} lang={lang} />
+
       {/* Dynamic Header */}
       <Header
         currentLang={lang}

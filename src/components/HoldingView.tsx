@@ -38,7 +38,11 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden">
+    <div 
+      className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden"
+      itemScope
+      itemType="https://schema.org/AboutPage"
+    >
       {/* Premium Hero Section with elegant cinematic overlays */}
       <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
         {/* Subtle high-end mesh and lighting layers */}
@@ -199,7 +203,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label={t.boardTitle}>
             {boardMembers.map((member, idx) => (
               <motion.div
                 key={idx}
@@ -212,6 +216,10 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
                   transition: { duration: 0.3, ease: 'easeOut' }
                 }}
                 className="bg-white rounded-xl p-8 border border-slate-200/60 shadow-[0_8px_30px_rgba(5,13,29,0.015)] hover:shadow-[0_20px_50px_rgba(5,13,29,0.06)] hover:border-[#0B1B3D]/10 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
+                itemProp="employee"
+                itemScope
+                itemType="https://schema.org/Person"
+                role="listitem"
               >
                 {/* Subtle visual gradient on card hover */}
                 <div className="absolute top-0 left-0 w-full h-[4px] bg-[#0B1B3D]/5 group-hover:bg-gradient-to-r group-hover:from-[#0B1B3D] group-hover:to-[#A2D2FF] transition-all duration-300"></div>
@@ -227,10 +235,16 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
 
                   {/* Name and Role */}
                   <div className="text-center mb-4">
-                    <h3 className="font-serif text-lg md:text-[1.2rem] font-bold text-[#0B1B3D] tracking-tight group-hover:text-sky-900 transition-colors duration-200">
+                    <h3 
+                      className="font-serif text-lg md:text-[1.2rem] font-bold text-[#0B1B3D] tracking-tight group-hover:text-sky-900 transition-colors duration-200"
+                      itemProp="name"
+                    >
                       {member.name}
                     </h3>
-                    <div className="text-[#A2D2FF] font-mono text-[9px] uppercase tracking-[2px] font-semibold mt-1">
+                    <div 
+                      className="text-[#A2D2FF] font-mono text-[9px] uppercase tracking-[2px] font-semibold mt-1"
+                      itemProp="jobTitle"
+                    >
                       {member.role}
                     </div>
                   </div>
@@ -240,7 +254,10 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
                 </div>
 
                 {/* Description with precise spacing and sizing */}
-                <p className="font-sans font-light text-xs sm:text-[0.88rem] text-slate-500 leading-relaxed text-left">
+                <p 
+                  className="font-sans font-light text-xs sm:text-[0.88rem] text-slate-500 leading-relaxed text-left"
+                  itemProp="description"
+                >
                   {member.desc}
                 </p>
 

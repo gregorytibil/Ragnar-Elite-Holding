@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Language } from '../types';
 import { translations } from '../translations';
+import { trackCTA } from '../lib/analytics';
 
 interface HeaderProps {
   currentLang: Language;
@@ -37,21 +38,29 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
       {/* Main Navbar with translucent dark theme blue */}
-      <nav className={`px-6 md:px-12 flex justify-between items-center transition-all duration-500 ${isScrolled ? 'bg-[#0B1B3D]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.15)] py-4 md:py-5' : 'bg-transparent border-b border-transparent py-6 md:py-8'} text-[#FAF6F0]`}>
+      <nav 
+        aria-label={currentLang === 'ro' ? 'Meniu Principal' : 'Primary Navigation'}
+        className={`px-6 md:px-12 flex justify-between items-center transition-all duration-500 ${isScrolled ? 'bg-[#0B1B3D]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.15)] py-4 md:py-5' : 'bg-transparent border-b border-transparent py-6 md:py-8'} text-[#FAF6F0]`}
+      >
         {/* Brand Logo */}
         <button
           onClick={() => {
             setActiveTab('home');
             setIsOpen(false);
+            trackCTA('header_logo', 'Home Logo Click');
           }}
-          className="text-left cursor-pointer group flex flex-col relative"
+          aria-label={currentLang === 'ro' ? 'Ragnar Elite - Pagina Principală' : 'Ragnar Elite - Home Page'}
+          className="text-left cursor-pointer group flex items-center gap-3 relative"
         >
-          <span className="font-serif text-lg md:text-[1.4rem] font-bold tracking-[0.22em] text-[#FAF6F0] group-hover:text-[#C8D9E6] transition-colors duration-300 leading-none">
-            RAGNAR ELITE
-          </span>
-          <span className="block text-[7.5px] tracking-[0.45em] uppercase text-[#C8D9E6]/80 font-mono mt-1.5 group-hover:text-[#FAF6F0] transition-colors duration-300">
-            Holding Company
-          </span>
+          <img src="https://i.imgur.com/InRDrMr.png" alt="Ragnar Elite Logo" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain brightness-0 invert" />
+          <div className="flex flex-col">
+            <span className="font-serif text-lg md:text-[1.4rem] font-bold tracking-[0.22em] text-[#FAF6F0] group-hover:text-[#C8D9E6] transition-colors duration-300 leading-none">
+              RAGNAR ELITE
+            </span>
+            <span className="block text-[7.5px] tracking-[0.45em] uppercase text-[#C8D9E6]/80 font-mono mt-1.5 group-hover:text-[#FAF6F0] transition-colors duration-300">
+              Holding Company
+            </span>
+          </div>
         </button>
 
         {/* Desktop Links and Language Selector */}
@@ -60,7 +69,11 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
             {navItems.map((item) => (
               <li key={item.id} className="relative py-1">
                 <button
-                  onClick={() => setActiveTab(item.id)}
+                  onClick={() => {
+                    setActiveTab(item.id);
+                    trackCTA(`header_nav_${item.id}`, item.label);
+                  }}
+                  aria-current={activeTab === item.id ? 'page' : undefined}
                   className={`text-[11px] uppercase tracking-[0.18em] font-medium transition-all duration-300 cursor-pointer hover:text-[#FAF6F0] ${
                     activeTab === item.id ? 'text-[#C8D9E6] font-bold' : 'text-[#FAF6F0]/70'
                   }`}
@@ -81,7 +94,12 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
           {/* Premium Language Switcher */}
           <div className="flex items-center gap-1.5 border-l border-white/15 pl-6 ml-2 font-mono text-[10px] tracking-widest">
             <button
-              onClick={() => setLang('ro')}
+              onClick={() => {
+                setLang('ro');
+                trackCTA('language_switch_ro', 'RO');
+              }}
+              aria-label="Schimbă limba în Română"
+              aria-pressed={currentLang === 'ro'}
               className={`px-1.5 py-0.5 rounded transition-all duration-300 cursor-pointer ${
                 currentLang === 'ro'
                   ? 'text-[#C8D9E6] font-bold'
@@ -92,7 +110,12 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
             </button>
             <span className="opacity-20 text-[#FAF6F0]/40 select-none">|</span>
             <button
-              onClick={() => setLang('en')}
+              onClick={() => {
+                setLang('en');
+                trackCTA('language_switch_en', 'EN');
+              }}
+              aria-label="Switch language to English"
+              aria-pressed={currentLang === 'en'}
               className={`px-1.5 py-0.5 rounded transition-all duration-300 cursor-pointer ${
                 currentLang === 'en'
                   ? 'text-[#C8D9E6] font-bold'
@@ -108,7 +131,9 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden text-[#FAF6F0] hover:text-[#C8D9E6] p-1.5 transition-colors cursor-pointer rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
-          aria-label="Toggle menu"
+          aria-label={currentLang === 'ro' ? 'Comută meniul de navigare' : 'Toggle navigation menu'}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation-menu"
         >
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -118,6 +143,9 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-navigation-menu"
+            role="region"
+            aria-label={currentLang === 'ro' ? 'Navigație Mobilă' : 'Mobile Navigation'}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -131,7 +159,9 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                     onClick={() => {
                       setActiveTab(item.id);
                       setIsOpen(false);
+                      trackCTA(`header_mobile_nav_${item.id}`, item.label);
                     }}
+                    aria-current={activeTab === item.id ? 'page' : undefined}
                     className={`w-full text-left py-3 px-4 text-[11px] uppercase tracking-[0.15em] font-semibold rounded-[4px] border-b border-white/5 block cursor-pointer transition-all duration-200 ${
                       activeTab === item.id 
                         ? 'text-[#C8D9E6] bg-white/5 border-l-2 border-l-[#C8D9E6]' 
@@ -149,6 +179,7 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                   onClick={() => {
                     setLang('ro');
                     setIsOpen(false);
+                    trackCTA('language_switch_ro', 'RO');
                   }}
                   className={`px-3 py-1.5 rounded transition-all duration-300 cursor-pointer ${
                     currentLang === 'ro'
@@ -163,6 +194,7 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                   onClick={() => {
                     setLang('en');
                     setIsOpen(false);
+                    trackCTA('language_switch_en', 'EN');
                   }}
                   className={`px-3 py-1.5 rounded transition-all duration-300 cursor-pointer ${
                     currentLang === 'en'

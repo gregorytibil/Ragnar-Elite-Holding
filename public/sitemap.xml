@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Primary Landing Page -->
+  <url>
+    <loc>https://ais-pre-45j5qubuweibvtx4wzdcip-244475190177.europe-west2.run.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Business Philosophy & Heritage -->
+  <url>
+    <loc>https://ais-pre-45j5qubuweibvtx4wzdcip-244475190177.europe-west2.run.app/#holding</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Active Investment Divisions (13 Active Divisions) -->
+  <url>
+    <loc>https://ais-pre-45j5qubuweibvtx4wzdcip-244475190177.europe-west2.run.app/#portfolio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Strategic Services & Corporate Enablement -->
+  <url>
+    <loc>https://ais-pre-45j5qubuweibvtx4wzdcip-244475190177.europe-west2.run.app/#services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Strategic Insights & Market Analysis -->
+  <url>
+    <loc>https://ais-pre-45j5qubuweibvtx4wzdcip-244475190177.europe-west2.run.app/#insights</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Strategic Partnerships & M&A Inquiries -->
+  <url>
+    <loc>https://ais-pre-45j5qubuweibvtx4wzdcip-244475190177.europe-west2.run.app/#contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Global Governance & GDPR Terms -->
+  <url>
+    <loc>https://ais-pre-45j5qubuweibvtx4wzdcip-244475190177.europe-west2.run.app/#legal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Terms & Conditions of Use -->
+  <url>
+    <loc>https://ais-pre-45j5qubuweibvtx4wzdcip-244475190177.europe-west2.run.app/#terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

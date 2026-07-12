@@ -1,6 +1,7 @@
 import { Landmark, ShieldCheck } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
+import { trackCTA, trackEmailClick, trackOutboundLink, trackWhatsAppClick } from '../lib/analytics';
 
 interface FooterProps {
   currentLang: Language;
@@ -73,7 +74,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
         {/* Column 1 - Brand Summary */}
         <div className="space-y-6">
           <div className="flex items-center gap-3">
-            <Landmark className="w-5 h-5 text-sky-accent" />
+            <img src="https://i.imgur.com/InRDrMr.png" alt="Ragnar Elite Logo" width={32} height={32} loading="lazy" className="w-8 h-8 object-contain brightness-0 invert" />
             <span className="font-serif text-lg font-bold tracking-[0.25em] text-[#FAF6F0]">
               RAGNAR ELITE
             </span>
@@ -99,7 +100,10 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
             ].map((item) => (
               <li key={item.tab}>
                 <button
-                  onClick={() => setActiveTab(item.tab)}
+                  onClick={() => {
+                    setActiveTab(item.tab);
+                    trackCTA(`footer_nav_${item.tab}`, item.label);
+                  }}
                   className="group flex items-center gap-3 text-stone-300 hover:text-sky-accent transition-colors duration-300 cursor-pointer text-left font-sans"
                 >
                   <span className="relative py-0.5">
@@ -120,7 +124,10 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
           <ul className="space-y-4 text-sm font-normal text-stone-300 list-none m-0 p-0">
             <li>
               <button
-                onClick={() => setActiveTab('legal')}
+                onClick={() => {
+                  setActiveTab('terms');
+                  trackCTA('footer_nav_terms', t.footerTerms);
+                }}
                 className="group flex items-center gap-3 text-stone-300 hover:text-sky-accent transition-colors duration-300 cursor-pointer text-left font-sans"
               >
                 <span className="relative py-0.5">
@@ -131,7 +138,10 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
             </li>
             <li>
               <button
-                onClick={() => setActiveTab('legal')}
+                onClick={() => {
+                  setActiveTab('legal');
+                  trackCTA('footer_nav_legal', t.footerGdpr);
+                }}
                 className="group flex items-center gap-3 text-stone-300 hover:text-sky-accent transition-colors duration-300 cursor-pointer text-left font-sans"
               >
                 <span className="relative py-0.5">
@@ -142,7 +152,10 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
             </li>
             <li>
               <button
-                onClick={() => setActiveTab('contact')}
+                onClick={() => {
+                  setActiveTab('contact');
+                  trackCTA('footer_nav_secure_access', t.footerSecureAccess);
+                }}
                 className="group flex items-center gap-3 text-stone-300 hover:text-sky-accent transition-colors duration-300 cursor-pointer text-left font-sans"
               >
                 <span className="flex items-center gap-1.5 relative py-0.5">
@@ -166,7 +179,11 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
               : 'Official encrypted channels for direct macroeconomic briefs and media communiqués.'}
           </p>
           <div className="flex items-center gap-2 pb-2">
-            <a href="mailto:office@ragnareliteholding.com" className="font-mono text-sm text-sky-accent hover:text-white transition-colors duration-300 tracking-wider border-b border-sky-accent/30 hover:border-white pb-0.5">
+            <a 
+              href="mailto:office@ragnareliteholding.com" 
+              onClick={() => trackEmailClick('office@ragnareliteholding.com')}
+              className="font-mono text-sm text-sky-accent hover:text-white transition-colors duration-300 tracking-wider border-b border-sky-accent/30 hover:border-white pb-0.5"
+            >
               office@ragnareliteholding.com
             </a>
           </div>
@@ -178,6 +195,13 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
                 target="_blank"
                 rel="noreferrer"
                 title={soc.label}
+                onClick={() => {
+                  if (soc.label === 'WhatsApp') {
+                    trackWhatsAppClick(soc.url);
+                  } else {
+                    trackOutboundLink(soc.url);
+                  }
+                }}
                 className="p-3 bg-white/[0.02] hover:bg-sky-accent text-stone-300 hover:text-[#030914] rounded-xl transition-all duration-350 hover:scale-105 border border-white/5 hover:border-sky-accent/20 flex items-center justify-center shadow-lg relative overflow-hidden group cursor-pointer"
               >
                 {/* Subtle shine overlay inside the button */}
@@ -192,11 +216,27 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
 
       {/* Bottom Block */}
       <div className="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-stone-500 font-light font-mono tracking-wider relative z-10 border-t border-white/[0.03]">
-        <span className="text-center sm:text-left">{t.footerCopyright}</span>
-        <span className="flex items-center gap-1.5 opacity-60 text-stone-400">
-          <ShieldCheck className="w-3.5 h-3.5 text-sky-accent" />
-          SECURED PLATFORM
-        </span>
+        <div className="text-center sm:text-left">
+          <span>{t.footerCopyright}</span>
+        </div>
+        <div className="flex flex-col items-center sm:items-end gap-1.5">
+          <span className="flex items-center gap-1.5 opacity-60 text-stone-400">
+            <ShieldCheck className="w-3.5 h-3.5 text-sky-accent" />
+            SECURED PLATFORM
+          </span>
+          <span className="text-stone-500/80">
+            {currentLang === 'ro' ? 'Găzduit de ' : 'Hosted by '}
+            <a 
+              href="https://olvismedia.ro" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              onClick={() => trackOutboundLink('https://olvismedia.ro')}
+              className="text-sky-accent hover:text-white font-medium transition-colors duration-300 underline decoration-sky-accent/20 hover:decoration-white/50"
+            >
+              Olvis Media
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   );

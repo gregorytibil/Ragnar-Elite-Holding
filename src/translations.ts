@@ -11,7 +11,7 @@ export const translations = {
 
     // Hero Section
     heroTitle: 'Ragnar Elite Holding',
-    heroSubtitle: 'The Standard of Strategic Leadership. Precision in Investment. Authority in Growth.',
+    heroSubtitle: 'The Standard of Strategic Leadership.',
     heroBtn: 'Explorează Ecosistemul',
 
     // About Section
@@ -75,7 +75,7 @@ export const translations = {
     div1Item3Desc: 'Plasarea tactică a capitalului în dezvoltări rezidențiale exclusiviste, optimizate structural pentru generarea de randamente superioare și conservarea valorii activelor.',
 
     // Divisions 2
-    div2Title: '💻 02. Disruption Technology & Infrastructură Critică',
+    div2Title: '💻 02. Disruptive Technology & Infrastructură Critică',
     div2Subtitle: 'Digitalizare avansată și sisteme energetice inteligente pentru securizarea economiei viitorului.',
     div2Item1Title: 'Tehnologie & IT',
     div2Item1Desc: 'Dezvoltare software enterprise, arhitecturi cloud scalabile și soluții avansate de securitate cibernetică dedicate entităților guvernamentale și corporative globale.',
@@ -154,7 +154,7 @@ export const translations = {
 
     // Sector Options
     sectorOpt1: 'Luxury Real Estate & Macro-Infrastructură',
-    sectorOpt2: 'Disruption Technology & Infrastructură Critică',
+    sectorOpt2: 'Disruptive Technology & Infrastructură Critică',
     sectorOpt3: 'Asset Management & Shared Services (Corporate)',
     sectorOpt4: 'Lifesciences, Media & Facilities (Ragnar Legacy)',
     sectorOpt5: 'Parteneriat Strategic Macroeconomic Direct / Propune Proiect M&A',
@@ -222,7 +222,7 @@ export const translations = {
 
     // Hero Section
     heroTitle: 'Ragnar Elite Holding',
-    heroSubtitle: 'The Standard of Strategic Leadership. Precision in Investment. Authority in Growth.',
+    heroSubtitle: 'The Standard of Strategic Leadership.',
     heroBtn: 'Explore the Ecosystem',
 
     // About Section
@@ -286,7 +286,7 @@ export const translations = {
     div1Item3Desc: 'Tactical capital placement in exclusive residential developments, structurally optimized to generate superior returns and conserve asset value.',
 
     // Divisions 2
-    div2Title: '💻 02. Disruption Technology & Critical Infrastructure',
+    div2Title: '💻 02. Disruptive Technology & Critical Infrastructure',
     div2Subtitle: 'Advanced digitalization and smart energy systems securing the economy of tomorrow.',
     div2Item1Title: 'Technology & IT',
     div2Item1Desc: 'Enterprise software development, scalable cloud architectures, and advanced cybersecurity solutions dedicated to global government and corporate entities.',
@@ -365,7 +365,7 @@ export const translations = {
 
     // Sector Options
     sectorOpt1: 'Luxury Real Estate & Macro-Infrastructure',
-    sectorOpt2: 'Disruption Technology & Critical Infrastructure',
+    sectorOpt2: 'Disruptive Technology & Critical Infrastructure',
     sectorOpt3: 'Asset Management & Shared Services (Corporate)',
     sectorOpt4: 'Lifesciences, Media & Facilities (Ragnar Legacy)',
     sectorOpt5: 'Direct Macroeconomic Strategic Partnership / M&A Proposal',

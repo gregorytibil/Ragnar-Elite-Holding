@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { CheckCircle, Loader2 } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
+import { trackFormSubmission } from '../lib/analytics';
 
 interface ContactViewProps {
   currentLang: Language;
@@ -29,11 +30,20 @@ export default function ContactView({ currentLang }: ContactViewProps) {
       const generatedId = 'RE-' + Math.floor(100000 + Math.random() * 90000);
       setTrackingId(generatedId);
       setFormState('success');
+      trackFormSubmission('contact_proposal', {
+        sector_selected: sector,
+        dossier_id: generatedId,
+        current_language: currentLang,
+      });
     }, 2500);
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden">
+    <div 
+      className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden"
+      itemScope
+      itemType="https://schema.org/ContactPage"
+    >
       {/* Hero Section */}
       <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>

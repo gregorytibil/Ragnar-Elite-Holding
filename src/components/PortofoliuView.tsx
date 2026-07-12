@@ -59,7 +59,11 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F7F6F3] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white relative overflow-hidden">
+    <div 
+      className="min-h-screen bg-[#F7F6F3] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white relative overflow-hidden"
+      itemScope
+      itemType="https://schema.org/CollectionPage"
+    >
       {/* Global subtle texture */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.02] pointer-events-none z-0"></div>
 
@@ -121,7 +125,13 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
         {/* Division Sections */}
         <div className="space-y-24 md:space-y-36 mt-24">
           {divisions.map((div, idx) => (
-            <div key={idx} className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-[#0B1B3D]/10 pt-16">
+            <div 
+              key={idx} 
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-[#0B1B3D]/10 pt-16"
+              itemProp="department"
+              itemScope
+              itemType="https://schema.org/Corporation"
+            >
               <div className="lg:col-span-4">
                 <div className="sticky top-32 space-y-4">
                   <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold">
@@ -130,14 +140,22 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
                   <div className="w-14 h-14 bg-[#050D1D] flex items-center justify-center rounded-lg border border-white/5 shadow-inner">
                     <div.icon className="w-7 h-7 text-[#A2D2FF]" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-sans font-bold uppercase tracking-tight text-[#0B1B3D]">
+                  <h2 
+                    className="text-3xl md:text-4xl font-sans font-bold uppercase tracking-tight text-[#0B1B3D]"
+                    itemProp="name"
+                  >
                     {div.title}
                   </h2>
-                  <p className="text-lg text-slate-500 font-light leading-relaxed">{div.subtitle}</p>
+                  <p 
+                    className="text-lg text-slate-500 font-light leading-relaxed"
+                    itemProp="description"
+                  >
+                    {div.subtitle}
+                  </p>
                 </div>
               </div>
 
-              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6" role="list" aria-label={div.title}>
                 {div.items.map((item, itemIdx) => (
                   <motion.div
                     key={itemIdx}
@@ -147,12 +165,22 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
                       borderColor: '#A2D2FF'
                     }}
                     className="group bg-white p-8 border border-slate-200/80 rounded-sm transition-all duration-300 flex flex-col justify-between"
+                    itemProp="hasPart"
+                    itemScope
+                    itemType="https://schema.org/Project"
+                    role="listitem"
                   >
                     <div className="space-y-4">
-                      <h4 className="font-sans text-lg font-semibold text-[#0B1B3D] leading-tight group-hover:text-[#0B1B3D]/80 transition-colors duration-200">
+                      <h3 
+                        className="font-sans text-lg font-semibold text-[#0B1B3D] leading-tight group-hover:text-[#0B1B3D]/80 transition-colors duration-200"
+                        itemProp="name"
+                      >
                         {item.title}
-                      </h4>
-                      <p className="font-sans font-light text-sm text-slate-500 leading-relaxed">
+                      </h3>
+                      <p 
+                        className="font-sans font-light text-sm text-slate-500 leading-relaxed"
+                        itemProp="description"
+                      >
                         {item.desc}
                       </p>
                     </div>

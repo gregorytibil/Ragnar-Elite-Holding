@@ -37,7 +37,11 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden">
+    <div 
+      className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden"
+      itemScope
+      itemType="https://schema.org/CollectionPage"
+    >
       {/* Hero Section */}
       <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
@@ -109,7 +113,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
                 </div>
               </div>
 
-              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6" role="list" aria-label={group.title}>
                 {group.items.map((item, itemIdx) => (
                   <motion.div
                     key={itemIdx}
@@ -119,16 +123,27 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
                       borderColor: '#A2D2FF'
                     }}
                     className="group bg-white p-8 border border-slate-200/80 rounded-sm transition-all duration-300 flex flex-col"
+                    itemProp="hasPart"
+                    itemScope
+                    itemType="https://schema.org/Service"
+                    role="listitem"
                   >
+                    <meta itemProp="provider" content="Ragnar Elite Holding" />
                     <div className="w-14 h-14 bg-[#050D1D] flex items-center justify-center rounded-lg border border-white/5 shadow-inner mb-6">
                        <item.icon className="w-7 h-7 text-[#A2D2FF]" />
                     </div>
                     
                     <div className="space-y-4 flex-grow">
-                      <h4 className="font-sans text-lg font-semibold text-[#0B1B3D] leading-tight group-hover:text-[#0B1B3D]/80 transition-colors duration-200">
+                      <h3 
+                        className="font-sans text-lg font-semibold text-[#0B1B3D] leading-tight group-hover:text-[#0B1B3D]/80 transition-colors duration-200"
+                        itemProp="name"
+                      >
                         {item.title}
-                      </h4>
-                      <p className="font-sans font-light text-sm text-slate-500 leading-relaxed">
+                      </h3>
+                      <p 
+                        className="font-sans font-light text-sm text-slate-500 leading-relaxed"
+                        itemProp="description"
+                      >
                         {item.desc}
                       </p>
                     </div>

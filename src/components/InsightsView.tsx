@@ -35,7 +35,11 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden">
+    <div 
+      className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden"
+      itemScope
+      itemType="https://schema.org/Blog"
+    >
       {/* Hero Section */}
       <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
@@ -102,6 +106,9 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.08 }}
               className="group grid grid-cols-1 lg:grid-cols-12 gap-12"
+              itemProp="blogPost"
+              itemScope
+              itemType="https://schema.org/BlogPosting"
             >
               {/* Article Meta Sidebar */}
               <div className="lg:col-span-3 space-y-6">
@@ -113,7 +120,10 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
                       <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold mb-1">
                         Category
                       </span>
-                      <span className="text-sm text-slate-600 font-medium">
+                      <span 
+                        className="text-sm text-slate-600 font-medium"
+                        itemProp="articleSection"
+                      >
                         {art.tag}
                       </span>
                     </div>
@@ -121,9 +131,14 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
                       <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold mb-1">
                         Author
                       </span>
-                      <span className="text-sm text-slate-600 font-medium flex items-center gap-1.5">
+                      <span 
+                        className="text-sm text-slate-600 font-medium flex items-center gap-1.5"
+                        itemProp="author"
+                        itemScope
+                        itemType="https://schema.org/Organization"
+                      >
                          <User className="w-3.5 h-3.5" />
-                         {art.author}
+                         <span itemProp="name">{art.author}</span>
                       </span>
                     </div>
                  </div>
@@ -131,15 +146,24 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
 
               {/* Article Content */}
               <div className="lg:col-span-9">
-                <h2 className="text-3xl md:text-5xl font-sans font-bold uppercase mb-8 tracking-tight text-[#0B1B3D] group-hover:text-[#0B1B3D]/80 transition-colors leading-tight">
+                <h2 
+                  className="text-3xl md:text-5xl font-sans font-bold uppercase mb-8 tracking-tight text-[#0B1B3D] group-hover:text-[#0B1B3D]/80 transition-colors leading-tight"
+                  itemProp="headline"
+                >
                   {art.title}
                 </h2>
 
-                <div className="mb-10 text-xl md:text-2xl text-[#0B1B3D] font-light italic leading-relaxed border-l-2 border-[#A2D2FF] pl-6 md:pl-10">
+                <div 
+                  className="mb-10 text-xl md:text-2xl text-[#0B1B3D] font-light italic leading-relaxed border-l-2 border-[#A2D2FF] pl-6 md:pl-10"
+                  itemProp="description"
+                >
                   {art.summary}
                 </div>
 
-                <div className="prose prose-lg prose-slate max-w-none text-slate-600 font-light leading-loose text-base md:text-lg">
+                <div 
+                  className="prose prose-lg prose-slate max-w-none text-slate-600 font-light leading-loose text-base md:text-lg"
+                  itemProp="articleBody"
+                >
                   <p>{art.content}</p>
                 </div>
               </div>
