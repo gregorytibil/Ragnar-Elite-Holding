@@ -1,39 +1,37 @@
 import { motion } from 'motion/react';
-import { Coins, Settings, Globe, Shield, Link2, BarChart3, Scale, Users, Quote } from 'lucide-react';
+import { BookOpen, Calendar, User, Quote, TrendingUp, Shield } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
 
-interface ServiciiViewProps {
+interface InsightsViewProps {
   currentLang: Language;
 }
 
-export default function ServiciiView({ currentLang }: ServiciiViewProps) {
+export default function InsightsView({ currentLang }: InsightsViewProps) {
   const t = translations[currentLang];
 
   // Helper to remove emojis from titles if they exist
   const cleanTitle = (text: string) => text.replace(/[\u{1F300}-\u{1F9FF}]|[\u{2600}-\u{26FF}]/gu, '').trim();
 
-  const serviceGroups = [
+  const articles = [
     {
-      title: t.servicesSub1,
-      tag: 'SERVICES I',
-      items: [
-        { title: cleanTitle(t.service1Title), desc: t.service1Desc, icon: Coins },
-        { title: cleanTitle(t.service2Title), desc: t.service2Desc, icon: Settings },
-        { title: cleanTitle(t.service3Title), desc: t.service3Desc, icon: Globe },
-        { title: cleanTitle(t.service4Title), desc: t.service4Desc, icon: Shield },
-        { title: cleanTitle(t.service5Title), desc: t.service5Desc, icon: Link2 },
-      ],
+      id: 'article-1',
+      title: cleanTitle(t.insightsArticle1Title),
+      author: t.insightsArticle1Author,
+      summary: t.insightsArticle1Summary,
+      content: t.insightsArticle1Content,
+      icon: TrendingUp,
+      tag: currentLang === 'ro' ? 'MACROECONOMIE' : 'MACROECONOMICS'
     },
     {
-      title: t.servicesSub2,
-      tag: 'SERVICES II',
-      items: [
-        { title: cleanTitle(t.service6Title), desc: t.service6Desc, icon: BarChart3 },
-        { title: cleanTitle(t.service7Title), desc: t.service7Desc, icon: Scale },
-        { title: cleanTitle(t.service8Title), desc: t.service8Desc, icon: Users },
-      ],
-    },
+      id: 'article-2',
+      title: cleanTitle(t.insightsArticle2Title),
+      author: t.insightsArticle2Author,
+      summary: t.insightsArticle2Summary,
+      content: t.insightsArticle2Content,
+      icon: Shield,
+      tag: currentLang === 'ro' ? 'TEHNOLOGIE & INVESTIȚII' : 'TECH & INVESTMENT'
+    }
   ];
 
   return (
@@ -52,7 +50,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
-              <span>SERVICES</span>
+              <span>INSIGHTS</span>
             </motion.div>
 
             <motion.h1
@@ -61,7 +59,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="font-sans text-4xl sm:text-5xl md:text-[4.2rem] font-bold mb-6 tracking-tight text-white leading-[1.1] uppercase"
             >
-              {t.servicesHeaderTitle}
+              {t.insightsHeaderTitle}
             </motion.h1>
 
             <motion.p
@@ -70,7 +68,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
               transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="text-[#C8D9E6] text-base sm:text-lg md:text-[1.35rem] font-sans font-light tracking-wide max-w-2xl leading-relaxed"
             >
-              {t.servicesHeaderSubtitle}
+              {t.insightsHeaderSubtitle}
             </motion.p>
           </div>
         </div>
@@ -90,52 +88,62 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
           <div className="absolute top-0 left-0 w-full h-[2px] bg-[#0B1B3D]"></div>
           <Quote className="w-6 h-6 text-[#A2D2FF] mx-auto mb-6" />
           <p className="font-sans text-lg sm:text-xl md:text-[1.35rem] leading-[1.7] text-[#0B1B3D]/90 max-w-3xl mx-auto font-light italic">
-            {t.servicesIntro}
+            {t.insightsIntro}
           </p>
         </motion.div>
 
-        {/* Service Sections */}
-        <div className="space-y-24 md:space-y-36 mt-24">
-          {serviceGroups.map((group, idx) => (
-            <div key={idx} className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-[#0B1B3D]/10 pt-16">
-              <div className="lg:col-span-4">
-                <div className="sticky top-32 space-y-4">
-                  <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold">
-                    {group.tag}
-                  </span>
-                  <h2 className="text-3xl md:text-4xl font-sans font-bold uppercase tracking-tight text-[#0B1B3D]">
-                    {group.title}
-                  </h2>
-                </div>
+        {/* Articles List */}
+        <div className="mt-24 space-y-24 md:space-y-36">
+          {articles.map((art, idx) => (
+            <motion.article
+              key={art.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.08 }}
+              className="group grid grid-cols-1 lg:grid-cols-12 gap-12"
+            >
+              {/* Article Meta Sidebar */}
+              <div className="lg:col-span-3 space-y-6">
+                 <div className="w-16 h-16 bg-[#050D1D] flex items-center justify-center rounded-lg border border-white/5 shadow-inner">
+                    <art.icon className="w-8 h-8 text-[#A2D2FF]" />
+                 </div>
+                 <div className="space-y-4 pt-4 border-t border-slate-200">
+                    <div>
+                      <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold mb-1">
+                        Category
+                      </span>
+                      <span className="text-sm text-slate-600 font-medium">
+                        {art.tag}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold mb-1">
+                        Author
+                      </span>
+                      <span className="text-sm text-slate-600 font-medium flex items-center gap-1.5">
+                         <User className="w-3.5 h-3.5" />
+                         {art.author}
+                      </span>
+                    </div>
+                 </div>
               </div>
 
-              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                {group.items.map((item, itemIdx) => (
-                  <motion.div
-                    key={itemIdx}
-                    whileHover={{ 
-                      y: -8,
-                      boxShadow: '0 25px 50px -12px rgba(11,27,61,0.25)',
-                      borderColor: '#A2D2FF'
-                    }}
-                    className="group bg-white p-8 border border-slate-200/80 rounded-sm transition-all duration-300 flex flex-col"
-                  >
-                    <div className="w-14 h-14 bg-[#050D1D] flex items-center justify-center rounded-lg border border-white/5 shadow-inner mb-6">
-                       <item.icon className="w-7 h-7 text-[#A2D2FF]" />
-                    </div>
-                    
-                    <div className="space-y-4 flex-grow">
-                      <h4 className="font-sans text-lg font-semibold text-[#0B1B3D] leading-tight group-hover:text-[#0B1B3D]/80 transition-colors duration-200">
-                        {item.title}
-                      </h4>
-                      <p className="font-sans font-light text-sm text-slate-500 leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
+              {/* Article Content */}
+              <div className="lg:col-span-9">
+                <h2 className="text-3xl md:text-5xl font-sans font-bold uppercase mb-8 tracking-tight text-[#0B1B3D] group-hover:text-[#0B1B3D]/80 transition-colors leading-tight">
+                  {art.title}
+                </h2>
+
+                <div className="mb-10 text-xl md:text-2xl text-[#0B1B3D] font-light italic leading-relaxed border-l-2 border-[#A2D2FF] pl-6 md:pl-10">
+                  {art.summary}
+                </div>
+
+                <div className="prose prose-lg prose-slate max-w-none text-slate-600 font-light leading-loose text-base md:text-lg">
+                  <p>{art.content}</p>
+                </div>
               </div>
-            </div>
+            </motion.article>
           ))}
         </div>
       </div>

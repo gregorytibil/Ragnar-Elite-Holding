@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { ArrowUpRight, Building2, Cpu, Layers, Dna, Quote } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
 
@@ -11,10 +12,10 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
 
   const divisions = [
     {
-      number: '01',
-      emoji: '🏛️',
-      title: t.div1Title,
+      icon: Building2,
+      title: t.div1Title.replace(/🏛️ \d{2}\. /, ''),
       subtitle: t.div1Subtitle,
+      tag: 'DIVISION I',
       items: [
         { title: t.div1Item1Title, desc: t.div1Item1Desc },
         { title: t.div1Item2Title, desc: t.div1Item2Desc },
@@ -22,10 +23,10 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       ],
     },
     {
-      number: '02',
-      emoji: '💻',
-      title: t.div2Title,
+      icon: Cpu,
+      title: t.div2Title.replace(/💻 \d{2}\. /, ''),
       subtitle: t.div2Subtitle,
+      tag: 'DIVISION II',
       items: [
         { title: t.div2Item1Title, desc: t.div2Item1Desc },
         { title: t.div2Item2Title, desc: t.div2Item2Desc },
@@ -33,10 +34,10 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       ],
     },
     {
-      number: '03',
-      emoji: '📊',
-      title: t.div3Title,
+      icon: Layers,
+      title: t.div3Title.replace(/📊 \d{2}\. /, ''),
       subtitle: t.div3Subtitle,
+      tag: 'DIVISION III',
       items: [
         { title: t.div3Item1Title, desc: t.div3Item1Desc },
         { title: t.div3Item2Title, desc: t.div3Item2Desc },
@@ -44,10 +45,10 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       ],
     },
     {
-      number: '04',
-      emoji: '🧬',
-      title: t.div4Title,
+      icon: Dna,
+      title: t.div4Title.replace(/🧬 \d{2}\. /, ''),
       subtitle: t.div4Subtitle,
+      tag: 'DIVISION IV',
       items: [
         { title: t.div4Item1Title, desc: t.div4Item1Desc },
         { title: t.div4Item2Title, desc: t.div4Item2Desc },
@@ -58,91 +59,107 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
   ];
 
   return (
-    <div className="pt-[115px] sm:pt-[125px] md:pt-[135px] min-h-screen bg-bej-bg text-navy-brand">
-      {/* Header Specific */}
-      <section className="bg-navy-brand text-[#FAF6F0] text-center py-14 sm:py-20 md:py-[80px] px-6 border-b border-[#FAF6F0]/10">
-        <div className="max-w-[700px] mx-auto">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="font-serif text-3xl sm:text-4xl md:text-[3rem] font-bold mb-[15px] tracking-wide"
-          >
-            {t.portfolioHeaderTitle}
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sky-accent text-base sm:text-lg md:text-[1.2rem] font-light tracking-[0.5px]"
-          >
-            {t.portfolioHeaderSubtitle}
-          </motion.p>
+    <div className="min-h-screen bg-[#F7F6F3] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white relative overflow-hidden">
+      {/* Global subtle texture */}
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.02] pointer-events-none z-0"></div>
+
+      {/* Hero Section */}
+      <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
+        {/* Subtle high-end mesh and lighting layers */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
+        <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-3"></div>
+
+        <div className="max-w-[1140px] mx-auto relative z-10 px-4 md:px-8">
+          <div className="flex flex-col items-start text-left max-w-[850px]">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
+            >
+              <span>PORTFOLIO</span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="font-sans text-4xl sm:text-5xl md:text-[4.2rem] font-bold mb-6 tracking-tight text-white leading-[1.1] uppercase"
+            >
+              {t.portfolioHeaderTitle}
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="text-[#C8D9E6] text-base sm:text-lg md:text-[1.35rem] font-sans font-light tracking-wide max-w-2xl leading-relaxed"
+            >
+              {t.portfolioHeaderSubtitle}
+            </motion.p>
+          </div>
         </div>
       </section>
 
-      {/* Main Container */}
-      <div className="max-w-[1200px] mx-auto px-6 py-[60px]">
+      {/* Main Content Container */}
+      <div className="max-w-[1140px] mx-auto px-6 pb-24 md:pb-36 relative z-10">
         {/* Intro Quote */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center font-serif italic text-lg sm:text-2xl md:text-[1.4rem] max-w-[900px] mx-auto mb-[50px] leading-relaxed text-navy-brand"
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-white rounded-sm p-8 md:p-[70px] shadow-[0_20px_50px_rgba(5,13,29,0.05)] -mt-12 md:-mt-[80px] relative z-20 border border-[#0B1B3D]/10 text-center"
         >
-          {t.portfolioIntro}
-        </motion.p>
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-[#0B1B3D]"></div>
+          <Quote className="w-6 h-6 text-[#A2D2FF] mx-auto mb-6" />
+          <p className="font-sans text-lg sm:text-xl md:text-[1.35rem] leading-[1.7] text-[#0B1B3D]/90 max-w-3xl mx-auto font-light italic">
+            {t.portfolioIntro}
+          </p>
+        </motion.div>
 
-        {/* Division Blocks */}
-        <div className="space-y-[50px]">
-          {divisions.map((division, dIdx) => (
-            <motion.div
-              key={division.number}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-bej-card rounded-[6px] p-6 md:p-[50px] shadow-[0_15px_40px_rgba(11,27,61,0.02)] border-t-4 border-navy-brand"
-            >
-              {/* Division Header */}
-              <div className="mb-[35px] border-b border-navy-brand/8 pb-[20px] divizie-header">
-                <h2 className="font-serif text-xl sm:text-[2.2rem] font-bold text-navy-brand leading-tight">
-                  {division.emoji} {division.title}
-                </h2>
-                <p className="font-sans font-light text-sm sm:text-[1.1rem] text-[#556380] mt-1.5">
-                  {division.subtitle}
-                </p>
+        {/* Division Sections */}
+        <div className="space-y-24 md:space-y-36 mt-24">
+          {divisions.map((div, idx) => (
+            <div key={idx} className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-[#0B1B3D]/10 pt-16">
+              <div className="lg:col-span-4">
+                <div className="sticky top-32 space-y-4">
+                  <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold">
+                    {div.tag}
+                  </span>
+                  <div className="w-14 h-14 bg-[#050D1D] flex items-center justify-center rounded-lg border border-white/5 shadow-inner">
+                    <div.icon className="w-7 h-7 text-[#A2D2FF]" />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-sans font-bold uppercase tracking-tight text-[#0B1B3D]">
+                    {div.title}
+                  </h2>
+                  <p className="text-lg text-slate-500 font-light leading-relaxed">{div.subtitle}</p>
+                </div>
               </div>
 
-              {/* Industry Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px] industrii-grid">
-                {division.items.map((item, iIdx) => (
+              <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                {div.items.map((item, itemIdx) => (
                   <motion.div
-                    key={iIdx}
-                    initial={{ opacity: 0, y: 15 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: iIdx * 0.1, duration: 0.4 }}
-                    whileHover={{ y: -3 }}
-                    className="bg-bej-bg p-[30px] rounded-[4px] border border-navy-brand/3 hover:bg-bej-card hover:border-sky-accent hover:shadow-[0_8px_25px_rgba(11,27,61,0.04)] transition-all duration-300 flex flex-col justify-between industrie-card"
+                    key={itemIdx}
+                    whileHover={{ 
+                      y: -8,
+                      boxShadow: '0 25px 50px -12px rgba(11,27,61,0.25)',
+                      borderColor: '#A2D2FF'
+                    }}
+                    className="group bg-white p-8 border border-slate-200/80 rounded-sm transition-all duration-300 flex flex-col justify-between"
                   >
-                    <div>
-                      <h4 className="font-serif text-base sm:text-[1.25rem] font-bold mb-[12px] text-navy-brand border-b border-navy-brand/5 pb-[8px]">
+                    <div className="space-y-4">
+                      <h4 className="font-sans text-lg font-semibold text-[#0B1B3D] leading-tight group-hover:text-[#0B1B3D]/80 transition-colors duration-200">
                         {item.title}
                       </h4>
-                      <p className="font-sans font-light text-xs sm:text-[0.95rem] text-[#444] text-justify leading-relaxed">
+                      <p className="font-sans font-light text-sm text-slate-500 leading-relaxed">
                         {item.desc}
                       </p>
-                    </div>
-
-                    <div className="mt-6 pt-3 border-t border-navy-brand/5 flex justify-between items-center text-[9px] font-mono tracking-wider opacity-50 text-navy-brand uppercase">
-                      <span>SECURED PORTFOLIO</span>
-                      <span>HQ HONG KONG</span>
                     </div>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

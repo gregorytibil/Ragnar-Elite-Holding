@@ -5,7 +5,8 @@ export const translations = {
     navHolding: 'The Holding',
     navPortfolio: 'Portofoliu',
     navServices: 'Servicii',
-    navContact: 'Contact',
+    navInsights: 'Insights',
+    navContact: 'Parteneriate',
     navLegal: 'Guvernanță & GDPR',
 
     // Hero Section
@@ -19,9 +20,9 @@ export const translations = {
     pillarsSubtitle: 'Valorile supreme care ne guvernează deciziile comerciale și operaționale.',
 
     // Pillars
-    pillarFortitudeTitle: '⚡ Fortitudine (Ragnar)',
+    pillarFortitudeTitle: '⚡ Fortitudine',
     pillarFortitudeDesc: 'Reprezintă reziliența structurală și forța de neclintit în fața transformărilor macroeconomice agresive ale pieței globale.',
-    pillarExcellenceTitle: '🏆 Excelență (Elite)',
+    pillarExcellenceTitle: '🏆 Excelență',
     pillarExcellenceDesc: 'Un standard operațional absolut și fără compromisuri, aplicat riguros în fiecare tranzacție, audit sau parteneriat executat.',
     pillarIntegrityTitle: '⚖️ Integritate',
     pillarIntegrityDesc: 'Transparență guvernamentală deplină, etică profesională incoruptibilă și responsabilitate totală față de capitalul consolidat.',
@@ -186,7 +187,7 @@ export const translations = {
     legalSec7Bullet2: 'Dreptul la rectificare și actualizare: Modificarea imediată a datelor eronate sau incomplete;',
     legalSec7Bullet3: 'Dreptul la ștergerea definitivă (Dreptul de a fi uitat): Eliminarea irevocabilă a datelor din serverele active și arhivele holdingului;',
     legalSec7Bullet4: 'Dreptul la restricționarea temporară a prelucrării.',
-    legalSec7Footer: 'Pentru orice solicitare oficială din sfera conformității sau pentru a iniția un audit legat de guvernanța datelor trimise, vă rugăm să folosiți adresa unică securizată de corespondență legală a grupului: capital@ragnarelite.com.',
+    legalSec7Footer: 'Pentru orice solicitare oficială din sfera conformității sau pentru a iniția un audit legat de guvernanța datelor trimise, vă rugăm să folosiți adresa unică securizată de corespondență legală a grupului: office@ragnareliteholding.com.',
 
     // Footer Specifics
     footerDesc: 'Gestionarea, restructurarea și accelerarea activelor corporative de înaltă performanță la standarde macroeconomice riguroase.',
@@ -195,6 +196,19 @@ export const translations = {
     footerGdpr: 'Politica GDPR',
     footerSecureAccess: 'Solicitare Acces Securizat',
     footerCopyright: '© 2026 Ragnar Elite Holding. Toate drepturile rezervate. Headquarters: Hong Kong.',
+    
+    // Insights Section (Gândire Strategică)
+    insightsHeaderTitle: 'Insights Strategic',
+    insightsHeaderSubtitle: 'Analize de piață lunare, rapoarte macroeconomice și perspective globale semnate de experții Ragnar Elite.',
+    insightsIntro: 'Consiliul nostru de administrație și analiștii asociați publică lunar evaluări de impact economic, adaptate pentru managementul strategic al riscurilor comerciale.',
+    insightsArticle1Title: 'Reconfigurarea Lanțurilor de Aprovizionare în Era Post-Globalizare',
+    insightsArticle1Author: 'Executive Chairman | Iulie 2026',
+    insightsArticle1Summary: 'O analiză profundă despre modul în care holdingul își repoziționează activele logistice în contextul relocării producției industriale globale și al noilor coridoare comerciale intercontinentale.',
+    insightsArticle1Content: 'Într-o perioadă marcată de tensiuni comerciale și fragmentare economică, globalizarea clasică bazată exclusiv pe costuri minime de producție este înlocuită rapid de conceptul de "friend-shoring" și reziliență structurală. Ragnar Elite Holding acționează proactiv prin canalizarea capitalului în divizia de tehnologie și logistică, optimizând rutele comerciale pentru subsidiarele noastre din Asia și Europa, protejând astfel valoarea lanțurilor de distribuție.',
+    insightsArticle2Title: 'Integrarea Inteligenței Artificiale Enterprise în Infrastructura Critică',
+    insightsArticle2Author: 'Chief Financial Officer | Iunie 2026',
+    insightsArticle2Summary: 'Cum utilizarea algoritmilor predictivi avansați și a sistemelor inteligente de gestiune optimizează riscurile energetice și randamentele financiare în piețe volatile.',
+    insightsArticle2Content: 'Sistemele energetice moderne și piețele de capital necesită o viteză de reacție care depășește capacitatea decizională umană tradițională. Investițiile noastre recente în infrastructura energetică inteligentă (smart grids) și tehnologii IT enterprise au adus o eficiență sporită de 18% la nivelul subsidiarelor grupului. Protejarea activelor holdingului rămâne pilonul nostru fundamental de stabilitate pe termen lung.',
   },
   en: {
     // Navigation
@@ -202,7 +216,8 @@ export const translations = {
     navHolding: 'The Holding',
     navPortfolio: 'Portfolio',
     navServices: 'Services',
-    navContact: 'Contact',
+    navInsights: 'Insights',
+    navContact: 'Partnerships',
     navLegal: 'Governance & GDPR',
 
     // Hero Section
@@ -216,9 +231,9 @@ export const translations = {
     pillarsSubtitle: 'The supreme values governing our commercial and operational decisions.',
 
     // Pillars
-    pillarFortitudeTitle: '⚡ Fortitude (Ragnar)',
+    pillarFortitudeTitle: '⚡ Fortitude',
     pillarFortitudeDesc: 'Represents structural resilience and unwavering strength in the face of aggressive macroeconomic transformations in the global market.',
-    pillarExcellenceTitle: '🏆 Excellence (Elite)',
+    pillarExcellenceTitle: '🏆 Excellence',
     pillarExcellenceDesc: 'An absolute and uncompromising operational standard, rigorously applied in every transaction, audit, or partnership executed.',
     pillarIntegrityTitle: '⚖️ Integrity',
     pillarIntegrityDesc: 'Full corporate governance, incorruptible professional ethics, and total responsibility toward consolidated capital.',
@@ -383,7 +398,7 @@ export const translations = {
     legalSec7Bullet2: 'Right to rectification and updating: Immediate correction of incorrect or incomplete data;',
     legalSec7Bullet3: 'Right to permanent deletion (Right to be forgotten): Irrevocable removal of your records from active servers and archives;',
     legalSec7Bullet4: 'Right to temporary restriction of processing.',
-    legalSec7Footer: 'For any official compliance inquiries or data audit requests, please contact our dedicated legal email: capital@ragnarelite.com.',
+    legalSec7Footer: 'For any official compliance inquiries or data audit requests, please contact our dedicated legal email: office@ragnareliteholding.com.',
 
     // Footer Specifics
     footerDesc: 'Management, restructuring, and acceleration of high-performance corporate assets under rigorous macroeconomic standards.',
@@ -392,5 +407,18 @@ export const translations = {
     footerGdpr: 'GDPR Policy',
     footerSecureAccess: 'Request Secure Access',
     footerCopyright: '© 2026 Ragnar Elite Holding. All rights reserved. Headquarters: Hong Kong.',
+    
+    // Insights Section (Strategic Thinking)
+    insightsHeaderTitle: 'Strategic Insights',
+    insightsHeaderSubtitle: 'Monthly market analyses, macroeconomic reports, and global perspectives signed by Ragnar Elite experts.',
+    insightsIntro: 'Our board of directors and associate analysts publish monthly economic impact assessments, tailored for strategic management of commercial risks.',
+    insightsArticle1Title: 'Reconfiguring Supply Chains in the Post-Globalization Era',
+    insightsArticle1Author: 'Executive Chairman | July 2026',
+    insightsArticle1Summary: 'A deep dive into how the holding is repositioning its logistical assets in the context of industrial nearshoring and new intercontinental trade corridors.',
+    insightsArticle1Content: 'In a period marked by trade tensions and economic fragmentation, classical cost-based globalization is being rapidly replaced by friend-shoring and structural resilience. Ragnar Elite Holding acts proactively by channeling capital into our technology and logistics divisions, optimizing trade routes for our subsidiaries in Asia and Europe, thereby protecting distribution value.',
+    insightsArticle2Title: 'Integrating Enterprise AI into Critical Infrastructure',
+    insightsArticle2Author: 'Chief Financial Officer | June 2026',
+    insightsArticle2Summary: 'How utilizing advanced predictive algorithms and smart management systems optimizes energy risks and financial returns in highly volatile markets.',
+    insightsArticle2Content: 'Modern energy grids and capital markets require a speed of reaction that exceeds traditional human decision-making capacity. Our recent investments in smart grids and enterprise IT infrastructure have generated an 18% efficiency increase across group subsidiaries. Asset protection remains our core foundation for long-term stability.',
   },
 };
