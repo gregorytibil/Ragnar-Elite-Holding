@@ -4,16 +4,16 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
-  --color-navy-brand: #0B1B3D;
-  --color-bej-bg: #FAF6F0;
-  --color-sky-accent: #A2D2FF;
+  --color-navy-brand: #2F4156;
+  --color-bej-bg: #F5EFEB;
+  --color-sky-accent: #C8D9E6;
   --color-bej-card: #FFFFFF;
   --animate-loading: loading 2.2s ease-in-out infinite;
 }
 
 @utility bg-grid-pattern {
   background-size: 40px 40px;
-  background-image: linear-gradient(to right, rgba(11, 27, 61, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(11, 27, 61, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(47, 65, 86, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(47, 65, 86, 0.03) 1px, transparent 1px);
 }
 
 @utility bg-grid-pattern-light {
@@ -43,13 +43,13 @@
   grid-template-columns: 1fr 1fr;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 30px 70px rgba(11, 27, 61, 0.15);
-  border: 1px solid rgba(162, 210, 255, 0.15);
+  box-shadow: 0 30px 70px rgba(47, 65, 86, 0.15);
+  border: 1px solid rgba(200, 217, 230, 0.15);
 }
 
 .contact-info {
   padding: 60px;
-  background: linear-gradient(145deg, #0B1B3D 0%, #07122a 100%);
+  background: linear-gradient(145deg, #2F4156 0%, #2F4156 100%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -69,7 +69,7 @@
 
 .contact-details {
   margin-top: auto;
-  border-top: 1px solid rgba(162, 210, 255, 0.25);
+  border-top: 1px solid rgba(200, 217, 230, 0.25);
   padding-top: 30px;
 }
 
@@ -104,8 +104,8 @@
 .form-control {
   width: 100%;
   padding: 15px 18px;
-  background: #FAF9F6;
-  border: 1.5px solid rgba(11, 27, 61, 0.08);
+  background: #F5EFEB;
+  border: 1.5px solid rgba(47, 65, 86, 0.08);
   border-radius: 6px;
   font-family: "Inter", sans-serif;
   font-size: 0.95rem;
@@ -117,7 +117,7 @@
   outline: none;
   border-color: var(--color-navy-brand);
   background: var(--color-bej-card);
-  box-shadow: 0 4px 12px rgba(11, 27, 61, 0.04);
+  box-shadow: 0 4px 12px rgba(47, 65, 86, 0.04);
 }
 
 select.form-control {
@@ -138,7 +138,7 @@ select.form-control {
   letter-spacing: 1.5px;
   border-radius: 6px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(11, 27, 61, 0.15);
+  box-shadow: 0 4px 14px rgba(47, 65, 86, 0.15);
 }
 
 .btn-submit:hover:not(:disabled) {
@@ -146,7 +146,7 @@ select.form-control {
   color: var(--color-navy-brand);
   border-color: var(--color-sky-accent);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(162, 210, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(200, 217, 230, 0.3);
 }
 
 .btn-submit:active:not(:disabled) {

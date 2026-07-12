@@ -59,7 +59,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
   ];
 
   return (
-    <footer className="bg-[#030914] text-[#FAF6F0] pt-24 pb-12 px-6 md:px-12 relative overflow-hidden">
+    <footer className="bg-[#2F4156] text-[#F5EFEB] pt-24 pb-12 px-6 md:px-12 relative overflow-hidden">
       {/* Exquisite Top Linear Accent - Single pixel line with glowing fade */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[1px] bg-gradient-to-r from-transparent via-sky-accent/40 to-transparent" />
@@ -74,7 +74,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <Landmark className="w-5 h-5 text-sky-accent" />
-            <span className="font-serif text-lg font-bold tracking-[0.25em] text-[#FAF6F0]">
+            <span className="font-serif text-lg font-bold tracking-[0.25em] text-[#F5EFEB]">
               RAGNAR ELITE
             </span>
           </div>
@@ -178,7 +178,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
                 target="_blank"
                 rel="noreferrer"
                 title={soc.label}
-                className="p-3 bg-white/[0.02] hover:bg-sky-accent text-stone-300 hover:text-[#030914] rounded-xl transition-all duration-350 hover:scale-105 border border-white/5 hover:border-sky-accent/20 flex items-center justify-center shadow-lg relative overflow-hidden group cursor-pointer"
+                className="p-3 bg-white/[0.02] hover:bg-sky-accent text-stone-300 hover:text-[#2F4156] rounded-xl transition-all duration-350 hover:scale-105 border border-white/5 hover:border-sky-accent/20 flex items-center justify-center shadow-lg relative overflow-hidden group cursor-pointer"
               >
                 {/* Subtle shine overlay inside the button */}
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none" />

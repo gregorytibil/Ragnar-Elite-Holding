@@ -33,10 +33,10 @@ export default function ContactView({ currentLang }: ContactViewProps) {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden">
+    <div className="min-h-screen bg-[#F5EFEB] bg-grid-pattern text-[#2F4156] selection:bg-[#2F4156] selection:text-white overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
+      <section className="relative bg-[#2F4156] text-[#F5EFEB] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#2F4156] via-[#2F4156]/95 to-[#2F4156] z-1"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-3"></div>
 
@@ -46,7 +46,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#C8D9E6] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
               <span>{t.contactHeaderTitle.split(' ')[0] || 'PARTNERSHIPS'}</span>
             </motion.div>
@@ -80,11 +80,11 @@ export default function ContactView({ currentLang }: ContactViewProps) {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="grid grid-cols-1 lg:grid-cols-12 relative z-20 shadow-[0_20px_50px_rgba(5,13,29,0.08)] rounded-sm overflow-hidden border border-[#0B1B3D]/10"
+          className="grid grid-cols-1 lg:grid-cols-12 relative z-20 shadow-[0_20px_50px_rgba(5,13,29,0.08)] rounded-sm overflow-hidden border border-[#2F4156]/10"
         >
           {/* Left Column - Contact info */}
-          <div className="lg:col-span-5 bg-[#050D1D] text-[#FAF6F0] p-10 md:p-14 lg:p-16 flex flex-col justify-between relative overflow-hidden border-r border-[#0B1B3D]/10">
-            <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-0"></div>
+          <div className="lg:col-span-5 bg-[#2F4156] text-[#F5EFEB] p-10 md:p-14 lg:p-16 flex flex-col justify-between relative overflow-hidden border-r border-[#2F4156]/10">
+            <div className="absolute inset-0 bg-gradient-to-b from-[#2F4156] via-[#2F4156]/95 to-[#2F4156] z-0"></div>
             <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.05] z-0"></div>
             
             <div className="relative z-10">
@@ -94,15 +94,15 @@ export default function ContactView({ currentLang }: ContactViewProps) {
               
               <div className="space-y-12">
                 <div className="space-y-3">
-                  <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.hqLabel}</strong>
-                  <span className="font-sans text-base text-[#FAF6F0] font-light leading-relaxed block max-w-xs">{t.hqAddress}</span>
+                  <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#C8D9E6] font-bold">{t.hqLabel}</strong>
+                  <span className="font-sans text-base text-[#F5EFEB] font-light leading-relaxed block max-w-xs">{t.hqAddress}</span>
                 </div>
                 <div className="space-y-3">
-                  <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.mailSecured}</strong>
+                  <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#C8D9E6] font-bold">{t.mailSecured}</strong>
                   <span className="font-mono text-sm text-white border-b border-white/20 pb-1 inline-block">office@ragnareliteholding.com</span>
                 </div>
                 <div className="space-y-3">
-                  <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.mailRelations}</strong>
+                  <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#C8D9E6] font-bold">{t.mailRelations}</strong>
                   <span className="font-mono text-sm text-white border-b border-white/20 pb-1 inline-block">office@ragnareliteholding.com</span>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                   exit={{ opacity: 0, scale: 0.98 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <h2 className="font-sans text-2xl md:text-3xl font-bold text-[#0B1B3D] mb-3 uppercase tracking-tight">
+                  <h2 className="font-sans text-2xl md:text-3xl font-bold text-[#2F4156] mb-3 uppercase tracking-tight">
                     {t.formTitle}
                   </h2>
                   <p className="font-sans font-light text-base text-slate-500 mb-12 leading-relaxed max-w-lg">
@@ -136,60 +136,60 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                   <form onSubmit={handleSubmit} className="space-y-10">
                     <div className="space-y-8">
                       <div className="relative group">
-                        <label className="absolute -top-2.5 left-3 bg-white px-1 text-[10px] font-mono uppercase tracking-widest text-[#0B1B3D]/60 font-bold transition-colors group-focus-within:text-[#0B1B3D]">{t.formNamePlaceholder}</label>
+                        <label className="absolute -top-2.5 left-3 bg-white px-1 text-[10px] font-mono uppercase tracking-widest text-[#2F4156]/60 font-bold transition-colors group-focus-within:text-[#2F4156]">{t.formNamePlaceholder}</label>
                         <input
                           type="text"
                           required
                           value={name}
                           onChange={(e) => setName(e.target.value)}
-                          className="w-full bg-transparent border border-[#0B1B3D]/15 focus:border-[#0B1B3D] transition-colors outline-none font-sans text-base py-4 px-4 text-[#0B1B3D] shadow-sm hover:border-[#0B1B3D]/30"
+                          className="w-full bg-transparent border border-[#2F4156]/15 focus:border-[#2F4156] transition-colors outline-none font-sans text-base py-4 px-4 text-[#2F4156] shadow-sm hover:border-[#2F4156]/30"
                         />
                       </div>
                       
                       <div className="relative group">
-                        <label className="absolute -top-2.5 left-3 bg-white px-1 text-[10px] font-mono uppercase tracking-widest text-[#0B1B3D]/60 font-bold transition-colors group-focus-within:text-[#0B1B3D]">{t.formEmailPlaceholder}</label>
+                        <label className="absolute -top-2.5 left-3 bg-white px-1 text-[10px] font-mono uppercase tracking-widest text-[#2F4156]/60 font-bold transition-colors group-focus-within:text-[#2F4156]">{t.formEmailPlaceholder}</label>
                         <input
                           type="email"
                           required
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="w-full bg-transparent border border-[#0B1B3D]/15 focus:border-[#0B1B3D] transition-colors outline-none font-sans text-base py-4 px-4 text-[#0B1B3D] shadow-sm hover:border-[#0B1B3D]/30"
+                          className="w-full bg-transparent border border-[#2F4156]/15 focus:border-[#2F4156] transition-colors outline-none font-sans text-base py-4 px-4 text-[#2F4156] shadow-sm hover:border-[#2F4156]/30"
                         />
                       </div>
                       
                       <div className="relative group">
-                        <label className="absolute -top-2.5 left-3 bg-white px-1 z-10 text-[10px] font-mono uppercase tracking-widest text-[#0B1B3D]/60 font-bold transition-colors group-focus-within:text-[#0B1B3D]">{t.formSectorPlaceholder}</label>
+                        <label className="absolute -top-2.5 left-3 bg-white px-1 z-10 text-[10px] font-mono uppercase tracking-widest text-[#2F4156]/60 font-bold transition-colors group-focus-within:text-[#2F4156]">{t.formSectorPlaceholder}</label>
                         <div className="relative">
                           <select
                             required
                             value={sector}
                             onChange={(e) => setSector(e.target.value)}
-                            className={`w-full bg-transparent border border-[#0B1B3D]/15 focus:border-[#0B1B3D] transition-colors outline-none font-sans text-base py-4 px-4 appearance-none cursor-pointer shadow-sm hover:border-[#0B1B3D]/30 ${sector ? 'text-[#0B1B3D]' : 'text-[#0B1B3D]/40'}`}
+                            className={`w-full bg-transparent border border-[#2F4156]/15 focus:border-[#2F4156] transition-colors outline-none font-sans text-base py-4 px-4 appearance-none cursor-pointer shadow-sm hover:border-[#2F4156]/30 ${sector ? 'text-[#2F4156]' : 'text-[#2F4156]/40'}`}
                           >
                             <option value="" disabled className="text-slate-400">
                               {currentLang === 'ro' ? 'Selectează...' : 'Select...'}
                             </option>
-                            <option value="infrastructure" className="text-[#0B1B3D]">{t.sectorOpt1}</option>
-                            <option value="tech_energy" className="text-[#0B1B3D]">{t.sectorOpt2}</option>
-                            <option value="shared_services" className="text-[#0B1B3D]">{t.sectorOpt3}</option>
-                            <option value="lifesciences_media" className="text-[#0B1B3D]">{t.sectorOpt4}</option>
-                            <option value="ma_proposal" className="text-[#0B1B3D]">{t.sectorOpt5}</option>
+                            <option value="infrastructure" className="text-[#2F4156]">{t.sectorOpt1}</option>
+                            <option value="tech_energy" className="text-[#2F4156]">{t.sectorOpt2}</option>
+                            <option value="shared_services" className="text-[#2F4156]">{t.sectorOpt3}</option>
+                            <option value="lifesciences_media" className="text-[#2F4156]">{t.sectorOpt4}</option>
+                            <option value="ma_proposal" className="text-[#2F4156]">{t.sectorOpt5}</option>
                           </select>
-                          <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-[#0B1B3D]/40">
+                          <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-[#2F4156]/40">
                             <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" fillRule="evenodd"></path></svg>
                           </div>
                         </div>
                       </div>
                       
                       <div className="relative group">
-                        <label className="absolute -top-2.5 left-3 bg-white px-1 text-[10px] font-mono uppercase tracking-widest text-[#0B1B3D]/60 font-bold transition-colors group-focus-within:text-[#0B1B3D]">{currentLang === 'ro' ? 'Detalii Propunere' : 'Proposal Details'}</label>
+                        <label className="absolute -top-2.5 left-3 bg-white px-1 text-[10px] font-mono uppercase tracking-widest text-[#2F4156]/60 font-bold transition-colors group-focus-within:text-[#2F4156]">{currentLang === 'ro' ? 'Detalii Propunere' : 'Proposal Details'}</label>
                         <textarea
                           required
                           rows={5}
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
                           placeholder={t.formMessagePlaceholder}
-                          className="w-full bg-transparent border border-[#0B1B3D]/15 focus:border-[#0B1B3D] transition-colors outline-none font-sans text-base py-5 px-4 text-[#0B1B3D] placeholder-[#0B1B3D]/30 resize-none shadow-sm hover:border-[#0B1B3D]/30 leading-relaxed"
+                          className="w-full bg-transparent border border-[#2F4156]/15 focus:border-[#2F4156] transition-colors outline-none font-sans text-base py-5 px-4 text-[#2F4156] placeholder-[#2F4156]/30 resize-none shadow-sm hover:border-[#2F4156]/30 leading-relaxed"
                         />
                       </div>
                     </div>
@@ -201,7 +201,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                         required
                         checked={agree}
                         onChange={(e) => setAgree(e.target.checked)}
-                        className="mt-0.5 w-4 h-4 rounded-sm text-[#0B1B3D] border-[#0B1B3D]/20 focus:ring-[#0B1B3D]"
+                        className="mt-0.5 w-4 h-4 rounded-sm text-[#2F4156] border-[#2F4156]/20 focus:ring-[#2F4156]"
                       />
                       <label
                         htmlFor="agree-gdpr"
@@ -214,7 +214,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                     <button
                       type="submit"
                       disabled={!agree}
-                      className="w-full py-5 bg-[#0B1B3D] text-white font-sans text-sm font-bold uppercase tracking-[0.2em] hover:bg-[#050D1D] transition-all disabled:opacity-50 disabled:cursor-not-allowed mt-4 flex items-center justify-center gap-3 border border-[#0B1B3D]"
+                      className="w-full py-5 bg-[#2F4156] text-white font-sans text-sm font-bold uppercase tracking-[0.2em] hover:bg-[#2F4156] transition-all disabled:opacity-50 disabled:cursor-not-allowed mt-4 flex items-center justify-center gap-3 border border-[#2F4156]"
                     >
                       {t.formSubmitBtn}
                     </button>
@@ -230,8 +230,8 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                   exit={{ opacity: 0 }}
                   className="text-center py-20 flex flex-col items-center justify-center h-full"
                 >
-                  <Loader2 className="w-12 h-12 text-[#0B1B3D] animate-spin mb-6" />
-                  <h3 className="font-sans text-xl font-bold text-[#0B1B3D] mb-2 uppercase tracking-widest">
+                  <Loader2 className="w-12 h-12 text-[#2F4156] animate-spin mb-6" />
+                  <h3 className="font-sans text-xl font-bold text-[#2F4156] mb-2 uppercase tracking-widest">
                     AES-256 HANDSHAKE
                   </h3>
                   <p className="text-sm text-slate-500 font-mono tracking-wider max-w-sm">
@@ -239,7 +239,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                   </p>
                   
                   <div className="w-48 bg-slate-100 h-1 mt-8 rounded overflow-hidden relative">
-                    <div className="absolute top-0 left-0 bg-[#0B1B3D] h-full animate-pulse w-full"></div>
+                    <div className="absolute top-0 left-0 bg-[#2F4156] h-full animate-pulse w-full"></div>
                   </div>
                 </motion.div>
               )}
@@ -254,21 +254,21 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                   <div className="p-4 bg-emerald-50 rounded-full w-fit mx-auto text-emerald-600 mb-6 border border-emerald-100">
                     <CheckCircle className="w-10 h-10" />
                   </div>
-                  <h3 className="font-sans text-2xl font-bold text-[#0B1B3D] mb-3 uppercase tracking-tight">
+                  <h3 className="font-sans text-2xl font-bold text-[#2F4156] mb-3 uppercase tracking-tight">
                     {t.formSuccessTitle}
                   </h3>
                   <p className="text-sm text-slate-600 font-light leading-relaxed max-w-md mx-auto mb-10">
                     {t.formSuccessDesc}
                   </p>
 
-                  <div className="p-6 bg-[#F7F6F3] rounded-sm border border-slate-200 text-left font-mono text-xs text-[#0B1B3D] space-y-3">
+                  <div className="p-6 bg-[#F7F6F3] rounded-sm border border-slate-200 text-left font-mono text-xs text-[#2F4156] space-y-3">
                     <div className="flex justify-between border-b border-slate-200 pb-3">
                       <span className="opacity-60 uppercase font-bold text-[10px]">PROTOCOL:</span>
                       <span className="font-bold text-emerald-700">AES-256 SECURED</span>
                     </div>
                     <div className="flex justify-between border-b border-slate-200 pb-3">
                       <span className="opacity-60 uppercase font-bold text-[10px]">DOSSIER ID:</span>
-                      <span className="font-bold text-[#0B1B3D]">{trackingId}</span>
+                      <span className="font-bold text-[#2F4156]">{trackingId}</span>
                     </div>
                     <div className="flex justify-between pb-1 pt-1">
                       <span className="opacity-60 uppercase font-bold text-[10px]">SERVERS:</span>
@@ -285,7 +285,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                       setAgree(false);
                       setFormState('default');
                     }}
-                    className="mt-10 w-full py-4 border border-[#0B1B3D] text-[#0B1B3D] hover:bg-[#0B1B3D] hover:text-white font-sans text-xs font-semibold uppercase tracking-widest transition-all"
+                    className="mt-10 w-full py-4 border border-[#2F4156] text-[#2F4156] hover:bg-[#2F4156] hover:text-white font-sans text-xs font-semibold uppercase tracking-widest transition-all"
                   >
                     {currentLang === 'ro' ? 'Transmite Nou Dosar' : 'Submit New Dossier'}
                   </button>

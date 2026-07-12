@@ -37,7 +37,7 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
       {/* Main Navbar with translucent dark theme blue */}
-      <nav className={`px-6 md:px-12 flex justify-between items-center transition-all duration-500 ${isScrolled ? 'bg-[#0B1B3D]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.15)] py-4 md:py-5' : 'bg-transparent border-b border-transparent py-6 md:py-8'} text-[#FAF6F0]`}>
+      <nav className={`px-6 md:px-12 flex justify-between items-center transition-all duration-500 ${isScrolled ? 'bg-[#2F4156]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.15)] py-4 md:py-5' : 'bg-transparent border-b border-transparent py-6 md:py-8'} text-[#F5EFEB]`}>
         {/* Brand Logo */}
         <button
           onClick={() => {
@@ -46,10 +46,10 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
           }}
           className="text-left cursor-pointer group flex flex-col relative"
         >
-          <span className="font-serif text-lg md:text-[1.4rem] font-bold tracking-[0.22em] text-[#FAF6F0] group-hover:text-[#C8D9E6] transition-colors duration-300 leading-none">
+          <span className="font-serif text-lg md:text-[1.4rem] font-bold tracking-[0.22em] text-[#F5EFEB] group-hover:text-[#C8D9E6] transition-colors duration-300 leading-none">
             RAGNAR ELITE
           </span>
-          <span className="block text-[7.5px] tracking-[0.45em] uppercase text-[#C8D9E6]/80 font-mono mt-1.5 group-hover:text-[#FAF6F0] transition-colors duration-300">
+          <span className="block text-[7.5px] tracking-[0.45em] uppercase text-[#C8D9E6]/80 font-mono mt-1.5 group-hover:text-[#F5EFEB] transition-colors duration-300">
             Holding Company
           </span>
         </button>
@@ -61,8 +61,8 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
               <li key={item.id} className="relative py-1">
                 <button
                   onClick={() => setActiveTab(item.id)}
-                  className={`text-[11px] uppercase tracking-[0.18em] font-medium transition-all duration-300 cursor-pointer hover:text-[#FAF6F0] ${
-                    activeTab === item.id ? 'text-[#C8D9E6] font-bold' : 'text-[#FAF6F0]/70'
+                  className={`text-[11px] uppercase tracking-[0.18em] font-medium transition-all duration-300 cursor-pointer hover:text-[#F5EFEB] ${
+                    activeTab === item.id ? 'text-[#C8D9E6] font-bold' : 'text-[#F5EFEB]/70'
                   }`}
                 >
                   {item.label}
@@ -85,18 +85,18 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
               className={`px-1.5 py-0.5 rounded transition-all duration-300 cursor-pointer ${
                 currentLang === 'ro'
                   ? 'text-[#C8D9E6] font-bold'
-                  : 'text-[#FAF6F0]/50 hover:text-[#FAF6F0]'
+                  : 'text-[#F5EFEB]/50 hover:text-[#F5EFEB]'
               }`}
             >
               RO
             </button>
-            <span className="opacity-20 text-[#FAF6F0]/40 select-none">|</span>
+            <span className="opacity-20 text-[#F5EFEB]/40 select-none">|</span>
             <button
               onClick={() => setLang('en')}
               className={`px-1.5 py-0.5 rounded transition-all duration-300 cursor-pointer ${
                 currentLang === 'en'
                   ? 'text-[#C8D9E6] font-bold'
-                  : 'text-[#FAF6F0]/50 hover:text-[#FAF6F0]'
+                  : 'text-[#F5EFEB]/50 hover:text-[#F5EFEB]'
               }`}
             >
               EN
@@ -107,7 +107,7 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
         {/* Mobile Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-[#FAF6F0] hover:text-[#C8D9E6] p-1.5 transition-colors cursor-pointer rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
+          className="lg:hidden text-[#F5EFEB] hover:text-[#C8D9E6] p-1.5 transition-colors cursor-pointer rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
           aria-label="Toggle menu"
         >
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -122,7 +122,7 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden bg-[#0B1B3D]/95 backdrop-blur-2xl border-b border-white/10 overflow-hidden shadow-2xl"
+            className="lg:hidden bg-[#2F4156]/95 backdrop-blur-2xl border-b border-white/10 overflow-hidden shadow-2xl"
           >
             <ul className="flex flex-col p-6 gap-3 list-none m-0">
               {navItems.map((item) => (
@@ -135,7 +135,7 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                     className={`w-full text-left py-3 px-4 text-[11px] uppercase tracking-[0.15em] font-semibold rounded-[4px] border-b border-white/5 block cursor-pointer transition-all duration-200 ${
                       activeTab === item.id 
                         ? 'text-[#C8D9E6] bg-white/5 border-l-2 border-l-[#C8D9E6]' 
-                        : 'text-[#FAF6F0]/80 hover:text-[#C8D9E6] hover:bg-white/5'
+                        : 'text-[#F5EFEB]/80 hover:text-[#C8D9E6] hover:bg-white/5'
                     }`}
                   >
                     {item.label}
@@ -153,12 +153,12 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                   className={`px-3 py-1.5 rounded transition-all duration-300 cursor-pointer ${
                     currentLang === 'ro'
                       ? 'text-[#C8D9E6] font-bold bg-white/5'
-                      : 'text-[#FAF6F0]/60 hover:text-[#FAF6F0]'
+                      : 'text-[#F5EFEB]/60 hover:text-[#F5EFEB]'
                   }`}
                 >
                   ROMÂNĂ
                 </button>
-                <span className="opacity-20 text-[#FAF6F0]/40 self-center select-none">|</span>
+                <span className="opacity-20 text-[#F5EFEB]/40 self-center select-none">|</span>
                 <button
                   onClick={() => {
                     setLang('en');
@@ -167,7 +167,7 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                   className={`px-3 py-1.5 rounded transition-all duration-300 cursor-pointer ${
                     currentLang === 'en'
                       ? 'text-[#C8D9E6] font-bold bg-white/5'
-                      : 'text-[#FAF6F0]/60 hover:text-[#FAF6F0]'
+                      : 'text-[#F5EFEB]/60 hover:text-[#F5EFEB]'
                   }`}
                 >
                   ENGLISH
