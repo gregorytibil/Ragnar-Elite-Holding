@@ -38,13 +38,13 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F5EFEB] bg-grid-pattern text-[#2F4156] selection:bg-[#2F4156] selection:text-white overflow-hidden">
+    <div className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden">
       {/* Premium Hero Section with elegant cinematic overlays */}
-      <section className="relative bg-[#2F4156] text-[#F5EFEB] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
+      <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
         {/* Subtle high-end mesh and lighting layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#2F4156] via-[#2F4156]/95 to-[#2F4156] z-1"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
-        <div className="absolute -top-[30%] -left-[20%] w-[80%] h-[80%] bg-[radial-gradient(ellipse_at_center,rgba(200,217,230,0.06),transparent_60%)] z-2"></div>
+        <div className="absolute -top-[30%] -left-[20%] w-[80%] h-[80%] bg-[radial-gradient(ellipse_at_center,rgba(162,210,255,0.06),transparent_60%)] z-2"></div>
         <div className="absolute -bottom-[30%] -right-[20%] w-[80%] h-[80%] bg-[radial-gradient(ellipse_at_center,rgba(200,217,230,0.05),transparent_60%)] z-2"></div>
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-3"></div>
 
@@ -59,9 +59,9 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-md text-[9px] md:text-[10px] text-[#C8D9E6] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-md text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
-              <Landmark className="w-3 h-3 text-[#C8D9E6]" />
+              <Landmark className="w-3 h-3 text-[#A2D2FF]" />
               <span>CORPORATE ARCHITECTURE</span>
             </motion.div>
 
@@ -95,19 +95,19 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white/95 backdrop-blur-xl rounded-xl p-8 md:p-[70px] shadow-[0_30px_70px_rgba(5,13,29,0.06)] -mt-12 md:-mt-[80px] relative z-20 border border-[#2F4156]/5 overflow-hidden"
+          className="bg-white/95 backdrop-blur-xl rounded-xl p-8 md:p-[70px] shadow-[0_30px_70px_rgba(5,13,29,0.06)] -mt-12 md:-mt-[80px] relative z-20 border border-[#0B1B3D]/5 overflow-hidden"
         >
           {/* Top Decorative Gold/Sky Accent Indicator */}
-          <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#2F4156] via-[#C8D9E6] to-[#2F4156]"></div>
+          <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#0b1b3d] via-[#A2D2FF] to-[#0b1b3d]"></div>
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             {/* Left side: Editorial intro */}
             <div className="lg:col-span-5 flex flex-col">
-              <span className="font-mono text-[10px] tracking-[0.3em] text-[#C8D9E6] uppercase mb-3 block">SECTION I // PHILOSOPHY</span>
-              <h2 className="font-serif text-3xl md:text-[2.65rem] font-bold text-[#2F4156] tracking-tight leading-[1.15] mb-6">
+              <span className="font-mono text-[10px] tracking-[0.3em] text-[#A2D2FF] uppercase mb-3 block">SECTION I // PHILOSOPHY</span>
+              <h2 className="font-serif text-3xl md:text-[2.65rem] font-bold text-[#0B1B3D] tracking-tight leading-[1.15] mb-6">
                 {t.philosophyTitle}
               </h2>
-              <div className="w-12 h-[1px] bg-[#2F4156]/20 mb-6 lg:block hidden"></div>
+              <div className="w-12 h-[1px] bg-[#0B1B3D]/20 mb-6 lg:block hidden"></div>
               <p className="font-sans italic text-slate-500 text-sm hidden lg:block leading-relaxed">
                 "Our capital deployment structure aims to generate absolute resilience under fluctuating macroeconomic patterns."
               </p>
@@ -118,7 +118,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
               <p className="font-sans font-light text-slate-700 text-base md:text-[1.1rem] leading-relaxed relative">
                 {t.philosophyDesc1}
               </p>
-              <p className="font-sans font-light text-slate-600 text-[0.95rem] md:text-[1rem] leading-relaxed border-l-2 border-[#C8D9E6] pl-4 italic">
+              <p className="font-sans font-light text-slate-600 text-[0.95rem] md:text-[1rem] leading-relaxed border-l-2 border-[#A2D2FF] pl-4 italic">
                 {t.philosophyDesc2}
               </p>
             </div>
@@ -136,13 +136,13 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
             className="lg:col-span-6 flex flex-col justify-center space-y-6"
           >
             <div className="space-y-2">
-              <span className="font-mono text-[9px] tracking-[0.3em] text-[#2F4156]/60 uppercase block">SECTION II // THE COGNOMEN</span>
-              <h3 className="font-serif text-3xl md:text-[2.35rem] font-bold text-[#2F4156] tracking-tight leading-none">
+              <span className="font-mono text-[9px] tracking-[0.3em] text-[#0B1B3D]/60 uppercase block">SECTION II // THE COGNOMEN</span>
+              <h3 className="font-serif text-3xl md:text-[2.35rem] font-bold text-[#0B1B3D] tracking-tight leading-none">
                 {t.originTitle}
               </h3>
             </div>
             
-            <div className="h-[2px] w-12 bg-[#2F4156]/15"></div>
+            <div className="h-[2px] w-12 bg-[#0B1B3D]/15"></div>
 
             <div className="space-y-5 text-left">
               <p className="font-sans font-light text-slate-700 text-sm sm:text-[1rem] leading-relaxed">
@@ -160,22 +160,22 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-6 bg-gradient-to-br from-[#2F4156] to-[#2F4156] p-10 md:p-14 rounded-xl border border-white/5 shadow-[0_25px_50px_rgba(5,13,29,0.15)] flex flex-col justify-between relative overflow-hidden"
+            className="lg:col-span-6 bg-gradient-to-br from-[#0B1B3D] to-[#050D1D] p-10 md:p-14 rounded-xl border border-white/5 shadow-[0_25px_50px_rgba(5,13,29,0.15)] flex flex-col justify-between relative overflow-hidden"
           >
             {/* Ambient gold/light circle in the background */}
-            <div className="absolute -top-[20%] -right-[20%] w-[60%] h-[60%] bg-[radial-gradient(ellipse_at_center,rgba(200,217,230,0.08),transparent_70%)] pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-[3px] h-full bg-gradient-to-b from-[#C8D9E6] to-[#2F4156]"></div>
+            <div className="absolute -top-[20%] -right-[20%] w-[60%] h-[60%] bg-[radial-gradient(ellipse_at_center,rgba(162,210,255,0.08),transparent_70%)] pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[3px] h-full bg-gradient-to-b from-[#A2D2FF] to-[#0B1B3D]"></div>
 
-            <Quote className="w-10 h-10 text-[#C8D9E6]/20 mb-8 self-start" />
+            <Quote className="w-10 h-10 text-[#A2D2FF]/20 mb-8 self-start" />
 
             <div className="relative z-10 flex-1 flex items-center">
-              <p className="font-serif italic text-lg sm:text-[1.35rem] text-[#F5EFEB] leading-[1.65] text-left">
+              <p className="font-serif italic text-lg sm:text-[1.35rem] text-[#FAF6F0] leading-[1.65] text-left">
                 {t.originQuote}
               </p>
             </div>
 
             <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between relative z-10">
-              <span className="font-mono text-[9px] tracking-[0.25em] text-[#C8D9E6] uppercase">THE GOVERNING COUNCIL</span>
+              <span className="font-mono text-[9px] tracking-[0.25em] text-[#A2D2FF] uppercase">THE GOVERNING COUNCIL</span>
               <span className="font-sans text-[10px] text-white/40">RAGNAR ELITE HOLDING</span>
             </div>
           </motion.div>
@@ -189,11 +189,11 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
             viewport={{ once: true }}
             className="text-center mb-16 md:mb-20 max-w-3xl mx-auto space-y-4"
           >
-            <span className="font-mono text-[10px] tracking-[0.3em] text-[#2F4156]/60 uppercase block">SECTION III // EXECUTIVE POWER</span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-[2.85rem] font-bold tracking-tight text-[#2F4156]">
+            <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D]/60 uppercase block">SECTION III // EXECUTIVE POWER</span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-[2.85rem] font-bold tracking-tight text-[#0B1B3D]">
               {t.boardTitle}
             </h2>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#2F4156] to-transparent mx-auto"></div>
+            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#0B1B3D] to-transparent mx-auto"></div>
             <p className="font-sans font-light text-sm sm:text-[1rem] text-slate-500 leading-relaxed max-w-2xl mx-auto">
               {t.boardSubtitle}
             </p>
@@ -211,14 +211,14 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
                   y: -8,
                   transition: { duration: 0.3, ease: 'easeOut' }
                 }}
-                className="bg-white rounded-xl p-8 border border-slate-200/60 shadow-[0_8px_30px_rgba(5,13,29,0.015)] hover:shadow-[0_20px_50px_rgba(5,13,29,0.06)] hover:border-[#2F4156]/10 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
+                className="bg-white rounded-xl p-8 border border-slate-200/60 shadow-[0_8px_30px_rgba(5,13,29,0.015)] hover:shadow-[0_20px_50px_rgba(5,13,29,0.06)] hover:border-[#0B1B3D]/10 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
               >
                 {/* Subtle visual gradient on card hover */}
-                <div className="absolute top-0 left-0 w-full h-[4px] bg-[#2F4156]/5 group-hover:bg-gradient-to-r group-hover:from-[#2F4156] group-hover:to-[#C8D9E6] transition-all duration-300"></div>
+                <div className="absolute top-0 left-0 w-full h-[4px] bg-[#0B1B3D]/5 group-hover:bg-gradient-to-r group-hover:from-[#0B1B3D] group-hover:to-[#A2D2FF] transition-all duration-300"></div>
 
                 <div>
                   {/* Monogram Badge */}
-                  <div className="w-[72px] h-[72px] rounded-full bg-gradient-to-br from-[#2F4156] to-[#2F4156] mx-auto mb-6 flex items-center justify-center text-white text-base md:text-[1.15rem] font-serif font-bold relative shadow-md transition-transform duration-500 group-hover:scale-105">
+                  <div className="w-[72px] h-[72px] rounded-full bg-gradient-to-br from-[#0B1B3D] to-[#050D1D] mx-auto mb-6 flex items-center justify-center text-white text-base md:text-[1.15rem] font-serif font-bold relative shadow-md transition-transform duration-500 group-hover:scale-105">
                     {/* Ring layer */}
                     <div className="absolute inset-[3px] border border-white/20 rounded-full"></div>
                     <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
@@ -227,16 +227,16 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
 
                   {/* Name and Role */}
                   <div className="text-center mb-4">
-                    <h3 className="font-serif text-lg md:text-[1.2rem] font-bold text-[#2F4156] tracking-tight group-hover:text-sky-900 transition-colors duration-200">
+                    <h3 className="font-serif text-lg md:text-[1.2rem] font-bold text-[#0B1B3D] tracking-tight group-hover:text-sky-900 transition-colors duration-200">
                       {member.name}
                     </h3>
-                    <div className="text-[#C8D9E6] font-mono text-[9px] uppercase tracking-[2px] font-semibold mt-1">
+                    <div className="text-[#A2D2FF] font-mono text-[9px] uppercase tracking-[2px] font-semibold mt-1">
                       {member.role}
                     </div>
                   </div>
 
                   {/* Clean thin separator */}
-                  <div className="w-8 h-[1px] bg-slate-100 group-hover:w-16 group-hover:bg-[#C8D9E6] transition-all duration-300 mx-auto mb-6"></div>
+                  <div className="w-8 h-[1px] bg-slate-100 group-hover:w-16 group-hover:bg-[#A2D2FF] transition-all duration-300 mx-auto mb-6"></div>
                 </div>
 
                 {/* Description with precise spacing and sizing */}

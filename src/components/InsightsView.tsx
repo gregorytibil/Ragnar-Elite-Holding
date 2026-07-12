@@ -35,10 +35,10 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F5EFEB] bg-grid-pattern text-[#2F4156] selection:bg-[#2F4156] selection:text-white overflow-hidden">
+    <div className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-[#2F4156] text-[#F5EFEB] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#2F4156] via-[#2F4156]/95 to-[#2F4156] z-1"></div>
+      <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-3"></div>
 
@@ -48,7 +48,7 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#C8D9E6] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
               <span>INSIGHTS</span>
             </motion.div>
@@ -83,11 +83,11 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white rounded-sm p-8 md:p-[70px] shadow-[0_20px_50px_rgba(5,13,29,0.05)] -mt-12 md:-mt-[80px] relative z-20 border border-[#2F4156]/10 text-center"
+          className="bg-white rounded-sm p-8 md:p-[70px] shadow-[0_20px_50px_rgba(5,13,29,0.05)] -mt-12 md:-mt-[80px] relative z-20 border border-[#0B1B3D]/10 text-center"
         >
-          <div className="absolute top-0 left-0 w-full h-[2px] bg-[#2F4156]"></div>
-          <Quote className="w-6 h-6 text-[#C8D9E6] mx-auto mb-6" />
-          <p className="font-sans text-lg sm:text-xl md:text-[1.35rem] leading-[1.7] text-[#2F4156]/90 max-w-3xl mx-auto font-light italic">
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-[#0B1B3D]"></div>
+          <Quote className="w-6 h-6 text-[#A2D2FF] mx-auto mb-6" />
+          <p className="font-sans text-lg sm:text-xl md:text-[1.35rem] leading-[1.7] text-[#0B1B3D]/90 max-w-3xl mx-auto font-light italic">
             {t.insightsIntro}
           </p>
         </motion.div>
@@ -105,12 +105,12 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
             >
               {/* Article Meta Sidebar */}
               <div className="lg:col-span-3 space-y-6">
-                 <div className="w-16 h-16 bg-[#2F4156] flex items-center justify-center rounded-lg border border-white/5 shadow-inner">
-                    <art.icon className="w-8 h-8 text-[#C8D9E6]" />
+                 <div className="w-16 h-16 bg-[#050D1D] flex items-center justify-center rounded-lg border border-white/5 shadow-inner">
+                    <art.icon className="w-8 h-8 text-[#A2D2FF]" />
                  </div>
                  <div className="space-y-4 pt-4 border-t border-slate-200">
                     <div>
-                      <span className="font-mono text-[10px] tracking-[0.3em] text-[#2F4156] uppercase block font-bold mb-1">
+                      <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold mb-1">
                         Category
                       </span>
                       <span className="text-sm text-slate-600 font-medium">
@@ -118,7 +118,7 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
                       </span>
                     </div>
                     <div>
-                      <span className="font-mono text-[10px] tracking-[0.3em] text-[#2F4156] uppercase block font-bold mb-1">
+                      <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold mb-1">
                         Author
                       </span>
                       <span className="text-sm text-slate-600 font-medium flex items-center gap-1.5">
@@ -131,11 +131,11 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
 
               {/* Article Content */}
               <div className="lg:col-span-9">
-                <h2 className="text-3xl md:text-5xl font-sans font-bold uppercase mb-8 tracking-tight text-[#2F4156] group-hover:text-[#2F4156]/80 transition-colors leading-tight">
+                <h2 className="text-3xl md:text-5xl font-sans font-bold uppercase mb-8 tracking-tight text-[#0B1B3D] group-hover:text-[#0B1B3D]/80 transition-colors leading-tight">
                   {art.title}
                 </h2>
 
-                <div className="mb-10 text-xl md:text-2xl text-[#2F4156] font-light italic leading-relaxed border-l-2 border-[#C8D9E6] pl-6 md:pl-10">
+                <div className="mb-10 text-xl md:text-2xl text-[#0B1B3D] font-light italic leading-relaxed border-l-2 border-[#A2D2FF] pl-6 md:pl-10">
                   {art.summary}
                 </div>
 
