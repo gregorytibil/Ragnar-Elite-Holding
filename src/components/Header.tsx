@@ -130,7 +130,7 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
         {/* Mobile Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-[#FAF6F0] hover:text-[#C8D9E6] p-1.5 transition-colors cursor-pointer rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
+          className="lg:hidden text-[#FAF6F0] hover:text-[#C8D9E6] w-11 h-11 flex items-center justify-center transition-all duration-200 cursor-pointer rounded-full bg-white/5 border border-white/10 hover:bg-white/10 active:scale-95"
           aria-label={currentLang === 'ro' ? 'Comută meniul de navigare' : 'Toggle navigation menu'}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation-menu"

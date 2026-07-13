@@ -13,9 +13,10 @@ export const translations = {
     heroTitle: 'Ragnar Elite Holding',
     heroSubtitle: 'The Standard of Strategic Leadership.',
     heroBtn: 'Explorează Ecosistemul',
+    heroSecondaryBtn: 'Contact',
 
     // About Section
-    aboutQuote: '„Ragnar Elite Holding este o entitate de investiții de tip „blue-chip”, dedicată gestionării și dezvoltării unui portofoliu diversificat de active de înaltă performanță. Inspirat de spiritul de pionierat și de rigoarea excelenței, holdingul nostru acționează ca un nucleu de stabilitate și creștere într-o economie globală dinamică.”',
+    aboutQuote: '„Ragnar Elite Holding este o entitate de tip blue-chip dedicată consolidării și dezvoltării activelor de înaltă performanță. Ghidați de rigoare și excelență, reprezentăm un pilon de stabilitate și creștere strategică în economia globală.”',
     pillarsTitle: 'Pilonii Ragnar Elite',
     pillarsSubtitle: 'Valorile supreme care ne guvernează deciziile comerciale și operaționale.',
 
@@ -224,9 +225,10 @@ export const translations = {
     heroTitle: 'Ragnar Elite Holding',
     heroSubtitle: 'The Standard of Strategic Leadership.',
     heroBtn: 'Explore the Ecosystem',
+    heroSecondaryBtn: 'Contact',
 
     // About Section
-    aboutQuote: '“Ragnar Elite Holding is a blue-chip investment entity dedicated to managing and growing a diversified portfolio of high-performance assets. Inspired by a pioneering spirit and rigorous excellence, our holding acts as a core of stability and growth in a dynamic global economy.”',
+    aboutQuote: '“Ragnar Elite Holding is a blue-chip entity dedicated to consolidating and scaling high-performance assets. Driven by rigor and excellence, we serve as a core of stability and strategic growth in the global economy.”',
     pillarsTitle: 'The Pillars of Ragnar Elite',
     pillarsSubtitle: 'The supreme values governing our commercial and operational decisions.',
 

@@ -131,13 +131,21 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
+            className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 justify-center w-full"
           >
             <button
               onClick={() => setActiveTab('portfolio')}
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-sky-accent hover:bg-transparent text-navy-brand hover:text-white font-semibold text-xs uppercase tracking-[2px] rounded-[8px] border border-sky-accent transition-all duration-350 cursor-pointer shadow-[0_4px_20px_rgba(162,210,255,0.2)] hover:shadow-[0_0_30px_rgba(162,210,255,0.35)] active:scale-95"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-sky-accent hover:bg-transparent text-navy-brand hover:text-white font-semibold text-xs uppercase tracking-[2px] rounded-[8px] border border-sky-accent transition-all duration-350 cursor-pointer shadow-[0_4px_20px_rgba(162,210,255,0.2)] hover:shadow-[0_0_30px_rgba(162,210,255,0.35)] active:scale-95 w-full sm:w-auto justify-center"
             >
               <span>{t.heroBtn}</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+            </button>
+            <button
+              onClick={() => setActiveTab('contact')}
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-transparent hover:bg-white/[0.04] text-white/90 hover:text-white font-semibold text-xs uppercase tracking-[2px] rounded-[8px] border border-white/20 hover:border-white/60 transition-all duration-350 cursor-pointer active:scale-95 w-full sm:w-auto justify-center"
+            >
+              <span>{t.heroSecondaryBtn}</span>
+              <span className="w-1.5 h-1.5 bg-sky-accent rounded-full animate-pulse group-hover:scale-125 transition-transform duration-300" />
             </button>
           </motion.div>
         </div>
@@ -146,7 +154,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
       {/* About Quote Section (Ultra-Polished Editorial Layout) */}
       <section 
         id="about-section" 
-        className="bg-bej-card py-24 px-6 border-b border-navy-brand/5 relative overflow-hidden flex items-center justify-center"
+        className="bg-bej-card py-14 sm:py-24 px-6 border-b border-navy-brand/5 relative overflow-hidden flex items-center justify-center"
         itemProp="description"
       >
         {/* Sophisticated design lines */}
@@ -196,7 +204,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
       </section>
 
       {/* Pillars Section */}
-      <section className="max-w-[1240px] mx-auto px-6 py-[90px] relative">
+      <section className="max-w-[1240px] mx-auto px-6 py-14 sm:py-24 relative">
         {/* Geometric accent element */}
         <div className="absolute top-0 right-10 w-24 h-24 bg-gradient-to-br from-sky-accent/5 to-transparent rounded-full blur-2xl"></div>
 
@@ -204,7 +212,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-[60px]"
+          className="text-center mb-10 sm:mb-[60px]"
         >
           <h2 className="font-serif text-3xl sm:text-4xl md:text-[2.65rem] font-bold text-navy-brand tracking-wide mb-3">
             {t.pillarsTitle}
@@ -274,7 +282,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
       </section>
 
       {/* Corporate Badges of Scale */}
-      <section className="relative py-20 bg-[#050d1d] text-[#FAF6F0] overflow-hidden border-t border-b border-[#FAF6F0]/5">
+      <section className="relative py-12 sm:py-20 bg-[#050d1d] text-[#FAF6F0] overflow-hidden border-t border-b border-[#FAF6F0]/5">
         {/* Subtle decorative background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-sky-accent/5 rounded-full blur-3xl pointer-events-none select-none"></div>
 

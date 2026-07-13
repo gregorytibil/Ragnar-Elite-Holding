@@ -46,7 +46,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
         </svg>
       ),
       label: 'Instagram',
-      url: 'https://instagram.com/#',
+      url: 'https://www.instagram.com/ragnareliteholding?igsh=MzYwNmtuampmMnlm#/',
     },
     {
       icon: (
@@ -60,7 +60,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
   ];
 
   return (
-    <footer className="bg-[#030914] text-[#FAF6F0] pt-24 pb-12 px-6 md:px-12 relative overflow-hidden">
+    <footer className="bg-[#030914] text-[#FAF6F0] pt-14 sm:pt-24 pb-12 px-6 md:px-12 relative overflow-hidden">
       {/* Exquisite Top Linear Accent - Single pixel line with glowing fade */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[1px] bg-gradient-to-r from-transparent via-sky-accent/40 to-transparent" />

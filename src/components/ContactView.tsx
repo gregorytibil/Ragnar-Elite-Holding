@@ -45,7 +45,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
       itemType="https://schema.org/ContactPage"
     >
       {/* Hero Section */}
-      <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
+      <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[140px] pb-16 sm:pt-[170px] sm:pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-3"></div>
@@ -83,7 +83,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
       </section>
 
       {/* Main Content Container */}
-      <div className="max-w-[1140px] mx-auto px-6 pb-24 md:pb-36 relative z-10 -mt-12 md:-mt-24">
+      <div className="max-w-[1140px] mx-auto px-6 pb-16 sm:pb-24 md:pb-36 relative z-10 -mt-8 sm:-mt-12 md:-mt-24">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.02] pointer-events-none z-0"></div>
 
         <motion.div 
@@ -93,7 +93,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
           className="grid grid-cols-1 lg:grid-cols-12 relative z-20 shadow-[0_20px_50px_rgba(5,13,29,0.08)] rounded-sm overflow-hidden border border-[#0B1B3D]/10"
         >
           {/* Left Column - Contact info */}
-          <div className="lg:col-span-5 bg-[#050D1D] text-[#FAF6F0] p-10 md:p-14 lg:p-16 flex flex-col justify-between relative overflow-hidden border-r border-[#0B1B3D]/10">
+          <div className="lg:col-span-5 bg-[#050D1D] text-[#FAF6F0] p-6 sm:p-10 md:p-14 lg:p-16 flex flex-col justify-between relative overflow-hidden border-r border-[#0B1B3D]/10">
             <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-0"></div>
             <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.05] z-0"></div>
             
@@ -126,7 +126,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
           </div>
 
           {/* Right Column - Form container */}
-          <div className="lg:col-span-7 bg-white p-10 md:p-14 lg:p-16 relative">
+          <div className="lg:col-span-7 bg-white p-6 sm:p-10 md:p-14 lg:p-16 relative">
             <AnimatePresence mode="wait">
               {formState === 'default' && (
                 <motion.div
@@ -139,7 +139,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                   <h2 className="font-sans text-2xl md:text-3xl font-bold text-[#0B1B3D] mb-3 uppercase tracking-tight">
                     {t.formTitle}
                   </h2>
-                  <p className="font-sans font-light text-base text-slate-500 mb-12 leading-relaxed max-w-lg">
+                  <p className="font-sans font-light text-base text-slate-500 mb-8 sm:mb-12 leading-relaxed max-w-lg">
                     {t.formSubtitle}
                   </p>
 

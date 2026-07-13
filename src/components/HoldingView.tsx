@@ -44,7 +44,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
       itemType="https://schema.org/AboutPage"
     >
       {/* Premium Hero Section with elegant cinematic overlays */}
-      <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
+      <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[140px] pb-16 sm:pt-[170px] sm:pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
         {/* Subtle high-end mesh and lighting layers */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
@@ -93,13 +93,13 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
       </section>
 
       {/* Main Corporate Core Container */}
-      <div className="max-w-[1140px] mx-auto px-6 pb-24 md:pb-36 relative z-10">
+      <div className="max-w-[1140px] mx-auto px-6 pb-16 sm:pb-24 md:pb-36 relative z-10">
         {/* Asymmetrical Premium Philosophy Card with -mt Overlap */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white/95 backdrop-blur-xl rounded-xl p-8 md:p-[70px] shadow-[0_30px_70px_rgba(5,13,29,0.06)] -mt-12 md:-mt-[80px] relative z-20 border border-[#0B1B3D]/5 overflow-hidden"
+          className="bg-white/95 backdrop-blur-xl rounded-xl p-6 sm:p-8 md:p-[70px] shadow-[0_30px_70px_rgba(5,13,29,0.06)] -mt-8 sm:-mt-12 md:-mt-[80px] relative z-20 border border-[#0B1B3D]/5 overflow-hidden"
         >
           {/* Top Decorative Gold/Sky Accent Indicator */}
           <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#0b1b3d] via-[#A2D2FF] to-[#0b1b3d]"></div>
@@ -130,7 +130,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
         </motion.div>
 
         {/* Asymmetrical Origins Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch my-24 md:my-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch my-14 sm:my-24 md:my-32">
           {/* Left Side: Historical Narrative */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -164,7 +164,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-6 bg-gradient-to-br from-[#0B1B3D] to-[#050D1D] p-10 md:p-14 rounded-xl border border-white/5 shadow-[0_25px_50px_rgba(5,13,29,0.15)] flex flex-col justify-between relative overflow-hidden"
+            className="lg:col-span-6 bg-gradient-to-br from-[#0B1B3D] to-[#050D1D] p-6 sm:p-10 md:p-14 rounded-xl border border-white/5 shadow-[0_25px_50px_rgba(5,13,29,0.15)] flex flex-col justify-between relative overflow-hidden"
           >
             {/* Ambient gold/light circle in the background */}
             <div className="absolute -top-[20%] -right-[20%] w-[60%] h-[60%] bg-[radial-gradient(ellipse_at_center,rgba(162,210,255,0.08),transparent_70%)] pointer-events-none"></div>
@@ -186,12 +186,12 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
         </div>
 
         {/* Board of Directors Section with Custom-designed Cards */}
-        <section className="mt-28 md:mt-36">
+        <section className="mt-16 sm:mt-28 md:mt-36">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16 md:mb-20 max-w-3xl mx-auto space-y-4"
+            className="text-center mb-10 sm:mb-16 md:mb-20 max-w-3xl mx-auto space-y-4"
           >
             <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D]/60 uppercase block">SECTION III // EXECUTIVE POWER</span>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-[2.85rem] font-bold tracking-tight text-[#0B1B3D]">
@@ -215,7 +215,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
                   y: -8,
                   transition: { duration: 0.3, ease: 'easeOut' }
                 }}
-                className="bg-white rounded-xl p-8 border border-slate-200/60 shadow-[0_8px_30px_rgba(5,13,29,0.015)] hover:shadow-[0_20px_50px_rgba(5,13,29,0.06)] hover:border-[#0B1B3D]/10 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
+                className="bg-white rounded-xl p-6 md:p-8 border border-slate-200/60 shadow-[0_8px_30px_rgba(5,13,29,0.015)] hover:shadow-[0_20px_50px_rgba(5,13,29,0.06)] hover:border-[#0B1B3D]/10 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
                 itemProp="employee"
                 itemScope
                 itemType="https://schema.org/Person"

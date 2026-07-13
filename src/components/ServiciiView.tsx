@@ -43,7 +43,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
       itemType="https://schema.org/CollectionPage"
     >
       {/* Hero Section */}
-      <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
+      <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[140px] pb-16 sm:pt-[170px] sm:pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-3"></div>
@@ -81,7 +81,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
       </section>
 
       {/* Main Content Container */}
-      <div className="max-w-[1140px] mx-auto px-6 pb-24 md:pb-36 relative z-10">
+      <div className="max-w-[1140px] mx-auto px-6 pb-16 sm:pb-24 md:pb-36 relative z-10">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.02] pointer-events-none z-0"></div>
 
         {/* Intro Quote */}
@@ -89,7 +89,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white rounded-sm p-8 md:p-[70px] shadow-[0_20px_50px_rgba(5,13,29,0.05)] -mt-12 md:-mt-[80px] relative z-20 border border-[#0B1B3D]/10 text-center"
+          className="bg-white rounded-sm p-6 sm:p-8 md:p-[70px] shadow-[0_20px_50px_rgba(5,13,29,0.05)] -mt-8 sm:-mt-12 md:-mt-[80px] relative z-20 border border-[#0B1B3D]/10 text-center"
         >
           <div className="absolute top-0 left-0 w-full h-[2px] bg-[#0B1B3D]"></div>
           <Quote className="w-6 h-6 text-[#A2D2FF] mx-auto mb-6" />
@@ -99,9 +99,9 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
         </motion.div>
 
         {/* Service Sections */}
-        <div className="space-y-24 md:space-y-36 mt-24">
+        <div className="space-y-16 md:space-y-36 mt-16 md:mt-24">
           {serviceGroups.map((group, idx) => (
-            <div key={idx} className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-[#0B1B3D]/10 pt-16">
+            <div key={idx} className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-[#0B1B3D]/10 pt-10 md:pt-16">
               <div className="lg:col-span-4">
                 <div className="sticky top-32 space-y-4">
                   <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold">
@@ -122,7 +122,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
                       boxShadow: '0 25px 50px -12px rgba(11,27,61,0.25)',
                       borderColor: '#A2D2FF'
                     }}
-                    className="group bg-white p-8 border border-slate-200/80 rounded-sm transition-all duration-300 flex flex-col"
+                    className="group bg-white p-6 md:p-8 border border-slate-200/80 rounded-sm transition-all duration-300 flex flex-col"
                     itemProp="hasPart"
                     itemScope
                     itemType="https://schema.org/Service"
