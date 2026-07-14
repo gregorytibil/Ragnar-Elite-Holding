@@ -5,7 +5,7 @@ export const translations = {
     navHolding: 'Holding',
     navPortfolio: 'Portofoliu',
     navServices: 'Servicii',
-    navInsights: 'Insights',
+    navInsights: 'Perspective',
     navContact: 'Parteneriate',
     navLegal: 'Guvernanță & GDPR',
 

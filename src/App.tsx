@@ -17,9 +17,12 @@ import { initAnalytics, trackPageView, trackScrollDepth } from './lib/analytics'
 export default function App() {
   const [lang, setLang] = useState<Language>(() => {
     if (typeof navigator !== 'undefined') {
+      // Obținem limbile preferate ale utilizatorului setate în browser
+      // We retrieve the user's preferred languages configured in their browser
       const userLangs = navigator.languages || [navigator.language || (navigator as any).userLanguage || ''];
       
-      // Detect Romanian timezone
+      // Detecție automată a fusului orar din România sau Republica Moldova ca semnal de fallback
+      // Automatic detection of the Romanian/Moldovan timezone as a robust fallback signal
       let isRomanianTimezone = false;
       try {
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -28,18 +31,23 @@ export default function App() {
         }
       } catch (e) {}
 
+      // Verificăm dacă browserul are limba română în lista de preferințe
+      // Check if the browser has Romanian in its preference list
       const hasRo = userLangs.some(l => l.toLowerCase().startsWith('ro'));
       if (hasRo || isRomanianTimezone) {
         return 'ro';
       }
 
-      // If they explicitly have English as their primary preference, return 'en'
+      // Dacă utilizatorul preferă explicit engleza ca primă opțiune în browser
+      // If the user explicitly prefers English as their first choice in the browser
       const primaryLang = userLangs[0] || '';
       if (primaryLang.toLowerCase().startsWith('en')) {
         return 'en';
       }
     }
-    return 'ro'; // Default fallback is Romanian (the app's original default)
+    // Implicit revenim la limba română ca limbă nativă a platformei
+    // Default fallback to Romanian as the platform's native language
+    return 'ro';
   });
   const [activeTab, setActiveTab] = useState<string>('home');
 
