@@ -18,12 +18,28 @@ export default function App() {
   const [lang, setLang] = useState<Language>(() => {
     if (typeof navigator !== 'undefined') {
       const userLangs = navigator.languages || [navigator.language || (navigator as any).userLanguage || ''];
+      
+      // Detect Romanian timezone
+      let isRomanianTimezone = false;
+      try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (tz && (tz.includes('Bucharest') || tz.includes('Chisinau') || tz.includes('Romania'))) {
+          isRomanianTimezone = true;
+        }
+      } catch (e) {}
+
       const hasRo = userLangs.some(l => l.toLowerCase().startsWith('ro'));
-      if (hasRo) {
+      if (hasRo || isRomanianTimezone) {
         return 'ro';
       }
+
+      // If they explicitly have English as their primary preference, return 'en'
+      const primaryLang = userLangs[0] || '';
+      if (primaryLang.toLowerCase().startsWith('en')) {
+        return 'en';
+      }
     }
-    return 'en';
+    return 'ro'; // Default fallback is Romanian (the app's original default)
   });
   const [activeTab, setActiveTab] = useState<string>('home');
 
@@ -35,15 +51,37 @@ export default function App() {
     const hasRo = userLangs.some(l => l.toLowerCase().startsWith('ro'));
     const hasEn = userLangs.some(l => l.toLowerCase().startsWith('en'));
 
-    // If browser supports Romanian or English natively, use our premium pre-built translations
-    if (hasRo || hasEn) {
+    // Detect Romanian timezone
+    let isRomanianTimezone = false;
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz && (tz.includes('Bucharest') || tz.includes('Chisinau') || tz.includes('Romania'))) {
+        isRomanianTimezone = true;
+      }
+    } catch (e) {}
+
+    // If browser supports Romanian natively, or they are in the Romanian timezone, use our premium pre-built Romanian translation
+    if (hasRo || isRomanianTimezone) {
+      setLang('ro');
       // Clear any leftover translation cookies to avoid double translation issues
       document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
       return;
     }
 
-    // Otherwise, find the best language match for automated translation (e.g. Polish, Chinese, French)
+    // If browser supports English natively, use our premium pre-built English translation
+    if (hasEn) {
+      setLang('en');
+      // Clear any leftover translation cookies to avoid double translation issues
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
+      return;
+    }
+
+    // Otherwise, for other foreign languages (e.g. Polish, Chinese, French, German):
+    // Use our native English as the source language for the highest translation accuracy
+    setLang('en');
+
     const primaryLang = userLangs[0] || '';
     let targetLangCode = '';
     const lowerLang = primaryLang.toLowerCase();
@@ -53,10 +91,10 @@ export default function App() {
     } else if (lowerLang.includes('cn') || lowerLang.includes('simplified') || lowerLang.startsWith('zh')) {
       targetLangCode = 'zh-CN';
     } else {
-      targetLangCode = lowerLang.split('-')[0]; // e.g. "pl" for Polish, "de" for German
+      targetLangCode = lowerLang.split('-')[0]; // e.g. "pl" for Polish, "de" for German, "fr" for French
     }
 
-    if (targetLangCode && targetLangCode !== 'en') {
+    if (targetLangCode && targetLangCode !== 'en' && targetLangCode !== 'ro') {
       // Configure cookie to trigger automatic translation in Google Translate
       const cookieValue = `/en/${targetLangCode}`;
       document.cookie = `googtrans=${cookieValue}; path=/;`;
