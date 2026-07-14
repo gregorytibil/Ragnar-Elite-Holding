@@ -30,7 +30,6 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
     { id: 'holding', label: t.navHolding },
     { id: 'portfolio', label: t.navPortfolio },
     { id: 'services', label: t.navServices },
-    { id: 'insights', label: t.navInsights },
     { id: 'contact', label: t.navContact },
     { id: 'legal', label: t.navLegal },
   ];

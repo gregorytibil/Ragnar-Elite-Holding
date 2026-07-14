@@ -7,7 +7,6 @@ import HomeView from './components/HomeView';
 import HoldingView from './components/HoldingView';
 import PortofoliuView from './components/PortofoliuView';
 import ServiciiView from './components/ServiciiView';
-import InsightsView from './components/InsightsView';
 import ContactView from './components/ContactView';
 import LegalView from './components/LegalView';
 import TermsView from './components/TermsView';
@@ -187,8 +186,6 @@ export default function App() {
         return <PortofoliuView currentLang={lang} />;
       case 'services':
         return <ServiciiView currentLang={lang} />;
-      case 'insights':
-        return <InsightsView currentLang={lang} />;
       case 'contact':
         return <ContactView currentLang={lang} />;
       case 'legal':

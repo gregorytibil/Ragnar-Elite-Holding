@@ -109,7 +109,6 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
               { label: t.navHolding, tab: 'holding' },
               { label: t.navPortfolio, tab: 'portfolio' },
               { label: t.navServices, tab: 'services' },
-              { label: t.navInsights, tab: 'insights' },
               { label: t.navContact, tab: 'contact' },
             ].map((item) => (
               <li key={item.tab}>

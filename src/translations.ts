@@ -2,7 +2,7 @@ export const translations = {
   ro: {
     // Navigation
     navHome: 'Acasă',
-    navHolding: 'Holding',
+    navHolding: 'Despre Noi',
     navPortfolio: 'Portofoliu',
     navServices: 'Servicii',
     navInsights: 'Perspective',
@@ -232,7 +232,7 @@ export const translations = {
   en: {
     // Navigation
     navHome: 'Home',
-    navHolding: 'The Holding',
+    navHolding: 'About Us',
     navPortfolio: 'Portfolio',
     navServices: 'Services',
     navInsights: 'Insights',
