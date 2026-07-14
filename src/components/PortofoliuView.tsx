@@ -17,9 +17,21 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       subtitle: t.div1Subtitle,
       tag: t.divTag1,
       items: [
-        { title: t.div1Item1Title, desc: t.div1Item1Desc },
-        { title: t.div1Item2Title, desc: t.div1Item2Desc },
-        { title: t.div1Item3Title, desc: t.div1Item3Desc },
+        { 
+          title: t.div1Item1Title, 
+          desc: t.div1Item1Desc,
+          image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&h=400&q=80'
+        },
+        { 
+          title: t.div1Item2Title, 
+          desc: t.div1Item2Desc,
+          image: 'https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=600&h=400&q=80'
+        },
+        { 
+          title: t.div1Item3Title, 
+          desc: t.div1Item3Desc,
+          image: 'https://images.unsplash.com/photo-1517502884422-41eaaced0168?auto=format&fit=crop&w=600&h=400&q=80'
+        },
       ],
     },
     {
@@ -28,9 +40,21 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       subtitle: t.div2Subtitle,
       tag: t.divTag2,
       items: [
-        { title: t.div2Item1Title, desc: t.div2Item1Desc },
-        { title: t.div2Item2Title, desc: t.div2Item2Desc },
-        { title: t.div2Item3Title, desc: t.div2Item3Desc },
+        { 
+          title: t.div2Item1Title, 
+          desc: t.div2Item1Desc,
+          image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400&q=80'
+        },
+        { 
+          title: t.div2Item2Title, 
+          desc: t.div2Item2Desc,
+          image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&h=400&q=80'
+        },
+        { 
+          title: t.div2Item3Title, 
+          desc: t.div2Item3Desc,
+          image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&h=400&q=80'
+        },
       ],
     },
     {
@@ -39,9 +63,21 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       subtitle: t.div3Subtitle,
       tag: t.divTag3,
       items: [
-        { title: t.div3Item1Title, desc: t.div3Item1Desc },
-        { title: t.div3Item2Title, desc: t.div3Item2Desc },
-        { title: t.div3Item3Title, desc: t.div3Item3Desc },
+        { 
+          title: t.div3Item1Title, 
+          desc: t.div3Item1Desc,
+          image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600&h=400&q=80'
+        },
+        { 
+          title: t.div3Item2Title, 
+          desc: t.div3Item2Desc,
+          image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=600&h=400&q=80'
+        },
+        { 
+          title: t.div3Item3Title, 
+          desc: t.div3Item3Desc,
+          image: 'https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=600&h=400&q=80'
+        },
       ],
     },
     {
@@ -50,10 +86,26 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       subtitle: t.div4Subtitle,
       tag: t.divTag4,
       items: [
-        { title: t.div4Item1Title, desc: t.div4Item1Desc },
-        { title: t.div4Item2Title, desc: t.div4Item2Desc },
-        { title: t.div4Item3Title, desc: t.div4Item3Desc },
-        { title: t.div4Item4Title, desc: t.div4Item4Desc },
+        { 
+          title: t.div4Item1Title, 
+          desc: t.div4Item1Desc,
+          image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&h=400&q=80'
+        },
+        { 
+          title: t.div4Item2Title, 
+          desc: t.div4Item2Desc,
+          image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&h=400&q=80'
+        },
+        { 
+          title: t.div4Item3Title, 
+          desc: t.div4Item3Desc,
+          image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&h=400&q=80'
+        },
+        { 
+          title: t.div4Item4Title, 
+          desc: t.div4Item4Desc,
+          image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&h=400&q=80'
+        },
       ],
     },
   ];
@@ -69,8 +121,15 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
 
       {/* Hero Section */}
       <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[140px] pb-16 sm:pt-[170px] sm:pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
+        {/* Background corporate panoramic boardroom meeting image */}
+        <img 
+          src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80" 
+          alt="Luxury corporate office boardroom glass steel architecture"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.35] pointer-events-none z-0 scale-105"
+          referrerPolicy="no-referrer"
+        />
         {/* Subtle high-end mesh and lighting layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1 opacity-60"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-3"></div>
 
@@ -164,25 +223,40 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
                       boxShadow: '0 25px 50px -12px rgba(11,27,61,0.25)',
                       borderColor: '#A2D2FF'
                     }}
-                    className="group bg-white p-6 md:p-8 border border-slate-200/80 rounded-sm transition-all duration-300 flex flex-col justify-between"
+                    className="group bg-white border border-slate-200/80 rounded-lg overflow-hidden transition-all duration-300 flex flex-col justify-between h-full"
                     itemProp="hasPart"
                     itemScope
                     itemType="https://schema.org/Project"
                     role="listitem"
                   >
-                    <div className="space-y-4">
-                      <h3 
-                        className="font-sans text-lg font-semibold text-[#0B1B3D] leading-tight group-hover:text-[#0B1B3D]/80 transition-colors duration-200"
-                        itemProp="name"
-                      >
-                        {item.title}
-                      </h3>
-                      <p 
-                        className="font-sans font-light text-sm text-slate-500 leading-relaxed"
-                        itemProp="description"
-                      >
-                        {item.desc}
-                      </p>
+                    {/* Top half: Photo */}
+                    <div className="h-44 sm:h-48 overflow-hidden relative border-b border-slate-100 bg-[#050D1D]">
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                        referrerPolicy="no-referrer"
+                      />
+                      {/* Subtle linear overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
+                    </div>
+
+                    {/* Bottom half: Title & Description */}
+                    <div className="p-6 sm:p-8 flex-grow flex flex-col justify-between space-y-4">
+                      <div className="space-y-3">
+                        <h3 
+                          className="font-sans text-lg font-semibold text-[#0B1B3D] leading-tight group-hover:text-[#A2D2FF] transition-colors duration-200"
+                          itemProp="name"
+                        >
+                          {item.title}
+                        </h3>
+                        <p 
+                          className="font-sans font-light text-sm text-slate-500 leading-relaxed"
+                          itemProp="description"
+                        >
+                          {item.desc}
+                        </p>
+                      </div>
                     </div>
                   </motion.div>
                 ))}

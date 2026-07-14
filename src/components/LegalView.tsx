@@ -21,10 +21,19 @@ export default function LegalView({ currentLang }: LegalViewProps) {
 
   return (
     <div 
-      className="min-h-screen bg-ice-marble text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden"
+      className="min-h-screen bg-ice-marble text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden relative"
       itemScope
       itemType="https://schema.org/WebPage"
     >
+      {/* Abstract digital global data connection network lines background (5% opacity, max blur) */}
+      <div className="fixed inset-0 z-0 pointer-events-none select-none overflow-hidden opacity-[0.05]">
+        <img 
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80"
+          alt="Abstract digital network connections"
+          className="w-full h-full object-cover filter blur-[4px]"
+          referrerPolicy="no-referrer"
+        />
+      </div>
       {/* Hero Section */}
       <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[170px] pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>

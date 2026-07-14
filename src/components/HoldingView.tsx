@@ -45,8 +45,15 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
     >
       {/* Premium Hero Section with elegant cinematic overlays */}
       <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[140px] pb-16 sm:pt-[170px] sm:pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
+        {/* Background corporate architecture image */}
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" 
+          alt="Modern corporate architecture glass steel facade"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.30] pointer-events-none z-0 scale-105"
+          referrerPolicy="no-referrer"
+        />
         {/* Subtle high-end mesh and lighting layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1 opacity-75"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
         <div className="absolute -top-[30%] -left-[20%] w-[80%] h-[80%] bg-[radial-gradient(ellipse_at_center,rgba(162,210,255,0.06),transparent_60%)] z-2"></div>
         <div className="absolute -bottom-[30%] -right-[20%] w-[80%] h-[80%] bg-[radial-gradient(ellipse_at_center,rgba(200,217,230,0.05),transparent_60%)] z-2"></div>
@@ -185,25 +192,36 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
           </motion.div>
         </div>
 
-        {/* Board of Directors Section with Custom-designed Cards */}
-        <section className="mt-16 sm:mt-28 md:mt-36">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-10 sm:mb-16 md:mb-20 max-w-3xl mx-auto space-y-4"
-          >
-            <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D]/60 uppercase block">{t.sectionExecutivePower}</span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-[2.85rem] font-bold tracking-tight text-[#0B1B3D]">
-              {t.boardTitle}
-            </h2>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#0B1B3D] to-transparent mx-auto"></div>
-            <p className="font-sans font-light text-sm sm:text-[1rem] text-slate-500 leading-relaxed max-w-2xl mx-auto">
-              {t.boardSubtitle}
-            </p>
-          </motion.div>
+        {/* Board of Directors Section with Luxury Panoramic Boardroom Background */}
+        <section className="mt-16 sm:mt-28 md:mt-36 relative rounded-2xl overflow-hidden py-14 sm:py-20 px-6 sm:px-10 border border-[#0B1B3D]/10 bg-[#050D1D] shadow-2xl">
+          {/* Panoramic Boardroom Backdrop Image */}
+          <img 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&h=600&q=80" 
+            alt="Luxury corporate boardroom meeting table panorama"
+            className="absolute inset-0 w-full h-full object-cover opacity-[0.18] pointer-events-none z-0 scale-105"
+            referrerPolicy="no-referrer"
+          />
+          {/* Deep dark luxury navy overlay filter */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D]/95 via-[#0B1B3D]/90 to-[#050D1D]/95 z-0"></div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label={t.boardTitle}>
+          <div className="relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-10 sm:mb-16 md:mb-20 max-w-3xl mx-auto space-y-4"
+            >
+              <span className="font-mono text-[10px] tracking-[0.3em] text-[#A2D2FF] uppercase block">{t.sectionExecutivePower}</span>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-[2.85rem] font-bold tracking-tight text-white uppercase">
+                {t.boardTitle}
+              </h2>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#A2D2FF] to-transparent mx-auto"></div>
+              <p className="font-sans font-light text-sm sm:text-[1rem] text-[#C8D9E6] leading-relaxed max-w-2xl mx-auto">
+                {t.boardSubtitle}
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label={t.boardTitle}>
             {boardMembers.map((member, idx) => (
               <motion.div
                 key={idx}
@@ -265,6 +283,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
                 <div className="absolute bottom-2 right-2 w-2 h-2 border-r border-b border-transparent group-hover:border-slate-300 transition-all duration-300"></div>
               </motion.div>
             ))}
+          </div>
           </div>
         </section>
       </div>
