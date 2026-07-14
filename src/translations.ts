@@ -455,4 +455,229 @@ export const translations = {
     insightsArticle2Summary: 'How utilizing advanced predictive algorithms and smart management systems optimizes energy risks and financial returns in highly volatile markets.',
     insightsArticle2Content: 'Modern energy grids and capital markets require a speed of reaction that exceeds traditional human decision-making capacity. Our recent investments in smart grids and enterprise IT infrastructure have generated an 18% efficiency increase across group subsidiaries. Asset protection remains our core foundation for long-term stability.',
   },
+  fr: {
+    // Navigation
+    navHome: 'Accueil',
+    navHolding: 'Le Holding',
+    navPortfolio: 'Portefeuille',
+    navServices: 'Services',
+    navInsights: 'Perspectives',
+    navContact: 'Partenariats',
+    navLegal: 'Gouvernance & RGPD',
+
+    labelCategory: 'Catégorie',
+    labelAuthor: 'Auteur',
+    divTag1: 'DIVISION I',
+    divTag2: 'DIVISION II',
+    divTag3: 'DIVISION III',
+    divTag4: 'DIVISION IV',
+    servicesTag1: 'SERVICES I',
+    servicesTag2: 'SERVICES II',
+
+    // Hero Section
+    establishedInHK: 'ÉTABLI À HONG KONG',
+    heroTitle: 'Ragnar Elite Holding',
+    heroSubtitle: 'La norme du leadership stratégique.',
+    heroBtn: 'Explorer l\'Écosystème',
+    heroSecondaryBtn: 'Contact',
+
+    // About Section
+    aboutQuote: '« Ragnar Elite Holding est une entité de premier plan dédiée à la consolidation et au développement d\'actifs de haute performance. Guidés par la rigueur et l\'excellence, nous représentons un pilier de stabilité et de croissance stratégique dans l\'économie mondiale. »',
+    pillarsTitle: 'Les Piliers de Ragnar Elite',
+    pillarsSubtitle: 'Les valeurs suprêmes qui régissent nos décisions commerciales et opérationnelles.',
+
+    // Pillars
+    pillarFortitudeTitle: '⚡ Force & Résilience',
+    pillarFortitudeDesc: 'Représente la résilience structurelle et la force inébranlable face aux transformations macroéconomiques agressives du marché mondial.',
+    pillarExcellenceTitle: '🏆 Excellence',
+    pillarExcellenceDesc: 'Une norme opérationnelle absolue et sans compromis, appliquée rigoureusement dans chaque transaction, audit ou partenariat exécuté.',
+    pillarIntegrityTitle: '⚖️ Intégrité',
+    pillarIntegrityDesc: 'Pleine transparence gouvernementale, éthique professionnelle incorruptible et responsabilité totale envers le capital consolidé.',
+    pillarVisionTitle: '🌍 Vision Globale',
+    pillarVisionDesc: 'Une perspective élargie, sans frontières administratives ni barrières de marché, axée sur la génération d\'un impact systémique à l\'échelle mondiale.',
+
+    // Holding Section
+    holdingHeaderTitle: 'Le Holding',
+    holdingHeaderSubtitle: 'Philosophie d\'entreprise, héritage et structure de gouvernance d\'entreprise.',
+    corporateArchitecture: 'ARCHITECTURE CORPORATIVE',
+    governingCouncil: 'CONSEIL DE GOUVERNANCE',
+    sectionPhilosophy: 'SECTION I // PHILOSOPHIE',
+    sectionCognomen: 'SECTION II // SURNOM',
+    sectionExecutivePower: 'SECTION III // POUVOIR EXÉCUTIF',
+    philosophyTitle: 'Philosophie d\'Entreprise',
+    philosophyDesc1: 'Chez Ragnar Elite Holding, la gouvernance d\'entreprise dépasse la simple gestion des actifs financiers. Nous opérons selon un modèle structurel intégré verticalement, conçu spécifiquement pour générer de la valeur à long terme, totalement immunisé contre les fluctuations saisonnières ou les cycles économiques de courte durée des marchés internationaux.',
+    philosophyDesc2: 'Notre stratégie principale repose sur des acquisitions sécurisées de type blue-chip et des restructurations opérationnelles immédiates. Grâce à l\'infusion de capital stratégique et d\'expertise exécutive, nous transformons des entités à fort potentiel en leaders capables d\'une expansion transfrontalière agressive.',
+    philosophyQuote: '« Notre structure de déploiement de capital vise à générer une résilience absolue face aux fluctuations des modèles macroéconomiques. »',
+    originTitle: 'Origine du Nom & Héritage',
+    originDesc1: 'Notre nom réunit deux concepts fondamentaux pour l\'identité du groupe : la force brute de pionnier commercial et la rigueur administrative absolue.',
+    originDesc2: 'Ragnar représente le courage stratégique indispensable, la résilience structurelle face à des marchés très volatils et la capacité innée à ouvrir de nouvelles frontières commerciales complexes. Elite définit un standard opérationnel exclusif, où aucune transaction ni aucun processus interne ne laisse place au compromis ou à l\'erreur administrative.',
+    originQuote: '« Nous ne nous adaptons pas passivement à l\'avenir économique mondial ; nous le détenons structurellement. Nous protégeons les ressources de nos partenaires avec la même force avec laquelle nous étendons notre écosystème sur les marchés internationaux. »',
+    boardTitle: 'Le Conseil d\'Administration',
+    boardSubtitle: 'Une direction unifiée, composée d\'experts reconnus en macroéconomie, ingénierie financière et gestion opérationnelle de niveau international.',
+
+    // Board Members
+    boardMember1Name: 'Executive Chairman',
+    boardMember1Role: 'Stratégie Globale & M&A',
+    boardMember1Desc: 'Orchestre la vision macro du holding et coordonne l\'allocation stratégique du capital pour les grandes transactions et fusions internationales du groupe.',
+    boardMember2Name: 'Chief Financial Officer',
+    boardMember2Role: 'Rigueur Fiscale & Audit',
+    boardMember2Desc: 'Supervise la gouvernance des risques consolidés, la conformité totale aux réglementations financières européennes et internationales, assurant la protection des actifs mondiaux.',
+    boardMember3Name: 'Managing Director - Asia',
+    boardMember3Role: 'Transactions Stratégiques & Expansion',
+    boardMember3Desc: 'Gère le hub commercial de Hong Kong et mène les négociations intercontinentales pour l\'intégration et l\'acquisition d\'actifs de haute performance.',
+    boardMember4Name: 'Head of Legal & Governance',
+    boardMember4Role: 'Conformité Internationale',
+    boardMember4Desc: 'Garantit l\'intégrité juridique globale et supervise la conformité des fusions et acquisitions transfrontalières, sécurisant la propriété intellectuelle du holding.',
+
+    // Portfolio Section
+    portfolioHeaderTitle: 'Portefeuille d\'Actifs',
+    portfolioHeaderSubtitle: 'L\'architecture d\'élite d\'un écosystème immunisé contre les paradigmes de volatilité économique.',
+    portfolioIntro: 'Nous orchestrons avec une rigueur absolue et une précision mathématique 13 industries stratégiques interconnectées verticalement.',
+
+    // Divisions 1
+    div1Title: '🏛️ 01. Immobilier de Luxe & Macro-Infrastructure',
+    div1Subtitle: 'Développements d\'envergure mondiale, concepts visionnaires et conception structurelle premium.',
+    div1Item1Title: 'Architecture & Conception',
+    div1Item1Desc: 'Systèmes complexes de modélisation architecturale d\'avant-garde et de conception structurelle tridimensionnelle, transformant des concepts visionnaires en repères immobiliers mondiaux.',
+    div1Item2Title: 'Construction & Développement',
+    div1Item2Desc: 'Exécution technique impeccable, ingénierie de précision et gestion de projet avancée pour des objectifs commerciaux et civils à l\'échelle macro-industrielle.',
+    div1Item3Title: 'Immobilier & Investissements',
+    div1Item3Desc: 'Placement tactique du capital dans des développements résidentiels exclusifs, optimisés structurellement pour générer des rendements supérieurs et préserver la valeur des actifs.',
+
+    // Divisions 2
+    div2Title: '💻 02. Technologie Disruptive & Infrastructure Critique',
+    div2Subtitle: 'Numérisation avancée et systèmes énergétiques intelligents pour sécuriser l\'économie de l\'avenir.',
+    div2Item1Title: 'Technologie & Informatique',
+    div2Item1Desc: 'Développement de logiciels d\'entreprise, architectures cloud évolutives et solutions de cybersécurité avancées dédiées aux entités gouvernementales et corporatives mondiales.',
+    div2Item2Title: 'Électricité & Énergie',
+    div2Item2Desc: 'Infrastructure énergétique moderne, administration des réseaux de transport intelligents et développement d\'actifs de production basés sur des ressources durables.',
+    div2Item3Title: 'Transport & Logistique',
+    div2Item3Desc: 'Optimisation algorithmique des chaînes d\'approvisionnement mondiales, transport intermodal et connectivité logistique transfrontalière entièrement fluidifiée.',
+
+    // Divisions 3
+    div3Title: '📊 03. Gestion d\'Actifs & Services Corporatifs Intégrés',
+    div3Subtitle: 'Gouvernance, conformité totale et systèmes de support unifiés pour accélérer les filiales.',
+    div3Item1Title: 'Comptabilité & Audit',
+    div3Item1Desc: 'Gestion financière stratégique centralisée, audit interne rigoureux, planification budgétaire macro et conformité fiscale internationale sans compromis.',
+    div3Item2Title: 'Juridique & Contentieux',
+    div3Item2Desc: 'Protection juridique multidimensionnelle, allant de la structuration des transactions transfrontalières et de la protection de la propriété intellectuelle à la conformité stricte aux réglementations européennes et internationales.',
+    div3Item3Title: 'Infrastructures Corporatives',
+    div3Item3Desc: 'Systèmes unifiés de gestion des infrastructures opérationnelles et logistiques pour tous les sièges des filiales du holding à l\'échelle mondiale.',
+
+    // Divisions 4
+    div4Title: '🧬 04. Sciences de la Vie, Médias & Patrimoine historique',
+    div4Subtitle: 'Recherche avancée, plateformes médias d\'impact et administration du patrimoine historique.',
+    div4Item1Title: 'Sciences de la Vie & Bio-Tech',
+    div4Item1Desc: 'Investissements stratégiques dans les technologies médicales révolutionnaires, la bio-informatique et la recherche pharmaceutique pour améliorer la qualité de vie.',
+    div4Item2Title: 'Médias & Communications Numériques',
+    div4Item2Desc: 'Plateformes de diffusion multimédia, analyse stratégique des données de communication et services de production numérique redéfinissant le paysage informationnel moderne.',
+    div4Item3Title: 'Consolidation de Capital & Capital-Risque',
+    div4Item3Desc: 'Incubateur exclusif dédié à l\'accélération des start-ups technologiques à fort potentiel de transformation disruptive des marchés industriels.',
+    div4Item4Title: 'Conseil en Fusions & Acquisitions Stratégiques',
+    div4Item4Desc: 'Conseil d\'élite en fusions et acquisitions, évaluation structurelle des risques et modélisation de syndicats de financement internationaux.',
+
+    // Services Section
+    servicesHeaderTitle: 'Services Stratégiques',
+    servicesHeaderSubtitle: 'Injection directe de valeur macroéconomique au cœur opérationnel de nos filiales.',
+    servicesIntro: 'We develop structural support pillars, ironclad governance, and smart capital, designed exclusively for accelerating performance of Ragnar Elite group companies.',
+    servicesSub1: '01. Accélération Corporative & Mécanismes d\'Échelle',
+    servicesSub2: '02. Centre d\'Excellence Unifié (Services Partagés)',
+
+    // Service items group 1
+    service1Title: '💵 Déploiement de Capital Stratégique',
+    service1Desc: 'Nous exécutons des financements directs, l\'optimisation de l\'architecture des liquidités et des infusions massives de capital destinées aux fusions, acquisitions tactiques (M&A) et à l\'expansion agressive sur les marchés internationaux. Nous réduisons le coût du capital et maximisons la force d\'investissement.',
+    service2Title: '⚙️ Excellence Opérationnelle',
+    service2Desc: 'Nous restructurons complètement et optimisons les processus internes des entreprises acquises en mettant en œuvre des méthodologies de gestion rigoureuses. Nous déployons des automatisations avancées, des audits opérationnels industriels et des normes suprêmes de productivité d\'entreprise.',
+    service3Title: '🌐 Accès au Marché Mondial',
+    service3Desc: 'Nous utilisons le réseau diplomatique, commercial et les partenariats stratégiques mondiaux du holding pour lancer les marques du portefeuille sur les marchés émergents et consolidés d\'Asie, d\'Amérique et d\'Europe, éliminant ainsi les barrières bureaucratiques et d\'intégration régionale.',
+    service4Title: '🛡️ Gouvernance des Risques',
+    service4Desc: 'Nous développons des systèmes avancés pour la protection des actifs corporels et incorporels du groupe. Grâce à des mécanismes prédictifs et des stratégies de couverture (hedging), nous assurons la pleine stabilité des filiales même en période d\'extrême volatilité macroéconomique.',
+    service5Title: '🔗 Gestion des Synergies',
+    service5Desc: 'Nous interconnectons de manière dynamique les flux de production et les services offerts par les entreprises du groupe. Nous générons de réelles économies d\'échelle, éliminons les redondances logistiques et ouvrons d\'importants canaux de vente croisée (cross-selling) entre nos 13 divisions actives.',
+
+    // Service items group 2
+    service6Title: '📊 Comptabilité & Audit Stratégique',
+    service6Desc: 'Nous assurons une gestion financière centralisée conforme aux normes internationales de reporting les plus strictes. De l\'optimisation fiscale légale avancée aux audits internes de conformité gouvernementale, nous garantisons une transparence totale et un contrôle financier absolu du capital consolidé.',
+    service7Title: '⚖️ Juridique & Avocats d\'Affaires',
+    service7Desc: 'We offer multidimensional legal protection, covering cross-border transaction structuring, intellectual property defense, and strict compliance with EU and international regulations. We secure every commercial agreement signed within the group.',
+    service8Title: '👥 Recrutement de Cadres Dirigeants d\'Élite',
+    service8Desc: 'Nous identifions, recrutons et plaçons des dirigeants mondiaux de calibre supérieur (C-Suite) au sein de nos filiales. Nous développons des schémas d\'incitation professionnelle optimaux et des plans de succession rigoureux.',
+
+    // Contact Section
+    contactHeaderTitle: 'Initier un Contact',
+    contactHeaderSubtitle: 'Partenariats exclusifs basés sur la stabilité du capital à long terme, une gouvernance d\'entreprise stricte et une expansion macrostructurelle transfrontalière.',
+    hqLabel: 'Siège Social du Holding',
+    hqAddress: 'International Finance Centre (IFC), Central, Hong Kong',
+    mailSecured: 'Correspondance Sécurisée',
+    mailRelations: 'Relations Investisseurs Stratégiques',
+    formTitle: 'Demande Stratégique',
+    formSubtitle: 'Les propositions de fusions et acquisitions (M&A) et les demandes d\'allocation de capital sont transmises directement pour analyse au Conseil d\'Administration.',
+    formNamePlaceholder: 'Nom Complet / Entité Juridique Représentée',
+    formEmailPlaceholder: 'E-mail Professionnel Officiel',
+    formSectorPlaceholder: 'Sélectionnez le Secteur d\'Intérêt Principal',
+    formMessagePlaceholder: 'Décrivez avec des arguments macroéconomiques l\'opportunité commerciale, la synergie proposée ou l\'objectif stratégique poursuivi...',
+    formSubmitBtn: 'Envoyer la Demande Sécurisée',
+    formSending: 'Chiffrement et Envoi...',
+    formSuccessTitle: 'Transmission Sécurisée Réussie',
+    formSuccessDesc: 'Vos informations ont été chiffrées à l\'aide du protocole AES-256 et transmises avec succès à nos serveurs sécurisés à Hong Kong. Le Conseil d\'Administration évaluera votre dossier sous 3 jours ouvrables.',
+    formGdprLabel: 'Je confirme avoir lu et accepté les Conditions d\'utilisation et la Politique de confidentialité (RGPD) de Ragnar Elite Holding.',
+
+    // Sector Options
+    sectorOpt1: 'Immobilier de Luxe & Macro-Infrastructure',
+    sectorOpt2: 'Technologie Disruptive & Infrastructure Critique',
+    sectorOpt3: 'Gestion d\'Actifs & Shared Services (Corporate)',
+    sectorOpt4: 'Sciences de la Vie, Médias & Services Héritage (Ragnar Legacy)',
+    sectorOpt5: 'Partenariat Stratégique Macroéconomique Direct / Proposition M&A',
+
+    // Legal Section
+    legalTitle: 'Conditions d\'utilisation & Gouvernance Globale des Données (RGPD)',
+    legalUpdate: 'Dernière mise à jour : Juillet 2026',
+
+    legalSec1Title: '1. Accord d\'Utilisation et Avertissements Globaux',
+    legalSec1Desc: 'Cet écosystème numérique est géré de manière centralisée par Ragnar Elite Holding. En accédant à la plateforme, les utilisateurs et partenaires stratégiques potentiels acceptent pleinement les dispositions mentionnées dans ce document. Le contenu publié est exclusivement destiné à l\'information corporative mondiale et reflète la performance de nos actifs et la structure de nos divisions. Les données présentées ne constituent en aucun cas un conseil financier international, une recommandation d\'analyse de marché, une offre publique de valeurs mobilières ou une sollicitation directe de capital public.',
+
+    legalSec2Title: '2. Droits de Propriété Intellectuelle Suprêmes',
+    legalSec2Desc: 'L\'architecture conceptuelle de la marque, les marques enregistrées transfrontalières, les éléments graphiques, les textes ultra-premium, la structure des mises en page et les codes sources inclus sont la propriété de plein droit de Ragnar Elite Holding. Aucun composant de cette plateforme ne peut être extrait, dupliqué, modifié ou intégré dans des réseaux externes sans un mandat écrit préalablement approuvé par le Conseil d\'Administration du holding.',
+
+    legalSec3Title: '3. Limitation de Responsabilité et Immunité Macroéconomique',
+    legalSec3Desc: 'Ragnar Elite Holding applique des normes rigoureuses de vérification des données, mais décline toute responsabilité pour les erreurs temporaires, les changements géopolitiques des marchés ou les dysfonctionnements numériques techniques indépendants de sa propre infrastructure. De plus, le holding se réserve le droit discrétionnaire de recalibrer les priorités sectorielles de ses 13 divisions actives, sans obligation de notification préalable au grand public.',
+
+    legalSec4Title: '4. Politique Globale de Confidentialité (RGPD, CCPA et normes transfrontalières)',
+    legalSec4Desc: 'Nous opérons en tant que responsable international du traitement des données en pleine conformité avec le Règlement Général sur la Protection des Données (RGPD) de l\'UE 2016/679, ainsi qu\'avec les protocoles équivalents sur les principaux marchés internationaux où le groupe détient des intérêts stratégiques. Les données personnelles sont collectées exclusivement par des canaux chiffrés avancés (formulaire de contact) et sont strictement limitées aux données d\'identification corporative (Nom, E-mail professionnel, division sélectionnée et message stratégique).',
+
+    legalSec5Title: '5. Base et Finalité du Traitement au Niveau du Groupe',
+    legalSec5Desc: 'Le traitement des informations reçues est basé sur l\'intérêt légitime d\'analyser les opportunités de fusions et acquisitions (M&A), les partenariats basés sur le capital privé et l\'intégration des filiales. Les données traitées ne font pas l\'objet d\'opérations de marketing automatisé, ne sont pas utilisées à des fins de ciblage publicitaire commercial et ne sont en aucun cas transmises à des tiers.',
+
+    legalSec6Title: '6. Sécurité Avancée et Chiffrement des Données',
+    legalSec6Desc: 'Tous les flux de données entrant dans le réseau du holding sont protégés par des technologies de chiffrement de niveau entreprise, stockés sur des serveurs sécurisés soumis à des protocoles d\'audit stricts et de cybersécurité. La période de conservation des données collectées est dictée exclusivement par le temps nécessaire à l\'analyse spécifique effectuée par nos équipes de gestion, après quoi les informations sont définitivement supprimées des systèmes actifs.',
+
+    legalSec7Title: '7. Droits et Protection des Utilisateurs Internationaux',
+    legalSec7Desc: 'Quelle que soit la région géographique depuis laquelle vous accédez à la plateforme, Ragnar Elite Holding vous garantit le plein exercice des droits légaux suivants :',
+    legalSec7Bullet1: 'Droit d\'accès et transparence totale : Vous pouvez demander un rapport complet sur le traitement de vos données ;',
+    legalSec7Bullet2: 'Droit de rectification et de mise à jour : Correction immédiate des données erronées ou incomplètes ;',
+    legalSec7Bullet3: 'Droit à l\'effacement définitif (Droit à l\'oubli) : Suppression irrévocable des données des serveurs actifs et des archives du holding ;',
+    legalSec7Bullet4: 'Droit à la limitation temporaire du traitement.',
+    legalSec7Footer: 'Pour toute demande officielle de conformité ou pour initier un audit lié à la gouvernance des données soumises, veuillez utiliser l\'adresse de correspondance juridique unique sécurisée du groupe : office@ragnareliteholding.com.',
+
+    // Footer Specifics
+    footerDesc: 'Gestion, restructuration et accélération d\'actifs corporatifs de haute performance selon des normes macroéconomiques rigoureuses.',
+    footerLegalHeader: 'Section Juridique',
+    footerTerms: 'Conditions Générales',
+    footerGdpr: 'Politique RGPD',
+    footerSecureAccess: 'Demander un Accès Sécurisé',
+    footerCopyright: '© 2026 Ragnar Elite Holding. Tous droits réservés. Siège social : Hong Kong.',
+
+    // Insights Section (Pensée Stratégique)
+    insightsHeaderTitle: 'Analyses Stratégiques',
+    insightsHeaderSubtitle: 'Analyses mensuelles des marchés, rapports macroéconomiques et perspectives mondiales signés par les experts de Ragnar Elite.',
+    insightsIntro: 'Notre Conseil d\'Administration et nos analystes associés publient des évaluations mensuelles d\'impact économique, adaptées à la gestion stratégique des risques commerciaux.',
+    insightsArticle1Title: 'Reconfiguration des Chaînes d\'Approvisionnement à l\'Ère Post-Mondialisation',
+    insightsArticle1Author: 'Président Exécutif | Juillet 2026',
+    insightsArticle1Summary: 'Une analyse approfondie de la manière dont le holding repositionne ses actifs logistiques dans le contexte de la délocalisation industrielle et des nouveaux corridors commerciaux intercontinentaux.',
+    insightsArticle1Content: 'Dans une période marquée par les tensions commerciales et la fragmentation économique, la mondialisation classique basée uniquement sur des coûts de production minimaux est rapidement remplacée par la délocalisation de proximité (friend-shoring) et la résilience structurelle. Ragnar Elite Holding agit de manière proactive en canalisant ses capitaux dans sa division Technologie et Logistique, optimisant ainsi les routes commerciales de ses filiales en Asie et en Europe, protégeant ainsi la valeur de la chaîne de distribution.',
+    insightsArticle2Title: 'Intégration de l\'IA d\'Entreprise dans les Infrastructures Critiques',
+    insightsArticle2Author: 'Directeur Financier | Juin 2026',
+    insightsArticle2Summary: 'Comment l\'utilisation d\'algorithmes prédictifs avancés et de systèmes de gestion intelligents optimise les risques énergétiques et les rendements financiers sur des marchés hautement volatils.',
+    insightsArticle2Content: 'Les réseaux énergétiques modernes et les marchés de capitaux exigent une rapidité de réaction qui dépasse les capacités décisionnelles humaines traditionnelles. Nos investissements récents dans les réseaux intelligents (smart grids) et les infrastructures informatiques d\'entreprise ont généré une augmentation d\'efficacité de 18% au sein des filiales du groupe. La protection de nos actifs reste notre pilier fondamental pour la stabilité à long terme.',
+  },
 };

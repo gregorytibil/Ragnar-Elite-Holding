@@ -1,4 +1,4 @@
-export type Language = 'ro' | 'en';
+export type Language = 'ro' | 'en' | 'fr';
 
 export interface BoardMember {
   initials: string;
