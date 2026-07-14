@@ -15,7 +15,7 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       icon: Building2,
       title: t.div1Title.replace(/🏛️ \d{2}\. /, ''),
       subtitle: t.div1Subtitle,
-      tag: 'DIVISION I',
+      tag: t.divTag1,
       items: [
         { title: t.div1Item1Title, desc: t.div1Item1Desc },
         { title: t.div1Item2Title, desc: t.div1Item2Desc },
@@ -26,7 +26,7 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       icon: Cpu,
       title: t.div2Title.replace(/💻 \d{2}\. /, ''),
       subtitle: t.div2Subtitle,
-      tag: 'DIVISION II',
+      tag: t.divTag2,
       items: [
         { title: t.div2Item1Title, desc: t.div2Item1Desc },
         { title: t.div2Item2Title, desc: t.div2Item2Desc },
@@ -37,7 +37,7 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       icon: Layers,
       title: t.div3Title.replace(/📊 \d{2}\. /, ''),
       subtitle: t.div3Subtitle,
-      tag: 'DIVISION III',
+      tag: t.divTag3,
       items: [
         { title: t.div3Item1Title, desc: t.div3Item1Desc },
         { title: t.div3Item2Title, desc: t.div3Item2Desc },
@@ -48,7 +48,7 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       icon: Dna,
       title: t.div4Title.replace(/🧬 \d{2}\. /, ''),
       subtitle: t.div4Subtitle,
-      tag: 'DIVISION IV',
+      tag: t.divTag4,
       items: [
         { title: t.div4Item1Title, desc: t.div4Item1Desc },
         { title: t.div4Item2Title, desc: t.div4Item2Desc },
@@ -82,7 +82,7 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
-              <span>PORTFOLIO</span>
+              <span>{t.navPortfolio.toUpperCase()}</span>
             </motion.div>
 
             <motion.h1

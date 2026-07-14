@@ -66,7 +66,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
               className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-md text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
               <Landmark className="w-3 h-3 text-[#A2D2FF]" />
-              <span>CORPORATE ARCHITECTURE</span>
+              <span>{t.corporateArchitecture}</span>
             </motion.div>
 
             {/* Main Page Title */}
@@ -107,13 +107,13 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             {/* Left side: Editorial intro */}
             <div className="lg:col-span-5 flex flex-col">
-              <span className="font-mono text-[10px] tracking-[0.3em] text-[#A2D2FF] uppercase mb-3 block">SECTION I // PHILOSOPHY</span>
+              <span className="font-mono text-[10px] tracking-[0.3em] text-[#A2D2FF] uppercase mb-3 block">{t.sectionPhilosophy}</span>
               <h2 className="font-serif text-3xl md:text-[2.65rem] font-bold text-[#0B1B3D] tracking-tight leading-[1.15] mb-6">
                 {t.philosophyTitle}
               </h2>
               <div className="w-12 h-[1px] bg-[#0B1B3D]/20 mb-6 lg:block hidden"></div>
               <p className="font-sans italic text-slate-500 text-sm hidden lg:block leading-relaxed">
-                "Our capital deployment structure aims to generate absolute resilience under fluctuating macroeconomic patterns."
+                {t.philosophyQuote}
               </p>
             </div>
 
@@ -140,7 +140,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
             className="lg:col-span-6 flex flex-col justify-center space-y-6"
           >
             <div className="space-y-2">
-              <span className="font-mono text-[9px] tracking-[0.3em] text-[#0B1B3D]/60 uppercase block">SECTION II // THE COGNOMEN</span>
+              <span className="font-mono text-[9px] tracking-[0.3em] text-[#0B1B3D]/60 uppercase block">{t.sectionCognomen}</span>
               <h3 className="font-serif text-3xl md:text-[2.35rem] font-bold text-[#0B1B3D] tracking-tight leading-none">
                 {t.originTitle}
               </h3>
@@ -179,7 +179,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
             </div>
 
             <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between relative z-10">
-              <span className="font-mono text-[9px] tracking-[0.25em] text-[#A2D2FF] uppercase">THE GOVERNING COUNCIL</span>
+              <span className="font-mono text-[9px] tracking-[0.25em] text-[#A2D2FF] uppercase">{t.governingCouncil}</span>
               <span className="font-sans text-[10px] text-white/40">RAGNAR ELITE HOLDING</span>
             </div>
           </motion.div>
@@ -193,7 +193,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-16 md:mb-20 max-w-3xl mx-auto space-y-4"
           >
-            <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D]/60 uppercase block">SECTION III // EXECUTIVE POWER</span>
+            <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D]/60 uppercase block">{t.sectionExecutivePower}</span>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-[2.85rem] font-bold tracking-tight text-[#0B1B3D]">
               {t.boardTitle}
             </h2>

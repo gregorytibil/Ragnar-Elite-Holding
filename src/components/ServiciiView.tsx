@@ -16,7 +16,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
   const serviceGroups = [
     {
       title: t.servicesSub1,
-      tag: 'SERVICES I',
+      tag: t.servicesTag1,
       items: [
         { title: cleanTitle(t.service1Title), desc: t.service1Desc, icon: Coins },
         { title: cleanTitle(t.service2Title), desc: t.service2Desc, icon: Settings },
@@ -27,7 +27,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
     },
     {
       title: t.servicesSub2,
-      tag: 'SERVICES II',
+      tag: t.servicesTag2,
       items: [
         { title: cleanTitle(t.service6Title), desc: t.service6Desc, icon: BarChart3 },
         { title: cleanTitle(t.service7Title), desc: t.service7Desc, icon: Scale },
@@ -56,7 +56,7 @@ export default function ServiciiView({ currentLang }: ServiciiViewProps) {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
-              <span>SERVICES</span>
+              <span>{t.navServices.toUpperCase()}</span>
             </motion.div>
 
             <motion.h1

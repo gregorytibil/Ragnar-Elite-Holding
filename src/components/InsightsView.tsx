@@ -54,7 +54,7 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
-              <span>INSIGHTS</span>
+              <span>{t.navInsights.toUpperCase()}</span>
             </motion.div>
 
             <motion.h1
@@ -118,7 +118,7 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
                  <div className="space-y-4 pt-4 border-t border-slate-200">
                     <div>
                       <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold mb-1">
-                        Category
+                        {t.labelCategory}
                       </span>
                       <span 
                         className="text-sm text-slate-600 font-medium"
@@ -129,7 +129,7 @@ export default function InsightsView({ currentLang }: InsightsViewProps) {
                     </div>
                     <div>
                       <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D] uppercase block font-bold mb-1">
-                        Author
+                        {t.labelAuthor}
                       </span>
                       <span 
                         className="text-sm text-slate-600 font-medium flex items-center gap-1.5"

@@ -168,3 +168,33 @@ select.form-control {
   }
 }
 
+/* Hide default Google Translate bar and restore layout flow */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner,
+.goog-te-menu-value,
+iframe.goog-te-banner-frame,
+iframe.goog-te-menu-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+#google_translate_element {
+  display: none !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+

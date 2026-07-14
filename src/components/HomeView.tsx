@@ -72,7 +72,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
       itemType="https://schema.org/Corporation"
     >
       {/* Hero Section */}
-      <section className="relative hero bg-[#0B1B3D] text-[#FAF6F0] h-[100dvh] min-h-[580px] flex items-center justify-center text-center px-6 pt-[100px] pb-16 sm:pt-[120px] md:pt-[140px] border-b border-[#FAF6F0]/10 overflow-hidden">
+      <section className="relative hero bg-[#0B1B3D] text-[#FAF6F0] h-[100dvh] min-h-[580px] flex items-center justify-center text-center px-6 pt-[100px] pb-16 sm:pt-[120px] md:pt-[140px] border-b border-[#FAF6F0]/10 overflow-hidden notranslate">
         {/* Cinematic short background video loop (muted, no sound) */}
         <video
           autoPlay
@@ -94,7 +94,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
         
         {/* Bottom subtle ambient light separator */}
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-sky-accent/40 to-transparent z-4"></div>
-
+ 
         <div className="max-w-[850px] mx-auto relative z-10 hero-content flex flex-col items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: -15 }}
@@ -103,7 +103,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
             className="inline-flex items-center gap-2.5 px-[18px] py-[7px] bg-[#FAF6F0]/5 border border-[#FAF6F0]/15 rounded-full text-[10px] text-sky-accent font-mono tracking-[0.25em] mb-6 sm:mb-10 uppercase shadow-inner backdrop-blur-md"
           >
             <ShieldCheck className="w-3.5 h-3.5 text-sky-accent animate-pulse" />
-            ESTABLISHED IN HONG KONG
+            {t.establishedInHK}
           </motion.div>
 
           <motion.h1

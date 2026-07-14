@@ -75,9 +75,14 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <img src="https://i.imgur.com/InRDrMr.png" alt="Ragnar Elite Logo" width={32} height={32} loading="lazy" className="w-8 h-8 object-contain brightness-0 invert" />
-            <span className="font-serif text-lg font-bold tracking-[0.25em] text-[#FAF6F0]">
-              RAGNAR ELITE
-            </span>
+            <div className="flex flex-col items-center text-center notranslate">
+              <span className="font-serif text-lg font-bold tracking-[0.22em] text-[#FAF6F0] leading-none">
+                RAGNAR ELITE
+              </span>
+              <span className="block text-[8px] tracking-[0.55em] uppercase text-[#C8D9E6]/80 font-mono mt-1.5 mr-[-0.55em]">
+                HOLDING
+              </span>
+            </div>
           </div>
           <p className="text-sm text-stone-300/90 leading-relaxed text-left font-sans font-normal max-w-sm">
             {t.footerDesc}

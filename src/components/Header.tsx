@@ -53,12 +53,12 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
           className="text-left cursor-pointer group flex items-center gap-3 relative"
         >
           <img src="https://i.imgur.com/InRDrMr.png" alt="Ragnar Elite Logo" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain brightness-0 invert" />
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center text-center notranslate">
             <span className="font-serif text-lg md:text-[1.4rem] font-bold tracking-[0.22em] text-[#FAF6F0] group-hover:text-[#C8D9E6] transition-colors duration-300 leading-none">
               RAGNAR ELITE
             </span>
-            <span className="block text-[7.5px] tracking-[0.45em] uppercase text-[#C8D9E6]/80 font-mono mt-1.5 group-hover:text-[#FAF6F0] transition-colors duration-300">
-              Holding Company
+            <span className="block text-[8.5px] tracking-[0.55em] uppercase font-bold text-[#C8D9E6] font-mono mt-1.5 group-hover:text-white transition-colors duration-300 mr-[-0.55em]">
+              HOLDING
             </span>
           </div>
         </button>
@@ -90,41 +90,6 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
               </li>
             ))}
           </ul>
-
-          {/* Premium Language Switcher */}
-          <div className="flex items-center gap-1.5 border-l border-white/15 pl-6 ml-2 font-mono text-[10px] tracking-widest">
-            <button
-              onClick={() => {
-                setLang('ro');
-                trackCTA('language_switch_ro', 'RO');
-              }}
-              aria-label="Schimbă limba în Română"
-              aria-pressed={currentLang === 'ro'}
-              className={`px-1.5 py-0.5 rounded transition-all duration-300 cursor-pointer ${
-                currentLang === 'ro'
-                  ? 'text-[#C8D9E6] font-bold'
-                  : 'text-[#FAF6F0]/50 hover:text-[#FAF6F0]'
-              }`}
-            >
-              RO
-            </button>
-            <span className="opacity-20 text-[#FAF6F0]/40 select-none">|</span>
-            <button
-              onClick={() => {
-                setLang('en');
-                trackCTA('language_switch_en', 'EN');
-              }}
-              aria-label="Switch language to English"
-              aria-pressed={currentLang === 'en'}
-              className={`px-1.5 py-0.5 rounded transition-all duration-300 cursor-pointer ${
-                currentLang === 'en'
-                  ? 'text-[#C8D9E6] font-bold'
-                  : 'text-[#FAF6F0]/50 hover:text-[#FAF6F0]'
-              }`}
-            >
-              EN
-            </button>
-          </div>
         </div>
 
         {/* Mobile Toggle */}
@@ -172,39 +137,6 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                   </button>
                 </li>
               ))}
-
-              {/* Mobile Language Switcher */}
-              <li className="pt-4 mt-2 border-t border-white/10 flex justify-center gap-4 font-mono text-[11px] tracking-widest">
-                <button
-                  onClick={() => {
-                    setLang('ro');
-                    setIsOpen(false);
-                    trackCTA('language_switch_ro', 'RO');
-                  }}
-                  className={`px-3 py-1.5 rounded transition-all duration-300 cursor-pointer ${
-                    currentLang === 'ro'
-                      ? 'text-[#C8D9E6] font-bold bg-white/5'
-                      : 'text-[#FAF6F0]/60 hover:text-[#FAF6F0]'
-                  }`}
-                >
-                  ROMÂNĂ
-                </button>
-                <span className="opacity-20 text-[#FAF6F0]/40 self-center select-none">|</span>
-                <button
-                  onClick={() => {
-                    setLang('en');
-                    setIsOpen(false);
-                    trackCTA('language_switch_en', 'EN');
-                  }}
-                  className={`px-3 py-1.5 rounded transition-all duration-300 cursor-pointer ${
-                    currentLang === 'en'
-                      ? 'text-[#C8D9E6] font-bold bg-white/5'
-                      : 'text-[#FAF6F0]/60 hover:text-[#FAF6F0]'
-                  }`}
-                >
-                  ENGLISH
-                </button>
-              </li>
             </ul>
           </motion.div>
         )}

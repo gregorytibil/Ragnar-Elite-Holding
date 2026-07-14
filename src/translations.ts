@@ -2,14 +2,24 @@ export const translations = {
   ro: {
     // Navigation
     navHome: 'Acasă',
-    navHolding: 'The Holding',
+    navHolding: 'Holding',
     navPortfolio: 'Portofoliu',
     navServices: 'Servicii',
     navInsights: 'Insights',
     navContact: 'Parteneriate',
     navLegal: 'Guvernanță & GDPR',
 
+    labelCategory: 'Categorie',
+    labelAuthor: 'Autor',
+    divTag1: 'DIVIZIA I',
+    divTag2: 'DIVIZIA II',
+    divTag3: 'DIVIZIA III',
+    divTag4: 'DIVIZIA IV',
+    servicesTag1: 'SERVICII I',
+    servicesTag2: 'SERVICII II',
+
     // Hero Section
+    establishedInHK: 'FONDAT ÎN HONG KONG',
     heroTitle: 'Ragnar Elite Holding',
     heroSubtitle: 'The Standard of Strategic Leadership.',
     heroBtn: 'Explorează Ecosistemul',
@@ -31,11 +41,17 @@ export const translations = {
     pillarVisionDesc: 'O perspectivă extinsă, fără frontiere administrative sau bariere de piață, axată pe generarea unui impact sistemic la scară mondială.',
 
     // Holding Section
-    holdingHeaderTitle: 'The Holding',
+    holdingHeaderTitle: 'Holdingul',
     holdingHeaderSubtitle: 'Filozofia de Business, Moștenirea și Structura de Guvernanță Corporativă.',
+    corporateArchitecture: 'ARHITECTURĂ CORPORATIVĂ',
+    governingCouncil: 'CONSILIUL DE GUVERNANȚĂ',
+    sectionPhilosophy: 'SECȚIUNEA I // FILOZOFIE',
+    sectionCognomen: 'SECȚIUNEA II // COGNOMEN',
+    sectionExecutivePower: 'SECȚIUNEA III // PUTERE EXECUTIVĂ',
     philosophyTitle: 'Filozofia de Business',
     philosophyDesc1: 'La Ragnar Elite Holding, guvernanța corporativă depășește simplul management al activelor financiare. Operăm după un model structural integrat vertical, conceput special pentru a genera valoare pe termen lung, complet imună la fluctuațiile sezoniere sau la ciclurile economice de scurtă durată ale piețelor internaționale.',
     philosophyDesc2: 'Strategia noastră centrală se bazează pe achiziții sigure de tip blue-chip și pe restructurări operaționale imediate. Prin infuzia de capital strategic și expertiză executivă, transformăm entitățile cu potențial masiv în lideri capabili de extindere transfrontalieră agresivă.',
+    philosophyQuote: '„Structura noastră de plasare a capitalului urmărește să genereze reziliență absolută sub tiparele macroeconomice fluctuante.”',
     originTitle: 'Originea Numelui & Moștenirea',
     originDesc1: 'Numele nostru reunește două concepte fundamentale pentru identitatea grupului: forța brută de pionierat comercial și rigoarea administrativă absolută.',
     originDesc2: 'Ragnar reprezintă curajul strategic indispensabil, reziliența structurală în fața piețelor înalt volatile și capacitatea nativă de a deschide noi frontiere comerciale complexe. Elite definește un standard operațional exclusivist, unde nicio tranzacție și niciun proces intern nu lasă loc compromisului sau erorii administrative.',
@@ -221,7 +237,17 @@ export const translations = {
     navContact: 'Partnerships',
     navLegal: 'Governance & GDPR',
 
+    labelCategory: 'Category',
+    labelAuthor: 'Author',
+    divTag1: 'DIVISION I',
+    divTag2: 'DIVISION II',
+    divTag3: 'DIVISION III',
+    divTag4: 'DIVISION IV',
+    servicesTag1: 'SERVICES I',
+    servicesTag2: 'SERVICES II',
+
     // Hero Section
+    establishedInHK: 'ESTABLISHED IN HONG KONG',
     heroTitle: 'Ragnar Elite Holding',
     heroSubtitle: 'The Standard of Strategic Leadership.',
     heroBtn: 'Explore the Ecosystem',
@@ -245,9 +271,15 @@ export const translations = {
     // Holding Section
     holdingHeaderTitle: 'The Holding',
     holdingHeaderSubtitle: 'Business Philosophy, Heritage, and Corporate Governance Structure.',
+    corporateArchitecture: 'CORPORATE ARCHITECTURE',
+    governingCouncil: 'THE GOVERNING COUNCIL',
+    sectionPhilosophy: 'SECTION I // PHILOSOPHY',
+    sectionCognomen: 'SECTION II // THE COGNOMEN',
+    sectionExecutivePower: 'SECTION III // EXECUTIVE POWER',
     philosophyTitle: 'Business Philosophy',
     philosophyDesc1: 'At Ragnar Elite Holding, corporate governance transcends simple financial asset management. We operate under a vertically integrated structural model, specifically designed to generate long-term value, completely immune to seasonal fluctuations or short-term economic cycles of international markets.',
     philosophyDesc2: 'Our core strategy relies on secure blue-chip acquisitions and immediate operational restructuring. By infusing strategic capital and executive expertise, we transform entities with massive potential into leaders capable of aggressive cross-border expansion.',
+    philosophyQuote: '“Our capital deployment structure aims to generate absolute resilience under fluctuating macroeconomic patterns.”',
     originTitle: 'Origin of Name & Heritage',
     originDesc1: 'Our name unites two fundamental concepts for the group’s identity: commercial pioneering raw power and absolute administrative rigor.',
     originDesc2: 'Ragnar represents indispensable strategic courage, structural resilience in highly volatile markets, and a native capacity to unlock complex commercial frontiers. Elite defines an exclusive operational standard, where no internal process or transaction leaves room for compromise or administrative error.',
