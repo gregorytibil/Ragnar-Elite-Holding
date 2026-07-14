@@ -1,4 +1,5 @@
-import { ArrowRight, ShieldCheck, Shield, Award, Scale, Globe, ChevronDown } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { ArrowRight, ShieldCheck, Shield, Award, Scale, Globe, ChevronDown, Play, Pause, Volume2, VolumeX, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Language } from '../types';
 import { translations } from '../translations';
@@ -14,6 +15,37 @@ const stripEmoji = (text: string) => {
 
 export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
   const t = translations[currentLang];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalMuted, setIsModalMuted] = useState(false);
+  const [isModalPlaying, setIsModalPlaying] = useState(true);
+  const modalVideoRef = useRef<HTMLVideoElement>(null);
+
+  const openVideoModal = () => {
+    setIsModalOpen(true);
+    setIsModalPlaying(true);
+    setIsModalMuted(false);
+    
+    setTimeout(() => {
+      if (modalVideoRef.current) {
+        modalVideoRef.current.muted = false;
+        modalVideoRef.current.play().catch(err => {
+          console.log("Autoplay blocked or interrupted:", err);
+          if (modalVideoRef.current) {
+            modalVideoRef.current.muted = true;
+            setIsModalMuted(true);
+            modalVideoRef.current.play().catch(e => console.log("Muted autoplay blocked too:", e));
+          }
+        });
+      }
+    }, 150);
+  };
+
+  const closeVideoModal = () => {
+    if (modalVideoRef.current) {
+      modalVideoRef.current.pause();
+    }
+    setIsModalOpen(false);
+  };
 
   const scrollToNextSection = () => {
     const nextSection = document.getElementById('about-section');
@@ -67,7 +99,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
 
   return (
     <div 
-      className="min-h-screen bg-bej-bg bg-grid-pattern text-navy-brand"
+      className="min-h-screen bg-ice-marble text-navy-brand"
       itemScope 
       itemType="https://schema.org/Corporation"
     >
@@ -202,6 +234,142 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
           </motion.div>
         </div>
       </section>
+
+      {/* Video Presentation Section */}
+      <section 
+        className="py-12 sm:py-20 px-6 bg-ice-marble relative overflow-hidden flex flex-col items-center justify-center border-b border-navy-brand/5"
+      >
+        {/* Subtle decorative background lights */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(162,210,255,0.08),transparent_70%)] pointer-events-none select-none z-0"></div>
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#0B1B3D]/10 to-transparent"></div>
+
+        <div className="max-w-[1050px] w-full mx-auto relative z-10 flex flex-col items-center">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10 sm:mb-14"
+          >
+            <span className="inline-flex items-center gap-2 px-3 py-1 bg-navy-brand/[0.03] border border-[#0B1B3D]/10 rounded-full text-[9px] md:text-[10px] text-navy-brand/60 font-mono tracking-[0.25em] uppercase mb-4 backdrop-blur-md">
+              MEDIA HUB // PRESENTATION
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-[2.5rem] font-bold text-navy-brand tracking-wide mb-4">
+              {t.videoTitle}
+            </h2>
+            <div className="w-12 h-0.5 bg-sky-accent mx-auto mb-4 rounded-full"></div>
+            <p className="max-w-2xl mx-auto text-xs sm:text-sm text-navy-brand/70 font-sans font-light tracking-wide leading-relaxed">
+              {t.videoSubtitle}
+            </p>
+          </motion.div>
+
+          {/* Luxury Video Canvas */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full relative rounded-2xl overflow-hidden border border-[#0B1B3D]/15 shadow-[0_25px_60px_-15px_rgba(11,27,61,0.12)] bg-[#050D1D] group aspect-video cursor-pointer"
+            onClick={openVideoModal}
+          >
+            {/* Ambient inner border glow */}
+            <div className="absolute inset-0 rounded-2xl border border-white/5 pointer-events-none z-20"></div>
+
+            {/* Silent looping teaser preview of the corporate video */}
+            <video
+              src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0227e330d674251df170e70ab55fbf6&profile_id=139&oauth2_token_id=57447761"
+              loop
+              muted
+              autoPlay
+              playsInline
+              className="w-full h-full object-cover opacity-70 group-hover:opacity-85 transition-opacity duration-500 scale-[1.01]"
+            />
+
+            {/* Dark glassmorphic play overlay */}
+            <div 
+              className="absolute inset-0 bg-[#050D1D]/30 backdrop-blur-[1px] transition-all duration-500 flex flex-col items-center justify-center z-10 group-hover:bg-[#050D1D]/20"
+            >
+              {/* Golden circular play button */}
+              <div className="relative flex items-center justify-center">
+                {/* Ripple rings */}
+                <div className="absolute inset-0 w-20 h-20 bg-sky-accent/25 rounded-full animate-ping opacity-60"></div>
+                <div className="absolute inset-0 w-24 h-24 bg-sky-accent/10 rounded-full animate-pulse opacity-40"></div>
+                
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openVideoModal();
+                  }}
+                  className="w-16 h-16 rounded-full bg-white text-navy-brand flex items-center justify-center shadow-2xl border border-sky-accent/30 group-hover:scale-110 active:scale-95 transition-all duration-300 relative z-10"
+                  aria-label="Play Corporate Video"
+                >
+                  <Play className="w-6 h-6 fill-navy-brand text-navy-brand translate-x-[1.5px]" />
+                </button>
+              </div>
+
+              {/* Watermark branding */}
+              <div className="mt-6 text-center select-none">
+                <span className="font-serif text-sm tracking-[0.4em] text-white/90 uppercase font-medium">
+                  RAGNAR ELITE
+                </span>
+                <span className="block text-[9px] tracking-[0.3em] text-[#A2D2FF] uppercase mt-1 font-mono">
+                  TAP TO WATCH PRESENTATION
+                </span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Immersive Video Modal */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 sm:p-6 md:p-10 select-none"
+          onClick={closeVideoModal}
+        >
+          {/* Subtle animated ambient backing light */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+          {/* Close button top right */}
+          <button
+            onClick={closeVideoModal}
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/25 active:scale-90 transition-all duration-200 cursor-pointer z-[1010] shadow-2xl"
+            aria-label="Close Video Player"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          {/* Modal Container */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 15 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 15 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="relative w-full max-w-[1200px] aspect-video rounded-2xl overflow-hidden border border-white/10 bg-[#050D1D] shadow-[0_35px_100px_rgba(0,0,0,0.8)] z-[1005]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <video
+              ref={modalVideoRef}
+              src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0227e330d674251df170e70ab55fbf6&profile_id=139&oauth2_token_id=57447761"
+              controls
+              autoPlay
+              playsInline
+              className="w-full h-full object-contain"
+              onPlay={() => setIsModalPlaying(true)}
+              onPause={() => setIsModalPlaying(false)}
+            />
+
+            {/* Custom subtle brand watermark inside the modal video */}
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/5 pointer-events-none select-none">
+              <span className="w-1.5 h-1.5 bg-sky-accent rounded-full animate-pulse"></span>
+              <span className="font-serif text-[10px] tracking-[0.25em] text-white/90 uppercase font-medium">
+                RAGNAR ELITE
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {/* Pillars Section */}
       <section className="max-w-[1240px] mx-auto px-6 py-14 sm:py-24 relative">

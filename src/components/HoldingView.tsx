@@ -39,7 +39,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
 
   return (
     <div 
-      className="min-h-screen bg-[#FAF9F6] bg-grid-pattern text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden"
+      className="min-h-screen bg-ice-marble text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden"
       itemScope
       itemType="https://schema.org/AboutPage"
     >

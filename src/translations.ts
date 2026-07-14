@@ -27,6 +27,8 @@ export const translations = {
 
     // About Section
     aboutQuote: '„Ragnar Elite Holding este o entitate de tip blue-chip dedicată consolidării și dezvoltării activelor de înaltă performanță. Ghidați de rigoare și excelență, reprezentăm un pilon de stabilitate și creștere strategică în economia globală.”',
+    videoTitle: 'Viziune în Dinamică',
+    videoSubtitle: 'Descoperiți universul strategic Ragnar Elite Holding, o incursiune vizuală în excelența operațională și guvernanța de elită.',
     pillarsTitle: 'Pilonii Ragnar Elite',
     pillarsSubtitle: 'Valorile supreme care ne guvernează deciziile comerciale și operaționale.',
 
@@ -255,6 +257,8 @@ export const translations = {
 
     // About Section
     aboutQuote: '“Ragnar Elite Holding is a blue-chip entity dedicated to consolidating and scaling high-performance assets. Driven by rigor and excellence, we serve as a core of stability and strategic growth in the global economy.”',
+    videoTitle: 'Vision in Motion',
+    videoSubtitle: 'Discover the strategic universe of Ragnar Elite Holding, a visual insight into operational excellence and elite governance.',
     pillarsTitle: 'The Pillars of Ragnar Elite',
     pillarsSubtitle: 'The supreme values governing our commercial and operational decisions.',
 

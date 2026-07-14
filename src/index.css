@@ -5,7 +5,7 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
   --color-navy-brand: #0B1B3D;
-  --color-bej-bg: #FAF6F0;
+  --color-bej-bg: #F8F9FA;
   --color-sky-accent: #A2D2FF;
   --color-bej-card: #FFFFFF;
   --animate-loading: loading 2.2s ease-in-out infinite;
@@ -14,6 +14,23 @@
 @utility bg-grid-pattern {
   background-size: 40px 40px;
   background-image: linear-gradient(to right, rgba(11, 27, 61, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(11, 27, 61, 0.03) 1px, transparent 1px);
+}
+
+@utility bg-ice-marble {
+  background-color: #F8F9FA;
+  /* Premium subtle marble veining, light sheen, and geometric alignment grid */
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(255, 255, 255, 0.8) 0px, transparent 50%),
+    radial-gradient(at 85% 35%, rgba(11, 27, 61, 0.02) 0px, transparent 40%),
+    radial-gradient(at 50% 85%, rgba(255, 255, 255, 0.9) 0px, transparent 50%),
+    radial-gradient(at 90% 15%, rgba(11, 27, 61, 0.015) 0px, transparent 30%),
+    linear-gradient(135deg, rgba(11, 27, 61, 0.018) 0%, transparent 35%, rgba(255, 255, 255, 0.6) 50%, transparent 65%, rgba(11, 27, 61, 0.018) 100%),
+    linear-gradient(55deg, transparent 45%, rgba(11, 27, 61, 0.015) 48%, rgba(11, 27, 61, 0.035) 50%, rgba(11, 27, 61, 0.015) 52%, transparent 55%),
+    linear-gradient(115deg, transparent 20%, rgba(11, 27, 61, 0.018) 22%, rgba(11, 27, 61, 0.035) 23%, rgba(11, 27, 61, 0.01) 25%, transparent 30%),
+    linear-gradient(to right, rgba(11, 27, 61, 0.025) 1px, transparent 1px), 
+    linear-gradient(to bottom, rgba(11, 27, 61, 0.025) 1px, transparent 1px);
+  background-size: auto, auto, auto, auto, auto, auto, auto, 40px 40px, 40px 40px;
+  background-attachment: fixed;
 }
 
 @utility bg-grid-pattern-light {
@@ -104,7 +121,7 @@
 .form-control {
   width: 100%;
   padding: 15px 18px;
-  background: #FAF9F6;
+  background: #F8F9FA;
   border: 1.5px solid rgba(11, 27, 61, 0.08);
   border-radius: 6px;
   font-family: "Inter", sans-serif;
