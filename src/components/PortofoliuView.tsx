@@ -20,17 +20,17 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
         { 
           title: t.div1Item1Title, 
           desc: t.div1Item1Desc,
-          image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/S2gnWbt.jpeg'
         },
         { 
           title: t.div1Item2Title, 
           desc: t.div1Item2Desc,
-          image: 'https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/3uo7XKl.jpeg'
         },
         { 
           title: t.div1Item3Title, 
           desc: t.div1Item3Desc,
-          image: 'https://images.unsplash.com/photo-1517502884422-41eaaced0168?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/2Z1jHob.jpeg'
         },
       ],
     },
@@ -43,17 +43,17 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
         { 
           title: t.div2Item1Title, 
           desc: t.div2Item1Desc,
-          image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/0ZARZiv.png'
         },
         { 
           title: t.div2Item2Title, 
           desc: t.div2Item2Desc,
-          image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/1Q3wS35.jpeg'
         },
         { 
           title: t.div2Item3Title, 
           desc: t.div2Item3Desc,
-          image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/cnU5OWj.jpeg'
         },
       ],
     },
@@ -66,17 +66,17 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
         { 
           title: t.div3Item1Title, 
           desc: t.div3Item1Desc,
-          image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/vBU6TVb.jpeg'
         },
         { 
           title: t.div3Item2Title, 
           desc: t.div3Item2Desc,
-          image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/IA836kP.png'
         },
         { 
           title: t.div3Item3Title, 
           desc: t.div3Item3Desc,
-          image: 'https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/BhluVBh.jpeg'
         },
       ],
     },
@@ -89,22 +89,22 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
         { 
           title: t.div4Item1Title, 
           desc: t.div4Item1Desc,
-          image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/whhQIUX.jpeg'
         },
         { 
           title: t.div4Item2Title, 
           desc: t.div4Item2Desc,
-          image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/r0AYJUQ.jpeg'
         },
         { 
           title: t.div4Item3Title, 
           desc: t.div4Item3Desc,
-          image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/r1ZDeFS.png'
         },
         { 
           title: t.div4Item4Title, 
           desc: t.div4Item4Desc,
-          image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&h=400&q=80'
+          image: 'https://i.imgur.com/1zqlTDJ.png'
         },
       ],
     },
