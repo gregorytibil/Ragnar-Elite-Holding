@@ -239,7 +239,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
             SECURED PLATFORM
           </span>
           <span className="text-stone-500/80">
-            {currentLang === 'ro' ? 'Găzduit de ' : 'Hosted by '}
+            {currentLang === 'ro' ? 'Creat & Dezvoltat de ' : 'Designed & Developed by '}
             <a 
               href="https://olvismedia.ro" 
               target="_blank" 
