@@ -16,17 +16,13 @@ import { initAnalytics, trackPageView, trackScrollDepth } from './lib/analytics'
 
 export default function App() {
   const [lang, setLang] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('preferredLang');
-      if (stored === 'ro' || stored === 'en' || stored === 'fr') {
-        return stored as Language;
-      }
-    }
-
     if (typeof navigator !== 'undefined') {
+      // Obținem limbile preferate ale utilizatorului setate în browser
+      // We retrieve the user's preferred languages configured in their browser
       const userLangs = navigator.languages || [navigator.language || (navigator as any).userLanguage || ''];
       
       // Detecție automată a fusului orar din România sau Republica Moldova ca semnal de fallback
+      // Automatic detection of the Romanian/Moldovan timezone as a robust fallback signal
       let isRomanianTimezone = false;
       try {
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -35,51 +31,101 @@ export default function App() {
         }
       } catch (e) {}
 
-      for (const rawLang of userLangs) {
-        const normalized = rawLang.toLowerCase();
-        if (normalized.startsWith('ro')) {
-          if (typeof window !== 'undefined') {
-            localStorage.setItem('preferredLang', 'ro');
-          }
-          return 'ro';
-        }
-        if (normalized.startsWith('en')) {
-          if (typeof window !== 'undefined') {
-            localStorage.setItem('preferredLang', 'en');
-          }
-          return 'en';
-        }
-        if (normalized.startsWith('fr')) {
-          if (typeof window !== 'undefined') {
-            localStorage.setItem('preferredLang', 'fr');
-          }
-          return 'fr';
-        }
-      }
-
-      if (isRomanianTimezone) {
-        if (typeof window !== 'undefined') {
-          localStorage.setItem('preferredLang', 'ro');
-        }
+      // Verificăm dacă browserul are limba română în lista de preferințe
+      // Check if the browser has Romanian in its preference list
+      const hasRo = userLangs.some(l => l.toLowerCase().startsWith('ro'));
+      if (hasRo || isRomanianTimezone) {
         return 'ro';
       }
-    }
 
-    // Implicit revenim la limba română ca limbă nativă a platformei
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('preferredLang', 'ro');
+      // Dacă utilizatorul preferă explicit engleza ca primă opțiune în browser
+      // If the user explicitly prefers English as their first choice in the browser
+      const primaryLang = userLangs[0] || '';
+      if (primaryLang.toLowerCase().startsWith('en')) {
+        return 'en';
+      }
     }
+    // Implicit revenim la limba română ca limbă nativă a platformei
+    // Default fallback to Romanian as the platform's native language
     return 'ro';
   });
   const [activeTab, setActiveTab] = useState<string>('home');
 
-  // Dynamic <html lang> updating and localStorage sync
+  // Automatic Translation for other languages using Google Translate (behind the scenes)
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('preferredLang', lang);
-      document.documentElement.lang = lang;
+    if (typeof navigator === 'undefined') return;
+
+    const userLangs = navigator.languages || [navigator.language || (navigator as any).userLanguage || ''];
+    const hasRo = userLangs.some(l => l.toLowerCase().startsWith('ro'));
+    const hasEn = userLangs.some(l => l.toLowerCase().startsWith('en'));
+
+    // Detect Romanian timezone
+    let isRomanianTimezone = false;
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz && (tz.includes('Bucharest') || tz.includes('Chisinau') || tz.includes('Romania'))) {
+        isRomanianTimezone = true;
+      }
+    } catch (e) {}
+
+    // If browser supports Romanian natively, or they are in the Romanian timezone, use our premium pre-built Romanian translation
+    if (hasRo || isRomanianTimezone) {
+      setLang('ro');
+      // Clear any leftover translation cookies to avoid double translation issues
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
+      return;
     }
-  }, [lang]);
+
+    // If browser supports English natively, use our premium pre-built English translation
+    if (hasEn) {
+      setLang('en');
+      // Clear any leftover translation cookies to avoid double translation issues
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
+      return;
+    }
+
+    // Otherwise, for other foreign languages (e.g. Polish, Chinese, French, German):
+    // Use our native English as the source language for the highest translation accuracy
+    setLang('en');
+
+    const primaryLang = userLangs[0] || '';
+    let targetLangCode = '';
+    const lowerLang = primaryLang.toLowerCase();
+
+    if (lowerLang.includes('hk') || lowerLang.includes('tw') || lowerLang.includes('traditional')) {
+      targetLangCode = 'zh-TW';
+    } else if (lowerLang.includes('cn') || lowerLang.includes('simplified') || lowerLang.startsWith('zh')) {
+      targetLangCode = 'zh-CN';
+    } else {
+      targetLangCode = lowerLang.split('-')[0]; // e.g. "pl" for Polish, "de" for German, "fr" for French
+    }
+
+    if (targetLangCode && targetLangCode !== 'en' && targetLangCode !== 'ro') {
+      // Configure cookie to trigger automatic translation in Google Translate
+      const cookieValue = `/en/${targetLangCode}`;
+      document.cookie = `googtrans=${cookieValue}; path=/;`;
+      document.cookie = `googtrans=${cookieValue}; path=/; domain=${window.location.hostname};`;
+
+      // Load Google Translate script dynamically
+      if (!document.getElementById('google-translate-script')) {
+        const script = document.createElement('script');
+        script.id = 'google-translate-script';
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        script.async = true;
+        document.body.appendChild(script);
+
+        (window as any).googleTranslateElementInit = () => {
+          new (window as any).google.translate.TranslateElement({
+            pageLanguage: 'en',
+            layout: (window as any).google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+          }, 'google_translate_element');
+        };
+      }
+    }
+  }, []);
 
   // Initialize analytics on component mount
   useEffect(() => {
