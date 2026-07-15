@@ -40,10 +40,10 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
       {/* Main Navbar with translucent dark theme blue */}
       <nav 
         aria-label={currentLang === 'ro' ? 'Meniu Principal' : 'Primary Navigation'}
-        className={`px-6 md:px-12 flex justify-between items-center transition-all duration-500 ${
+        className={`px-4 sm:px-6 md:px-12 flex justify-between items-center transition-all duration-500 ${
           isScrolled || activeTab !== 'home'
-            ? 'bg-[#0B1B3D]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.15)] py-4 md:py-5' 
-            : 'bg-transparent border-b border-transparent py-6 md:py-8'
+            ? 'bg-[#0B1B3D]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.15)] py-3 sm:py-4 md:py-5' 
+            : 'bg-transparent border-b border-transparent py-4 sm:py-6 md:py-8'
         } text-[#FAF6F0]`}
       >
         {/* Brand Logo */}
@@ -54,14 +54,14 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
             trackCTA('header_logo', 'Home Logo Click');
           }}
           aria-label={currentLang === 'ro' ? 'Ragnar Elite - Pagina Principală' : 'Ragnar Elite - Home Page'}
-          className="text-left cursor-pointer group flex items-center gap-3 relative"
+          className="text-left cursor-pointer group flex items-center gap-1.5 sm:gap-2 md:gap-3 relative shrink-0"
         >
-          <img src="https://i.imgur.com/InRDrMr.png" alt="Ragnar Elite Logo" width={48} height={48} className="w-10 h-10 md:w-12 md:h-12 object-contain brightness-0 invert" />
+          <img src="https://i.imgur.com/InRDrMr.png" alt="Ragnar Elite Logo" width={48} height={48} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain brightness-0 invert" />
           <div className="flex flex-col items-center text-center notranslate">
-            <span className="font-serif text-lg md:text-[1.4rem] font-bold tracking-[0.22em] text-[#FAF6F0] group-hover:text-[#C8D9E6] transition-colors duration-300 leading-none">
+            <span className="font-serif text-[13px] sm:text-base md:text-xl lg:text-[1.5rem] font-bold tracking-[0.16em] sm:tracking-[0.22em] text-[#FAF6F0] group-hover:text-[#C8D9E6] transition-colors duration-300 leading-none">
               RAGNAR ELITE
             </span>
-            <span className="block text-[8.5px] tracking-[0.55em] uppercase font-bold text-[#C8D9E6] font-mono mt-1.5 group-hover:text-white transition-colors duration-300 mr-[-0.55em]">
+            <span className="block text-[7px] sm:text-[8.5px] md:text-[9.5px] lg:text-[10px] tracking-[0.4em] sm:tracking-[0.55em] uppercase font-bold text-[#C8D9E6] font-mono mt-0.5 sm:mt-1 group-hover:text-white transition-colors duration-300 mr-[-0.4em] sm:mr-[-0.55em]">
               HOLDING
             </span>
           </div>
@@ -94,18 +94,86 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
               </li>
             ))}
           </ul>
+
+          {/* Elegant Desktop Language Toggle */}
+          <div className="flex items-center gap-1.5 pl-5 border-l border-white/15 h-5 select-none">
+            <button
+              onClick={() => {
+                setLang('ro');
+                trackCTA('header_lang_ro', 'Language RO Click');
+              }}
+              aria-label="Schimbă în limba română"
+              className={`text-[10px] font-mono tracking-[0.1em] px-2 py-0.5 rounded transition-all duration-200 cursor-pointer ${
+                currentLang === 'ro' 
+                  ? 'text-[#C8D9E6] font-bold bg-white/10' 
+                  : 'text-[#FAF6F0]/50 hover:text-[#FAF6F0] hover:bg-white/5'
+              }`}
+            >
+              RO
+            </button>
+            <span className="text-[#FAF6F0]/15 font-mono text-[9px] select-none">|</span>
+            <button
+              onClick={() => {
+                setLang('en');
+                trackCTA('header_lang_en', 'Language EN Click');
+              }}
+              aria-label="Switch to English"
+              className={`text-[10px] font-mono tracking-[0.1em] px-2 py-0.5 rounded transition-all duration-200 cursor-pointer ${
+                currentLang === 'en' 
+                  ? 'text-[#C8D9E6] font-bold bg-white/10' 
+                  : 'text-[#FAF6F0]/50 hover:text-[#FAF6F0] hover:bg-white/5'
+              }`}
+            >
+              EN
+            </button>
+          </div>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-[#FAF6F0] hover:text-[#C8D9E6] w-11 h-11 flex items-center justify-center transition-all duration-200 cursor-pointer rounded-full bg-white/5 border border-white/10 hover:bg-white/10 active:scale-95"
-          aria-label={currentLang === 'ro' ? 'Comută meniul de navigare' : 'Toggle navigation menu'}
-          aria-expanded={isOpen}
-          aria-controls="mobile-navigation-menu"
-        >
-          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+        {/* Mobile Controls (Language + Menu Toggle) */}
+        <div className="lg:hidden flex items-center gap-1.5 sm:gap-3 shrink-0">
+          {/* Elegant Mobile Language Switch adjacent to Menu button */}
+          <div className="flex items-center gap-0.5 bg-white/5 border border-white/10 rounded-full p-0.5 h-8 sm:h-10 select-none">
+            <button
+              onClick={() => {
+                setLang('ro');
+                trackCTA('header_mobile_lang_ro_adjacent', 'Language RO Click');
+              }}
+              aria-label="Schimbă în limba română"
+              className={`text-[8px] sm:text-[9px] font-mono tracking-[0.05em] px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full transition-all duration-200 cursor-pointer ${
+                currentLang === 'ro' 
+                  ? 'text-[#0B1B3D] font-bold bg-[#C8D9E6] shadow-[0_2px_6px_rgba(200,217,230,0.3)]' 
+                  : 'text-[#FAF6F0]/60 hover:text-[#FAF6F0]'
+              }`}
+            >
+              RO
+            </button>
+            <button
+              onClick={() => {
+                setLang('en');
+                trackCTA('header_mobile_lang_en_adjacent', 'Language EN Click');
+              }}
+              aria-label="Switch to English"
+              className={`text-[8px] sm:text-[9px] font-mono tracking-[0.05em] px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full transition-all duration-200 cursor-pointer ${
+                currentLang === 'en' 
+                  ? 'text-[#0B1B3D] font-bold bg-[#C8D9E6] shadow-[0_2px_6px_rgba(200,217,230,0.3)]' 
+                  : 'text-[#FAF6F0]/60 hover:text-[#FAF6F0]'
+              }`}
+            >
+              EN
+            </button>
+          </div>
+
+          {/* Menu Toggle */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-[#FAF6F0] hover:text-[#C8D9E6] w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center transition-all duration-200 cursor-pointer rounded-full bg-white/5 border border-white/10 hover:bg-white/10 active:scale-95 animate-none"
+            aria-label={currentLang === 'ro' ? 'Comută meniul de navigare' : 'Toggle navigation menu'}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation-menu"
+          >
+            {isOpen ? <X className="w-3.5 h-3.5 sm:w-5 sm:h-5" /> : <Menu className="w-3.5 h-3.5 sm:w-5 sm:h-5" />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Drawer */}
