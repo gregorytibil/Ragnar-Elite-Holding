@@ -119,8 +119,8 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
               { label: t.navPortfolio, tab: 'portfolio' },
               { label: t.navServices, tab: 'services' },
               { label: t.navPartners, tab: 'partners' },
-              { label: t.navLegal, tab: 'legal' },
               { label: t.navContact, tab: 'contact' },
+              { label: t.navLegal, tab: 'legal' },
             ].map((item) => (
               <li key={item.tab}>
                 <button
