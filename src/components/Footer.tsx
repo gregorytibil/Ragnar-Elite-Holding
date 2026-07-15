@@ -101,7 +101,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
               {currentLang === 'ro' ? 'Sediu Social' : 'Registered Office'}
             </span>
             <p className="leading-relaxed text-stone-300/80">
-              Suite C, Level 7, World Trust Tower,<br />
+              Office C, Level 7, World Trust Tower,<br />
               50 Stanley Street, Central, Hong Kong
             </p>
           </div>
