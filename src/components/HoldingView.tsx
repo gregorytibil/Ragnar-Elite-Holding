@@ -1,4 +1,5 @@
-import { motion } from 'motion/react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Language } from '../types';
 import { translations } from '../translations';
 import { Shield, Users, Landmark, ChevronRight, Award, Quote } from 'lucide-react';
@@ -9,28 +10,29 @@ interface HoldingViewProps {
 
 export default function HoldingView({ currentLang }: HoldingViewProps) {
   const t = translations[currentLang];
+  const [expandedArticle, setExpandedArticle] = useState<string | null>(null);
 
   const boardMembers = [
     {
-      initials: 'RE',
+      initials: 'PR',
       name: t.boardMember1Name,
       role: t.boardMember1Role,
       desc: t.boardMember1Desc,
     },
     {
-      initials: 'FI',
+      initials: 'CEO',
       name: t.boardMember2Name,
       role: t.boardMember2Role,
       desc: t.boardMember2Desc,
     },
     {
-      initials: 'HK',
+      initials: 'CFO',
       name: t.boardMember3Name,
       role: t.boardMember3Role,
       desc: t.boardMember3Desc,
     },
     {
-      initials: 'LG',
+      initials: 'GC',
       name: t.boardMember4Name,
       role: t.boardMember4Role,
       desc: t.boardMember4Desc,
@@ -192,6 +194,147 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
           </motion.div>
         </div>
 
+        {/* Strategic Insights Section */}
+        <div className="mt-20 sm:mt-32 border-t border-slate-200/60 pt-16 sm:pt-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center max-w-3xl mx-auto mb-12 sm:mb-20 space-y-4"
+          >
+            <span className="font-mono text-[10px] tracking-[0.3em] text-[#0B1B3D]/60 uppercase block">
+              {currentLang === 'ro' ? 'Gândire Strategică' : 'Strategic Thinking'}
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-[2.85rem] font-bold tracking-tight text-[#0B1B3D] uppercase">
+              {t.insightsHeaderTitle}
+            </h2>
+            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#0B1B3D]/30 to-transparent mx-auto"></div>
+            <p className="font-sans font-light text-sm sm:text-[1.1rem] text-slate-600 leading-relaxed max-w-2xl mx-auto">
+              {t.insightsHeaderSubtitle}
+            </p>
+          </motion.div>
+
+          {/* Intro Quote for Insights */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-xl p-6 sm:p-10 shadow-[0_15px_40px_rgba(5,13,29,0.03)] border border-[#0B1B3D]/5 text-center mb-16 max-w-4xl mx-auto"
+          >
+            <Quote className="w-6 h-6 text-[#A2D2FF] mx-auto mb-5" />
+            <p className="font-sans text-base sm:text-lg leading-[1.65] text-[#0B1B3D]/80 max-w-3xl mx-auto font-light italic">
+              {t.insightsIntro}
+            </p>
+          </motion.div>
+
+          {/* Articles/Briefings Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Article 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl border border-slate-200/60 p-6 sm:p-8 flex flex-col justify-between shadow-[0_10px_35px_rgba(5,13,29,0.02)] hover:shadow-[0_20px_50px_rgba(5,13,29,0.06)] hover:border-[#0B1B3D]/10 transition-all duration-300 group"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-[9px] tracking-[0.2em] px-2.5 py-1 bg-[#0B1B3D]/5 rounded text-[#0B1B3D] uppercase font-bold">
+                    {currentLang === 'ro' ? 'MACROECONOMIE' : 'MACROECONOMICS'}
+                  </span>
+                  <span className="font-mono text-[10px] text-slate-400">
+                    {t.insightsArticle1Author}
+                  </span>
+                </div>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0B1B3D] tracking-tight mb-4 group-hover:text-sky-900 transition-colors">
+                  {t.insightsArticle1Title}
+                </h3>
+                <p className="font-sans font-light text-slate-600 text-sm sm:text-[0.95rem] leading-relaxed mb-6">
+                  {t.insightsArticle1Summary}
+                </p>
+              </div>
+
+              {/* Expandable detailed content with animation */}
+              <div className="space-y-4">
+                <AnimatePresence>
+                  {expandedArticle === 'art1' && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.35, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pt-4 border-t border-slate-100 text-slate-600 font-sans font-light text-xs sm:text-sm leading-relaxed space-y-3">
+                        <p>{t.insightsArticle1Content}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <button
+                  onClick={() => setExpandedArticle(expandedArticle === 'art1' ? null : 'art1')}
+                  className="inline-flex items-center gap-2 text-[10px] tracking-[0.15em] font-mono font-bold uppercase text-[#0B1B3D] hover:text-sky-600 transition-colors mt-2 cursor-pointer"
+                >
+                  <span>{expandedArticle === 'art1' ? (currentLang === 'ro' ? 'RESTRÂNGE RAPORT' : 'COLLAPSE REPORT') : (currentLang === 'ro' ? 'CITEȘTE RAPORTUL COMPLET' : 'READ FULL REPORT')}</span>
+                  <ChevronRight className={`w-3 h-3 transform transition-transform duration-300 ${expandedArticle === 'art1' ? 'rotate-90' : ''}`} />
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Article 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl border border-slate-200/60 p-6 sm:p-8 flex flex-col justify-between shadow-[0_10px_35px_rgba(5,13,29,0.02)] hover:shadow-[0_20px_50px_rgba(5,13,29,0.06)] hover:border-[#0B1B3D]/10 transition-all duration-300 group"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-[9px] tracking-[0.2em] px-2.5 py-1 bg-[#0B1B3D]/5 rounded text-[#0B1B3D] uppercase font-bold">
+                    {currentLang === 'ro' ? 'TEHNOLOGIE & INVESTIȚII' : 'TECH & INVESTMENT'}
+                  </span>
+                  <span className="font-mono text-[10px] text-slate-400">
+                    {t.insightsArticle2Author}
+                  </span>
+                </div>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0B1B3D] tracking-tight mb-4 group-hover:text-sky-900 transition-colors">
+                  {t.insightsArticle2Title}
+                </h3>
+                <p className="font-sans font-light text-slate-600 text-sm sm:text-[0.95rem] leading-relaxed mb-6">
+                  {t.insightsArticle2Summary}
+                </p>
+              </div>
+
+              {/* Expandable detailed content with animation */}
+              <div className="space-y-4">
+                <AnimatePresence>
+                  {expandedArticle === 'art2' && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.35, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pt-4 border-t border-slate-100 text-slate-600 font-sans font-light text-xs sm:text-sm leading-relaxed space-y-3">
+                        <p>{t.insightsArticle2Content}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <button
+                  onClick={() => setExpandedArticle(expandedArticle === 'art2' ? null : 'art2')}
+                  className="inline-flex items-center gap-2 text-[10px] tracking-[0.15em] font-mono font-bold uppercase text-[#0B1B3D] hover:text-sky-600 transition-colors mt-2 cursor-pointer"
+                >
+                  <span>{expandedArticle === 'art2' ? (currentLang === 'ro' ? 'RESTRÂNGE RAPORT' : 'COLLAPSE REPORT') : (currentLang === 'ro' ? 'CITEȘTE RAPORTUL COMPLET' : 'READ FULL REPORT')}</span>
+                  <ChevronRight className={`w-3 h-3 transform transition-transform duration-300 ${expandedArticle === 'art2' ? 'rotate-90' : ''}`} />
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
         {/* Board of Directors Section with Luxury Panoramic Boardroom Background */}
         <section className="mt-16 sm:mt-28 md:mt-36 relative rounded-2xl overflow-hidden py-14 sm:py-20 px-6 sm:px-10 border border-[#0B1B3D]/10 bg-[#050D1D] shadow-2xl">
           {/* Panoramic Boardroom Backdrop Image */}
@@ -251,33 +394,42 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
                     <span className="relative z-10 tracking-widest">{member.initials}</span>
                   </div>
 
-                  {/* Name and Role */}
+                  {/* Name */}
                   <div className="text-center mb-4">
                     <h3 
-                      className="font-serif text-lg md:text-[1.2rem] font-bold text-[#0B1B3D] tracking-tight group-hover:text-sky-900 transition-colors duration-200"
+                      className="font-serif text-lg md:text-[1.25rem] font-bold text-[#0B1B3D] tracking-tight group-hover:text-sky-900 transition-colors duration-200"
                       itemProp="name"
                     >
                       {member.name}
                     </h3>
-                    <div 
-                      className="text-[#A2D2FF] font-mono text-[9px] uppercase tracking-[2px] font-semibold mt-1"
-                      itemProp="jobTitle"
-                    >
-                      {member.role}
-                    </div>
                   </div>
 
                   {/* Clean thin separator */}
-                  <div className="w-8 h-[1px] bg-slate-100 group-hover:w-16 group-hover:bg-[#A2D2FF] transition-all duration-300 mx-auto mb-6"></div>
-                </div>
+                  <div className="w-8 h-[1px] bg-slate-100 group-hover:w-16 group-hover:bg-[#A2D2FF] transition-all duration-300 mx-auto mb-5"></div>
 
-                {/* Description with precise spacing and sizing */}
-                <p 
-                  className="font-sans font-light text-xs sm:text-[0.88rem] text-slate-500 leading-relaxed text-left"
-                  itemProp="description"
-                >
-                  {member.desc}
-                </p>
+                  {/* What they do (Cu ce se ocupă) */}
+                  <div className="mb-4 text-left">
+                    <span className="font-mono text-[8px] tracking-[0.2em] text-[#0B1B3D]/50 uppercase block mb-1">
+                      {t.labelWhatTheyDo}
+                    </span>
+                    <p className="font-sans font-medium text-xs text-slate-700 leading-relaxed">
+                      {member.role}
+                    </p>
+                  </div>
+
+                  {/* In simple terms (Pe înțelesul tuturor) */}
+                  <div className="text-left">
+                    <span className="font-mono text-[8px] tracking-[0.2em] text-[#0B1B3D]/50 uppercase block mb-1">
+                      {t.labelInSimpleTerms}
+                    </span>
+                    <p 
+                      className="font-sans font-light text-xs sm:text-[0.82rem] text-slate-500 leading-relaxed"
+                      itemProp="description"
+                    >
+                      {member.desc}
+                    </p>
+                  </div>
+                </div>
 
                 {/* Aesthetic Corner Bracket decoration */}
                 <div className="absolute bottom-2 right-2 w-2 h-2 border-r border-b border-transparent group-hover:border-slate-300 transition-all duration-300"></div>

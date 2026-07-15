@@ -282,7 +282,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                     </div>
                     <div className="flex justify-between pb-1 pt-1">
                       <span className="opacity-60 uppercase font-bold text-[10px]">SERVERS:</span>
-                      <span className="font-bold">IFC CENTRAL, HK</span>
+                      <span className="font-bold">STANLEY STREET, HK</span>
                     </div>
                   </div>
 

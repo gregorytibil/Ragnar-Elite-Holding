@@ -7,6 +7,7 @@ import HomeView from './components/HomeView';
 import HoldingView from './components/HoldingView';
 import PortofoliuView from './components/PortofoliuView';
 import ServiciiView from './components/ServiciiView';
+import PartnersView from './components/PartnersView';
 import ContactView from './components/ContactView';
 import LegalView from './components/LegalView';
 import TermsView from './components/TermsView';
@@ -186,6 +187,8 @@ export default function App() {
         return <PortofoliuView currentLang={lang} />;
       case 'services':
         return <ServiciiView currentLang={lang} />;
+      case 'partners':
+        return <PartnersView currentLang={lang} />;
       case 'contact':
         return <ContactView currentLang={lang} />;
       case 'legal':
@@ -198,23 +201,49 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-bej-bg flex flex-col justify-between selection:bg-sky-accent selection:text-navy-brand overflow-x-hidden">
+    <div className="min-h-screen bg-bej-bg flex flex-col justify-between selection:bg-sky-accent selection:text-navy-brand overflow-x-hidden relative">
       {/* Hidden Google Translate anchor */}
       <div id="google_translate_element" style={{ display: 'none' }} />
+
+      {/* Background Video */}
+      <div 
+        className="absolute top-0 left-0 w-full h-[100dvh] min-h-[580px] overflow-hidden pointer-events-none transition-opacity duration-700 ease-in-out z-[0]"
+        style={{ opacity: activeTab === 'home' ? 1 : 0 }}
+      >
+        <div className="absolute inset-0 bg-[#0B1B3D]"></div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-label="Cinematic background video representing global connection and strategic movement"
+          className="absolute inset-0 w-full h-full object-cover opacity-40 scale-105"
+        >
+          <source src="https://res.cloudinary.com/bahq24cf/video/upload/7065796-uhd_2160_3840_24fps_a2excz.mp4" type="video/mp4" />
+        </video>
+        {/* Decorative luxury gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050d1d]/35 via-[#0B1B3D]/30 to-[#07132b]/45 z-10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(162,210,255,0.15),transparent_60%)] z-20"></div>
+        {/* Creative Director Accent: Subtle geometric radial mesh pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_1px,transparent_1px)] [background-size:28px_28px] opacity-10 z-30"></div>
+      </div>
 
       {/* Search Engine Optimization (SEO), Metadata, and JSON-LD Structured Data */}
       <SEOMetadata activeTab={activeTab} lang={lang} />
 
       {/* Dynamic Header */}
-      <Header
-        currentLang={lang}
-        setLang={setLang}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-      />
+      <div className="relative z-[50]">
+        <Header
+          currentLang={lang}
+          setLang={setLang}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        />
+      </div>
 
       {/* Main Animated Canvas */}
-      <main className="flex-grow">
+      <main className="flex-grow relative z-[1]">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -229,7 +258,9 @@ export default function App() {
       </main>
 
       {/* Corporate Footer */}
-      <Footer currentLang={lang} setActiveTab={setActiveTab} />
+      <div className="relative z-[1]">
+        <Footer currentLang={lang} setActiveTab={setActiveTab} />
+      </div>
     </div>
   );
 }

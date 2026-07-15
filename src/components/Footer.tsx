@@ -93,9 +93,18 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
               </span>
             </div>
           </div>
-          <p className="text-sm text-stone-300/90 leading-relaxed text-left font-sans font-normal max-w-sm">
+          <p className="text-sm text-stone-300/90 leading-relaxed text-left font-sans font-normal max-w-sm whitespace-pre-line">
             {t.footerDesc}
           </p>
+          <div className="pt-2 text-xs text-stone-400 font-sans font-light">
+            <span className="font-mono text-[9px] tracking-widest text-sky-accent uppercase block mb-1 font-bold">
+              {currentLang === 'ro' ? 'Sediu Social' : 'Registered Office'}
+            </span>
+            <p className="leading-relaxed text-stone-300/80">
+              Suite C, Level 7, World Trust Tower,<br />
+              50 Stanley Street, Central, Hong Kong
+            </p>
+          </div>
         </div>
 
         {/* Column 2 - Navigation links */}
@@ -109,6 +118,8 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
               { label: t.navHolding, tab: 'holding' },
               { label: t.navPortfolio, tab: 'portfolio' },
               { label: t.navServices, tab: 'services' },
+              { label: t.navPartners, tab: 'partners' },
+              { label: t.navLegal, tab: 'legal' },
               { label: t.navContact, tab: 'contact' },
             ].map((item) => (
               <li key={item.tab}>

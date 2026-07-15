@@ -68,31 +68,12 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
 
   return (
     <div 
-      className="min-h-screen bg-ice-marble text-navy-brand"
+      className="text-navy-brand"
       itemScope 
       itemType="https://schema.org/Corporation"
     >
       {/* Hero Section */}
-      <section className="relative hero bg-[#0B1B3D] text-[#FAF6F0] h-[100dvh] min-h-[580px] flex items-center justify-center text-center px-6 pt-[100px] pb-16 sm:pt-[120px] md:pt-[140px] border-b border-[#FAF6F0]/10 overflow-hidden notranslate">
-        {/* Cinematic background video loop (muted, no sound) */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          aria-label="Cinematic background video representing global connection and strategic movement"
-          className="absolute inset-0 w-full h-full object-cover opacity-40 z-0 pointer-events-none scale-105"
-        >
-          <source src="https://res.cloudinary.com/bahq24cf/video/upload/7065796-uhd_2160_3840_24fps_a2excz.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Decorative luxury gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050d1d]/35 via-[#0B1B3D]/30 to-[#07132b]/45 z-1"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(162,210,255,0.15),transparent_60%)] z-2"></div>
-        {/* Creative Director Accent: Subtle geometric radial mesh pattern */}
-        <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_1px,transparent_1px)] [background-size:28px_28px] opacity-10 z-3"></div>
-        
+      <section className="relative hero bg-transparent text-[#FAF6F0] h-[100dvh] min-h-[580px] flex items-center justify-center text-center px-6 pt-[100px] pb-16 sm:pt-[120px] md:pt-[140px] border-b border-[#FAF6F0]/10 overflow-hidden notranslate">
         {/* Bottom subtle ambient light separator */}
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-sky-accent/40 to-transparent z-4"></div>
  
@@ -152,12 +133,14 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
         </div>
       </section>
 
-      {/* About Quote Section (Ultra-Polished Editorial Layout) */}
-      <section 
-        id="about-section" 
-        className="bg-bej-card py-14 sm:py-24 px-6 border-b border-navy-brand/5 relative overflow-hidden flex items-center justify-center"
-        itemProp="description"
-      >
+      {/* Container for subsequent sections to maintain background */}
+      <div className="bg-ice-marble">
+        {/* About Quote Section (Ultra-Polished Editorial Layout) */}
+        <section 
+          id="about-section" 
+          className="bg-bej-card py-14 sm:py-24 px-6 border-b border-navy-brand/5 relative overflow-hidden flex items-center justify-center"
+          itemProp="description"
+        >
         {/* Sophisticated design lines */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-16 bg-gradient-to-b from-sky-accent to-transparent"></div>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-16 bg-gradient-to-t from-sky-accent to-transparent"></div>
@@ -308,7 +291,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
               </span>
             </div>
             <div className="p-8 md:p-12 text-center flex flex-col items-center justify-center last:border-0 group hover:bg-white/[0.02] transition-colors duration-300">
-              <span className="block text-3xl sm:text-4xl font-bold text-[#FAF6F0] mb-3 font-serif tracking-wide group-hover:scale-105 transition-transform duration-300">IFC HK</span>
+              <span className="block text-3xl sm:text-4xl font-bold text-[#FAF6F0] mb-3 font-serif tracking-wide group-hover:scale-105 transition-transform duration-300">STANLEY HK</span>
               <span className="text-[10px] md:text-[11px] font-mono tracking-[0.2em] opacity-60 uppercase">
                 {currentLang === 'ro' ? 'Sediu Global' : 'Global Headquarters'}
               </span>
@@ -316,6 +299,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }

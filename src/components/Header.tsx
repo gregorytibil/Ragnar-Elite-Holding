@@ -30,8 +30,9 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
     { id: 'holding', label: t.navHolding },
     { id: 'portfolio', label: t.navPortfolio },
     { id: 'services', label: t.navServices },
-    { id: 'contact', label: t.navContact },
+    { id: 'partners', label: t.navPartners },
     { id: 'legal', label: t.navLegal },
+    { id: 'contact', label: t.navContact },
   ];
 
   return (
@@ -39,7 +40,11 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
       {/* Main Navbar with translucent dark theme blue */}
       <nav 
         aria-label={currentLang === 'ro' ? 'Meniu Principal' : 'Primary Navigation'}
-        className={`px-6 md:px-12 flex justify-between items-center transition-all duration-500 ${isScrolled ? 'bg-[#0B1B3D]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.15)] py-4 md:py-5' : 'bg-transparent border-b border-transparent py-6 md:py-8'} text-[#FAF6F0]`}
+        className={`px-6 md:px-12 flex justify-between items-center transition-all duration-500 ${
+          isScrolled || activeTab !== 'home'
+            ? 'bg-[#0B1B3D]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.15)] py-4 md:py-5' 
+            : 'bg-transparent border-b border-transparent py-6 md:py-8'
+        } text-[#FAF6F0]`}
       >
         {/* Brand Logo */}
         <button

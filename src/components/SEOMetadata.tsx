@@ -70,17 +70,17 @@ export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
           : 'holding services, m&a advisory, financial engineering, fiscal audit, legal compliance, operational restructuring, fiscal integration, asset management',
         ogType: 'website',
       },
-      insights: {
+      partners: {
         title: isRo
-          ? 'Analize de Piață & Insights Macroeconomice | Ragnar Elite'
-          : 'Market Analysis & Macroeconomic Insights | Ragnar Elite',
+          ? 'Parteneri & Alianțe Strategice | Ragnar Elite'
+          : 'Partners & Strategic Alliances | Ragnar Elite',
         description: isRo
-          ? 'Accesați analize macroeconomice periodice, perspective strategice de piață și cercetare financiară realizată de experții Ragnar Elite.'
-          : 'Access quarterly macroeconomic reviews, strategic market outlooks, and financial research conducted by Ragnar Elite experts.',
+          ? 'Alianțe globale de top pentru asigurarea excelenței operaționale și creșterii strategice pe termen lung.'
+          : 'Top global alliances ensuring operational excellence and long-term strategic growth.',
         keywords: isRo
-          ? 'insights macroeconomice, analize de piata, cercetare financiara, rapoarte ragnar, investitii inteligente, analiza strategica, tendinte economice'
-          : 'macroeconomic insights, market analysis, financial research, ragnar reports, smart investments, strategic analysis, economic trends',
-        ogType: 'article',
+          ? 'parteneri ragnar elite, aliante strategice, kpmg, mckinsey, parteneriate holding, colaborari corporative'
+          : 'ragnar elite partners, strategic alliances, kpmg, mckinsey, holding partnerships, corporate collaborations',
+        ogType: 'website',
       },
       contact: {
         title: isRo
@@ -284,7 +284,7 @@ export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
           },
         ],
       };
-    } else if (activeTab === 'insights') {
+    } else if (activeTab === 'partners') {
       schemaObject = {
         '@context': 'https://schema.org',
         '@graph': [
