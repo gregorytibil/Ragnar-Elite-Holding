@@ -24,11 +24,11 @@ export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
     > = {
       home: {
         title: isRo
-          ? 'Ragnar Elite Holding | Excelență în Management Strategic'
-          : 'Ragnar Elite Holding | The Standard of Strategic Leadership',
+          ? 'Ragnar Elite Holding | Companie Internațională de Holding în Hong Kong'
+          : 'Ragnar Elite Holding | International Holding Company in Hong Kong',
         description: isRo
-          ? 'Ragnar Elite Holding este o entitate de investiții de tip blue-chip dedicată gestionării și restructurării unui portofoliu diversificat de active globale.'
-          : 'Ragnar Elite Holding is a blue-chip investment entity dedicated to managing and restructuring a diversified global portfolio of high-performance assets.',
+          ? 'Ragnar Elite Holding este un grup internațional cu sediul în Hong Kong care administrează și dezvoltă companii în sectoare industriale și de servicii strategice.'
+          : 'Ragnar Elite Holding is a Hong Kong-based international group managing and developing companies across strategic industrial and service sectors.',
         keywords: isRo
           ? 'Ragnar Elite Holding, holding romania, investitii blue chip, management strategic, fuziuni si achizitii, restructurare corporativa, real estate lux, tehnologie disruptiva, servicii corporative'
           : 'Ragnar Elite Holding, strategic leadership, blue chip investments, asset management, mergers and acquisitions, corporate restructuring, luxury real estate, disruptive technology, corporate services',
