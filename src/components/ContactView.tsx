@@ -19,6 +19,39 @@ export default function ContactView({ currentLang }: ContactViewProps) {
   const [agree, setAgree] = useState(false);
   const [trackingId, setTrackingId] = useState('');
 
+  const isRo = currentLang === 'ro';
+
+  const coreOptions = [
+    { value: 'aerospace', ro: 'Divizia de Industrie Aerospațială, Aviație & Apărare Marină', en: 'Aerospace, Aviation & Marine Defense Division' },
+    { value: 'real_estate', ro: 'Divizia Imobiliară & Proprietăți de Investiții', en: 'Real Estate & Investment Property Division' },
+    { value: 'architecture', ro: 'Divizia de Arhitectură & Proiectare Conceptuală', en: 'Architecture & Conceptual Design Division' },
+    { value: 'construction', ro: 'Divizia de Construcții & Dezvoltare Infrastructură', en: 'Construction & Infrastructure Development Division' },
+    { value: 'energy', ro: 'Divizia de Energie, Electricitate & Resurse Regenerabile', en: 'Energy, Electricity & Renewable Resources Division' },
+    { value: 'mining', ro: 'Divizia de Exploatare Minieră, Resurse Naturale & Metale Prețioase', en: 'Mining, Natural Resources & Precious Metals Division' },
+    { value: 'healthcare', ro: 'Divizia de Sănătate & Biotehnologie Medicală', en: 'Healthcare & Medical Biotechnology Division' },
+    { value: 'agriculture', ro: 'Divizia de Agricultură Sustenabilă & Producție Alimentară', en: 'Sustainable Agriculture & Food Production Division' },
+    { value: 'logistics', ro: 'Divizia de Transport & Logistică Globală', en: 'Transport & Global Logistics Division' },
+  ];
+
+  const governanceOptions = [
+    { value: 'private_equity', ro: 'Divizia de Private Equity & Venture Capital', en: 'Private Equity & Venture Capital Division' },
+    { value: 'ma', ro: 'Divizia de Fuziuni & Achiziții (M&A Corporativ)', en: 'Mergers & Acquisitions (M&A Corporate) Division' },
+    { value: 'asset_management', ro: 'Divizia de Asset & Wealth Management Global', en: 'Global Asset & Wealth Management Division' },
+    { value: 'accounting', ro: 'Divizia de Contabilitate Corporativă & Audit Financiar', en: 'Corporate Accounting & Financial Auditing Division' },
+    { value: 'consultancy', ro: 'Divizia de Consultanță Strategică Executivă', en: 'Strategic Executive Consultancy Division' },
+    { value: 'project_management', ro: 'Divizia de Project Management & Supervizare Tehnică', en: 'Project Management & Technical Supervision Division' },
+    { value: 'cybersecurity', ro: 'Divizia de IT, Tehnologie & Securitate Cibernetică', en: 'IT, Technology & Cybersecurity Division' },
+    { value: 'education', ro: 'Divizia de Educație Executivă & Instruire de Elită în Management', en: 'Executive Education & Elite Management Training Division' },
+    { value: 'office_supplies', ro: 'Divizia de Consumabile de Birou & Managementul Procurării', en: 'Office Supplies & Consumables Management Division' },
+    { value: 'cleaning', ro: 'Divizia de Curățenie Comercială & Igienizare Ecologică', en: 'Commercial Cleaning & Environmental Sanitation Division' },
+  ];
+
+  const strategicOption = {
+    value: 'strategic_partnership',
+    ro: 'Parteneriat Strategic Macroeconomic Direct / Propune Proiect M&A',
+    en: 'Direct Macroeconomic Strategic Partnership / M&A Proposal'
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!agree) return;
@@ -109,11 +142,11 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                 </div>
                 <div className="space-y-3">
                   <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.mailSecured}</strong>
-                  <span className="font-mono text-sm text-white border-b border-white/20 pb-1 inline-block">office@ragnareliteholding.com</span>
+                  <span className="font-mono text-sm text-white border-b border-white/20 pb-1 inline-block">investitor@ragnareliteholding.com</span>
                 </div>
                 <div className="space-y-3">
                   <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.mailRelations}</strong>
-                  <span className="font-mono text-sm text-white border-b border-white/20 pb-1 inline-block">office@ragnareliteholding.com</span>
+                  <span className="font-mono text-sm text-white border-b border-white/20 pb-1 inline-block">investitor@ragnareliteholding.com</span>
                 </div>
               </div>
             </div>
@@ -179,11 +212,25 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                             <option value="" disabled className="text-slate-400">
                               {currentLang === 'ro' ? 'Selectează...' : 'Select...'}
                             </option>
-                            <option value="infrastructure" className="text-[#0B1B3D]">{t.sectorOpt1}</option>
-                            <option value="tech_energy" className="text-[#0B1B3D]">{t.sectorOpt2}</option>
-                            <option value="shared_services" className="text-[#0B1B3D]">{t.sectorOpt3}</option>
-                            <option value="lifesciences_media" className="text-[#0B1B3D]">{t.sectorOpt4}</option>
-                            <option value="ma_proposal" className="text-[#0B1B3D]">{t.sectorOpt5}</option>
+                            <optgroup label={currentLang === 'ro' ? 'PAGINA 1: CORE OPERATIONS & HEAVY INDUSTRIES' : 'PAGE 1: CORE OPERATIONS & HEAVY INDUSTRIES'} className="text-[#0B1B3D]/80 font-bold bg-white text-xs tracking-wider">
+                              {coreOptions.map((opt) => (
+                                <option key={opt.value} value={opt.value} className="text-[#0B1B3D] font-normal text-sm">
+                                  {currentLang === 'ro' ? opt.ro : opt.en}
+                                </option>
+                              ))}
+                            </optgroup>
+                            <optgroup label={currentLang === 'ro' ? 'PAGINA 2: CORPORATE GOVERNANCE, FINANCE & SUPPORT' : 'PAGE 2: CORPORATE GOVERNANCE, FINANCE & SUPPORT'} className="text-[#0B1B3D]/80 font-bold bg-white text-xs tracking-wider mt-2">
+                              {governanceOptions.map((opt) => (
+                                <option key={opt.value} value={opt.value} className="text-[#0B1B3D] font-normal text-sm">
+                                  {currentLang === 'ro' ? opt.ro : opt.en}
+                                </option>
+                              ))}
+                            </optgroup>
+                            <optgroup label={currentLang === 'ro' ? 'PARTENERIATE STRATEGICE' : 'STRATEGIC PARTNERSHIPS'} className="text-[#0B1B3D]/80 font-bold bg-white text-xs tracking-wider mt-2">
+                              <option value={strategicOption.value} className="text-[#0B1B3D] font-normal text-sm">
+                                {currentLang === 'ro' ? strategicOption.ro : strategicOption.en}
+                              </option>
+                            </optgroup>
                           </select>
                           <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-[#0B1B3D]/40">
                             <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" fillRule="evenodd"></path></svg>

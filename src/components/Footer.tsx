@@ -206,11 +206,11 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
           </p>
           <div className="flex items-center gap-2 pb-2">
             <a 
-              href="mailto:office@ragnareliteholding.com" 
-              onClick={() => trackEmailClick('office@ragnareliteholding.com')}
+              href="mailto:investitor@ragnareliteholding.com" 
+              onClick={() => trackEmailClick('investitor@ragnareliteholding.com')}
               className="font-mono text-sm text-sky-accent hover:text-white transition-colors duration-300 tracking-wider border-b border-sky-accent/30 hover:border-white pb-0.5"
             >
-              office@ragnareliteholding.com
+              investitor@ragnareliteholding.com
             </a>
           </div>
           <div className="flex items-center gap-2 sm:gap-2.5 flex-nowrap">

@@ -24,7 +24,7 @@ export const translations = {
     establishedInHK: 'CU SEDIUL ÎN HONG KONG',
     heroTitle: 'Ragnar Elite Holding',
     heroSubtitle: 'The Standard of Strategic Leadership.',
-    heroDescription: 'Holding internațional cu sediul în Hong Kong, dedicat administrării, dezvoltării și integrării strategice a companiilor din 19 divizii operaționale.',
+    heroDescription: 'Holding internațional cu sediul în Hong Kong, dedicat administrării, dezvoltării și integrării strategice a companiilor din divizii operaționale.',
     heroBtn: 'Descoperă Portofoliul',
     heroSecondaryBtn: 'Contact',
 
@@ -85,8 +85,8 @@ export const translations = {
 
     // Portfolio Section
     portfolioHeaderTitle: 'Portofoliu de Active',
-    portfolioHeaderSubtitle: 'Arhitectura de elită a unui ecosistem imun la paradigmele de volatilitate economică.',
-    portfolioIntro: 'Orchestrăm cu rigoare absolută și precizie matematică 19 industrii strategice interconectate vertical.',
+    portfolioHeaderSubtitle: 'O structură integrată concepută pentru stabilitate operațională și dezvoltare pe termen lung.',
+    portfolioIntro: 'Grupăm diviziile noastre operaționale în piloni strategici pentru a asigura o dezvoltare sustenabilă și o sinergie eficientă a tuturor activelor din portofoliu.',
     
     // Divisions 1
     div1Title: '🏛️ 01. Luxury Real Estate & Macro-Infrastructură',
@@ -147,7 +147,7 @@ export const translations = {
     service4Title: '🛡️ Risk Governance',
     service4Desc: 'Dezvoltăm sisteme avansate pentru protecția activelor tangibile și intangibile ale grupului. Prin mecanisme predictive și strategii de acoperire a riscurilor (hedging), asigurăm stabilitatea deplină a subsidiarelor chiar și în perioade de volatilitate macroeconomică extremă.',
     service5Title: '🔗 Synergy Management',
-    service5Desc: 'Interconectăm dinamic fluxurile de producție și serviciile oferite de companiile din grup. Generăm economii de scară reale, eliminăm redundanțele logistice și deschidem canale masive de promovare încrucișată (cross-selling) între cele 19 divizii active.',
+    service5Desc: 'Interconectăm dinamic fluxurile de producție și serviciile oferite de companiile din grup. Generăm economii de scară reale, eliminăm redundanțele logistice și deschidem canale masive de promovare încrucișată (cross-selling) între diviziile active.',
 
     // Service items group 2
     service6Title: '📊 Contabilitate & Audit Strategic',
@@ -161,7 +161,7 @@ export const translations = {
     contactHeaderTitle: 'Inițiați o Conexiune',
     contactHeaderSubtitle: 'Parteneriate exclusiviste fundamentate pe stabilitatea capitalului pe termen lung, guvernanță corporativă strictă și extindere macro-structurală transfrontalieră.',
     hqLabel: 'Centrala Holdingului',
-    hqAddress: 'Suite C, Level 7, World Trust Tower, 50 Stanley Street, Central, Hong Kong',
+    hqAddress: 'Office C, Level 7, World Trust Tower, 50 Stanley Street, Central, Hong Kong',
     mailSecured: 'Corespondență Securizată',
     mailRelations: 'Relații Investitori Strategici',
     formTitle: 'Solicitare Strategică',
@@ -194,7 +194,7 @@ export const translations = {
     legalSec2Desc: 'Arhitectura conceptuală a brandului, mărcile inregistrate transfrontalier, materialele grafice, textele ultra-premium, structura layout-urilor și codurile sursă incluse sunt proprietatea de drept a Ragnar Elite Holding. Nicio componentă a acestei platforme nu poate fi extrasă, duplicată, modificată sau integrată în rețele externe fără un mandat scris aprobat în prealabil de către Consiliul de Administrație al holdingului.',
     
     legalSec3Title: '3. Limitarea Răspunderii și Imunitatea Macroeconomică',
-    legalSec3Desc: 'Ragnar Elite Holding aplică standarde riguroase de verificare a datelor, însă nu își asumă răspunderea pentru erori temporare, modificări geopolitice ale piețelor sau disfuncționalități digitale tehnice independente de infrastructura proprie. De asemenea, holdingul își rezervă dreptul discreționar de a recalibra prioritățile sectoriale din cele 19 divizii active, fără obligația notificării prealabile a publicului larg.',
+    legalSec3Desc: 'Ragnar Elite Holding aplică standarde riguroase de verificare a datelor, însă nu își asumă răspunderea pentru erori temporare, modificări geopolitice ale piețelor sau disfuncționalități digitale tehnice independente de infrastructura proprie. De asemenea, holdingul își rezervă dreptul discreționar de a recalibra prioritățile sectoriale din diviziile active, fără obligația notificării prealabile a publicului larg.',
     
     legalSec4Title: '4. Politica Globală de Confidențialitate (Standarde GDPR, CCPA și Transfrontaliere)',
     legalSec4Desc: 'Operăm ca operator internațional de date în deplină concordanță cu Regulamentul General privind Protecția Datelor (UE) 2016/679 (GDPR), precum și cu protocoalele echivalente de pe piețele internaționale majore în care grupul deține interese strategice. Datele cu caracter personal sunt colectate exclusiv prin canale criptate avansate (formularul din pagina Contact) și sunt limitate strict la datele de identificare corporativă (Nume, Email Profesional, Divizia Selectată și Mesajul Strategic).',
@@ -211,7 +211,7 @@ export const translations = {
     legalSec7Bullet2: 'Dreptul la rectificare și actualizare: Modificarea imediată a datelor eronate sau incomplete;',
     legalSec7Bullet3: 'Dreptul la ștergerea definitivă (Dreptul de a fi uitat): Eliminarea irevocabilă a datelor din serverele active și arhivele holdingului;',
     legalSec7Bullet4: 'Dreptul la restricționarea temporară a prelucrării.',
-    legalSec7Footer: 'Pentru orice solicitare oficială din sfera conformității sau pentru a iniția un audit legat de guvernanța datelor trimise, vă rugăm să folosiți adresa unică securizată de corespondență legală a grupului: office@ragnareliteholding.com.',
+    legalSec7Footer: 'Pentru orice solicitare oficială din sfera conformității sau pentru a iniția un audit legat de guvernanța datelor trimise, vă rugăm să folosiți adresa unică securizată de corespondență legală a grupului: investitor@ragnareliteholding.com.',
 
     // Footer Specifics
     footerDesc: 'Holding investițional global dedicat excelenței operaționale și dezvoltării strategice în divizii industriale cheie.\n\nGestionarea, restructurarea și accelerarea activelor corporative de înaltă performanță la standarde macroeconomice riguroase.',
@@ -259,7 +259,7 @@ export const translations = {
     establishedInHK: 'ESTABLISHED IN HONG KONG',
     heroTitle: 'Ragnar Elite Holding',
     heroSubtitle: 'The Standard of Strategic Leadership.',
-    heroDescription: 'An international holding company based in Hong Kong, dedicated to the management, development, and strategic integration of companies across 19 operational divisions.',
+    heroDescription: 'An international holding company based in Hong Kong, dedicated to the management, development, and strategic integration of companies across its operational divisions.',
     heroBtn: 'Discover Portfolio',
     heroSecondaryBtn: 'Contact',
 
@@ -320,8 +320,8 @@ export const translations = {
 
     // Portfolio Section
     portfolioHeaderTitle: 'Asset Portfolio',
-    portfolioHeaderSubtitle: 'The elite architecture of an ecosystem immune to economic volatility paradigms.',
-    portfolioIntro: 'We orchestrate 19 vertically interconnected strategic industries with absolute rigor and mathematical precision.',
+    portfolioHeaderSubtitle: 'An integrated structure designed for operational stability and long-term development.',
+    portfolioIntro: 'We organize our operational divisions into strategic pillars to ensure sustainable development and efficient synergy across all portfolio assets.',
     
     // Divisions 1
     div1Title: '🏛️ 01. Luxury Real Estate & Macro-Infrastructure',
@@ -396,7 +396,7 @@ export const translations = {
     contactHeaderTitle: 'Initiate a Connection',
     contactHeaderSubtitle: 'Exclusive partnerships founded on long-term capital stability, strict corporate governance, and cross-border macro-structural expansion.',
     hqLabel: 'Holding Headquarters',
-    hqAddress: 'Suite C, Level 7, World Trust Tower, 50 Stanley Street, Central, Hong Kong',
+    hqAddress: 'Office C, Level 7, World Trust Tower, 50 Stanley Street, Central, Hong Kong',
     mailSecured: 'Secured Correspondence',
     mailRelations: 'Strategic Investor Relations',
     formTitle: 'Strategic Inquiry',
@@ -429,7 +429,7 @@ export const translations = {
     legalSec2Desc: 'The conceptual architecture of the brand, cross-border registered trademarks, graphics, ultra-premium copywriting, layouts, and underlying source code are the sole property of Ragnar Elite Holding. No portion of this platform may be extracted, duplicated, modified, or integrated into external networks without a written mandate pre-approved by the Board of Directors.',
     
     legalSec3Title: '3. Limitation of Liability & Macroeconomic Immunity',
-    legalSec3Desc: 'Ragnar Elite Holding applies rigorous validation standards but assumes no responsibility for temporary errors, geopolitical market shifts, or independent technical digital outages. The holding reserves the absolute discretionary right to recalibrate sector priorities among its 19 active divisions without prior notice.',
+    legalSec3Desc: 'Ragnar Elite Holding applies rigorous validation standards but assumes no responsibility for temporary errors, geopolitical market shifts, or independent technical digital outages. The holding reserves the absolute discretionary right to recalibrate sector priorities among its active divisions without prior notice.',
     
     legalSec4Title: '4. Global Privacy Policy (GDPR, CCPA & Cross-Border Standards)',
     legalSec4Desc: 'We operate as an international data controller in complete compliance with the General Data Protection Regulation (EU) 2016/679 (GDPR) and equivalent protocols in major global jurisdictions. Personal data is collected exclusively via highly encrypted channels (the Contact form) and is strictly limited to corporate identification details (Name, Professional Email, Selected Sector, and Strategic Message).',
@@ -446,7 +446,7 @@ export const translations = {
     legalSec7Bullet2: 'Right to rectification and updating: Immediate correction of incorrect or incomplete data;',
     legalSec7Bullet3: 'Right to permanent deletion (Right to be forgotten): Irrevocable removal of your records from active servers and archives;',
     legalSec7Bullet4: 'Right to temporary restriction of processing.',
-    legalSec7Footer: 'For any official compliance inquiries or data audit requests, please contact our dedicated legal email: office@ragnareliteholding.com.',
+    legalSec7Footer: 'For any official compliance inquiries or data audit requests, please contact our dedicated legal email: investitor@ragnareliteholding.com.',
 
     // Footer Specifics
     footerDesc: 'Global investment holding dedicated to operational excellence and strategic development in key industrial divisions.\n\nManagement, restructuring, and acceleration of high-performance corporate assets under rigorous macroeconomic standards.',
