@@ -123,7 +123,7 @@ export default function PortofoliuView({ currentLang }: PortofoliuViewProps) {
       <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[140px] pb-16 sm:pt-[170px] sm:pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
         {/* Background corporate panoramic boardroom meeting image */}
         <img 
-          src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80" 
+          src="https://i.imgur.com/7c0k70M.png" 
           alt="Luxury corporate office boardroom glass steel architecture"
           className="absolute inset-0 w-full h-full object-cover opacity-[0.35] pointer-events-none z-0 scale-105"
           referrerPolicy="no-referrer"
