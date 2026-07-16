@@ -7,6 +7,8 @@ import HomeView from './components/HomeView';
 import HoldingView from './components/HoldingView';
 import PortofoliuView from './components/PortofoliuView';
 import ServiciiView from './components/ServiciiView';
+import DivisionsCoreView from './components/DivisionsCoreView';
+import DivisionsGovernanceView from './components/DivisionsGovernanceView';
 import PartnersView from './components/PartnersView';
 import ContactView from './components/ContactView';
 import LegalView from './components/LegalView';
@@ -139,6 +141,9 @@ export default function App() {
       holding: 'Holding & Board | Ragnar Elite',
       portfolio: 'Strategic Portfolio | Ragnar Elite',
       services: 'Corporate Services | Ragnar Elite',
+      'divisions-core': 'Core Operations & Heavy Industries | Ragnar Elite',
+      'divisions-governance': 'Corporate Governance, Finance & Support | Ragnar Elite',
+      partners: 'Strategic Alliances & Global Partners | Ragnar Elite',
       insights: 'Market Insights & Intelligence | Ragnar Elite',
       contact: 'Global Contact & Propose Dossier | Ragnar Elite',
       legal: 'Legal Notice & Security | Ragnar Elite',
@@ -187,6 +192,10 @@ export default function App() {
         return <PortofoliuView currentLang={lang} />;
       case 'services':
         return <ServiciiView currentLang={lang} />;
+      case 'divisions-core':
+        return <DivisionsCoreView currentLang={lang} />;
+      case 'divisions-governance':
+        return <DivisionsGovernanceView currentLang={lang} />;
       case 'partners':
         return <PartnersView currentLang={lang} />;
       case 'contact':

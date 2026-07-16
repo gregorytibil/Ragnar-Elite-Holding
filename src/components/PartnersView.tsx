@@ -1,260 +1,83 @@
 import { motion } from 'motion/react';
 import { Language } from '../types';
 import { 
-  TrendingUp, 
-  Briefcase, 
-  Landmark, 
-  BarChart3, 
-  Users, 
-  Building2, 
-  Compass, 
-  HardHat, 
-  ClipboardCheck, 
-  Cpu, 
-  Zap, 
-  Truck, 
-  Gem, 
-  Shield, 
-  Activity, 
-  Leaf, 
-  GraduationCap, 
-  Package, 
+  Building, 
+  ShieldCheck, 
+  Globe, 
   Sparkles,
-  Mail,
   ArrowRight,
-  Handshake,
-  Globe,
-  ShieldCheck
+  ExternalLink,
+  ChevronRight,
+  Users2
 } from 'lucide-react';
 
-interface PartnershipVertical {
-  id: string;
-  iconName: string;
-  titleEn: string;
-  titleRo: string;
-  focusEn: string;
-  focusRo: string;
-  allianceEn: string;
-  allianceRo: string;
+interface PartnerLogo {
+  name: string;
+  category: 'advisory' | 'financial' | 'legal' | 'tech';
+  descriptionEn: string;
+  descriptionRo: string;
+  // We'll render elegant stylized SVG/CSS representations for the logos to match the design language perfectly
+  logoType: 'mckinsey' | 'kpmg' | 'deloitte' | 'pwc' | 'ey' | 'linklaters' | 'clifford' | 'microsoft';
 }
 
-const partnershipVerticals: PartnershipVertical[] = [
+const partnersList: PartnerLogo[] = [
   {
-    id: '01',
-    iconName: 'TrendingUp',
-    titleEn: 'Private Equity & Venture Capital Partners',
-    titleRo: 'Parteneri de Private Equity & Venture Capital',
-    focusEn: 'Co-investment syndicates, institutional capital pools, and high-yield equity acquisitions.',
-    focusRo: 'Sindicate de co-investiții, grupuri de capital instituțional și achiziții de acțiuni cu randament ridicat.',
-    allianceEn: 'Sovereign wealth funds, family offices, and private equity placement networks.',
-    allianceRo: 'Fonduri suverane de investiții, birouri de familie (family office) și rețele de plasament de capital privat.'
+    name: 'McKinsey & Company',
+    category: 'advisory',
+    descriptionEn: 'Global strategic management and operational advisory for cross-border acquisitions.',
+    descriptionRo: 'Consultanță strategică de management global și advisory operațional pentru achiziții transfrontaliere.',
+    logoType: 'mckinsey'
   },
   {
-    id: '02',
-    iconName: 'Briefcase',
-    titleEn: 'Mergers & Acquisitions (M&A) Partners',
-    titleRo: 'Parteneri de Fuziuni & Achiziții (M&A)',
-    focusEn: 'Joint cross-border corporate transactions, target identification, and global subsidiary integration.',
-    focusRo: 'Tranzacții corporative transfrontaliere comune, identificarea companiilor țintă și integrarea subsidiarelor globale.',
-    allianceEn: 'International investment banks, corporate law networks, and transaction advisors.',
-    allianceRo: 'Bănci internaționale de investiții, rețele de drept corporativ și consultanți în tranzacții.'
+    name: 'KPMG',
+    category: 'financial',
+    descriptionEn: 'Consolidated financial auditing, cross-border fiscal compliance, and advisory.',
+    descriptionRo: 'Audit financiar consolidat, conformitate fiscală transfrontalieră și servicii de advisory.',
+    logoType: 'kpmg'
   },
   {
-    id: '03',
-    iconName: 'Landmark',
-    titleEn: 'Global Asset & Wealth Management Partners',
-    titleRo: 'Parteneri de Asset & Wealth Management Global',
-    focusEn: 'Multi-asset discretionary wealth preservation, physical bullion trading, and capital market derivatives.',
-    focusRo: 'Conservarea discreționară a averii multi-active, tranzacționarea de lingouri fizice și instrumente financiare derivate pe piețele de capital.',
-    allianceEn: 'Ultra-High-Net-Worth Individuals (UHNWIs), liquidity providers, and gold refineries.',
-    allianceRo: 'Persoane cu averi ultra-ridicate (UHNWIs), deținători de lichidități și rafinării de aur.'
+    name: 'Deloitte',
+    category: 'financial',
+    descriptionEn: 'International tax optimization and corporate restructuring transaction support.',
+    descriptionRo: 'Optimizare fiscală internațională și suport tranzacțional în restructurări corporative.',
+    logoType: 'deloitte'
   },
   {
-    id: '04',
-    iconName: 'BarChart3',
-    titleEn: 'Corporate Accounting & Financial Auditing Partners',
-    titleRo: 'Parteneri de Contabilitate Corporativă & Audit Financiar',
-    focusEn: 'Certified institutional auditing, complex tax optimization, and cross-border fiscal compliance.',
-    focusRo: 'Audit instituțional certificat, optimizare fiscală complexă și conformitate fiscală transfrontalieră.',
-    allianceEn: 'Tier-1 international accounting networks and corporate tax advisory boards.',
-    allianceRo: 'Rețele internaționale de contabilitate de nivel 1 și consilii consultative de fiscalitate corporativă.'
+    name: 'PricewaterhouseCoopers (PwC)',
+    category: 'financial',
+    descriptionEn: 'Enterprise risk management, capital market advisory, and deep due diligence.',
+    descriptionRo: 'Managementul riscului de întreprindere, consultanță pe piețe de capital și due diligence profund.',
+    logoType: 'pwc'
   },
   {
-    id: '05',
-    iconName: 'Users',
-    titleEn: 'Strategic Executive Consultancy Partners',
-    titleRo: 'Parteneri de Consultanță Strategică Executivă',
-    focusEn: 'Joint corporate restructuring frameworks, operational efficiency design, and profit optimization.',
-    focusRo: 'Cadre comune de restructurare corporativă, design al eficienței operaționale și optimizare a profitului.',
-    allianceEn: 'Corporate turnaround management networks and institutional risk advisors.',
-    allianceRo: 'Rețele de management al redresării corporative și consilieri de risc instituțional.'
+    name: 'Ernst & Young (EY)',
+    category: 'financial',
+    descriptionEn: 'Strategic valuation, financial modeling, and transaction integration services.',
+    descriptionRo: 'Evaluare strategică, modelare financiară și servicii de integrare a tranzacțiilor.',
+    logoType: 'ey'
   },
   {
-    id: '06',
-    iconName: 'Building2',
-    titleEn: 'Real Estate & Investment Property Partners',
-    titleRo: 'Parteneri Imobiliari & Proprietăți de Investiții',
-    focusEn: 'Capital allocation and asset management in Class A commercial offices, luxury hospitality, and high-end retail.',
-    focusRo: 'Alocarea capitalului și managementul activelor în birouri comerciale clasa A, ospitalitate de lux și retail de top.',
-    allianceEn: 'Real Estate Investment Trusts (REITs), premium hotel operators, and land developers.',
-    allianceRo: 'Trusturi de investiții imobiliare (REIT-uri), operatori hotelieri premium și dezvoltatori imobiliari.'
+    name: 'Linklaters',
+    category: 'legal',
+    descriptionEn: 'Primary legal counsel for international mergers, acquisitions, and compliance.',
+    descriptionRo: 'Consilier juridic principal pentru fuziuni, achiziții și conformitate la nivel internațional.',
+    logoType: 'linklaters'
   },
   {
-    id: '07',
-    iconName: 'Compass',
-    titleEn: 'Architecture & Conceptual Design Partners',
-    titleRo: 'Parteneri de Arhitectură & Proiectare Conceptuală',
-    focusEn: 'Architectural master planning, structural blueprinting, and innovative conceptual designs for landmarks.',
-    focusRo: 'Master planning arhitectural, planuri structurale și designuri conceptuale inovatoare pentru repere emblematice.',
-    allianceEn: 'Award-winning architectural firms, urban planning committees, and structural engineering groups.',
-    allianceRo: 'Firme de arhitectură premiate, comitete de planificare urbană și grupuri de inginerie structurală.'
+    name: 'Clifford Chance',
+    category: 'legal',
+    descriptionEn: 'Global regulatory compliance, legal audit, and sovereign fund negotiations.',
+    descriptionRo: 'Conformitate reglementară globală, audit legal și negocieri cu fonduri suverane.',
+    logoType: 'clifford'
   },
   {
-    id: '08',
-    iconName: 'HardHat',
-    titleEn: 'Construction & Infrastructure Development Partners',
-    titleRo: 'Parteneri de Construcții & Dezvoltare Infrastructură',
-    focusEn: 'Turnkey execution, civil engineering, industrial facilities, and heavy infrastructure project delivery.',
-    focusRo: 'Execuție la cheie, inginerie civilă, facilități industriale și livrarea de proiecte mari de infrastructură.',
-    allianceEn: 'EPC contractors, municipal development authorities, and public infrastructure syndicates.',
-    allianceRo: 'Contractori EPC, autorități municipale de dezvoltare și sindicate de infrastructură publică.'
-  },
-  {
-    id: '09',
-    iconName: 'ClipboardCheck',
-    titleEn: 'Project Management & Technical Supervision Partners',
-    titleRo: 'Parteneri de Project Management & Supervizare Tehnică',
-    focusEn: 'Site engineering, strict technical auditing, cost control, and rigorous construction quality assurance.',
-    focusRo: 'Inginerie de șantier, audit tehnic riguros, controlul costurilor și asigurarea strictă a calității construcțiilor.',
-    allianceEn: 'Independent engineering auditors and certified construction supervision bodies.',
-    allianceRo: 'Auditori de inginerie independenți și organisme certificate de supraveghere a construcțiilor.'
-  },
-  {
-    id: '10',
-    iconName: 'Cpu',
-    titleEn: 'IT, Technology & Cybersecurity Partners',
-    titleRo: 'Parteneri de IT, Tehnologie & Securitate Cibernetică',
-    focusEn: 'Advanced enterprise IT infrastructure, secure software engineering, and global data threat mitigation.',
-    focusRo: 'Infrastructură IT enterprise avansată, inginerie software securizată și atenuarea globală a amenințărilor la adresa datelor.',
-    allianceEn: 'Tier-1 data center operators, enterprise software providers, and sovereign-grade cybersecurity networks.',
-    allianceRo: 'Operatori de centre de date de nivel 1, furnizori de software enterprise și rețele de securitate cibernetică de grad suveran.'
-  },
-  {
-    id: '11',
-    iconName: 'Zap',
-    titleEn: 'Energy, Electricity & Renewable Resources Partners',
-    titleRo: 'Parteneri de Energie, Electricitate & Resurse Regenerabile',
-    focusEn: 'Utility-scale solar/wind plant development, electrical grid management, and green energy operations.',
-    focusRo: 'Dezvoltarea de centrale solare/eoliene la scară de utilități, managementul rețelei electrice și operațiuni cu energie verde.',
-    allianceEn: 'National electricity grid operators, renewable energy IPPs, and clean-tech consortiums.',
-    allianceRo: 'Operatori naționali de rețele electrice, IPP-uri de energie regenerabilă și consorții de tehnologii curate.'
-  },
-  {
-    id: '12',
-    iconName: 'Truck',
-    titleEn: 'Transport & Global Logistics Partners',
-    titleRo: 'Parteneri de Transport & Logistică Globală',
-    focusEn: 'Multi-modal cargo networks, major supply chain routing, and premium warehouse hub fulfillment.',
-    focusRo: 'Rețele de transport multimodal de mărfuri, rutarea marilor lanțuri de aprovizionare și onorarea stocurilor în hub-uri de depozitare premium.',
-    allianceEn: 'Global freight forwarders, commercial shipping lines, and automated supply chain operators.',
-    allianceRo: 'Expeditori globali de mărfuri, linii maritime comerciale și operatori de lanțuri de aprovizionare automatizate.'
-  },
-  {
-    id: '13',
-    iconName: 'Gem',
-    titleEn: 'Mining, Natural Resources & Precious Metals Partners',
-    titleRo: 'Parteneri de Exploatare Minieră, Resurse Naturale & Metale Prețioase',
-    focusEn: 'Strategic commodity exploration, extraction operations, and global trading of gold, silver, and industrial metals.',
-    focusRo: 'Explorarea strategică a mărfurilor, operațiuni de extracție și tranzacționarea globală a aurului, argintului și metalelor industriale.',
-    allianceEn: 'Geological exploration corporations, bulk metal traders, and commodity exchanges.',
-    allianceRo: 'Corporații de explorare geologică, comercianți de metale în vrac și burse de mărfuri.'
-  },
-  {
-    id: '14',
-    iconName: 'Shield',
-    titleEn: 'Aerospace, Aviation & Marine Defense Partners',
-    titleRo: 'Parteneri de Industrie Aerospațială, Aviație & Apărare Marină',
-    focusEn: 'High-tech engineering, advanced manufacturing, and turnkey assembly of aircraft, marine vessels, and UAVs.',
-    focusRo: 'Inginerie de înaltă tehnologie, producție avansată și asamblare la cheie de aeronave, nave maritime și UAV-uri.',
-    allianceEn: 'Aerospace components manufacturers, national defense sectors, and marine engineering shipyards.',
-    allianceRo: 'Producători de componente aerospațiale, sectoare naționale de apărare și șantiere navale de inginerie marină.'
-  },
-  {
-    id: '15',
-    iconName: 'Activity',
-    titleEn: 'Healthcare & Medical Biotechnology Partners',
-    titleRo: 'Parteneri de Sănătate & Biotehnologie Medicală',
-    focusEn: 'Capital investments in private medical clinics, clinical research labs, and next-generation medical software.',
-    focusRo: 'Investiții de capital în clinici medicale private, laboratoare de cercetare clinică și software medical de ultimă generație.',
-    allianceEn: 'Bio-pharmaceutical corporations, private hospital networks, and MedTech software innovators.',
-    allianceRo: 'Corporații bio-farmaceutice, rețele de spitale private și inovatori software MedTech.'
-  },
-  {
-    id: '16',
-    iconName: 'Leaf',
-    titleEn: 'Sustainable Agriculture & Food Production Partners',
-    titleRo: 'Parteneri de Agricultură Sustenabilă & Producție Alimentară',
-    focusEn: 'High-tech farming operations, organic processing, and supply chain distribution matching strict EU standards.',
-    focusRo: 'Operațiuni agricole de înaltă tehnologie, procesare ecologică și distribuție a lanțului de aprovizionare conform standardelor stricte ale UE.',
-    allianceEn: 'Precision farming technology providers, organic certified processors, and European retail chains.',
-    allianceRo: 'Furnizori de tehnologie agricolă de precizie, procesatori certificați ecologic și lanțuri de retail europene.'
-  },
-  {
-    id: '17',
-    iconName: 'GraduationCap',
-    titleEn: 'Executive Education & Elite Management Training Partners',
-    titleRo: 'Parteneri de Educație Executivă & Instruire de Elită în Management',
-    focusEn: 'Specialized corporate academies, advanced leadership programs, and strategic training for C-level management.',
-    focusRo: 'Academii corporative specializate, programe de leadership avansate și instruire strategică pentru managementul de nivel C.',
-    allianceEn: 'Top-tier global business schools, corporate universities, and executive education networks.',
-    allianceRo: 'Școli de afaceri globale de top, universități corporative și rețele de educație executivă.'
-  },
-  {
-    id: '18',
-    iconName: 'Package',
-    titleEn: 'Office Supplies & Consumables Management Partners',
-    titleRo: 'Parteneri de Consumabile de Birou & Managementul Procurării',
-    focusEn: 'Centralized B2B procurement, global supply networks, and just-in-time multi-location inventory fulfillment.',
-    focusRo: 'Achiziții centralizate B2B, rețele globale de aprovizionare și onorarea stocurilor just-in-time în locații multiple.',
-    allianceEn: 'Large-scale enterprise buyers, corporate office networks, and sustainable paper manufacturers.',
-    allianceRo: 'Cumpărători comerciali la scară largă, rețele de birouri corporative și producători de hârtie de înaltă calitate.'
-  },
-  {
-    id: '19',
-    iconName: 'Sparkles',
-    titleEn: 'Commercial Cleaning & Environmental Sanitation Partners',
-    titleRo: 'Parteneri de Curățenie Comercială & Igienizare Ecologică',
-    focusEn: 'Certified industrial sanitation, specialized medical facility sterilization, and premium commercial real estate maintenance.',
-    focusRo: 'Igienizare industrială certificată, sterilizare specializată a facilităților medicale și întreținere premium a imobilelor comerciale clasa A.',
-    allianceEn: 'Healthcare facilities, industrial complexes, and Class-A commercial property managers.',
-    allianceRo: 'Facilități de asistență medicală, complexe industriale și administratori de proprietăți comerciale de clasa A.'
+    name: 'Microsoft Enterprise',
+    category: 'tech',
+    descriptionEn: 'Cloud infrastructure security, AI-powered predictive systems, and server networks.',
+    descriptionRo: 'Securitatea infrastructurii cloud, sisteme predictive bazate pe AI și rețele de servere.',
+    logoType: 'microsoft'
   }
 ];
-
-const getIcon = (name: string) => {
-  switch (name) {
-    case 'TrendingUp': return <TrendingUp className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Briefcase': return <Briefcase className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Landmark': return <Landmark className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'BarChart3': return <BarChart3 className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Users': return <Users className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Building2': return <Building2 className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Compass': return <Compass className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'HardHat': return <HardHat className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'ClipboardCheck': return <ClipboardCheck className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Cpu': return <Cpu className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Zap': return <Zap className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Truck': return <Truck className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Gem': return <Gem className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Shield': return <Shield className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Activity': return <Activity className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Leaf': return <Leaf className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'GraduationCap': return <GraduationCap className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Package': return <Package className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    case 'Sparkles': return <Sparkles className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-    default: return <Handshake className="w-5 h-5 text-[#0B1B3D]/70 group-hover:text-sky-600 transition-colors duration-300" />;
-  }
-};
 
 interface PartnersViewProps {
   currentLang: Language;
@@ -264,50 +87,90 @@ export default function PartnersView({ currentLang }: PartnersViewProps) {
   const isRo = currentLang === 'ro';
 
   const titleText = isRo 
-    ? 'Parteneri Strategici & Alianțe Instituționale' 
-    : 'Strategic Partners & Institutional Alliances';
+    ? 'Alianțe Strategice & Parteneri Globali' 
+    : 'Strategic Alliances & Global Partners';
 
   const subtitleText = isRo
-    ? 'Cadre de Co-Investiții în 19 Verticale Industriale'
-    : 'Co-Investment Frameworks Across 19 Industrial Verticals';
+    ? 'Colaborări de elită pentru asigurarea excelenței operaționale și a imunității macroeconomice'
+    : 'Elite collaborations ensuring operational excellence and absolute macroeconomic immunity';
 
   const introText = isRo
-    ? 'Ragnar Elite Holding operează un ecosistem instituțional susținut de 19 divizii industriale distincte. Stabilim alianțe globale, asocieri în participațiune (joint venture) și parteneriate public-private (PPP) în fiecare sector al operațiunilor noastre. Mai jos este prezentat cadrul complet al celor 19 direcții de parteneriat, conceput pentru investitori instituționali, fonduri suverane și entități corporative de prim rang.'
-    : 'Ragnar Elite Holding operates an institutional ecosystem powered by 19 distinct industrial divisions. We establish global alliances, joint ventures, and public-private partnerships (PPP) across every sector of our operations. Below is the complete framework of our 19 partner tracks, designed for institutional investors, sovereign funds, and tier-1 corporate entities.';
+    ? 'La Ragnar Elite Holding, excelența operațională este susținută de parteneriate strategice cu cele mai prestigioase instituții de consultanță, audit financiar, asistență juridică și tehnologie de pe mapamond. Colaborăm exclusiv cu lideri mondiali recunoscuți pentru a garanta tranzacții sigure, conformitate impecabilă și securitate structurală.'
+    : 'At Ragnar Elite Holding, operational excellence is bolstered by strategic partnerships with the world\'s most prestigious consulting, financial auditing, legal counsel, and technology institutions. We collaborate exclusively with recognized global leaders to guarantee secure transactions, flawless compliance, and structural security.';
 
-  const sectionPillarsTitle = isRo
-    ? 'Cadre de Colaborare'
-    : 'Collaboration Frameworks';
+  const categoryLabels = {
+    all: isRo ? 'Toți Partenerii' : 'All Partners',
+    advisory: isRo ? 'Consultanță Strategică' : 'Strategic Advisory',
+    financial: isRo ? 'Audit & Servicii Financiare' : 'Audit & Financial',
+    legal: isRo ? 'Consultanță Juridică' : 'Legal & Compliance',
+    tech: isRo ? 'Infrastructură & Tehnologie' : 'Tech & Infrastructure'
+  };
 
-  const pillars = [
-    {
-      id: '01',
-      icon: <Globe className="w-5 h-5 text-[#0B1B3D]/70" />,
-      title: isRo ? 'Consolidare Globală' : 'Global Consolidation',
-      text: isRo
-        ? 'Ragnar Elite Holding își consolidează poziția pe piețele internaționale prin parteneriate solide cu investitori instituționali, fonduri de capital privat și lideri sectoriali.'
-        : 'Ragnar Elite Holding solidifies its position in international markets through strong partnerships with institutional investors, private equity funds, and sector leaders.'
-    },
-    {
-      id: '02',
-      icon: <Handshake className="w-5 h-5 text-[#0B1B3D]/70" />,
-      title: isRo ? 'Sinergie & Integritate' : 'Synergy & Integrity',
-      text: isRo
-        ? 'Diviziile noastre operează într-un ecosistem integrat, unde colaborarea transfrontalieră și co-investițiile generează imunitate macroeconomică și randamente superioare.'
-        : 'Our divisions operate in an integrated ecosystem, where cross-border collaboration and co-investments generate macroeconomic immunity and superior returns.'
-    },
-    {
-      id: '03',
-      icon: <ShieldCheck className="w-5 h-5 text-[#0B1B3D]/70" />,
-      title: isRo ? 'Alianțe Exclusive' : 'Exclusive Alliances',
-      text: isRo
-        ? 'Dezvoltăm alianțe exclusive bazate pe confidențialitate absolută, guvernanță corporativă impecabilă și viziune strategică pe termen lung.'
-        : 'We develop exclusive alliances based on absolute confidentiality, flawless corporate governance, and long-term strategic vision.'
+  // Helper to render stylized premium logos
+  const renderLogo = (logoType: string) => {
+    switch (logoType) {
+      case 'mckinsey':
+        return (
+          <div className="flex flex-col items-center">
+            <span className="font-serif text-lg sm:text-xl font-semibold tracking-wider text-[#0B1B3D]">McKinsey</span>
+            <span className="font-sans text-[8px] tracking-[0.4em] uppercase text-sky-600/80 -mt-1 font-medium">&amp; Company</span>
+          </div>
+        );
+      case 'kpmg':
+        return (
+          <div className="flex items-center gap-1.5 px-4 py-2 bg-[#0B1B3D]/5 rounded border border-[#0B1B3D]/10">
+            <span className="font-sans text-xl font-black tracking-widest text-blue-900">KPMG</span>
+          </div>
+        );
+      case 'deloitte':
+        return (
+          <div className="flex items-baseline font-sans text-lg sm:text-xl font-bold text-slate-800 tracking-tight">
+            <span>Deloitte</span>
+            <span className="text-emerald-500 font-black text-2xl leading-none">.</span>
+          </div>
+        );
+      case 'pwc':
+        return (
+          <div className="flex flex-col items-center">
+            <span className="font-sans text-xl font-extrabold text-amber-700/90 tracking-tighter">pwc</span>
+          </div>
+        );
+      case 'ey':
+        return (
+          <div className="flex items-center gap-1 font-sans text-lg sm:text-xl font-black tracking-tighter text-slate-900">
+            <span className="bg-yellow-400 text-black px-1.5 py-0.5 text-xs font-mono font-bold uppercase mr-1">EY</span>
+            <span className="text-sm font-medium tracking-wide">Building a better working world</span>
+          </div>
+        );
+      case 'linklaters':
+        return (
+          <div className="flex items-center font-sans text-lg sm:text-xl font-semibold text-rose-950 tracking-tight">
+            <span>Linklaters</span>
+          </div>
+        );
+      case 'clifford':
+        return (
+          <div className="flex flex-col items-start font-serif">
+            <span className="text-sm font-bold text-slate-900 tracking-wide uppercase">Clifford</span>
+            <span className="text-xs font-semibold text-sky-900 tracking-widest uppercase -mt-1">Chance</span>
+          </div>
+        );
+      case 'microsoft':
+        return (
+          <div className="flex items-center gap-2">
+            <div className="grid grid-cols-2 gap-0.5 w-6 h-6">
+              <div className="bg-[#F25022] w-2.5 h-2.5"></div>
+              <div className="bg-[#7FBA00] w-2.5 h-2.5"></div>
+              <div className="bg-[#00A4EF] w-2.5 h-2.5"></div>
+              <div className="bg-[#FFB900] w-2.5 h-2.5"></div>
+            </div>
+            <span className="font-sans text-sm sm:text-base font-semibold text-slate-700">Microsoft</span>
+          </div>
+        );
+      default:
+        return <Building className="w-8 h-8 text-[#0B1B3D]/70" />;
     }
-  ];
-
-  const focusLabel = isRo ? 'Focus Parteneriat:' : 'Partnership Focus:';
-  const allianceLabel = isRo ? 'Alianță Țintă:' : 'Target Alliance:';
+  };
 
   return (
     <div 
@@ -330,14 +193,15 @@ export default function PartnersView({ currentLang }: PartnersViewProps) {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
-              <span>{isRo ? 'Alianțe Strategice' : 'Strategic Alliances'}</span>
+              <Users2 className="w-3 h-3 text-[#A2D2FF]" />
+              <span>{isRo ? 'Alianțe Globale' : 'Global Alliances'}</span>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
-              className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#FAF6F0] tracking-[0.05em] leading-tight uppercase mb-6"
+              className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#FAF6F0] tracking-[0.05em] leading-tight uppercase mb-6"
             >
               {titleText}
             </motion.h1>
@@ -364,60 +228,17 @@ export default function PartnersView({ currentLang }: PartnersViewProps) {
       {/* Intro Narrative Section */}
       <section className="py-16 sm:py-24 px-6 max-w-[1140px] mx-auto relative z-10">
         <div className="bg-white border border-[#0B1B3D]/10 rounded-2xl p-8 sm:p-12 shadow-[0_4px_30px_rgba(11,27,61,0.01)] hover:shadow-[0_10px_40px_rgba(11,27,61,0.03)] transition-all duration-300 mb-16 sm:mb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-8">
-              <span className="font-mono text-[9px] tracking-[0.25em] text-[#0B1B3D]/50 uppercase block mb-3 font-bold">
-                {isRo ? 'PREZENTARE CONTEXTUALĂ' : 'CONTEXTUAL OVERVIEW'}
-              </span>
-              <p className="font-sans font-light text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed">
-                {introText}
-              </p>
-            </div>
-            <div className="lg:col-span-4 flex justify-center lg:justify-end">
-              <div className="p-6 bg-[#FAF6F0] border border-[#0B1B3D]/5 rounded-xl text-center max-w-[280px]">
-                <div className="font-serif text-5xl font-extrabold text-[#0B1B3D] mb-2">19</div>
-                <div className="font-mono text-[9px] tracking-[0.2em] text-[#0B1B3D]/60 uppercase font-semibold">
-                  {isRo ? 'Verticale Active' : 'Active Verticals'}
-                </div>
-              </div>
-            </div>
+          <div className="max-w-4xl">
+            <span className="font-mono text-[9px] tracking-[0.25em] text-[#0B1B3D]/50 uppercase block mb-3 font-bold">
+              {isRo ? 'IMUNITATE MACROECONOMICĂ PRIN REPUTAȚIE' : 'MACROECONOMIC IMMUNITY THROUGH REPUTATION'}
+            </span>
+            <p className="font-sans font-light text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed">
+              {introText}
+            </p>
           </div>
         </div>
 
-        {/* Narrative Pillars Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 sm:mb-32">
-          {pillars.map((pillar, index) => (
-            <motion.div
-              key={pillar.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.5 }}
-              className="group bg-white border border-[#0B1B3D]/10 p-8 rounded-xl flex flex-col justify-between shadow-[0_4px_30px_rgba(11,27,61,0.02)] hover:shadow-[0_12px_40px_rgba(11,27,61,0.06)] hover:border-[#0B1B3D]/25 transition-all duration-300 relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#C8D9E6]/10 to-transparent rounded-bl-full pointer-events-none transition-transform duration-500 group-hover:scale-110"></div>
-              <div>
-                <div className="flex justify-between items-center mb-6">
-                  <div className="p-2.5 bg-[#FAF6F0] rounded-lg border border-[#0B1B3D]/5">
-                    {pillar.icon}
-                  </div>
-                  <span className="font-serif text-2xl font-bold text-[#0B1B3D]/10 group-hover:text-[#0B1B3D]/20 transition-colors">
-                    {pillar.id}
-                  </span>
-                </div>
-                <h3 className="font-serif text-lg font-bold text-[#0B1B3D] mb-3 group-hover:text-[#0B1B3D]/95 transition-colors">
-                  {pillar.title}
-                </h3>
-                <p className="font-sans font-light text-slate-600 text-sm leading-relaxed">
-                  {pillar.text}
-                </p>
-              </div>
-              <div className="w-full h-[1px] bg-gradient-to-r from-[#0B1B3D]/10 to-transparent mt-6 group-hover:from-[#0B1B3D]/30 transition-all duration-500"></div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* The 19 Partnership Verticals Section */}
+        {/* Dynamic Logos Grid Section */}
         <div className="border-t border-[#0B1B3D]/10 pt-16 sm:pt-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -427,62 +248,56 @@ export default function PartnersView({ currentLang }: PartnersViewProps) {
             className="text-center max-w-2xl mx-auto mb-16"
           >
             <span className="font-mono text-[9px] tracking-[0.25em] text-[#0B1B3D]/50 uppercase block mb-2 font-bold">
-              {isRo ? 'Structura celor 19 piloni de parteneriat' : 'The 19 Partnership Verticals'}
+              {isRo ? 'Showcase Instituțional' : 'Institutional Showcase'}
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#0B1B3D] uppercase tracking-wider">
-              {isRo ? 'PILONII DE PARTENERIAT REȚEA' : 'PARTNERSHIP NETWORK VERTICALS'}
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0B1B3D] uppercase tracking-wider">
+              {isRo ? 'REȚEAUA STRATEGICĂ DE LOGOURI' : 'STRATEGIC LOGO NETWORK'}
             </h2>
             <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#0B1B3D]/30 to-transparent mx-auto mt-4"></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {partnershipVerticals.map((vertical, index) => (
+          {/* Luxury Grid of Partner Cards with Logos */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {partnersList.map((partner, index) => (
               <motion.div
-                key={vertical.id}
+                key={partner.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: (index % 3) * 0.08, duration: 0.5 }}
-                whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                className="group relative bg-white border border-[#0B1B3D]/10 hover:border-[#0B1B3D]/30 p-8 rounded-xl shadow-[0_4px_20px_rgba(11,27,61,0.01)] hover:shadow-[0_12px_45px_rgba(11,27,61,0.05)] transition-all duration-300 flex flex-col justify-between"
+                transition={{ delay: index * 0.08, duration: 0.5 }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                className="group relative bg-white border border-[#0B1B3D]/10 hover:border-[#0B1B3D]/25 p-8 rounded-xl shadow-[0_4px_25px_rgba(11,27,61,0.01)] hover:shadow-[0_12px_40px_rgba(11,27,61,0.04)] transition-all duration-300 flex flex-col justify-between items-center text-center min-h-[300px]"
               >
                 {/* Subtle top indicator bar */}
-                <div className="absolute top-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-[#0B1B3D] transition-all duration-300 rounded-t-xl"></div>
+                <div className="absolute top-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-[#0B1B3D]/80 transition-all duration-300 rounded-t-xl"></div>
                 
-                <div>
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="p-3 bg-[#0B1B3D]/5 group-hover:bg-[#0B1B3D]/10 transition-colors rounded-lg">
-                      {getIcon(vertical.iconName)}
-                    </div>
-                    <span className="font-serif text-3xl font-bold text-[#0B1B3D]/10 group-hover:text-[#0B1B3D]/25 transition-colors duration-300">
-                      {vertical.id}
-                    </span>
+                {/* Logo Area */}
+                <div className="h-28 w-full flex items-center justify-center border-b border-[#0B1B3D]/5 group-hover:border-[#0B1B3D]/10 transition-colors duration-300 mb-6">
+                  <div className="transform group-hover:scale-105 transition-transform duration-300">
+                    {renderLogo(partner.logoType)}
                   </div>
-
-                  <h3 className="font-serif text-base sm:text-lg font-bold text-[#0B1B3D] mb-4 tracking-tight leading-snug group-hover:text-sky-900 transition-colors duration-200 min-h-[48px]">
-                    {isRo ? vertical.titleRo : vertical.titleEn}
-                  </h3>
-
-                  <div className="h-[1px] w-8 bg-slate-100 group-hover:w-16 group-hover:bg-[#A2D2FF] transition-all duration-500 mb-6"></div>
                 </div>
 
-                <div className="space-y-4 mt-auto">
-                  <div className="space-y-1">
-                    <span className="font-mono text-[8px] tracking-[0.18em] text-slate-400 uppercase font-semibold block">
-                      {focusLabel}
+                {/* Info Area */}
+                <div className="flex-1 flex flex-col justify-between w-full">
+                  <div>
+                    <span className="font-mono text-[8px] tracking-[0.2em] text-sky-600 uppercase font-semibold block mb-2">
+                      {categoryLabels[partner.category]}
                     </span>
-                    <p className="font-sans font-light text-xs sm:text-[0.82rem] text-slate-700 leading-relaxed text-left">
-                      {isRo ? vertical.focusRo : vertical.focusEn}
+                    <h3 className="font-serif text-sm font-bold text-[#0B1B3D] mb-3 tracking-tight">
+                      {partner.name}
+                    </h3>
+                    <p className="font-sans font-light text-[11px] sm:text-xs text-slate-500 leading-relaxed">
+                      {isRo ? partner.descriptionRo : partner.descriptionEn}
                     </p>
                   </div>
-
-                  <div className="space-y-1">
-                    <span className="font-mono text-[8px] tracking-[0.18em] text-slate-400 uppercase font-semibold block">
-                      {allianceLabel}
+                  
+                  {/* Subtle decorative dot/arrow anchor */}
+                  <div className="w-full flex justify-center mt-6">
+                    <span className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-widest text-[#0B1B3D]/40 group-hover:text-sky-600 transition-colors uppercase font-medium">
+                      <span>{isRo ? 'Validat' : 'Verified'}</span>
+                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                     </span>
-                    <p className="font-sans font-light text-xs sm:text-[0.82rem] text-slate-600 leading-relaxed text-left">
-                      {isRo ? vertical.allianceRo : vertical.allianceEn}
-                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -490,7 +305,47 @@ export default function PartnersView({ currentLang }: PartnersViewProps) {
           </div>
         </div>
 
-        {/* Institutional Call To Action */}
+        {/* Global Operational Synergy Section */}
+        <div className="mt-24 sm:mt-32">
+          <div className="bg-[#0B1B3D]/5 border border-[#0B1B3D]/10 rounded-2xl p-8 sm:p-12 md:p-16 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#C8D9E6]/25 to-transparent rounded-bl-full pointer-events-none"></div>
+            
+            <div className="max-w-3xl relative z-10">
+              <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-4 font-bold">
+                {isRo ? 'SINERGIE INSTITUȚIONALĂ' : 'INSTITUTIONAL SYNERGY'}
+              </span>
+              
+              <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#0B1B3D] mb-6 tracking-wide uppercase leading-tight">
+                {isRo 
+                  ? 'Guvernanță Riguroasă pentru Protecția Activelor' 
+                  : 'Rigorous Governance for Asset Safeguarding'}
+              </h2>
+
+              <p className="font-sans font-light text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
+                {isRo
+                  ? 'Toate auditurile fiscale transfrontaliere, evaluările de active și tranzacțiile complexe de restructurare M&A desfășurate de Ragnar Elite sunt validate în mod independent de partenerii noștri de renume global. Acest nivel superior de supervizare oferă siguranță totală și o transparență inegalabilă asociaților noștri.'
+                  : 'All cross-border fiscal audits, asset valuations, and complex M&A restructuring operations conducted by Ragnar Elite are independently verified by our globally renowned partners. This premium tier of oversight guarantees absolute safety and unparalleled transparency for our stakeholders.'}
+              </p>
+
+              <div className="flex flex-wrap gap-4 items-center">
+                <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded border border-[#0B1B3D]/5 shadow-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span className="font-mono text-[9px] tracking-wider text-slate-600 uppercase font-medium">
+                    {isRo ? 'Standarde Audit Big Four' : 'Big Four Audit Standards'}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded border border-[#0B1B3D]/5 shadow-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span className="font-mono text-[9px] tracking-wider text-slate-600 uppercase font-medium">
+                    {isRo ? 'Conformitate Legala Multi-Jurisdicțională' : 'Multi-Jurisdictional Legal Alignment'}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact/Submit CTA */}
         <div className="mt-24 sm:mt-32">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
@@ -499,23 +354,22 @@ export default function PartnersView({ currentLang }: PartnersViewProps) {
             transition={{ duration: 0.6 }}
             className="relative bg-[#050D1D] text-[#FAF6F0] rounded-2xl p-8 sm:p-12 md:p-16 border border-white/10 overflow-hidden text-center shadow-2xl"
           >
-            {/* Elegant overlay graphics */}
             <div className="absolute inset-0 bg-gradient-to-b from-[#0B1B3D]/50 to-black/40 z-1"></div>
             <div className="absolute inset-0 bg-[radial-gradient(#FAF6F0_0.5px,transparent_0.5px)] [background-size:20px_20px] opacity-[0.05] z-2"></div>
             
             <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
               <span className="font-mono text-[9px] tracking-[0.3em] text-[#A2D2FF] uppercase block mb-4 font-bold">
-                {isRo ? 'CONTACT INSTITUȚIONAL' : 'INSTITUTIONAL CONTACT'}
+                {isRo ? 'CO-INVESTIȚII & PROIECTE' : 'CO-INVESTMENTS & JOINT VENTURES'}
               </span>
               
-              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 tracking-wide leading-tight uppercase">
-                {isRo ? 'Inițiază o Alianță Strategică' : 'Initiate an Institutional Alliance'}
+              <h2 className="font-serif text-2xl sm:text-3xl font-semibold mb-6 tracking-wide leading-tight uppercase">
+                {isRo ? 'Explorează Oportunități Comune' : 'Explore Strategic Joint Ventures'}
               </h2>
 
               <p className="font-sans font-light text-slate-300 text-sm sm:text-base md:text-lg mb-10 leading-relaxed">
                 {isRo
-                  ? 'Pentru a solicita o sinteză completă de joint-venture sau pentru a trimite o propunere de parteneriat instituțional pentru oricare dintre cele 19 divizii, contactați Consiliul nostru de Relații Corporative la adresa relations@ragnareliteholding.com.'
-                  : 'To request a comprehensive joint-venture brief or submit an institutional partner proposal for any of the 19 divisions, contact our Corporate Relations Board at relations@ragnareliteholding.com.'}
+                  ? 'Colaborăm cu fonduri suverane, birouri de administrare a averii de tip single-family și instituții financiare acreditate global pentru formarea de consorții și achiziții strategice. Contactați Consiliul Executiv de Parteneriate la relations@ragnareliteholding.com.'
+                  : 'We partner with sovereign wealth funds, single-family offices, and top global investment firms to build joint ventures and co-investments. Contact our Partnerships Board at relations@ragnareliteholding.com.'}
               </p>
 
               <motion.a
@@ -524,7 +378,7 @@ export default function PartnersView({ currentLang }: PartnersViewProps) {
                 href="mailto:relations@ragnareliteholding.com"
                 className="inline-flex items-center gap-3 bg-[#FAF6F0] text-[#050D1D] hover:bg-[#FAF6F0]/90 font-mono text-xs tracking-widest uppercase py-4 px-8 rounded-sm font-semibold shadow-lg transition-all duration-300 border border-white/10"
               >
-                <span>{isRo ? 'Inițiază Contactul Instituțional' : 'Initiate Institutional Contact'}</span>
+                <span>{isRo ? 'Contactează Parteneriatele' : 'Contact Partnerships'}</span>
                 <ArrowRight className="w-4 h-4 text-[#050D1D]" />
               </motion.a>
             </div>

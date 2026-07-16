@@ -70,16 +70,40 @@ export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
           : 'holding services, m&a advisory, financial engineering, fiscal audit, legal compliance, operational restructuring, fiscal integration, asset management',
         ogType: 'website',
       },
+      'divisions-core': {
+        title: isRo
+          ? 'Divizii Industriale & Tehnologii Strategice | Ragnar Elite'
+          : 'Core Operations & Heavy Industries | Ragnar Elite',
+        description: isRo
+          ? 'Descoperiți diviziile noastre industriale active: aerospace și apărare, imobiliare, arhitectură, construcții, energie regenerabilă, minerit, biotehnologie, agricultură și logistică globală.'
+          : 'Explore our heavy industrial and core operations: aerospace, luxury real estate, architecture, construction, renewable energy, mining, medical biotechnology, sustainable agriculture, and global logistics.',
+        keywords: isRo
+          ? 'divizii industriale, infrastructura critica, tehnologii strategice, ragnar elite, aparare marina, real estate lux, exploatare miniera, energie regenerabila, logistica globala, transport multimodal'
+          : 'industrial divisions, core operations, critical infrastructure, ragnar elite, marine defense, luxury real estate, mining operations, renewable energy, global logistics, multi-modal transport',
+        ogType: 'website',
+      },
+      'divisions-governance': {
+        title: isRo
+          ? 'Management Strategic, Capital & Servicii Integrate | Ragnar Elite'
+          : 'Corporate Governance, Finance & Support | Ragnar Elite',
+        description: isRo
+          ? 'Explorați pilonul nostru de guvernanță corporativă: private equity, fuziuni și achiziții (M&A), asset management global, audit financiar, consultanță executivă strategică și securitate cibernetică.'
+          : 'Explore our corporate governance and strategic support engine: private equity, mergers and acquisitions (M&A), global asset management, financial auditing, executive consultancy, and enterprise cybersecurity.',
+        keywords: isRo
+          ? 'management strategic, capital privat, fuziuni si achizitii, asset management global, audit financiar, consultanta executiva, securitate cibernetica, educatie de elita, consumabile corporative, curatenie industriala'
+          : 'corporate governance, private equity, mergers and acquisitions, asset management, financial auditing, strategic consultancy, cybersecurity, executive education, corporate supplies, commercial sanitation',
+        ogType: 'website',
+      },
       partners: {
         title: isRo
           ? 'Parteneri & Alianțe Strategice | Ragnar Elite'
           : 'Partners & Strategic Alliances | Ragnar Elite',
         description: isRo
-          ? 'Alianțe globale de top pentru asigurarea excelenței operaționale și creșterii strategice pe termen lung.'
-          : 'Top global alliances ensuring operational excellence and long-term strategic growth.',
+          ? 'Alianțe globale de top pentru asigurarea excelenței operaționale și a imunității macroeconomice prin audit independent și consultanță.'
+          : 'Top global alliances ensuring operational excellence and macroeconomic immunity through independent auditing and consulting.',
         keywords: isRo
-          ? 'parteneri ragnar elite, aliante strategice, kpmg, mckinsey, parteneriate holding, colaborari corporative'
-          : 'ragnar elite partners, strategic alliances, kpmg, mckinsey, holding partnerships, corporate collaborations',
+          ? 'parteneri ragnar elite, aliante strategice, kpmg, mckinsey, deloitte, pwc, ey, linklaters, clifford chance, microsoft'
+          : 'ragnar elite partners, strategic alliances, kpmg, mckinsey, deloitte, pwc, ey, linklaters, clifford chance, microsoft',
         ogType: 'website',
       },
       contact: {
@@ -284,7 +308,7 @@ export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
           },
         ],
       };
-    } else if (activeTab === 'partners') {
+    } else if (activeTab === 'divisions-core' || activeTab === 'divisions-governance' || activeTab === 'partners') {
       schemaObject = {
         '@context': 'https://schema.org',
         '@graph': [
@@ -299,19 +323,15 @@ export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
             },
           },
           {
-            '@type': 'Article',
-            '@id': `${canonicalUrl}/#article`,
-            'isPartOf': {
-              '@id': `${canonicalUrl}/#webpage`,
-            },
-            'headline': currentMeta.title,
+            '@type': 'CollectionPage',
+            '@id': `${canonicalUrl}/#collectionpage`,
+            'url': canonicalUrl,
+            'name': currentMeta.title,
             'description': currentMeta.description,
-            'image': 'https://i.imgur.com/InRDrMr.png',
-            'author': {
-              '@type': 'Organization',
-              'name': 'Ragnar Elite Holding Research',
+            'isPartOf': {
+              '@id': `${baseUrl}/#website`,
             },
-            'publisher': {
+            'about': {
               '@id': `${baseUrl}/#corporation`,
             },
           },
