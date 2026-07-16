@@ -210,7 +210,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-bej-bg flex flex-col justify-between selection:bg-sky-accent selection:text-navy-brand overflow-x-hidden relative">
+    <div className="min-h-screen bg-bej-bg flex flex-col justify-between selection:bg-sky-accent selection:text-navy-brand overflow-x-hidden relative notranslate">
       {/* Hidden Google Translate anchor */}
       <div id="google_translate_element" style={{ display: 'none' }} />
 

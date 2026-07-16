@@ -166,6 +166,7 @@ export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
     setMeta('description', currentMeta.description);
     setMeta('keywords', currentMeta.keywords);
     setMeta('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+    setMeta('google', 'notranslate');
 
     // 4. Update Canonical URL
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;

@@ -211,7 +211,7 @@ export const translations = {
     legalSec7Bullet2: 'Dreptul la rectificare și actualizare: Modificarea imediată a datelor eronate sau incomplete;',
     legalSec7Bullet3: 'Dreptul la ștergerea definitivă (Dreptul de a fi uitat): Eliminarea irevocabilă a datelor din serverele active și arhivele holdingului;',
     legalSec7Bullet4: 'Dreptul la restricționarea temporară a prelucrării.',
-    legalSec7Footer: 'Pentru orice solicitare oficială din sfera conformității sau pentru a iniția un audit legat de guvernanța datelor trimise, vă rugăm să folosiți adresa unică securizată de corespondență legală a grupului: investitor@ragnareliteholding.com.',
+    legalSec7Footer: 'Pentru orice solicitare oficială din sfera conformității sau pentru a iniția un audit legat de guvernanța datelor trimise, vă rugăm să folosiți adresa unică securizată de corespondență legală a grupului: office@ragnareliteholding.com.',
 
     // Footer Specifics
     footerDesc: 'Holding investițional global dedicat excelenței operaționale și dezvoltării strategice în divizii industriale cheie.\n\nGestionarea, restructurarea și accelerarea activelor corporative de înaltă performanță la standarde macroeconomice riguroase.',
@@ -446,7 +446,7 @@ export const translations = {
     legalSec7Bullet2: 'Right to rectification and updating: Immediate correction of incorrect or incomplete data;',
     legalSec7Bullet3: 'Right to permanent deletion (Right to be forgotten): Irrevocable removal of your records from active servers and archives;',
     legalSec7Bullet4: 'Right to temporary restriction of processing.',
-    legalSec7Footer: 'For any official compliance inquiries or data audit requests, please contact our dedicated legal email: investitor@ragnareliteholding.com.',
+    legalSec7Footer: 'For any official compliance inquiries or data audit requests, please contact our dedicated legal email: office@ragnareliteholding.com.',
 
     // Footer Specifics
     footerDesc: 'Global investment holding dedicated to operational excellence and strategic development in key industrial divisions.\n\nManagement, restructuring, and acceleration of high-performance corporate assets under rigorous macroeconomic standards.',

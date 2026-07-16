@@ -142,7 +142,7 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                 </div>
                 <div className="space-y-3">
                   <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.mailSecured}</strong>
-                  <span className="font-mono text-sm text-white border-b border-white/20 pb-1 inline-block">investitor@ragnareliteholding.com</span>
+                  <span className="font-mono text-sm text-white border-b border-white/20 pb-1 inline-block">office@ragnareliteholding.com</span>
                 </div>
                 <div className="space-y-3">
                   <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.mailRelations}</strong>
