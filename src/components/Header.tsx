@@ -32,7 +32,6 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
     { id: 'services', label: t.navServices },
     { id: 'partners', label: t.navPartners },
     { id: 'contact', label: t.navContact },
-    { id: 'legal', label: t.navLegal },
   ];
 
   return (
@@ -40,7 +39,7 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
       {/* Main Navbar with translucent dark theme blue */}
       <nav 
         aria-label={currentLang === 'ro' ? 'Meniu Principal' : 'Primary Navigation'}
-        className={`px-4 sm:px-6 md:px-12 flex justify-between items-center transition-all duration-500 ${
+        className={`px-4 sm:px-6 md:px-12 flex justify-between items-center transition-all duration-500 relative z-50 ${
           isScrolled || activeTab !== 'home'
             ? 'bg-[#0B1B3D]/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.15)] py-3 sm:py-4 md:py-5' 
             : 'bg-transparent border-b border-transparent py-4 sm:py-6 md:py-8'
@@ -183,15 +182,21 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
             id="mobile-navigation-menu"
             role="region"
             aria-label={currentLang === 'ro' ? 'Navigație Mobilă' : 'Mobile Navigation'}
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden bg-[#0B1B3D]/95 backdrop-blur-2xl border-b border-white/10 overflow-hidden shadow-2xl"
+            initial={{ opacity: 0, y: '-100%' }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: '-100%' }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:hidden fixed inset-0 w-screen h-[100dvh] bg-[#0B1B3D]/98 backdrop-blur-3xl flex flex-col justify-center items-center z-40 px-6 pt-24 pb-12 overflow-y-auto"
           >
-            <ul className="flex flex-col p-6 gap-3 list-none m-0">
-              {navItems.map((item) => (
-                <li key={item.id}>
+            <ul className="flex flex-col items-center justify-center gap-6 list-none m-0 p-0 w-full max-w-sm">
+              {navItems.map((item, idx) => (
+                <motion.li 
+                  key={item.id}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.04 + 0.1, duration: 0.4 }}
+                  className="w-full text-center"
+                >
                   <button
                     onClick={() => {
                       setActiveTab(item.id);
@@ -199,15 +204,15 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                       trackCTA(`header_mobile_nav_${item.id}`, item.label);
                     }}
                     aria-current={activeTab === item.id ? 'page' : undefined}
-                    className={`w-full text-left py-3 px-4 text-[11px] uppercase tracking-[0.15em] font-semibold rounded-[4px] border-b border-white/5 block cursor-pointer transition-all duration-200 ${
+                    className={`w-full text-center py-3 text-lg sm:text-xl uppercase tracking-[0.2em] font-serif block cursor-pointer transition-all duration-300 ${
                       activeTab === item.id 
-                        ? 'text-[#C8D9E6] bg-white/5 border-l-2 border-l-[#C8D9E6]' 
-                        : 'text-[#FAF6F0]/80 hover:text-[#C8D9E6] hover:bg-white/5'
+                        ? 'text-[#C8D9E6] font-bold border-b border-[#C8D9E6]/20' 
+                        : 'text-[#FAF6F0]/80 hover:text-[#C8D9E6] active:text-[#C8D9E6]'
                     }`}
                   >
                     {item.label}
                   </button>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </motion.div>

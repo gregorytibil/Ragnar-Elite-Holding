@@ -22,7 +22,8 @@ export const translations = {
     establishedInHK: 'FONDAT ÎN HONG KONG',
     heroTitle: 'Ragnar Elite Holding',
     heroSubtitle: 'The Standard of Strategic Leadership.',
-    heroBtn: 'Explorează Ecosistemul',
+    heroDescription: 'Holding internațional cu sediul în Hong Kong, dedicat administrării, dezvoltării și integrării strategice a companiilor din 13 divizii operaționale.',
+    heroBtn: 'Descoperă Portofoliul',
     heroSecondaryBtn: 'Contact',
 
     // About Section
@@ -38,7 +39,7 @@ export const translations = {
     pillarExcellenceTitle: '🏆 Excelență',
     pillarExcellenceDesc: 'Un standard operațional absolut și fără compromisuri, aplicat riguros în fiecare tranzacție, audit sau parteneriat executat.',
     pillarIntegrityTitle: '⚖️ Integritate',
-    pillarIntegrityDesc: 'Transparență guvernamentală deplină, etică profesională incoruptibilă și responsabilitate totală față de capitalul consolidat.',
+    pillarIntegrityDesc: 'Promovăm guvernanța corporativă transparentă, etica profesională, responsabilitatea managerială și protejarea intereselor companiilor din grup.',
     pillarVisionTitle: '🌍 Viziune Globală',
     pillarVisionDesc: 'O perspectivă extinsă, fără frontiere administrative sau bariere de piață, axată pe generarea unui impact sistemic la scară mondială.',
 
@@ -216,7 +217,7 @@ export const translations = {
     footerTerms: 'Termeni și Condiții',
     footerGdpr: 'Politica GDPR',
     footerSecureAccess: 'Solicitare Acces Securizat',
-    footerCopyright: '© 2026 Ragnar Elite Holding. Toate drepturile rezervate. Headquarters: Hong Kong.',
+    footerCopyright: '© 2026 Ragnar Elite Holding Limited. Înregistrată în Hong Kong. Nr. Înregistrare: 3410294.',
     
     // Insights Section (Gândire Strategică)
     insightsHeaderTitle: 'Insights Strategic',
@@ -254,7 +255,8 @@ export const translations = {
     establishedInHK: 'ESTABLISHED IN HONG KONG',
     heroTitle: 'Ragnar Elite Holding',
     heroSubtitle: 'The Standard of Strategic Leadership.',
-    heroBtn: 'Explore the Ecosystem',
+    heroDescription: 'An international holding company based in Hong Kong, dedicated to the management, development, and strategic integration of companies across 13 operational divisions.',
+    heroBtn: 'Discover Portfolio',
     heroSecondaryBtn: 'Contact',
 
     // About Section
@@ -270,7 +272,7 @@ export const translations = {
     pillarExcellenceTitle: '🏆 Excellence',
     pillarExcellenceDesc: 'An absolute and uncompromising operational standard, rigorously applied in every transaction, audit, or partnership executed.',
     pillarIntegrityTitle: '⚖️ Integrity',
-    pillarIntegrityDesc: 'Full corporate governance, incorruptible professional ethics, and total responsibility toward consolidated capital.',
+    pillarIntegrityDesc: 'We promote transparent corporate governance, professional ethics, managerial responsibility, and safeguarding the interests of our group companies.',
     pillarVisionTitle: '🌍 Global Vision',
     pillarVisionDesc: 'An expansive perspective without administrative frontiers or market barriers, focused on generating systemic global impact.',
 
@@ -448,7 +450,7 @@ export const translations = {
     footerTerms: 'Terms & Conditions',
     footerGdpr: 'GDPR Policy',
     footerSecureAccess: 'Request Secure Access',
-    footerCopyright: '© 2026 Ragnar Elite Holding. All rights reserved. Headquarters: Hong Kong.',
+    footerCopyright: '© 2026 Ragnar Elite Holding Limited. Registered in Hong Kong. Company No. 3410294.',
     
     // Insights Section (Strategic Thinking)
     insightsHeaderTitle: 'Strategic Insights',

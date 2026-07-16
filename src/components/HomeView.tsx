@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Shield, Award, Scale, Globe, ChevronDown } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Shield, Award, Scale, Globe, ChevronDown, MessageSquare } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Language } from '../types';
 import { translations } from '../translations';
@@ -103,11 +103,20 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="font-sans font-light text-xs sm:text-sm md:text-base text-[#FAF6F0]/80 mb-10 sm:mb-16 tracking-[0.18em] sm:tracking-[0.25em] uppercase leading-relaxed max-w-3xl mx-auto"
+            className="font-sans font-light text-xs sm:text-sm md:text-base text-[#FAF6F0]/80 mb-4 sm:mb-6 tracking-[0.18em] sm:tracking-[0.25em] uppercase leading-relaxed max-w-3xl mx-auto"
             itemProp="slogan"
           >
             {t.heroSubtitle}
           </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45 }}
+            className="font-sans font-light text-sm sm:text-base md:text-lg text-white/95 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto tracking-wide normal-case px-4"
+          >
+            {t.heroDescription}
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -127,7 +136,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
               className="group inline-flex items-center gap-3 px-8 py-4 bg-transparent hover:bg-white/[0.04] text-white/90 hover:text-white font-semibold text-xs uppercase tracking-[2px] rounded-[8px] border border-white/20 hover:border-white/60 transition-all duration-350 cursor-pointer active:scale-95 w-full sm:w-auto justify-center"
             >
               <span>{t.heroSecondaryBtn}</span>
-              <span className="w-1.5 h-1.5 bg-sky-accent rounded-full animate-pulse group-hover:scale-125 transition-transform duration-300" />
+              <MessageSquare className="w-4 h-4 text-sky-accent group-hover:text-[#C8D9E6] group-hover:scale-110 transition-all duration-300" />
             </button>
           </motion.div>
         </div>
@@ -291,9 +300,9 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
               </span>
             </div>
             <div className="p-8 md:p-12 text-center flex flex-col items-center justify-center last:border-0 group hover:bg-white/[0.02] transition-colors duration-300">
-              <span className="block text-3xl sm:text-4xl font-bold text-[#FAF6F0] mb-3 font-serif tracking-wide group-hover:scale-105 transition-transform duration-300">STANLEY HK</span>
+              <span className="block text-3xl sm:text-4xl font-bold text-[#FAF6F0] mb-3 font-serif tracking-wide group-hover:scale-105 transition-transform duration-300">CENTRAL, HK</span>
               <span className="text-[10px] md:text-[11px] font-mono tracking-[0.2em] opacity-60 uppercase">
-                {currentLang === 'ro' ? 'Sediu Global' : 'Global Headquarters'}
+                {currentLang === 'ro' ? 'Sediul central al grupului' : 'Group Headquarters'}
               </span>
             </div>
           </div>
