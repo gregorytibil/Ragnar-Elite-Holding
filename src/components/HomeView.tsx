@@ -282,7 +282,7 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
         <div className="max-w-[1240px] mx-auto px-6 relative z-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 rounded-[12px] overflow-hidden border border-white/5 bg-white/[0.02] backdrop-blur-md">
             <div className="p-8 md:p-12 text-center flex flex-col items-center justify-center border-r border-b border-white/5 last:border-0 group hover:bg-white/[0.02] transition-colors duration-300">
-              <span className="block text-4xl sm:text-5xl font-bold text-sky-accent mb-3 font-serif tracking-tight group-hover:scale-105 transition-transform duration-300">13</span>
+              <span className="block text-4xl sm:text-5xl font-bold text-sky-accent mb-3 font-serif tracking-tight group-hover:scale-105 transition-transform duration-300">19</span>
               <span className="text-[10px] md:text-[11px] font-mono tracking-[0.2em] opacity-60 uppercase">
                 {currentLang === 'ro' ? 'Divizii Active' : 'Active Divisions'}
               </span>

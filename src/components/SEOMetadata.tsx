@@ -51,8 +51,8 @@ export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
           ? 'Portofoliu de Active & Divizii | Ragnar Elite Holding'
           : 'Asset Portfolio & Divisions | Ragnar Elite Holding',
         description: isRo
-          ? 'Explorați cele 13 divizii active ale Ragnar Elite Holding, incluzând imobiliare de lux, tehnologii disruptive, gestionare active și servicii partajate.'
-          : 'Explore the 13 active divisions of Ragnar Elite Holding, covering luxury real estate, disruptive technologies, asset management, and shared corporate services.',
+          ? 'Explorați cele 19 divizii active ale Ragnar Elite Holding, incluzând imobiliare de lux, tehnologii disruptive, gestionare active și servicii partajate.'
+          : 'Explore the 19 active divisions of Ragnar Elite Holding, covering luxury real estate, disruptive technologies, asset management, and shared corporate services.',
         keywords: isRo
           ? 'portofoliu active, divizii ragnar, investitii imobiliare lux, infrastructura critica, life sciences, administrare portofoliu, piete de capital, shared services'
           : 'asset portfolio, active divisions, luxury real estate investments, critical infrastructure, lifesciences, portfolio management, capital markets, shared services',

@@ -19,10 +19,10 @@ export const translations = {
     servicesTag2: 'SERVICII II',
 
     // Hero Section
-    establishedInHK: 'FONDAT ÎN HONG KONG',
+    establishedInHK: 'CU SEDIUL ÎN HONG KONG',
     heroTitle: 'Ragnar Elite Holding',
     heroSubtitle: 'The Standard of Strategic Leadership.',
-    heroDescription: 'Holding internațional cu sediul în Hong Kong, dedicat administrării, dezvoltării și integrării strategice a companiilor din 13 divizii operaționale.',
+    heroDescription: 'Holding internațional cu sediul în Hong Kong, dedicat administrării, dezvoltării și integrării strategice a companiilor din 19 divizii operaționale.',
     heroBtn: 'Descoperă Portofoliul',
     heroSecondaryBtn: 'Contact',
 
@@ -84,7 +84,7 @@ export const translations = {
     // Portfolio Section
     portfolioHeaderTitle: 'Portofoliu de Active',
     portfolioHeaderSubtitle: 'Arhitectura de elită a unui ecosistem imun la paradigmele de volatilitate economică.',
-    portfolioIntro: 'Orchestrăm cu rigoare absolută și precizie matematică 13 industrii strategice interconectate vertical.',
+    portfolioIntro: 'Orchestrăm cu rigoare absolută și precizie matematică 19 industrii strategice interconectate vertical.',
     
     // Divisions 1
     div1Title: '🏛️ 01. Luxury Real Estate & Macro-Infrastructură',
@@ -145,7 +145,7 @@ export const translations = {
     service4Title: '🛡️ Risk Governance',
     service4Desc: 'Dezvoltăm sisteme avansate pentru protecția activelor tangibile și intangibile ale grupului. Prin mecanisme predictive și strategii de acoperire a riscurilor (hedging), asigurăm stabilitatea deplină a subsidiarelor chiar și în perioade de volatilitate macroeconomică extremă.',
     service5Title: '🔗 Synergy Management',
-    service5Desc: 'Interconectăm dinamic fluxurile de producție și serviciile oferite de companiile din grup. Generăm economii de scară reale, eliminăm redundanțele logistice și deschidem canale masive de promovare încrucișată (cross-selling) între cele 13 divizii active.',
+    service5Desc: 'Interconectăm dinamic fluxurile de producție și serviciile oferite de companiile din grup. Generăm economii de scară reale, eliminăm redundanțele logistice și deschidem canale masive de promovare încrucișată (cross-selling) între cele 19 divizii active.',
 
     // Service items group 2
     service6Title: '📊 Contabilitate & Audit Strategic',
@@ -192,7 +192,7 @@ export const translations = {
     legalSec2Desc: 'Arhitectura conceptuală a brandului, mărcile inregistrate transfrontalier, materialele grafice, textele ultra-premium, structura layout-urilor și codurile sursă incluse sunt proprietatea de drept a Ragnar Elite Holding. Nicio componentă a acestei platforme nu poate fi extrasă, duplicată, modificată sau integrată în rețele externe fără un mandat scris aprobat în prealabil de către Consiliul de Administrație al holdingului.',
     
     legalSec3Title: '3. Limitarea Răspunderii și Imunitatea Macroeconomică',
-    legalSec3Desc: 'Ragnar Elite Holding aplică standarde riguroase de verificare a datelor, însă nu își asumă răspunderea pentru erori temporare, modificări geopolitice ale piețelor sau disfuncționalități digitale tehnice independente de infrastructura proprie. De asemenea, holdingul își rezervă dreptul discreționar de a recalibra prioritățile sectoriale din cele 13 divizii active, fără obligația notificării prealabile a publicului larg.',
+    legalSec3Desc: 'Ragnar Elite Holding aplică standarde riguroase de verificare a datelor, însă nu își asumă răspunderea pentru erori temporare, modificări geopolitice ale piețelor sau disfuncționalități digitale tehnice independente de infrastructura proprie. De asemenea, holdingul își rezervă dreptul discreționar de a recalibra prioritățile sectoriale din cele 19 divizii active, fără obligația notificării prealabile a publicului larg.',
     
     legalSec4Title: '4. Politica Globală de Confidențialitate (Standarde GDPR, CCPA și Transfrontaliere)',
     legalSec4Desc: 'Operăm ca operator internațional de date în deplină concordanță cu Regulamentul General privind Protecția Datelor (UE) 2016/679 (GDPR), precum și cu protocoalele echivalente de pe piețele internaționale majore în care grupul deține interese strategice. Datele cu caracter personal sunt colectate exclusiv prin canale criptate avansate (formularul din pagina Contact) și sunt limitate strict la datele de identificare corporativă (Nume, Email Profesional, Divizia Selectată și Mesajul Strategic).',
@@ -255,7 +255,7 @@ export const translations = {
     establishedInHK: 'ESTABLISHED IN HONG KONG',
     heroTitle: 'Ragnar Elite Holding',
     heroSubtitle: 'The Standard of Strategic Leadership.',
-    heroDescription: 'An international holding company based in Hong Kong, dedicated to the management, development, and strategic integration of companies across 13 operational divisions.',
+    heroDescription: 'An international holding company based in Hong Kong, dedicated to the management, development, and strategic integration of companies across 19 operational divisions.',
     heroBtn: 'Discover Portfolio',
     heroSecondaryBtn: 'Contact',
 
@@ -317,7 +317,7 @@ export const translations = {
     // Portfolio Section
     portfolioHeaderTitle: 'Asset Portfolio',
     portfolioHeaderSubtitle: 'The elite architecture of an ecosystem immune to economic volatility paradigms.',
-    portfolioIntro: 'We orchestrate 13 vertically interconnected strategic industries with absolute rigor and mathematical precision.',
+    portfolioIntro: 'We orchestrate 19 vertically interconnected strategic industries with absolute rigor and mathematical precision.',
     
     // Divisions 1
     div1Title: '🏛️ 01. Luxury Real Estate & Macro-Infrastructure',
@@ -425,7 +425,7 @@ export const translations = {
     legalSec2Desc: 'The conceptual architecture of the brand, cross-border registered trademarks, graphics, ultra-premium copywriting, layouts, and underlying source code are the sole property of Ragnar Elite Holding. No portion of this platform may be extracted, duplicated, modified, or integrated into external networks without a written mandate pre-approved by the Board of Directors.',
     
     legalSec3Title: '3. Limitation of Liability & Macroeconomic Immunity',
-    legalSec3Desc: 'Ragnar Elite Holding applies rigorous validation standards but assumes no responsibility for temporary errors, geopolitical market shifts, or independent technical digital outages. The holding reserves the absolute discretionary right to recalibrate sector priorities among its 13 active divisions without prior notice.',
+    legalSec3Desc: 'Ragnar Elite Holding applies rigorous validation standards but assumes no responsibility for temporary errors, geopolitical market shifts, or independent technical digital outages. The holding reserves the absolute discretionary right to recalibrate sector priorities among its 19 active divisions without prior notice.',
     
     legalSec4Title: '4. Global Privacy Policy (GDPR, CCPA & Cross-Border Standards)',
     legalSec4Desc: 'We operate as an international data controller in complete compliance with the General Data Protection Regulation (EU) 2016/679 (GDPR) and equivalent protocols in major global jurisdictions. Personal data is collected exclusively via highly encrypted channels (the Contact form) and is strictly limited to corporate identification details (Name, Professional Email, Selected Sector, and Strategic Message).',
