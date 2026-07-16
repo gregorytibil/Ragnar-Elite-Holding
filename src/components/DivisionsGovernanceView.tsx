@@ -143,8 +143,8 @@ export default function DivisionsGovernanceView({ currentLang }: DivisionsGovern
     : 'Systemic support architecture, consolidated auditing, and portfolio optimization';
 
   const introText = isRo
-    ? 'Această pagină grupează diviziile care asigură finanțarea, controlul riscurilor, auditul, securitatea cibernetică, educația de elită și logistica internă a întregului holding. Este motorul de guvernanță al Președintelui, proiectat pentru a asigura stabilitate structurală, conformitate impecabilă și fluxuri logistice centralizate.'
-    : 'This page groups the divisions that provide financing, risk control, auditing, cybersecurity, elite education, and internal logistics of the entire holding. It is the President\'s governance engine, designed to guarantee structural stability, flawless compliance, and centralized logistical flows.';
+    ? '„Sistemul nervos al holdingului nostru este guvernat de rigoare, securitate absolută și optimizare financiară. Diviziile din această secțiune asigură scutul de conformitate legală, managementul riscurilor cibernetice și administrarea inteligentă a capitalului grupului. Prin integrarea totală a serviciilor de suport, eliminăm dependența de terți, păstrând valoarea și excelența în interiorul ecosistemului Ragnar.”'
+    : '“The nervous system of our holding is governed by rigor, absolute security, and financial optimization. The divisions in this section provide the shield of legal compliance, cybersecurity risk management, and the intelligent administration of the group’s capital. By fully integrating support services, we eliminate dependency on third parties, keeping value and excellence within the Ragnar ecosystem.”';
 
   const sectionPillarsTitle = isRo
     ? 'Pilonii Guvernanței Strategice'
@@ -236,7 +236,7 @@ export default function DivisionsGovernanceView({ currentLang }: DivisionsGovern
         <div className="bg-white border border-[#0B1B3D]/10 rounded-2xl p-8 sm:p-12 shadow-[0_4px_30px_rgba(11,27,61,0.01)] hover:shadow-[0_10px_40px_rgba(11,27,61,0.03)] transition-all duration-300 mb-16 sm:mb-24">
           <div className="max-w-4xl">
             <span className="font-mono text-[9px] tracking-[0.25em] text-[#0B1B3D]/50 uppercase block mb-3 font-bold">
-              {isRo ? 'MOTORUL DE GUVERNANȚĂ AL PREȘEDINTELUI' : 'PRESIDENTIAL GOVERNANCE ENGINE'}
+              {isRo ? 'INTRODUCEREA PREȘEDINTELUI EXECUTIV' : 'EXECUTIVE PRESIDENT\'S INTRODUCTION'}
             </span>
             <p className="font-sans font-light text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed">
               {introText}

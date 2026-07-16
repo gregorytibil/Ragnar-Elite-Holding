@@ -46,7 +46,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
         </svg>
       ),
       label: 'LinkedIn',
-      url: 'https://linkedin.com/#',
+      url: 'https://www.linkedin.com/company/ragnareliteholding',
     },
     {
       icon: (

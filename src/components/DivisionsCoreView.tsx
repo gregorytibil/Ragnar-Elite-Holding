@@ -132,8 +132,8 @@ export default function DivisionsCoreView({ currentLang }: DivisionsCoreViewProp
     : 'Tangible asset production, critical infrastructure, and global resource operations';
 
   const introText = isRo
-    ? 'Această pagină grupează diviziile care produc active tangibile, infrastructură critică, resurse și tehnologie de apărare. Este nucleul dur al execuției holdingului, îmbinând precizia tehnică cu amplasarea strategică a capitalului pentru a construi un portofoliu rezistent la fluctuațiile macroeconomice.'
-    : 'This page groups the divisions that produce tangible assets, critical infrastructure, resources, and defense technology. It is the hard core of the holding\'s execution, blending technical precision with strategic capital placement to construct a portfolio resilient to macroeconomic fluctuations.';
+    ? '„Pilonul operațiunilor de bază reprezintă forța motrice tangibilă a Ragnar Elite Holding. Prin intermediul acestor divizii, transformăm viziunea strategică în infrastructură critică, securizăm resurse globale de înaltă valoare și dezvoltăm tehnologii de apărare avansate. Controlul direct asupra întregului lanț de producție ne garantează independența operațională și reziliența în fața oricăror provocări macroeconomice.”'
+    : '“The core operations pillar represents the tangible driving force of Ragnar Elite Holding. Through these divisions, we transform strategic vision into critical infrastructure, secure high-value global resources, and develop advanced defense technologies. Direct control over the entire production chain guarantees our operational independence and resilience in the face of any macroeconomic challenges.”';
 
   const sectionPillarsTitle = isRo
     ? 'Pilonii Execuției Industriale'
@@ -225,7 +225,7 @@ export default function DivisionsCoreView({ currentLang }: DivisionsCoreViewProp
         <div className="bg-white border border-[#0B1B3D]/10 rounded-2xl p-8 sm:p-12 shadow-[0_4px_30px_rgba(11,27,61,0.01)] hover:shadow-[0_10px_40px_rgba(11,27,61,0.03)] transition-all duration-300 mb-16 sm:mb-24">
           <div className="max-w-4xl">
             <span className="font-mono text-[9px] tracking-[0.25em] text-[#0B1B3D]/50 uppercase block mb-3 font-bold">
-              {isRo ? 'NUCLEUL DE EXECUȚIE AL HOLDINGULUI' : 'THE CORE EXECUTION ENGINE'}
+              {isRo ? 'INTRODUCEREA PREȘEDINTELUI EXECUTIV' : 'EXECUTIVE PRESIDENT\'S INTRODUCTION'}
             </span>
             <p className="font-sans font-light text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed">
               {introText}
