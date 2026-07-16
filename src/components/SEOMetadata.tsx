@@ -9,7 +9,7 @@ interface SEOMetadataProps {
 export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
   useEffect(() => {
     const isRo = lang === 'ro';
-    const baseUrl = 'https://ais-pre-45j5qubuweibvtx4wzdcip-244475190177.europe-west2.run.app';
+    const baseUrl = 'https://ragnareliteholding.com';
     const canonicalUrl = baseUrl + (activeTab === 'home' ? '' : `/#${activeTab}`);
 
     // Define page-specific metadata dictionary
