@@ -187,8 +187,15 @@ export default function DivisionsGovernanceView({ currentLang }: DivisionsGovern
     >
       {/* Premium Hero Section with elegant cinematic overlays */}
       <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[140px] pb-16 sm:pt-[170px] sm:pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
+        {/* Background image */}
+        <img 
+          src="https://i.imgur.com/ytLzc33.png" 
+          alt="Management strategic background"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.35] pointer-events-none z-0 scale-105"
+          referrerPolicy="no-referrer"
+        />
         {/* Subtle high-end mesh and lighting layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1 opacity-60"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-3"></div>
 

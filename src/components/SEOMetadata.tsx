@@ -203,7 +203,7 @@ export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
       'logo': 'https://i.imgur.com/InRDrMr.png',
       'contactPoint': {
         '@type': 'ContactPoint',
-        'email': 'investitor@ragnareliteholding.com',
+        'email': 'office@ragnareliteholding.com',
         'contactType': 'corporate partnerships',
         'availableLanguage': ['Romanian', 'English'],
       },
