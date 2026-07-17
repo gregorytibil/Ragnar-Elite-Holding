@@ -214,30 +214,24 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                             required
                             value={sector}
                             onChange={(e) => setSector(e.target.value)}
-                            className={`w-full bg-transparent border border-[#0B1B3D]/15 focus:border-[#0B1B3D] transition-colors outline-none font-sans text-base py-4 px-4 appearance-none cursor-pointer shadow-sm hover:border-[#0B1B3D]/30 ${sector ? 'text-[#0B1B3D]' : 'text-[#0B1B3D]/40'}`}
+                            className={`w-full bg-transparent border border-[#0B1B3D]/15 focus:border-[#0B1B3D] transition-colors outline-none font-sans text-xs sm:text-base py-4 px-4 appearance-none cursor-pointer shadow-sm hover:border-[#0B1B3D]/30 ${sector ? 'text-[#0B1B3D]' : 'text-[#0B1B3D]/40'}`}
                           >
-                            <option value="" disabled className="text-slate-400">
+                            <option value="" disabled className="text-slate-400 text-xs sm:text-sm">
                               {currentLang === 'ro' ? 'Selectează...' : 'Select...'}
                             </option>
-                            <optgroup label={currentLang === 'ro' ? 'PAGINA 1: CORE OPERATIONS & HEAVY INDUSTRIES' : 'PAGE 1: CORE OPERATIONS & HEAVY INDUSTRIES'} className="text-[#0B1B3D]/80 font-bold bg-white text-xs tracking-wider">
-                              {coreOptions.map((opt) => (
-                                <option key={opt.value} value={opt.value} className="text-[#0B1B3D] font-normal text-sm">
-                                  {currentLang === 'ro' ? opt.ro : opt.en}
-                                </option>
-                              ))}
-                            </optgroup>
-                            <optgroup label={currentLang === 'ro' ? 'PAGINA 2: CORPORATE GOVERNANCE, FINANCE & SUPPORT' : 'PAGE 2: CORPORATE GOVERNANCE, FINANCE & SUPPORT'} className="text-[#0B1B3D]/80 font-bold bg-white text-xs tracking-wider mt-2">
-                              {governanceOptions.map((opt) => (
-                                <option key={opt.value} value={opt.value} className="text-[#0B1B3D] font-normal text-sm">
-                                  {currentLang === 'ro' ? opt.ro : opt.en}
-                                </option>
-                              ))}
-                            </optgroup>
-                            <optgroup label={currentLang === 'ro' ? 'PARTENERIATE STRATEGICE' : 'STRATEGIC PARTNERSHIPS'} className="text-[#0B1B3D]/80 font-bold bg-white text-xs tracking-wider mt-2">
-                              <option value={strategicOption.value} className="text-[#0B1B3D] font-normal text-sm">
-                                {currentLang === 'ro' ? strategicOption.ro : strategicOption.en}
+                            {coreOptions.map((opt) => (
+                              <option key={opt.value} value={opt.value} className="text-[#0B1B3D] font-normal text-xs sm:text-sm">
+                                {currentLang === 'ro' ? opt.ro : opt.en}
                               </option>
-                            </optgroup>
+                            ))}
+                            {governanceOptions.map((opt) => (
+                              <option key={opt.value} value={opt.value} className="text-[#0B1B3D] font-normal text-xs sm:text-sm">
+                                {currentLang === 'ro' ? opt.ro : opt.en}
+                              </option>
+                            ))}
+                            <option value={strategicOption.value} className="text-[#0B1B3D] font-normal text-xs sm:text-sm">
+                              {currentLang === 'ro' ? strategicOption.ro : strategicOption.en}
+                            </option>
                           </select>
                           <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-[#0B1B3D]/40">
                             <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" fillRule="evenodd"></path></svg>
