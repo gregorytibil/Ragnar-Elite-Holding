@@ -79,6 +79,10 @@ export const translations = {
     boardMember3Role: 'Controlul banilor, bugete, riscuri și verificări contabile la nivel de grup',
     boardMember3Desc: 'Este „păzitorul sefului cu bani”. El știe unde merge fiecare usd sau euro din toate diviziile industriale. Face bugetele, verifică ca toate firmele din grup să fie pe profit, analizează riscurile de pe piață și se asigură că taxele și contabilitatea sunt plătite la secundă, fără greșeală.',
 
+    boardMemberChroName: 'Director Resurse Umane (CHRO / Chief Human Resources Officer)',
+    boardMemberChroRole: 'Managementul capitalului uman, recrutare de top, cultura organizațională și retenția talentelor',
+    boardMemberChroDesc: 'Este arhitectul echipei globale. Se asigură că holdingul atrage cei mai buni profesioniști și executivi din industrie, dezvoltă programe de leadership și menține un mediu de lucru bazat pe performanță, etică și respect.',
+
     boardMember4Name: 'Șef Juridic și Guvernanță (General Counsel)',
     boardMember4Role: 'Legi, reguli, contracte sigure, protecția datelor (GDPR) și respectarea legii',
     boardMember4Desc: 'Este scutul legal al holdingului. El se asigură că toate contractele pe care le semnăm când cumpărăm companii sunt 100% sigure și legale. El răspunde direct ca site-ul și firmele noastre să respecte regulile stricte de GDPR, protecția datelor și că nicio firmă din divizii nu încalcă nicio lege internațională.',
@@ -211,7 +215,7 @@ export const translations = {
     legalSec7Bullet2: 'Dreptul la rectificare și actualizare: Modificarea imediată a datelor eronate sau incomplete;',
     legalSec7Bullet3: 'Dreptul la ștergerea definitivă (Dreptul de a fi uitat): Eliminarea irevocabilă a datelor din serverele active și arhivele holdingului;',
     legalSec7Bullet4: 'Dreptul la restricționarea temporară a prelucrării.',
-    legalSec7Footer: 'Pentru orice solicitare oficială din sfera conformității sau pentru a iniția un audit legat de guvernanța datelor trimise, vă rugăm să folosiți adresa unică securizată de corespondență legală a grupului: office@ragnareliteholding.com.',
+    legalSec7Footer: 'Pentru orice solicitare oficială din sfera conformității sau pentru a iniția un audit legat de guvernanța datelor trimise, vă rugăm să folosiți adresa unică securizată de corespondență legală a grupului: legal@ragnareliteholding.com.',
 
     // Footer Specifics
     footerDesc: 'Holding investițional global dedicat excelenței operaționale și dezvoltării strategice în divizii industriale cheie.\n\nGestionarea, restructurarea și accelerarea activelor corporative de înaltă performanță la standarde macroeconomice riguroase.',
@@ -313,6 +317,10 @@ export const translations = {
     boardMember3Name: 'Chief Financial Officer (CFO)',
     boardMember3Role: 'Capital control, budgeting, risk management, and group-level financial auditing',
     boardMember3Desc: 'The "guardian of the treasury". He tracks every dollar or euro across all industrial divisions. He crafts budgets, ensures all group companies remain profitable, analyzes market risks, and guarantees taxes and accounting are executed flawlessly to the second.',
+
+    boardMemberChroName: 'Chief Human Resources Officer (CHRO)',
+    boardMemberChroRole: 'Human capital management, executive recruitment, organizational culture, and talent retention',
+    boardMemberChroDesc: 'The architect of the global workforce. Ensures the holding attracts top-tier industry professionals and executives, develops leadership frameworks, and maintains a high-performance, ethical, and meritocratic culture.',
 
     boardMember4Name: 'General Counsel (Șef Juridic și Guvernanță)',
     boardMember4Role: 'Laws, regulations, secure contracts, data protection (GDPR), and legal compliance',
@@ -446,7 +454,7 @@ export const translations = {
     legalSec7Bullet2: 'Right to rectification and updating: Immediate correction of incorrect or incomplete data;',
     legalSec7Bullet3: 'Right to permanent deletion (Right to be forgotten): Irrevocable removal of your records from active servers and archives;',
     legalSec7Bullet4: 'Right to temporary restriction of processing.',
-    legalSec7Footer: 'For any official compliance inquiries or data audit requests, please contact our dedicated legal email: office@ragnareliteholding.com.',
+    legalSec7Footer: 'For any official compliance inquiries or data audit requests, please contact our dedicated legal email: legal@ragnareliteholding.com.',
 
     // Footer Specifics
     footerDesc: 'Global investment holding dedicated to operational excellence and strategic development in key industrial divisions.\n\nManagement, restructuring, and acceleration of high-performance corporate assets under rigorous macroeconomic standards.',

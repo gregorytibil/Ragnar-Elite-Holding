@@ -149,11 +149,40 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                 </div>
                 <div className="space-y-3">
                   <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.mailSecured}</strong>
-                  <span className="font-mono text-sm text-white border-b border-white/20 pb-1 inline-block">office@ragnareliteholding.com</span>
+                  <a href="mailto:contact@ragnareliteholding.com" className="font-mono text-sm text-white hover:text-[#A2D2FF] transition-colors border-b border-white/20 pb-1 inline-block">contact@ragnareliteholding.com</a>
                 </div>
                 <div className="space-y-3">
                   <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.mailRelations}</strong>
-                  <span className="font-mono text-sm text-white border-b border-white/20 pb-1 inline-block">investitor@ragnareliteholding.com</span>
+                  <a href="mailto:investitor@ragnareliteholding.com" className="font-mono text-sm text-white hover:text-[#A2D2FF] transition-colors border-b border-white/20 pb-1 inline-block">investitor@ragnareliteholding.com</a>
+                </div>
+
+                {/* Specialized Department Channels */}
+                <div className="pt-4 border-t border-white/10 space-y-3">
+                  <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">
+                    {currentLang === 'ro' ? 'Canale Muncă & Departament' : 'Department Channels'}
+                  </strong>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono">
+                    <div>
+                      <span className="text-[#C8D9E6]/60 block text-[9px]">GENERAL / INFO:</span>
+                      <a href="mailto:info@ragnareliteholding.com" className="text-white hover:text-[#A2D2FF] transition-colors">info@ragnareliteholding.com</a>
+                    </div>
+                    <div>
+                      <span className="text-[#C8D9E6]/60 block text-[9px]">LEGAL & GDPR:</span>
+                      <a href="mailto:legal@ragnareliteholding.com" className="text-white hover:text-[#A2D2FF] transition-colors">legal@ragnareliteholding.com</a>
+                    </div>
+                    <div>
+                      <span className="text-[#C8D9E6]/60 block text-[9px]">HR / RECRUITMENT:</span>
+                      <a href="mailto:chro@ragnareliteholding.com" className="text-white hover:text-[#A2D2FF] transition-colors">chro@ragnareliteholding.com</a>
+                    </div>
+                    <div>
+                      <span className="text-[#C8D9E6]/60 block text-[9px]">PRESS & MEDIA:</span>
+                      <a href="mailto:media@ragnareliteholding.com" className="text-white hover:text-[#A2D2FF] transition-colors">media@ragnareliteholding.com</a>
+                    </div>
+                    <div>
+                      <span className="text-[#C8D9E6]/60 block text-[9px]">IT & SYSTEMS:</span>
+                      <a href="mailto:it@ragnareliteholding.com" className="text-white hover:text-[#A2D2FF] transition-colors">it@ragnareliteholding.com</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

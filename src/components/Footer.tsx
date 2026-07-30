@@ -204,13 +204,20 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
               ? 'Canale oficiale criptate pentru informări macroeconomice directe și comunicate oficiale.'
               : 'Official encrypted channels for direct macroeconomic briefs and media communiqués.'}
           </p>
-          <div className="flex items-center gap-2 pb-2">
+          <div className="flex flex-col gap-1.5 pb-2">
             <a 
-              href="mailto:office@ragnareliteholding.com" 
-              onClick={() => trackEmailClick('office@ragnareliteholding.com')}
-              className="font-mono text-sm text-sky-accent hover:text-white transition-colors duration-300 tracking-wider border-b border-sky-accent/30 hover:border-white pb-0.5"
+              href="mailto:contact@ragnareliteholding.com" 
+              onClick={() => trackEmailClick('contact@ragnareliteholding.com')}
+              className="font-mono text-sm text-sky-accent hover:text-white transition-colors duration-300 tracking-wider border-b border-sky-accent/30 hover:border-white pb-0.5 inline-block w-fit"
             >
-              office@ragnareliteholding.com
+              contact@ragnareliteholding.com
+            </a>
+            <a 
+              href="mailto:media@ragnareliteholding.com" 
+              onClick={() => trackEmailClick('media@ragnareliteholding.com')}
+              className="font-mono text-xs text-stone-300 hover:text-white transition-colors duration-300 tracking-wider border-b border-white/10 hover:border-white pb-0.5 inline-block w-fit"
+            >
+              media@ragnareliteholding.com
             </a>
           </div>
           <div className="flex items-center gap-2 sm:gap-2.5 flex-nowrap">

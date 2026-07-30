@@ -18,24 +18,35 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
       name: t.boardMember1Name,
       role: t.boardMember1Role,
       desc: t.boardMember1Desc,
+      email: 'chairman@ragnareliteholding.com',
     },
     {
       initials: 'CEO',
       name: t.boardMember2Name,
       role: t.boardMember2Role,
       desc: t.boardMember2Desc,
+      email: 'ceo@ragnareliteholding.com',
     },
     {
       initials: 'CFO',
       name: t.boardMember3Name,
       role: t.boardMember3Role,
       desc: t.boardMember3Desc,
+      email: 'cfo@ragnareliteholding.com',
+    },
+    {
+      initials: 'CHRO',
+      name: t.boardMemberChroName,
+      role: t.boardMemberChroRole,
+      desc: t.boardMemberChroDesc,
+      email: 'chro@ragnareliteholding.com',
     },
     {
       initials: 'GC',
       name: t.boardMember4Name,
       role: t.boardMember4Role,
       desc: t.boardMember4Desc,
+      email: 'legal@ragnareliteholding.com',
     },
   ];
 
@@ -364,7 +375,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label={t.boardTitle}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6" role="list" aria-label={t.boardTitle}>
             {boardMembers.map((member, idx) => (
               <motion.div
                 key={idx}
@@ -376,7 +387,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
                   y: -8,
                   transition: { duration: 0.3, ease: 'easeOut' }
                 }}
-                className="bg-white rounded-xl p-6 md:p-8 border border-slate-200/60 shadow-[0_8px_30px_rgba(5,13,29,0.015)] hover:shadow-[0_20px_50px_rgba(5,13,29,0.06)] hover:border-[#0B1B3D]/10 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
+                className="bg-white rounded-xl p-6 border border-slate-200/60 shadow-[0_8px_30px_rgba(5,13,29,0.015)] hover:shadow-[0_20px_50px_rgba(5,13,29,0.06)] hover:border-[#0B1B3D]/10 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
                 itemProp="employee"
                 itemScope
                 itemType="https://schema.org/Person"
@@ -387,7 +398,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
 
                 <div>
                   {/* Monogram Badge */}
-                  <div className="w-[72px] h-[72px] rounded-full bg-gradient-to-br from-[#0B1B3D] to-[#050D1D] mx-auto mb-6 flex items-center justify-center text-white text-base md:text-[1.15rem] font-serif font-bold relative shadow-md transition-transform duration-500 group-hover:scale-105">
+                  <div className="w-[64px] h-[64px] rounded-full bg-gradient-to-br from-[#0B1B3D] to-[#050D1D] mx-auto mb-5 flex items-center justify-center text-white text-sm md:text-base font-serif font-bold relative shadow-md transition-transform duration-500 group-hover:scale-105">
                     {/* Ring layer */}
                     <div className="absolute inset-[3px] border border-white/20 rounded-full"></div>
                     <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
@@ -397,7 +408,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
                   {/* Name */}
                   <div className="text-center mb-4">
                     <h3 
-                      className="font-serif text-lg md:text-[1.25rem] font-bold text-[#0B1B3D] tracking-tight group-hover:text-sky-900 transition-colors duration-200"
+                      className="font-serif text-base md:text-lg font-bold text-[#0B1B3D] tracking-tight group-hover:text-sky-900 transition-colors duration-200"
                       itemProp="name"
                     >
                       {member.name}
@@ -405,7 +416,7 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
                   </div>
 
                   {/* Clean thin separator */}
-                  <div className="w-8 h-[1px] bg-slate-100 group-hover:w-16 group-hover:bg-[#A2D2FF] transition-all duration-300 mx-auto mb-5"></div>
+                  <div className="w-8 h-[1px] bg-slate-100 group-hover:w-16 group-hover:bg-[#A2D2FF] transition-all duration-300 mx-auto mb-4"></div>
 
                   {/* What they do (Cu ce se ocupă) */}
                   <div className="mb-4 text-left">
@@ -418,17 +429,31 @@ export default function HoldingView({ currentLang }: HoldingViewProps) {
                   </div>
 
                   {/* In simple terms (Pe înțelesul tuturor) */}
-                  <div className="text-left">
+                  <div className="text-left mb-5">
                     <span className="font-mono text-[8px] tracking-[0.2em] text-[#0B1B3D]/50 uppercase block mb-1">
                       {t.labelInSimpleTerms}
                     </span>
                     <p 
-                      className="font-sans font-light text-xs sm:text-[0.82rem] text-slate-500 leading-relaxed"
+                      className="font-sans font-light text-xs text-slate-500 leading-relaxed"
                       itemProp="description"
                     >
                       {member.desc}
                     </p>
                   </div>
+                </div>
+
+                {/* Direct Role Email Link */}
+                <div className="pt-3 border-t border-slate-100 text-left">
+                  <span className="font-mono text-[8px] tracking-[0.2em] text-[#0B1B3D]/50 uppercase block mb-1">
+                    OFFICIAL CORRESPONDENCE:
+                  </span>
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="font-mono text-[11px] text-[#0B1B3D] hover:text-sky-700 font-semibold transition-colors duration-200 block truncate"
+                    itemProp="email"
+                  >
+                    {member.email}
+                  </a>
                 </div>
 
                 {/* Aesthetic Corner Bracket decoration */}
