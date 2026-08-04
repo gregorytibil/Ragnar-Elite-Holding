@@ -15,10 +15,10 @@ export default function SEOMetadata({ activeTab, activePartner, lang }: SEOMetad
     const baseUrl = 'https://ragnareliteholding.com';
     
     let canonicalPath = getPathForTab(activeTab);
+    let canonicalUrl = baseUrl + (canonicalPath === '/' ? '' : canonicalPath);
     if (activePartner) {
-      canonicalPath = getPathForPartner(activePartner.slug);
+      canonicalUrl = `https://${activePartner.subdomain}`;
     }
-    const canonicalUrl = baseUrl + (canonicalPath === '/' ? '' : canonicalPath);
 
     // Define page-specific metadata dictionary
     const metadataMap: Record<
@@ -378,7 +378,7 @@ export default function SEOMetadata({ activeTab, activePartner, lang }: SEOMetad
       document.head.appendChild(scriptTag);
     }
     scriptTag.textContent = JSON.stringify(schemaObject);
-  }, [activeTab, lang]);
+  }, [activeTab, activePartner, lang]);
 
   return null; // Side-effect only component
 }

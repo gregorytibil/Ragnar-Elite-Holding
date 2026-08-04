@@ -87,10 +87,12 @@ export default function PartnerLandingPage({
           {/* Holding Logo / Back Button */}
           <div className="flex items-center gap-2 sm:gap-3">
             <a
-              href="/partners"
+              href="https://ragnareliteholding.com"
               onClick={(e) => {
-                e.preventDefault();
-                onReturnToHolding();
+                if (typeof window !== 'undefined' && !window.location.hostname.includes('ragnareliteholding.com')) {
+                  e.preventDefault();
+                  onReturnToHolding();
+                }
               }}
               className="flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-mono text-[#C8D9E6] hover:text-white transition-colors bg-white/5 hover:bg-white/10 px-2.5 sm:px-3 py-1.5 rounded-sm border border-white/10 shrink-0 cursor-pointer"
               title={isRo ? "Înapoi la site-ul principal Ragnar Elite Holding" : "Back to Ragnar Elite Holding main site"}

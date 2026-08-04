@@ -197,16 +197,18 @@ export default function PartnersView({ currentLang, onSelectPartner }: PartnersV
                 {/* Card Action Button */}
                 <div className="pt-3.5 border-t border-slate-100">
                   <a
-                    href={`/partner/${p.slug}`}
+                    href={`https://${p.subdomain}`}
                     onClick={(e) => {
-                      e.preventDefault();
-                      if (onSelectPartner) {
-                        onSelectPartner(p);
+                      if (typeof window !== 'undefined' && !window.location.hostname.includes('ragnareliteholding.com')) {
+                        e.preventDefault();
+                        if (onSelectPartner) {
+                          onSelectPartner(p);
+                        }
                       }
                     }}
                     className="w-full py-2.5 px-3.5 bg-[#0B1B3D] hover:bg-sky-700 text-white font-mono text-xs font-semibold rounded-lg shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 group/btn min-h-[44px] cursor-pointer"
                   >
-                    <span>{isRo ? 'Deschide Pagina Oficială' : 'Open Official Page'}</span>
+                    <span>{isRo ? 'Deschide Subdomeniul Oficial' : 'Open Official Subdomain'}</span>
                     <ArrowRight className="w-4 h-4 text-sky-300 group-hover/btn:translate-x-1 transition-transform shrink-0" />
                   </a>
                 </div>
