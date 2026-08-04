@@ -6,18 +6,20 @@ import {
   Globe, 
   Sparkles,
   ArrowRight,
-  ExternalLink,
-  ChevronRight,
   Users2,
-  Scale,
-  Calculator,
+  Briefcase,
   Cpu,
   Zap,
   Compass,
   Truck,
   FileText,
   CheckCircle2,
-  Briefcase
+  Handshake,
+  Award,
+  Scale,
+  Landmark,
+  Shield,
+  BadgeCheck
 } from 'lucide-react';
 
 import { PARTNERS_DATA, PartnerProfile } from '../data/partnersData';
@@ -30,22 +32,31 @@ interface PartnersViewProps {
 
 export default function PartnersView({ currentLang, onSelectPartner, initialSection }: PartnersViewProps) {
   const isRo = currentLang === 'ro';
+  const isAlliances = initialSection === 'alliances' || initialSection === 'partners';
 
-  const titleText = isRo 
-    ? 'Subsidiarele Grupului' 
-    : 'Group Subsidiaries';
+  const badgeText = isAlliances
+    ? (isRo ? 'Alianțe Globale & Parteneri' : 'Global Alliances & Partners')
+    : (isRo ? 'Subsidiare Integrate 100%' : '100% Integrated Subsidiaries');
 
-  const subtitleText = isRo
-    ? 'Toate entitățile economice și comerciale prezentate în această secțiune sunt deținute în proporție de 100% și operate integral ca subsidiare integrate ale Ragnar Elite Holding.'
-    : 'All economic and commercial entities presented in this section are 100% owned and fully operated as integrated subsidiaries of Ragnar Elite Holding.';
+  const titleText = isAlliances
+    ? (isRo ? 'Alianțe Strategice & Parteneri Globali' : 'Strategic Alliances & Global Partners')
+    : (isRo ? 'Subsidiarele Grupului' : 'Group Subsidiaries');
 
-  const introText = isRo
-    ? 'Modelul nostru de afaceri funcționează ca un ecosistem industrial integrat de tip circuit închis. Ragnar Elite Holding nu doar investește capital, ci deține controlul strategic și operațional total asupra fiecărei companii din portofoliu. Această structură garantează o guvernanță corporativă fără compromisuri, sinergie absolută între divizii și o protecție maximă a activelor în fața volatilității macroeconomice globale.'
-    : 'Our business model operates as a closed-loop integrated industrial ecosystem. Ragnar Elite Holding not only invests capital, but retains full strategic and operational control over every portfolio company. This structure guarantees uncompromising corporate governance, absolute synergy between divisions, and maximum asset protection against global macroeconomic volatility.';
+  const subtitleText = isAlliances
+    ? (isRo ? 'Colaborări de elită și parteneriate instituționale pentru asigurarea excelenței operaționale și a imunității macroeconomice.' : 'Elite collaborations and institutional partnerships ensuring operational excellence and absolute macroeconomic immunity.')
+    : (isRo ? 'Toate entitățile economice și comerciale prezentate în această secțiune sunt deținute în proporție de 100% și operate integral ca subsidiare integrate ale Ragnar Elite Holding.' : 'All economic and commercial entities presented in this section are 100% owned and fully operated as integrated subsidiaries of Ragnar Elite Holding.');
 
-  const pillarsIntro = isRo
-    ? 'Subsidiarele noastre sunt organizate strategic pe piloni industriali vitali:'
-    : 'Our subsidiaries are strategically organized across vital industrial pillars:';
+  const boxTag = isAlliances
+    ? (isRo ? 'IMUNITATE MACROECONOMICĂ PRIN REPUTAȚIE & PARTENERIATE' : 'MACROECONOMIC IMMUNITY THROUGH REPUTATION & PARTNERSHIPS')
+    : (isRo ? 'ECOSISTEM INDUSTRIAL DE TIP CIRCUIT ÎNCHIS' : 'CLOSED-LOOP INDUSTRIAL ECOSYSTEM');
+
+  const introText = isAlliances
+    ? (isRo ? 'La Ragnar Elite Holding, excelența operațională este susținută de parteneriate strategice cu cele mai prestigioase instituții de consultanță, audit financiar, asistență juridică și tehnologie din grup. Colaborăm exclusiv cu entități de încredere pentru a garanta tranzacții sigure, conformitate impecabilă și securitate structurală.' : 'At Ragnar Elite Holding, operational excellence is bolstered by strategic partnerships with prestigious consulting, financial auditing, legal counsel, and technology group entities. We collaborate exclusively with trusted partners to guarantee secure transactions, flawless compliance, and structural security.')
+    : (isRo ? 'Modelul nostru de afaceri funcționează ca un ecosistem industrial integrat de tip circuit închis. Ragnar Elite Holding nu doar investește capital, ci deține controlul strategic și operațional total asupra fiecărei companii din portofoliu. Această structură garantează o guvernanță corporativă fără compromisuri, sinergie absolută între divizii și o protecție maximă a activelor în fața volatilității macroeconomice globale.' : 'Our business model operates as a closed-loop integrated industrial ecosystem. Ragnar Elite Holding not only invests capital, but retains full strategic and operational control over every portfolio company. This structure guarantees uncompromising corporate governance, absolute synergy between divisions, and maximum asset protection against global macroeconomic volatility.');
+
+  const pillarsIntro = isAlliances
+    ? (isRo ? 'Alianțele și subsidiarele noastre sunt structurate pe piloni strategici de guvernanță:' : 'Our alliances and subsidiaries are structured across strategic governance pillars:')
+    : (isRo ? 'Subsidiarele noastre sunt organizate strategic pe piloni industriali vitali:' : 'Our subsidiaries are strategically organized across vital industrial pillars:');
 
   const getPartnerIcon = (id: string) => {
     const props = { className: "w-6 h-6 text-[#38BDF8]" };
@@ -65,6 +76,64 @@ export default function PartnersView({ currentLang, onSelectPartner, initialSect
     }
   };
 
+  // Strategic Institution Alliances (Logos & Institutional Partners)
+  const institutionalPartners = [
+    {
+      categoryRo: 'Audit Financiar & Conformitate',
+      categoryEn: 'Financial Audit & Compliance',
+      name: 'Big Four Global Audit Alliance',
+      descRo: 'Supervizare independentă, audit financiar consolidat IFRS și raportare fiscală transfrontalieră.',
+      descEn: 'Independent oversight, IFRS consolidated auditing, and cross-border fiscal compliance.',
+      icon: ShieldCheck,
+      badge: 'Tier 1 Global Audit'
+    },
+    {
+      categoryRo: 'Asistență Juridică & Guvernanță',
+      categoryEn: 'Legal Counsel & Corporate Governance',
+      name: 'International Legal & Advisory Consortium',
+      descRo: 'Consultanță juridică internațională pentru fuziuni, achiziții (M&A) și structuri fiduciare.',
+      descEn: 'Cross-border legal counsel for M&A, international arbitration, and fiduciary structures.',
+      icon: Scale,
+      badge: 'Legal & Regulatory'
+    },
+    {
+      categoryRo: 'Piețe de Capital & Banking',
+      categoryEn: 'Capital Markets & Investment Banking',
+      name: 'Global Investment Banking Network',
+      descRo: 'Parteneriate bancare internaționale pentru emisiuni de obligațiuni, sindicate de credit și custodie.',
+      descEn: 'Global banking networks for bond issuance, syndicated loans, and multi-currency custody.',
+      icon: Landmark,
+      badge: 'Banking & Liquidity'
+    },
+    {
+      categoryRo: 'Consultanță Strategică & Restructurare',
+      categoryEn: 'Strategic Advisory & Operations',
+      name: 'Executive Leadership Consultancy Group',
+      descRo: 'Optimizare operațională, transformare digitală și eficientizarea modelului de business.',
+      descEn: 'Operational scaling, digital transformation, and business model optimization.',
+      icon: Briefcase,
+      badge: 'Strategic Advisory'
+    },
+    {
+      categoryRo: 'Securitate Cibernetică & Cloud IT',
+      categoryEn: 'Cybersecurity & Enterprise Cloud',
+      name: 'Enterprise Tech & Data Security Alliance',
+      descRo: 'Infrastructură de date criptată, audit cibernetic și protecția activelor digitale ale grupului.',
+      descEn: 'Encrypted cloud infrastructure, cybersecurity auditing, and digital asset protection.',
+      icon: Cpu,
+      badge: 'Tech & Infrastructure'
+    },
+    {
+      categoryRo: 'Fonduri Suverane & Private Equity',
+      categoryEn: 'Sovereign Funds & Co-Investments',
+      name: 'Private Equity & Wealth Alliances',
+      descRo: 'Consorții de co-investiții pentru achiziții industriale majore și dezvoltări imobiliare.',
+      descEn: 'Co-investment syndicates for major industrial acquisitions and real estate masterplans.',
+      icon: Award,
+      badge: 'Institutional Equity'
+    }
+  ];
+
   return (
     <div 
       className="min-h-screen bg-ice-marble text-[#0B1B3D] selection:bg-[#0B1B3D] selection:text-white overflow-hidden"
@@ -73,15 +142,15 @@ export default function PartnersView({ currentLang, onSelectPartner, initialSect
     >
       {/* Premium Hero Section with elegant cinematic overlays */}
       <section className="relative bg-[#050D1D] text-[#FAF6F0] pt-[140px] pb-16 sm:pt-[170px] sm:pb-28 md:pt-[240px] md:pb-[160px] px-6 border-b border-white/5 overflow-hidden">
-        {/* Background strategic alliances image */}
+        {/* Background strategic alliances image (Two businessmen shaking hands in suits overlay) */}
         <img 
-          src="https://i.imgur.com/nrRrYgw.png" 
-          alt="Strategic alliances"
+          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80" 
+          alt="Strategic corporate handshake"
           className="absolute inset-0 w-full h-full object-cover opacity-[0.35] pointer-events-none z-0 scale-105"
           referrerPolicy="no-referrer"
         />
         {/* Subtle high-end mesh and lighting layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1 opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050D1D] via-[#0B1B3D]/95 to-[#050D1D] z-1 opacity-75"></div>
         <div className="absolute inset-0 bg-[radial-gradient(#C8D9E6_0.75px,transparent_0.75px)] [background-size:24px_24px] opacity-[0.07] z-2"></div>
         <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-3"></div>
 
@@ -91,10 +160,10 @@ export default function PartnersView({ currentLang, onSelectPartner, initialSect
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
-              <Users2 className="w-3 h-3 text-[#A2D2FF]" />
-              <span>{isRo ? 'Subsidiare Integrate 100%' : '100% Integrated Subsidiaries'}</span>
+              <Handshake className="w-3.5 h-3.5 text-[#A2D2FF]" />
+              <span>{badgeText}</span>
             </motion.div>
 
             <motion.h1
@@ -110,7 +179,7 @@ export default function PartnersView({ currentLang, onSelectPartner, initialSect
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="font-sans text-sm sm:text-base md:text-lg text-slate-300 font-light max-w-[720px] mb-8 leading-relaxed"
+              className="font-sans text-sm sm:text-base md:text-lg text-slate-300 font-light max-w-[760px] mb-8 leading-relaxed"
             >
               {subtitleText}
             </motion.p>
@@ -126,31 +195,76 @@ export default function PartnersView({ currentLang, onSelectPartner, initialSect
       </section>
 
       {/* Intro Narrative Section */}
-      <section className="py-16 sm:py-24 px-6 max-w-[1140px] mx-auto relative z-10">
-        <div className="bg-white border border-[#0B1B3D]/10 rounded-2xl p-8 sm:p-12 shadow-[0_4px_30px_rgba(11,27,61,0.01)] hover:shadow-[0_10px_40px_rgba(11,27,61,0.03)] transition-all duration-300 mb-12 sm:mb-16">
-          <div className="max-w-4xl space-y-4">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 max-w-[1140px] mx-auto relative z-10">
+        <div className="bg-white border border-[#0B1B3D]/10 rounded-2xl p-6 sm:p-10 md:p-12 shadow-[0_4px_30px_rgba(11,27,61,0.01)] hover:shadow-[0_10px_40px_rgba(11,27,61,0.03)] transition-all duration-300 mb-12 sm:mb-16">
+          <div className="max-w-4xl space-y-3 sm:space-y-4">
             <span className="font-mono text-[9px] tracking-[0.25em] text-[#0B1B3D]/50 uppercase block mb-1 font-bold">
-              {isRo ? 'ECOSISTEM INDUSTRIAL DE TIP CIRCUIT ÎNCHIS' : 'CLOSED-LOOP INDUSTRIAL ECOSYSTEM'}
+              {boxTag}
             </span>
-            <p className="font-sans font-light text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed">
+            <p className="font-sans font-light text-slate-700 text-xs sm:text-base md:text-lg leading-relaxed">
               {introText}
             </p>
-            <p className="font-sans font-semibold text-[#0B1B3D] text-sm sm:text-base md:text-lg pt-2 border-t border-slate-100">
-              {pillarsIntro}
+            {pillarsIntro && (
+              <p className="font-sans font-semibold text-[#0B1B3D] text-xs sm:text-base md:text-lg pt-2 border-t border-slate-100">
+                {pillarsIntro}
+              </p>
+            )}
+          </div>
+        </div>
+
+        {/* STRATEGIC LOGOS & INSTITUTIONAL PARTNERS GRID (2 per row on mobile) */}
+        <div className="mb-16 sm:mb-24">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+            <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-2 sm:mb-3 font-bold">
+              {isRo ? 'INSTITUȚII PARTENERE & REȚEA DE AUDIT' : 'PARTNER INSTITUTIONS & AUDIT NETWORK'}
+            </span>
+            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#0B1B3D] tracking-tight uppercase">
+              {isRo ? 'Alianțe Strategice & Consultanță Globală' : 'Strategic Alliances & Global Advisory'}
+            </h2>
+            <p className="font-sans font-light text-slate-600 text-xs sm:text-sm md:text-base mt-2">
+              {isRo
+                ? 'Rețeaua noastă instituțională este sprijinită de parteneri internaționali din domeniul financiar, juridic și audit.'
+                : 'Our corporate structure is reinforced by an international network of financial, legal, technology, and audit partners.'}
             </p>
+          </div>
+
+          {/* 2 logos per row on mobile (grid-cols-2), 3 on sm, 6 on lg */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+            {institutionalPartners.map((item, idx) => {
+              const IconComp = item.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -3 }}
+                  className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-sky-400 flex flex-col items-center justify-center text-center transition-all duration-300 group min-h-[110px] sm:min-h-[125px] relative overflow-hidden"
+                >
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#0B1B3D]/5 border border-[#0B1B3D]/10 flex items-center justify-center text-[#0B1B3D] group-hover:bg-[#0B1B3D] group-hover:text-white transition-colors mb-2 shrink-0">
+                    <IconComp className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </div>
+
+                  <h3 className="font-serif text-xs font-bold text-[#0B1B3D] group-hover:text-sky-700 transition-colors line-clamp-2 leading-tight">
+                    {item.name}
+                  </h3>
+
+                  <span className="font-mono text-[8px] sm:text-[9px] text-sky-800 bg-sky-50 px-1.5 py-0.5 rounded border border-sky-100 font-bold uppercase tracking-wider mt-2 line-clamp-1">
+                    {item.badge}
+                  </span>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
         {/* Group Subsidiaries & Active Subdomains Showcase */}
         <div>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-3 font-bold">
-              {isRo ? 'SUBDISIARELE GRUPULUI & SUBDOMENII ACTIVE' : 'GROUP SUBSIDIARIES & ACTIVE SUBDOMAINS'}
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+            <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-2 sm:mb-3 font-bold">
+              {isRo ? 'SUBSIDIARELE GRUPULUI & SUBDOMENII ACTIVE' : 'GROUP SUBSIDIARIES & ACTIVE SUBDOMAINS'}
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0B1B3D] tracking-tight uppercase">
+            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#0B1B3D] tracking-tight uppercase">
               {isRo ? 'Portofoliul Integrat al Ragnar Elite Holding' : 'Ragnar Elite Holding Integrated Portfolio'}
             </h2>
-            <p className="font-sans font-light text-slate-600 text-sm sm:text-base mt-3">
+            <p className="font-sans font-light text-slate-600 text-xs sm:text-sm md:text-base mt-2">
               {isRo 
                 ? 'Fiecare subsidiară deținută 100% operează independent sub umbrela holdingului și dispune de un subdomeniu oficial securizat SSL (*.ragnareliteholding.com).'
                 : 'Each 100% owned subsidiary operates independently under the holding umbrella with an SSL-secured official subdomain (*.ragnareliteholding.com).'}
@@ -234,40 +348,68 @@ export default function PartnersView({ currentLang, onSelectPartner, initialSect
           </div>
         </div>
 
-        {/* Global Operational Synergy Section */}
-        <div className="mt-24 sm:mt-32">
-          <div className="bg-[#0B1B3D]/5 border border-[#0B1B3D]/10 rounded-2xl p-8 sm:p-12 md:p-16 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#C8D9E6]/25 to-transparent rounded-bl-full pointer-events-none"></div>
-            
-            <div className="max-w-3xl relative z-10">
-              <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-4 font-bold">
-                {isRo ? 'SINERGIE INSTITUȚIONALĂ' : 'INSTITUTIONAL SYNERGY'}
-              </span>
-              
-              <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#0B1B3D] mb-6 tracking-wide uppercase leading-tight">
-                {isRo 
-                  ? 'Guvernanță Riguroasă pentru Protecția Activelor' 
-                  : 'Rigorous Governance for Asset Safeguarding'}
-              </h2>
-
-              <p className="font-sans font-light text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
-                {isRo
-                  ? 'Toate auditurile fiscale transfrontaliere, evaluările de active și tranzacțiile complexe de restructurare M&A desfășurate de Ragnar Elite sunt validate în mod independent de partenerii noștri de renume global. Acest nivel superior de supervizare oferă siguranță totală și o transparență inegalabilă asociaților noștri.'
-                  : 'All cross-border fiscal audits, asset valuations, and complex M&A restructuring operations conducted by Ragnar Elite are independently verified by our globally renowned partners. This premium tier of oversight guarantees absolute safety and unparalleled transparency for our stakeholders.'}
-              </p>
-
-              <div className="flex flex-wrap gap-4 items-center">
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded border border-[#0B1B3D]/5 shadow-sm">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span className="font-mono text-[9px] tracking-wider text-slate-600 uppercase font-medium">
-                    {isRo ? 'Standarde Audit Big Four' : 'Big Four Audit Standards'}
+        {/* Global Operational Synergy & Institutional Governance Section (Integrated with Corporate Handshake Photo) */}
+        <div className="mt-20 sm:mt-28">
+          <div className="bg-[#050D1D] text-[#FAF6F0] rounded-2xl border border-white/10 overflow-hidden shadow-2xl relative">
+            <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+              {/* Image Side - Corporate Handshake */}
+              <div className="lg:col-span-5 relative h-[220px] sm:h-[300px] lg:h-full min-h-[220px] lg:min-h-[360px] overflow-hidden">
+                <img 
+                  src="https://i.imgur.com/VljBQC0.png" 
+                  alt="Corporate Executives Shaking Hands in Suits"
+                  className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#050D1D]/20 to-[#050D1D] hidden lg:block"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050D1D] via-[#050D1D]/30 to-transparent lg:hidden"></div>
+                
+                <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-[#0B1B3D]/90 backdrop-blur-md px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg border border-white/10 flex items-center gap-2">
+                  <BadgeCheck className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+                  <span className="font-mono text-[9px] sm:text-[10px] text-sky-200 uppercase tracking-widest font-semibold">
+                    {isRo ? 'Alianță Corporativă Verificată' : 'Verified Corporate Alliance'}
                   </span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded border border-[#0B1B3D]/5 shadow-sm">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span className="font-mono text-[9px] tracking-wider text-slate-600 uppercase font-medium">
-                    {isRo ? 'Conformitate Legala Multi-Jurisdicțională' : 'Multi-Jurisdictional Legal Alignment'}
-                  </span>
+              </div>
+
+              {/* Text Side - Combined Sinergie Instituțională & Protocol */}
+              <div className="lg:col-span-7 p-6 sm:p-10 lg:p-12 relative z-10 flex flex-col justify-between">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-sky-500/10 border border-sky-400/20 rounded-full font-mono text-[9px] text-sky-300 uppercase tracking-widest mb-4">
+                    <Handshake className="w-3.5 h-3.5 text-sky-400" />
+                    <span>{isRo ? 'SINERGIE INSTITUȚIONALĂ & GUVERNANȚĂ' : 'INSTITUTIONAL SYNERGY & GOVERNANCE'}</span>
+                  </div>
+
+                  <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 tracking-wide uppercase leading-tight">
+                    {isRo 
+                      ? 'Guvernanță Riguroasă și Parteneriate de Elită pentru Protecția Activelor' 
+                      : 'Rigorous Governance & Elite Partnerships for Asset Safeguarding'}
+                  </h2>
+
+                  <p className="font-sans font-light text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed mb-6">
+                    {isRo
+                      ? 'Toate auditurile fiscale transfrontaliere, evaluările de active, fuziunile și tranzacțiile complexe M&A derulate sub umbrela Ragnar Elite Holding sunt validate în mod independent de partenerii noștri de renume global. Supervizarea juridică internațională și respectarea strictă a standardelor de audit Big Four garantează imunitate macroeconomică, siguranță totală și transparență inegalabilă asociaților noștri.'
+                      : 'All cross-border fiscal audits, asset valuations, and complex M&A restructuring operations conducted under the Ragnar Elite Holding banner are independently verified by our globally renowned partners. International legal supervision and Big Four audit standards ensure absolute safety and unparalleled transparency.'}
+                  </p>
+                </div>
+
+                {/* Badge tags grid */}
+                <div className="pt-4 border-t border-white/10 grid grid-cols-2 gap-2.5 sm:gap-3 font-mono text-[10px] sm:text-[11px] text-slate-200">
+                  <div className="flex items-center gap-2 bg-white/5 px-2.5 py-1.5 rounded border border-white/10">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                    <span className="truncate">{isRo ? 'Standarde Audit Big Four' : 'Big Four Audit Standards'}</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/5 px-2.5 py-1.5 rounded border border-white/10">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                    <span className="truncate">{isRo ? 'Conformitate Multi-Jurisdicțională' : 'Multi-Jurisdictional Legal'}</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/5 px-2.5 py-1.5 rounded border border-white/10">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span className="truncate">{isRo ? 'Audit & Transparență 100%' : '100% Audit Transparency'}</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/5 px-2.5 py-1.5 rounded border border-white/10">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span className="truncate">{isRo ? 'Jurisdicție Internațională' : 'Global Jurisdiction'}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -317,3 +459,4 @@ export default function PartnersView({ currentLang, onSelectPartner, initialSect
     </div>
   );
 }
+
