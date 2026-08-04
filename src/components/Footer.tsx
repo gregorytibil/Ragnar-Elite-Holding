@@ -119,9 +119,10 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
               { label: t.navHolding, tab: 'holding' },
               { label: t.navPortfolio, tab: 'portfolio' },
               { label: t.navServices, tab: 'services' },
-              { label: t.navDivisionsCore, tab: 'divisions-core' },
-              { label: t.navDivisionsGovernance, tab: 'divisions-governance' },
-              { label: t.navPartners, tab: 'partners' },
+              { label: t.navManagement, tab: 'divisions-governance' },
+              { label: t.navSubsidiaries, tab: 'subsidiaries' },
+              { label: t.navDivisions, tab: 'divisions-core' },
+              { label: t.navPartners, tab: 'alliances' },
               { label: t.navContact, tab: 'contact' },
               { label: t.navLegal, tab: 'legal' },
             ].map((item) => (

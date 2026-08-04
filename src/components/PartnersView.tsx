@@ -25,22 +25,27 @@ import { PARTNERS_DATA, PartnerProfile } from '../data/partnersData';
 interface PartnersViewProps {
   currentLang: Language;
   onSelectPartner?: (partner: PartnerProfile) => void;
+  initialSection?: string;
 }
 
-export default function PartnersView({ currentLang, onSelectPartner }: PartnersViewProps) {
+export default function PartnersView({ currentLang, onSelectPartner, initialSection }: PartnersViewProps) {
   const isRo = currentLang === 'ro';
 
   const titleText = isRo 
-    ? 'Alianțe Strategice & Parteneri Globali' 
-    : 'Strategic Alliances & Global Partners';
+    ? 'Subsidiarele Grupului' 
+    : 'Group Subsidiaries';
 
   const subtitleText = isRo
-    ? 'Colaborări de elită pentru asigurarea excelenței operaționale și a imunității macroeconomice'
-    : 'Elite collaborations ensuring operational excellence and absolute macroeconomic immunity';
+    ? 'Toate entitățile economice și comerciale prezentate în această secțiune sunt deținute în proporție de 100% și operate integral ca subsidiare integrate ale Ragnar Elite Holding.'
+    : 'All economic and commercial entities presented in this section are 100% owned and fully operated as integrated subsidiaries of Ragnar Elite Holding.';
 
   const introText = isRo
-    ? 'La Ragnar Elite Holding, excelența operațională este susținută de parteneriate strategice cu cele mai prestigioase instituții de consultanță, audit financiar, asistență juridică și tehnologie din grup. Colaborăm exclusiv cu entități de încredere pentru a garanta tranzacții sigure, conformitate impecabilă și securitate structurală.'
-    : 'At Ragnar Elite Holding, operational excellence is bolstered by strategic partnerships with prestigious consulting, financial auditing, legal counsel, and technology group entities. We collaborate exclusively with trusted partners to guarantee secure transactions, flawless compliance, and structural security.';
+    ? 'Modelul nostru de afaceri funcționează ca un ecosistem industrial integrat de tip circuit închis. Ragnar Elite Holding nu doar investește capital, ci deține controlul strategic și operațional total asupra fiecărei companii din portofoliu. Această structură garantează o guvernanță corporativă fără compromisuri, sinergie absolută între divizii și o protecție maximă a activelor în fața volatilității macroeconomice globale.'
+    : 'Our business model operates as a closed-loop integrated industrial ecosystem. Ragnar Elite Holding not only invests capital, but retains full strategic and operational control over every portfolio company. This structure guarantees uncompromising corporate governance, absolute synergy between divisions, and maximum asset protection against global macroeconomic volatility.';
+
+  const pillarsIntro = isRo
+    ? 'Subsidiarele noastre sunt organizate strategic pe piloni industriali vitali:'
+    : 'Our subsidiaries are strategically organized across vital industrial pillars:';
 
   const getPartnerIcon = (id: string) => {
     const props = { className: "w-6 h-6 text-[#38BDF8]" };
@@ -89,7 +94,7 @@ export default function PartnersView({ currentLang, onSelectPartner }: PartnersV
               className="inline-flex items-center gap-2 px-3 py-1 bg-white/[0.04] border border-white/10 rounded-sm text-[9px] md:text-[10px] text-[#A2D2FF] font-mono tracking-[0.3em] uppercase mb-6 backdrop-blur-md"
             >
               <Users2 className="w-3 h-3 text-[#A2D2FF]" />
-              <span>{isRo ? 'Alianțe Globale' : 'Global Alliances'}</span>
+              <span>{isRo ? 'Subsidiare Integrate 100%' : '100% Integrated Subsidiaries'}</span>
             </motion.div>
 
             <motion.h1
@@ -123,12 +128,15 @@ export default function PartnersView({ currentLang, onSelectPartner }: PartnersV
       {/* Intro Narrative Section */}
       <section className="py-16 sm:py-24 px-6 max-w-[1140px] mx-auto relative z-10">
         <div className="bg-white border border-[#0B1B3D]/10 rounded-2xl p-8 sm:p-12 shadow-[0_4px_30px_rgba(11,27,61,0.01)] hover:shadow-[0_10px_40px_rgba(11,27,61,0.03)] transition-all duration-300 mb-12 sm:mb-16">
-          <div className="max-w-4xl">
-            <span className="font-mono text-[9px] tracking-[0.25em] text-[#0B1B3D]/50 uppercase block mb-3 font-bold">
-              {isRo ? 'IMUNITATE MACROECONOMICĂ PRIN REPUTAȚIE' : 'MACROECONOMIC IMMUNITY THROUGH REPUTATION'}
+          <div className="max-w-4xl space-y-4">
+            <span className="font-mono text-[9px] tracking-[0.25em] text-[#0B1B3D]/50 uppercase block mb-1 font-bold">
+              {isRo ? 'ECOSISTEM INDUSTRIAL DE TIP CIRCUIT ÎNCHIS' : 'CLOSED-LOOP INDUSTRIAL ECOSYSTEM'}
             </span>
             <p className="font-sans font-light text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed">
               {introText}
+            </p>
+            <p className="font-sans font-semibold text-[#0B1B3D] text-sm sm:text-base md:text-lg pt-2 border-t border-slate-100">
+              {pillarsIntro}
             </p>
           </div>
         </div>
@@ -137,15 +145,15 @@ export default function PartnersView({ currentLang, onSelectPartner }: PartnersV
         <div>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-3 font-bold">
-              {isRo ? 'PORTALURI & SUBDOMENII ACTIVE' : 'ACTIVE GROUP SUBDOMAINS'}
+              {isRo ? 'SUBDISIARELE GRUPULUI & SUBDOMENII ACTIVE' : 'GROUP SUBSIDIARIES & ACTIVE SUBDOMAINS'}
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0B1B3D] tracking-tight uppercase">
-              {isRo ? 'Companii & Entități Partenere din Grup' : 'Partner Companies & Group Subsidiaries'}
+              {isRo ? 'Portofoliul Integrat al Ragnar Elite Holding' : 'Ragnar Elite Holding Integrated Portfolio'}
             </h2>
             <p className="font-sans font-light text-slate-600 text-sm sm:text-base mt-3">
               {isRo 
-                ? 'Fiecare entitate din grup dispune de o pagină dedicată și un subdomeniu oficial securizat SSL (*.ragnareliteholding.com).'
-                : 'Each group entity operates a dedicated 1-page profile and an SSL-secured official subdomain (*.ragnareliteholding.com).'}
+                ? 'Fiecare subsidiară deținută 100% operează independent sub umbrela holdingului și dispune de un subdomeniu oficial securizat SSL (*.ragnareliteholding.com).'
+                : 'Each 100% owned subsidiary operates independently under the holding umbrella with an SSL-secured official subdomain (*.ragnareliteholding.com).'}
             </p>
           </div>
 

@@ -31,9 +31,10 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
     { id: 'holding', label: t.navHolding },
     { id: 'portfolio', label: t.navPortfolio },
     { id: 'services', label: t.navServices },
-    { id: 'divisions-core', label: t.navDivisionsCore },
-    { id: 'divisions-governance', label: t.navDivisionsGovernance },
-    { id: 'partners', label: t.navPartners },
+    { id: 'divisions-governance', label: t.navManagement },
+    { id: 'subsidiaries', label: t.navSubsidiaries },
+    { id: 'divisions-core', label: t.navDivisions },
+    { id: 'alliances', label: t.navPartners },
     { id: 'contact', label: t.navContact },
   ];
 
