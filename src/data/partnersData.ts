@@ -50,7 +50,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Ca divizie centrală de gestiune capital, Elite Capital Holding asigură administrarea investițiilor, gestionarea eficientă a participațiilor în companii partenere și derularea activităților de holding financiar la cele mai înalte standarde de guvernanță corporativă.',
     extendedOverviewEn: 'As a core capital management entity, Elite Capital Holding ensures professional investment administration, active management of corporate equity holdings, and financial holding operations under high standards of governance.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/xxyUU5r.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Domeniu Principal', labelEn: 'Core Domain', value: 'Holding Financiar' },
@@ -109,7 +109,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Studio Gilded Stars oferă servicii de producție cinematografică și de divertisment la nivel internațional:\n\n• Film, Commercial & Music Video Production: Soluții complete de casting, realizare de probe audio-video (self-tapes), videoclipuri muzicale și reclame digitale (producție și post-producție).\n• Advertising & Media Representation: Servicii boutique de publicitate, campanii social media, influencer marketing și sinergie între branduri și talente.\n• Photography & Visual Branding: Fotografie profesională în studio pentru book-uri de talente și portofolii conforme cu standardele estetice internaționale.\n• Event & Performing Arts Support: Managementul talentelor pentru spectacole live, prezentări de modă și gale corporative.\n• Professional Development & Training: Ateliere specializate de acting și modeling pentru Fresh Faces.\n• Focus pe Piețe Strategice Globale: Furnizăm talente pentru piețe active: India (Bollywood), EAU (Dubai), SUA (Hollywood) & Canada (Hollywood North), Marea Britanie (Londra), Turcia (Istanbul), Coreea de Sud (Seul), Nigeria (Nollywood) și Estonia.',
     extendedOverviewEn: 'Studio Gilded Stars offers comprehensive film production and entertainment services worldwide:\n\n• Film, Commercial & Music Video Production: Full casting solutions and production of high-quality audition tapes (self-tapes), music videos, and digital commercials (production & post-production).\n• Advertising & Media Representation: Boutique advertising services, brand-talent synergy, influencer marketing, and social media campaigns.\n• Photography & Visual Branding: In-house professional photography for talent books and portfolios meeting international aesthetic standards.\n• Event & Performing Arts Support: Organizing and managing talent for live performances, fashion shows, and corporate galas.\n• Professional Development & Training: Specialized acting and modeling workshops for Fresh Faces entering the global market.\n• Global Strategic Market Focus: Connecting talent with key international markets: India (Bollywood), UAE (Dubai), USA (Hollywood) & Canada (Hollywood North), UK (London), Turkey (Istanbul), South Korea (Seoul), Nigeria (Nollywood), and Estonia.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/sLJ2N6K.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Piețe Target', labelEn: 'Target Markets', value: 'Hollywood, Bollywood, Dubai+' },
@@ -168,7 +168,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Nexus Terranova dezvoltă un concept integrat de comerț omnichannel orientat pe bunuri de consum de calitate, având sediul de operare și lansarea principală în Thailanda. Portofoliul de produse include:\n\n• Îmbrăcăminte și Încălțăminte\n• Lenjerie intimă\n• Parfumuri și produse de îngrijire personală\n• Accesorii de modă și lifestyle\n• Electronice și gadgeturi tech\n• Electrocasnice pentru locuințe moderne\n\nCu o rețea logistică eficientă și o strategie axată pe experiența clienților, Nexus Terranova aduce produse premium mai aproape de consumatorii din Asia de Sud-Est.',
     extendedOverviewEn: 'Nexus Terranova develops an integrated omnichannel retail model focused on high-quality consumer goods, with primary launch and operations centered in Thailand. Product portfolio includes:\n\n• Apparel & Footwear\n• Fine Lingerie\n• Perfumes & Fragrances\n• Fashion & Lifestyle Accessories\n• Consumer Electronics & Tech Gadgets\n• Home Electrical Appliances\n\nEquipped with swift logistics and a customer-centric retail approach, Nexus Terranova delivers curated products across Thailand and Southeast Asia.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/rcgZWZE.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Piață Operativă', labelEn: 'Operating Market', value: 'Thailanda (Asia de Sud-Est)' },
