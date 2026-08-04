@@ -45,8 +45,9 @@ export default function PartnersView({ currentLang, onSelectPartner }: PartnersV
   const getPartnerIcon = (id: string) => {
     const props = { className: "w-6 h-6 text-[#38BDF8]" };
     switch (id) {
-      case 'aoddfis': return <Scale {...props} />;
-      case 'pro-consult-audit': return <Calculator {...props} />;
+      case 'elite-capital-holding': return <Building {...props} />;
+      case 'studio-gilded-stars': return <Sparkles {...props} />;
+      case 'nexus-terranova': return <Briefcase {...props} />;
       case 'vexta-data': return <Cpu {...props} />;
       case 'urban-energetic-service': return <Zap {...props} />;
       case 'urban-platinum-estate': return <Building {...props} />;

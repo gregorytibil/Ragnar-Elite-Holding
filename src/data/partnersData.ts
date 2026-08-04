@@ -35,120 +35,179 @@ export interface PartnerProfile {
 
 export const PARTNERS_DATA: PartnerProfile[] = [
   {
-    id: 'aoddfis',
-    slug: 'aoddfis',
-    subdomain: 'aoddfis.ragnareliteholding.com',
-    aliases: ['aoddfis', 'democratie', 'drepturi-omul', 'incluziune'],
-    nameRo: 'Asociația Obștească pentru Democrație, Drepturi Fundamentale și Incluziuni Sociale',
-    nameEn: 'Public Association for Democracy, Fundamental Rights and Social Inclusion',
-    categoryRo: 'Organizație Neguvernamentală & Proiecte Sociale',
-    categoryEn: 'Non-Governmental Organization & Social Impact',
-    taglineRo: 'Promovarea democrației, protecția drepturilor omului, incluziune socială și educație civică.',
-    taglineEn: 'Promoting democracy, protecting human rights, social inclusion, and civic education.',
-    descriptionRo: 'Asociația se ocupă cu promovarea democrației, protecția drepturilor omului, incluziunea socială, asistența socială și juridică, educația civică și implementarea proiectelor sociale cu impact comunitar sustenabil.',
-    descriptionEn: 'The association promotes democracy, human rights protection, social inclusion, social and legal assistance, civic education, and the implementation of social projects with sustainable community impact.',
-    extendedOverviewRo: 'Înființată cu scopul de a consolida valorile democratice și statul de drept, asociația furnizează suport juridic și social categoriilor vulnerabile, dezvoltă programe educaționale civice și colaborează cu instituții naționale și internaționale pentru promovarea drepturilor fundamentale și incluziunii sociale echitabile.',
-    extendedOverviewEn: 'Established to strengthen democratic values and the rule of law, the association provides legal and social support to vulnerable groups, develops civic education programs, and collaborates with national and international institutions to promote fundamental rights and equitable social inclusion.',
+    id: 'elite-capital-holding',
+    slug: 'elite-capital-holding',
+    subdomain: 'elitecapital.ragnareliteholding.com',
+    aliases: ['elitecapital', 'elite-capital-holding', 'capital', 'holding-financiar'],
+    nameRo: 'Elite Capital Holding',
+    nameEn: 'Elite Capital Holding',
+    categoryRo: 'Administrare Investiții, Participații & Holding Financiar',
+    categoryEn: 'Investment Management, Equity Participations & Financial Holding',
+    taglineRo: 'Administrarea investițiilor, gestionarea participațiilor în companii și activități de holding financiar.',
+    taglineEn: 'Investment management, corporate equity participations, and financial holding operations.',
+    descriptionRo: 'Elite Capital Holding se ocupă cu administrarea investițiilor strategice, gestionarea participațiilor de capital în companii și coordonarea activităților de holding financiar.',
+    descriptionEn: 'Elite Capital Holding specializes in strategic investment management, corporate equity participations, and managing financial holding operations.',
+    extendedOverviewRo: 'Ca divizie centrală de gestiune capital, Elite Capital Holding asigură administrarea investițiilor, gestionarea eficientă a participațiilor în companii partenere și derularea activităților de holding financiar la cele mai înalte standarde de guvernanță corporativă.',
+    extendedOverviewEn: 'As a core capital management entity, Elite Capital Holding ensures professional investment administration, active management of corporate equity holdings, and financial holding operations under high standards of governance.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://i.imgur.com/ia6P5rd.jpeg',
+    heroBgImage: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1920&q=80',
     accentColor: '#38BDF8',
     stats: [
-      { labelRo: 'Domeniu de Activitate', labelEn: 'Field of Action', value: 'Drepturi Civice' },
-      { labelRo: 'Acoperire Proiecte', labelEn: 'Project Scope', value: 'Națională & Int.' },
-      { labelRo: 'Impact Social', labelEn: 'Social Impact', value: 'Comunitar & Civic' },
-      { labelRo: 'Standard Afiliere', labelEn: 'Affiliation Standard', value: 'Ragnar Group' }
+      { labelRo: 'Domeniu Principal', labelEn: 'Core Domain', value: 'Holding Financiar' },
+      { labelRo: 'Portofoliu Active', labelEn: 'Asset Portfolio', value: 'Participații în Companii' },
+      { labelRo: 'Profil Operativ', labelEn: 'Operational Profile', value: 'Administrare Investiții' },
+      { labelRo: 'Grup Afiliat', labelEn: 'Group Affiliation', value: 'Ragnar Elite Capital' }
     ],
     services: [
       {
         id: 's1',
-        titleRo: 'Promovarea Democrației & Educație Civică',
-        titleEn: 'Democracy Promotion & Civic Education',
-        descRo: 'Organizarea de campanii de informare, seminarii și ateliere de lucru pentru creșterea gradului de conștientizare civică și participare democratică.',
-        descEn: 'Organizing awareness campaigns, seminars, and workshops to foster civic engagement and democratic participation.',
-        iconName: 'Scale'
+        titleRo: 'Administrare Investiții Strategice',
+        titleEn: 'Strategic Investment Management',
+        descRo: 'Gestiunea profesionistă a portofoliilor de investiții și alocarea capitalului în active cu valoare adăugată.',
+        descEn: 'Professional management of investment portfolios and strategic capital allocation.',
+        iconName: 'Briefcase'
       },
       {
         id: 's2',
-        titleRo: 'Protecția Drepturilor Omului & Consiliere',
-        titleEn: 'Human Rights Protection & Advisory',
-        descRo: 'Monitorizarea respectării drepturilor fundamentale și oferirea de servicii de asistență de primă linie pentru garantarea egalității de șanse.',
-        descEn: 'Monitoring compliance with fundamental rights and offering first-line advisory services to ensure equal opportunities.',
-        iconName: 'Shield'
+        titleRo: 'Gestionarea Participațiilor în Companii',
+        titleEn: 'Equity Participations & Corporate Governance',
+        descRo: 'Administrarea participațiilor sociale și de capital în societățile comerciale din portofoliu.',
+        descEn: 'Active oversight and management of corporate equity holdings across portfolio companies.',
+        iconName: 'Building'
       },
       {
         id: 's3',
-        titleRo: 'Incluziune Socială & Asistență Juridică',
-        titleEn: 'Social Inclusion & Legal Assistance',
-        descRo: 'Program integrat de sprijin social și reprezentare juridică gratuită sau facilitată pentru integrarea persoanelor defavorizate.',
-        descEn: 'Integrated social support and legal representation programs facilitating the social integration of disadvantaged individuals.',
-        iconName: 'FileText'
+        titleRo: 'Activități de Holding Financiar',
+        titleEn: 'Financial Holding Operations',
+        descRo: 'Consolidare financiară, structurare de capital și coordonarea guvernanței corporative la nivel de grup.',
+        descEn: 'Financial consolidation, capital structuring, and corporate governance coordination.',
+        iconName: 'Scale'
       },
       {
         id: 's4',
-        titleRo: 'Implementare Proiecte Sociale & Granturi',
-        titleEn: 'Social Project Implementation & Grants',
-        descRo: 'Atragerea de fonduri și dezvoltarea de parteneriate strategice cu ONG-uri și organisme internaționale pentru proiecte de dezvoltare durabilă.',
-        descEn: 'Securing funding and developing strategic partnerships with NGOs and international bodies for sustainable development projects.',
+        titleRo: 'Consultanță în Fuziuni & Achiziții (M&A)',
+        titleEn: 'Mergers & Acquisitions Advisory (M&A)',
+        descRo: 'Analiză financiară, evaluare de risc și structurarea tranzacțiilor strategice de expansiune.',
+        descEn: 'Financial analysis, risk assessment, and structuring strategic expansion transactions.',
+        iconName: 'Shield'
+      }
+    ]
+  },
+  {
+    id: 'studio-gilded-stars',
+    slug: 'studio-gilded-stars',
+    subdomain: 'gildedstars.ragnareliteholding.com',
+    aliases: ['gildedstars', 'studio-gilded-stars', 'gilded-stars', 'film-production', 'entertainment'],
+    nameRo: 'Studio Gilded Stars',
+    nameEn: 'Studio Gilded Stars',
+    categoryRo: 'Producție Film, Casting, Branding Vizual & Reprezentare Media',
+    categoryEn: 'Film Production, Casting, Visual Branding & Media Representation',
+    taglineRo: 'Producție de film, reclame, videoclipuri muzicale, casting global, fotografie și training pentru talente.',
+    taglineEn: 'Film, commercial & music video production, global casting, talent management, photography & training.',
+    descriptionRo: 'Studio Gilded Stars este o casă de producție și agenție media ce oferă producție film/reclame/videoclipuri, casting (self-tapes), fotografie profesională, reprezentare media și training pentru talente pe piețe precum Hollywood, Bollywood, Dubai, Londra, Seul, Istanbul, Nollywood și Estonia.',
+    descriptionEn: 'Studio Gilded Stars is a production house and media agency delivering film/commercial/music video production, casting (self-tapes), professional photography, media representation, and talent training across markets including Hollywood, Bollywood, Dubai, London, Seoul, Istanbul, Nollywood, and Estonia.',
+    extendedOverviewRo: 'Studio Gilded Stars oferă servicii de producție cinematografică și de divertisment la nivel internațional:\n\n• Film, Commercial & Music Video Production: Soluții complete de casting, realizare de probe audio-video (self-tapes), videoclipuri muzicale și reclame digitale (producție și post-producție).\n• Advertising & Media Representation: Servicii boutique de publicitate, campanii social media, influencer marketing și sinergie între branduri și talente.\n• Photography & Visual Branding: Fotografie profesională în studio pentru book-uri de talente și portofolii conforme cu standardele estetice internaționale.\n• Event & Performing Arts Support: Managementul talentelor pentru spectacole live, prezentări de modă și gale corporative.\n• Professional Development & Training: Ateliere specializate de acting și modeling pentru Fresh Faces.\n• Focus pe Piețe Strategice Globale: Furnizăm talente pentru piețe active: India (Bollywood), EAU (Dubai), SUA (Hollywood) & Canada (Hollywood North), Marea Britanie (Londra), Turcia (Istanbul), Coreea de Sud (Seul), Nigeria (Nollywood) și Estonia.',
+    extendedOverviewEn: 'Studio Gilded Stars offers comprehensive film production and entertainment services worldwide:\n\n• Film, Commercial & Music Video Production: Full casting solutions and production of high-quality audition tapes (self-tapes), music videos, and digital commercials (production & post-production).\n• Advertising & Media Representation: Boutique advertising services, brand-talent synergy, influencer marketing, and social media campaigns.\n• Photography & Visual Branding: In-house professional photography for talent books and portfolios meeting international aesthetic standards.\n• Event & Performing Arts Support: Organizing and managing talent for live performances, fashion shows, and corporate galas.\n• Professional Development & Training: Specialized acting and modeling workshops for Fresh Faces entering the global market.\n• Global Strategic Market Focus: Connecting talent with key international markets: India (Bollywood), UAE (Dubai), USA (Hollywood) & Canada (Hollywood North), UK (London), Turkey (Istanbul), South Korea (Seoul), Nigeria (Nollywood), and Estonia.',
+    contactEmail: 'contact@ragnareliteholding.com',
+    heroBgImage: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1920&q=80',
+    accentColor: '#38BDF8',
+    stats: [
+      { labelRo: 'Piețe Target', labelEn: 'Target Markets', value: 'Hollywood, Bollywood, Dubai+' },
+      { labelRo: 'Producție Video', labelEn: 'Video Production', value: 'Film, Reclame, Videoclipuri' },
+      { labelRo: 'Servicii Casting', labelEn: 'Casting Services', value: 'Self-Tapes & Book-uri' },
+      { labelRo: 'Grup Afiliat', labelEn: 'Group Division', value: 'Gilded Stars Entertainment' }
+    ],
+    services: [
+      {
+        id: 's1',
+        titleRo: 'Producție Film, Reclame & Videoclipuri Muzicale',
+        titleEn: 'Film, Commercial & Music Video Production',
+        descRo: 'Soluții complete de casting, probe audio-video (self-tapes), videoclipuri muzicale și reclame digitale (producție & post-producție).',
+        descEn: 'Full casting solutions, audition self-tapes, music videos, and digital commercial production & post-production.',
+        iconName: 'Sparkles'
+      },
+      {
+        id: 's2',
+        titleRo: 'Publicitate & Reprezentare Media',
+        titleEn: 'Advertising & Media Representation',
+        descRo: 'Servicii boutique de publicitate, influencer marketing, campanii social media și sinergie între branduri și talente.',
+        descEn: 'Boutique advertising services, influencer marketing, social media campaigns, and brand-talent synergy.',
+        iconName: 'Briefcase'
+      },
+      {
+        id: 's3',
+        titleRo: 'Fotografie Profesională & Branding Vizual',
+        titleEn: 'Photography & Visual Branding',
+        descRo: 'Ședințe foto în studio pentru portofolii și book-uri de talente la standarde estetice internaționale.',
+        descEn: 'In-house professional photography for talent books and portfolios meeting international aesthetic standards.',
+        iconName: 'Sparkles'
+      },
+      {
+        id: 's4',
+        titleRo: 'Evenimente, Performing Arts & Training',
+        titleEn: 'Event Support, Performing Arts & Training',
+        descRo: 'Management de talente pentru spectacole live, gale și workshop-uri specializate de acting și modeling pentru Fresh Faces.',
+        descEn: 'Talent management for live shows, corporate galas, and specialized acting/modeling workshops for Fresh Faces.',
         iconName: 'CheckCircle2'
       }
     ]
   },
   {
-    id: 'pro-consult-audit',
-    slug: 'pro-consult-audit',
-    subdomain: 'proconsult.ragnareliteholding.com',
-    aliases: ['proconsult', 'pro-consult-audit', 'proconsultaudit', 'audit'],
-    nameRo: 'Pro Consult Audit Expert',
-    nameEn: 'Pro Consult Audit Expert',
-    categoryRo: 'Audit Financiar, Contabilitate & Consultanță',
-    categoryEn: 'Financial Audit, Accounting & Advisory',
-    taglineRo: 'Contabilitate, audit financiar, consultanță fiscală, management și plasare de personal.',
-    taglineEn: 'Accounting, financial audit, tax advisory, management consultancy, and recruitment.',
-    descriptionRo: 'Compania se ocupă cu contabilitate, audit financiar, consultanță fiscală, consultanță în afaceri și management, studii de piață, precum și servicii de recrutare și plasare de personal.',
-    descriptionEn: 'The company specializes in accounting, financial auditing, tax advisory, business and management consulting, market research, as well as executive recruitment and staffing.',
-    extendedOverviewRo: 'Pro Consult Audit Expert oferă servicii financiare și de consultanță managerială integrate pentru companii naționale și corporații multinaționale. Cu o echipă de experți contabili, auditori financiari acreditați și consultanți de resurse umane, compania asigură rigoare contabilă, optimizare fiscală legală și soluții strategice de resurse umane.',
-    extendedOverviewEn: 'Pro Consult Audit Expert delivers integrated financial and management consulting services for national businesses and multinational corporations. Backed by certified auditors, tax specialists, and HR advisors, the company ensures flawless accounting, legal tax optimization, and strategic workforce solutions.',
+    id: 'nexus-terranova',
+    slug: 'nexus-terranova',
+    subdomain: 'nexusterranova.ragnareliteholding.com',
+    aliases: ['nexusterranova', 'nexus-terranova', 'nexus', 'terranova', 'thailand'],
+    nameRo: 'Nexus Terranova',
+    nameEn: 'Nexus Terranova',
+    categoryRo: 'Retail Internațional, Fashion & Electrocasnice (Thailanda)',
+    categoryEn: 'International Retail, Apparel & Consumer Electronics (Thailand)',
+    taglineRo: 'Comercializare îmbrăcăminte, încălțăminte, parfumuri, accesorii, electronice și electrocasnice (Lansare în Thailanda).',
+    taglineEn: 'Retail of apparel, footwear, lingerie, perfumes, accessories, electronics & home appliances (Thailand Launch).',
+    descriptionRo: 'Nexus Terranova este o companie modernă de retail ce comercializează îmbrăcăminte, încălțăminte, lenjerie intimă, parfumuri, accesorii, electronice și electrocasnice, având ca piață principală de lansare Thailanda.',
+    descriptionEn: 'Nexus Terranova is a modern retail enterprise offering clothing, footwear, lingerie, perfumes, accessories, electronics, and home appliances, with a primary launch market in Thailand.',
+    extendedOverviewRo: 'Nexus Terranova dezvoltă un concept integrat de comerț omnichannel orientat pe bunuri de consum de calitate, având sediul de operare și lansarea principală în Thailanda. Portofoliul de produse include:\n\n• Îmbrăcăminte și Încălțăminte\n• Lenjerie intimă\n• Parfumuri și produse de îngrijire personală\n• Accesorii de modă și lifestyle\n• Electronice și gadgeturi tech\n• Electrocasnice pentru locuințe moderne\n\nCu o rețea logistică eficientă și o strategie axată pe experiența clienților, Nexus Terranova aduce produse premium mai aproape de consumatorii din Asia de Sud-Est.',
+    extendedOverviewEn: 'Nexus Terranova develops an integrated omnichannel retail model focused on high-quality consumer goods, with primary launch and operations centered in Thailand. Product portfolio includes:\n\n• Apparel & Footwear\n• Fine Lingerie\n• Perfumes & Fragrances\n• Fashion & Lifestyle Accessories\n• Consumer Electronics & Tech Gadgets\n• Home Electrical Appliances\n\nEquipped with swift logistics and a customer-centric retail approach, Nexus Terranova delivers curated products across Thailand and Southeast Asia.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://i.imgur.com/Y3uJZSw.jpeg',
+    heroBgImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1920&q=80',
     accentColor: '#38BDF8',
     stats: [
-      { labelRo: 'Certificare Audit', labelEn: 'Audit Certification', value: 'Standard Acreditat' },
-      { labelRo: 'Arie Servicii', labelEn: 'Service Range', value: '360° Financial & HR' },
-      { labelRo: 'Conformitate Fiscală', labelEn: 'Tax Compliance', value: '100% Guaranteed' },
-      { labelRo: 'Grup Afiliat', labelEn: 'Affiliation Group', value: 'Ragnar Elite' }
+      { labelRo: 'Piață Operativă', labelEn: 'Operating Market', value: 'Thailanda (Asia de Sud-Est)' },
+      { labelRo: 'Domeniu Retail', labelEn: 'Retail Scope', value: 'Fashion, Tech & Home' },
+      { labelRo: 'Gama Produse', labelEn: 'Product Range', value: '7 Categorii Principale' },
+      { labelRo: 'Grup Afiliat', labelEn: 'Group Division', value: 'Nexus Consumer Retail' }
     ],
     services: [
       {
         id: 's1',
-        titleRo: 'Contabilitate Integrată & Raportare',
-        titleEn: 'Integrated Accounting & Financial Reporting',
-        descRo: 'Gestionarea completă a evidențelor contabile, întocmirea bilanțurilor financiare și alinierea la reglementările naționale și IFRS.',
-        descEn: 'Comprehensive bookkeeping, preparation of financial statements, and strict compliance with national and IFRS standards.',
-        iconName: 'Calculator'
-      },
-      {
-        id: 's2',
-        titleRo: 'Audit Financiar Statutar & Contractual',
-        titleEn: 'Statutory & Contractual Financial Audit',
-        descRo: 'Examinarea independentă a situațiilor financiare pentru garantarea acurateței, transparenței și reducerii riscurilor operaționale.',
-        descEn: 'Independent financial examination ensuring accuracy, transparency, and operational risk reduction.',
-        iconName: 'CheckCircle2'
-      },
-      {
-        id: 's3',
-        titleRo: 'Consultanță Fiscală & Management',
-        titleEn: 'Tax Advisory & Management Consulting',
-        descRo: 'Optimizare fiscală legală, structurarea tranzacțiilor, studii de piață și consultanță în planificarea strategică a afacerii.',
-        descEn: 'Legal tax optimization, transaction structuring, market intelligence, and strategic business planning advisory.',
+        titleRo: 'Îmbrăcăminte, Încălțăminte & Lenjerie Intimă',
+        titleEn: 'Apparel, Footwear & Fine Lingerie',
+        descRo: 'Colecții de îmbrăcăminte contemporană, încălțăminte confortabilă și lenjerie intimă de calitate.',
+        descEn: 'Contemporary clothing collections, comfortable footwear, and fine lingerie.',
         iconName: 'Briefcase'
       },
       {
+        id: 's2',
+        titleRo: 'Parfumuri Exclusiviste & Accesorii',
+        titleEn: 'Perfumes & Fashion Accessories',
+        descRo: 'Parfumuri cu arome rafinate, produse de îngrijire și accesorii de modă stilate.',
+        descEn: 'Exquisite fragrances, personal care lines, and stylish fashion accessories.',
+        iconName: 'Sparkles'
+      },
+      {
+        id: 's3',
+        titleRo: 'Electronice & Electrocasnice de Consum',
+        titleEn: 'Consumer Electronics & Home Appliances',
+        descRo: 'Echipamente electronice de ultimă generație, gadgeturi smart și electrocasnice pentru casă.',
+        descEn: 'Latest consumer electronics, smart gadgets, and essential home electrical appliances.',
+        iconName: 'Cpu'
+      },
+      {
         id: 's4',
-        titleRo: 'Recrutare & Plasare de Personal',
-        titleEn: 'Recruitment & HR Placement Services',
-        descRo: 'Selecție de executivi, recrutare de personal calificat, administrare de resurse umane și audit organizational.',
-        descEn: 'Executive search, qualified staff recruitment, HR administration, and organizational performance audits.',
-        iconName: 'Shield'
+        titleRo: 'Distribuție & Operațiuni Retail în Thailanda',
+        titleEn: 'Retail Operations & Logistics in Thailand',
+        descRo: 'Canale de distribuție omnichannel, magazine fizice și livrare online pe piața din Thailanda.',
+        descEn: 'Omnichannel retail distribution, store management, and fast online delivery across Thailand.',
+        iconName: 'Truck'
       }
     ]
   },

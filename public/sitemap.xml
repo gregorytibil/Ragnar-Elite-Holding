@@ -63,26 +63,38 @@
 
   <!-- Partner Landing Pages & Official Subdomains -->
 
-  <!-- 1. AODDFIS -->
+  <!-- 1. Elite Capital Holding -->
   <url>
-    <loc>https://ragnareliteholding.com/partner/aoddfis</loc>
+    <loc>https://ragnareliteholding.com/partner/elite-capital-holding</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aoddfis.ragnareliteholding.com/</loc>
+    <loc>https://elitecapital.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 2. Pro Consult Audit Expert -->
+  <!-- 2. Studio Gilded Stars -->
   <url>
-    <loc>https://ragnareliteholding.com/partner/pro-consult-audit</loc>
+    <loc>https://ragnareliteholding.com/partner/studio-gilded-stars</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://proconsult.ragnareliteholding.com/</loc>
+    <loc>https://gildedstars.ragnareliteholding.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 3. Nexus Terranova -->
+  <url>
+    <loc>https://ragnareliteholding.com/partner/nexus-terranova</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nexusterranova.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
