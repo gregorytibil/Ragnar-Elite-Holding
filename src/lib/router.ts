@@ -103,8 +103,13 @@ export function getRouteFromUrl(): { tab: string; partner: PartnerProfile | null
 export function updateUrlForRoute(tab: string, partner: PartnerProfile | null, replace = false) {
   if (typeof window === 'undefined') return;
 
+  const detectedPartner = detectPartnerFromHostname();
   let targetPath = '/';
-  if (partner) {
+
+  if (detectedPartner) {
+    // If on a dedicated partner subdomain, the pathname is '/'
+    targetPath = '/';
+  } else if (partner) {
     targetPath = `/partner/${partner.slug}`;
   } else {
     targetPath = getPathForTab(tab);
@@ -113,7 +118,7 @@ export function updateUrlForRoute(tab: string, partner: PartnerProfile | null, r
   const currentPathWithSearch = window.location.pathname + window.location.search + window.location.hash;
   
   if (currentPathWithSearch !== targetPath) {
-    if (replace) {
+    if (replace || detectedPartner) {
       window.history.replaceState({ tab, partnerSlug: partner?.slug }, '', targetPath);
     } else {
       window.history.pushState({ tab, partnerSlug: partner?.slug }, '', targetPath);

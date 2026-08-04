@@ -4,7 +4,7 @@ export interface PartnerService {
   titleEn: string;
   descRo: string;
   descEn: string;
-  iconName: 'Shield' | 'Building' | 'Cpu' | 'Zap' | 'Briefcase' | 'Truck' | 'Compass' | 'Sparkles' | 'FileText' | 'Scale' | 'Calculator' | 'CheckCircle2';
+  iconName: 'Shield' | 'Building' | 'Cpu' | 'Zap' | 'Briefcase' | 'Truck' | 'Compass' | 'Sparkles' | 'FileText' | 'Scale' | 'Calculator' | 'CheckCircle2' | 'Globe';
 }
 
 export interface PartnerProfile {
@@ -159,55 +159,55 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     aliases: ['nexusterranova', 'nexus-terranova', 'nexus', 'terranova', 'thailand'],
     nameRo: 'Nexus Terranova',
     nameEn: 'Nexus Terranova',
-    categoryRo: 'Retail Internațional, Fashion & Electrocasnice (Thailanda)',
-    categoryEn: 'International Retail, Apparel & Consumer Electronics (Thailand)',
-    taglineRo: 'Comercializare îmbrăcăminte, încălțăminte, parfumuri, accesorii, electronice și electrocasnice (Lansare în Thailanda).',
-    taglineEn: 'Retail of apparel, footwear, lingerie, perfumes, accessories, electronics & home appliances (Thailand Launch).',
-    descriptionRo: 'Nexus Terranova este o companie modernă de retail ce comercializează îmbrăcăminte, încălțăminte, lenjerie intimă, parfumuri, accesorii, electronice și electrocasnice, având ca piață principală de lansare Thailanda.',
-    descriptionEn: 'Nexus Terranova is a modern retail enterprise offering clothing, footwear, lingerie, perfumes, accessories, electronics, and home appliances, with a primary launch market in Thailand.',
-    extendedOverviewRo: 'Nexus Terranova dezvoltă un concept integrat de comerț omnichannel orientat pe bunuri de consum de calitate, având sediul de operare și lansarea principală în Thailanda. Portofoliul de produse include:\n\n• Îmbrăcăminte și Încălțăminte\n• Lenjerie intimă\n• Parfumuri și produse de îngrijire personală\n• Accesorii de modă și lifestyle\n• Electronice și gadgeturi tech\n• Electrocasnice pentru locuințe moderne\n\nCu o rețea logistică eficientă și o strategie axată pe experiența clienților, Nexus Terranova aduce produse premium mai aproape de consumatorii din Asia de Sud-Est.',
-    extendedOverviewEn: 'Nexus Terranova develops an integrated omnichannel retail model focused on high-quality consumer goods, with primary launch and operations centered in Thailand. Product portfolio includes:\n\n• Apparel & Footwear\n• Fine Lingerie\n• Perfumes & Fragrances\n• Fashion & Lifestyle Accessories\n• Consumer Electronics & Tech Gadgets\n• Home Electrical Appliances\n\nEquipped with swift logistics and a customer-centric retail approach, Nexus Terranova delivers curated products across Thailand and Southeast Asia.',
+    categoryRo: 'E-Commerce Global, Export Angro & Detail, Fashion & Electrocasnice',
+    categoryEn: 'Global E-Commerce, Wholesale & Retail Export, Apparel & Electronics',
+    taglineRo: 'E-commerce global, export angro și detail de îmbrăcăminte, încălțăminte, parfumuri, accesorii, electronice și electrocasnice (Sediu în Thailanda).',
+    taglineEn: 'Global e-commerce, wholesale & retail export of apparel, footwear, lingerie, perfumes, accessories, electronics & appliances (Thailand Hub).',
+    descriptionRo: 'Nexus Terranova este o companie internațională de e-commerce global și export (angro & detail) specializată în îmbrăcăminte, încălțăminte, lenjerie intimă, parfumuri, accesorii, electronice și electrocasnice, având ca nod principal Thailanda.',
+    descriptionEn: 'Nexus Terranova is an international global e-commerce and export enterprise (wholesale & retail) specializing in clothing, footwear, lingerie, perfumes, accessories, electronics, and home appliances, centered in Thailand.',
+    extendedOverviewRo: 'Nexus Terranova desfășoară activități de E-Commerce Global și export internațional în regim angro (wholesale) și detail (retail), având sediul operațional și hub-ul principal de lansare în Thailanda. Portofoliul de produse include:\n\n• Îmbrăcăminte și Încălțăminte\n• Lenjerie intimă\n• Parfumuri și produse de îngrijire personală\n• Accesorii de modă și lifestyle\n• Electronice și gadgeturi tech\n• Electrocasnice pentru locuințe moderne\n\nCu o infrastructură logistică globală și capacități solide de distribuție B2B (angro) și B2C (detail), Nexus Terranova livrează produse premium pe piețele internaționale.',
+    extendedOverviewEn: 'Nexus Terranova operates Global E-Commerce and international export channels across both wholesale (angro) and retail (detail) models, with primary launch and operational headquarters centered in Thailand. Product portfolio includes:\n\n• Apparel & Footwear\n• Fine Lingerie\n• Perfumes & Fragrances\n• Fashion & Lifestyle Accessories\n• Consumer Electronics & Tech Gadgets\n• Home Electrical Appliances\n\nEquipped with a global logistics network and B2B/B2C fulfillment capabilities, Nexus Terranova exports curated goods to international markets.',
     contactEmail: 'contact@ragnareliteholding.com',
     heroBgImage: 'https://i.imgur.com/rcgZWZE.jpeg',
     accentColor: '#38BDF8',
     stats: [
-      { labelRo: 'Piață Operativă', labelEn: 'Operating Market', value: 'Thailanda (Asia de Sud-Est)' },
-      { labelRo: 'Domeniu Retail', labelEn: 'Retail Scope', value: 'Fashion, Tech & Home' },
-      { labelRo: 'Gama Produse', labelEn: 'Product Range', value: '7 Categorii Principale' },
-      { labelRo: 'Grup Afiliat', labelEn: 'Group Division', value: 'Nexus Consumer Retail' }
+      { labelRo: 'Model de Afaceri', labelEn: 'Business Model', value: 'E-Commerce Global' },
+      { labelRo: 'Tip Vânzare', labelEn: 'Export Type', value: 'Export Angro & Detail' },
+      { labelRo: 'Hub Operațional', labelEn: 'Operational Hub', value: 'Thailanda (Global Shipping)' },
+      { labelRo: 'Grup Afiliat', labelEn: 'Group Division', value: 'Nexus Global Retail' }
     ],
     services: [
       {
         id: 's1',
-        titleRo: 'Îmbrăcăminte, Încălțăminte & Lenjerie Intimă',
-        titleEn: 'Apparel, Footwear & Fine Lingerie',
-        descRo: 'Colecții de îmbrăcăminte contemporană, încălțăminte confortabilă și lenjerie intimă de calitate.',
-        descEn: 'Contemporary clothing collections, comfortable footwear, and fine lingerie.',
-        iconName: 'Briefcase'
+        titleRo: 'E-Commerce Global & Platforme Online',
+        titleEn: 'Global E-Commerce & Digital Platforms',
+        descRo: 'Comerț electronic internațional B2C, platforme digitale inteligente și livrări directe către consumatori la nivel global.',
+        descEn: 'International B2C e-commerce operations, digital shopping platforms, and worldwide direct-to-consumer fulfillment.',
+        iconName: 'Globe'
       },
       {
         id: 's2',
-        titleRo: 'Parfumuri Exclusiviste & Accesorii',
-        titleEn: 'Perfumes & Fashion Accessories',
-        descRo: 'Parfumuri cu arome rafinate, produse de îngrijire și accesorii de modă stilate.',
-        descEn: 'Exquisite fragrances, personal care lines, and stylish fashion accessories.',
-        iconName: 'Sparkles'
+        titleRo: 'Export Angro & Distribuiție B2B (Wholesale)',
+        titleEn: 'Wholesale Export & B2B Distribution',
+        descRo: 'Furnizare în regim angro pentru parteneri comerciali, lanțuri de magazine și distribuitori internaționali.',
+        descEn: 'Bulk wholesale supply for commercial partners, retail chains, and international distributors.',
+        iconName: 'Truck'
       },
       {
         id: 's3',
-        titleRo: 'Electronice & Electrocasnice de Consum',
-        titleEn: 'Consumer Electronics & Home Appliances',
-        descRo: 'Echipamente electronice de ultimă generație, gadgeturi smart și electrocasnice pentru casă.',
-        descEn: 'Latest consumer electronics, smart gadgets, and essential home electrical appliances.',
-        iconName: 'Cpu'
+        titleRo: 'Fashion: Îmbrăcăminte, Încalțăminte & Parfumuri',
+        titleEn: 'Fashion: Apparel, Footwear, Lingerie & Perfumes',
+        descRo: 'Colecții de îmbrăcăminte contemporană, încălțăminte, lenjerie intimă, parfumuri și accesorii de modă.',
+        descEn: 'Contemporary clothing lines, footwear, fine lingerie, perfumes, and fashion accessories.',
+        iconName: 'Sparkles'
       },
       {
         id: 's4',
-        titleRo: 'Distribuție & Operațiuni Retail în Thailanda',
-        titleEn: 'Retail Operations & Logistics in Thailand',
-        descRo: 'Canale de distribuție omnichannel, magazine fizice și livrare online pe piața din Thailanda.',
-        descEn: 'Omnichannel retail distribution, store management, and fast online delivery across Thailand.',
-        iconName: 'Truck'
+        titleRo: 'Tech & Casă: Electronice & Electrocasnice',
+        titleEn: 'Tech & Home: Electronics & Home Appliances',
+        descRo: 'Echipamente electronice de consum, gadgeturi smart și electrocasnice moderne exportate din hub-ul din Thailanda.',
+        descEn: 'Consumer electronics, smart gadgets, and modern home electrical appliances exported from the Thailand hub.',
+        iconName: 'Cpu'
       }
     ]
   },

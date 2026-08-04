@@ -15,6 +15,7 @@ import {
   Scale, 
   Calculator, 
   CheckCircle2, 
+  Globe,
   ArrowLeft, 
   Check, 
   ChevronDown, 
@@ -69,6 +70,7 @@ export default function PartnerLandingPage({
       case 'FileText': return <FileText {...props} />;
       case 'Scale': return <Scale {...props} />;
       case 'Calculator': return <Calculator {...props} />;
+      case 'Globe': return <Globe {...props} />;
       default: return <CheckCircle2 {...props} />;
     }
   };
