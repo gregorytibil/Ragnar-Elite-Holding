@@ -50,7 +50,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Înființată cu scopul de a consolida valorile democratice și statul de drept, asociația furnizează suport juridic și social categoriilor vulnerabile, dezvoltă programe educaționale civice și colaborează cu instituții naționale și internaționale pentru promovarea drepturilor fundamentale și incluziunii sociale echitabile.',
     extendedOverviewEn: 'Established to strengthen democratic values and the rule of law, the association provides legal and social support to vulnerable groups, develops civic education programs, and collaborates with national and international institutions to promote fundamental rights and equitable social inclusion.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/ia6P5rd.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Domeniu de Activitate', labelEn: 'Field of Action', value: 'Drepturi Civice' },
@@ -109,7 +109,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Pro Consult Audit Expert oferă servicii financiare și de consultanță managerială integrate pentru companii naționale și corporații multinaționale. Cu o echipă de experți contabili, auditori financiari acreditați și consultanți de resurse umane, compania asigură rigoare contabilă, optimizare fiscală legală și soluții strategice de resurse umane.',
     extendedOverviewEn: 'Pro Consult Audit Expert delivers integrated financial and management consulting services for national businesses and multinational corporations. Backed by certified auditors, tax specialists, and HR advisors, the company ensures flawless accounting, legal tax optimization, and strategic workforce solutions.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/Y3uJZSw.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Certificare Audit', labelEn: 'Audit Certification', value: 'Standard Acreditat' },
@@ -168,7 +168,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Partener tehnologic de încredere pentru soluții digitale avansate. Vexta Data concepe, construiește și menține aplicații software complexe, arhitecturi Cloud securizate și infrastructuri IT critice pentru afaceri moderne, punând accent pe scalabilitate, securitate cibernetică și eficiență operațională.',
     extendedOverviewEn: 'A trusted technology partner for advanced digital solutions. Vexta Data designs, engineers, and maintains enterprise software applications, secure Cloud architectures, and mission-critical IT infrastructure for modern businesses, prioritizing scalability and cyber resilience.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/JXKRCkU.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Tech Stack', labelEn: 'Tech Stack', value: 'Enterprise & Cloud' },
@@ -227,7 +227,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Lider în soluții de inginerie energetică pentru clădiri comerciale, facilități industriale și rețele urbane. Compania oferă servicii de la proiectare tehnică, instalarea de echipamente de înaltă eficiență, până la planuri de mentenanță preventivă și consultanță în optimizarea consumului energetic.',
     extendedOverviewEn: 'A leader in energy engineering solutions for commercial buildings, industrial facilities, and urban networks. The company provides end-to-end services from engineering design and installation of high-efficiency energy systems to preventive maintenance and energy consumption optimization.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/axpTkAU.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Capacitate Tehnică', labelEn: 'Technical Capacity', value: 'High-Voltage & Smart Grid' },
@@ -286,7 +286,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Companie de elită specializată în tranzacționarea, dezvoltarea și administrarea activelor imobiliare de valoare ridicată. Cu o viziune axată pe randament investițional și calitate arhitecturală, Urban Platinum Estate oferă soluții tailor-made pentru investitori privați, fonduri și corporații.',
     extendedOverviewEn: 'An elite firm specializing in the transaction, development, and fiduciary management of high-value property assets. With a focus on investment yield and architectural prestige, Urban Platinum Estate provides bespoke solutions for institutional and private investors.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/NITq0xR.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Segment Activitate', labelEn: 'Market Segment', value: 'Prime & Commercial' },
@@ -345,7 +345,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Antreprenor general în construcții recunoscut pentru rigoarea execuției, respectarea termenelor și utilizarea tehnologiilor moderne de zidărie, structură și finisaje. De la hală industrială la ansambluri rezidențiale, Urban Edge Build garantează calitate structurală de durată.',
     extendedOverviewEn: 'A premier general contractor recognized for execution precision, deadline compliance, and modern structural engineering. From industrial warehouses to residential complexes, Urban Edge Build delivers enduring civil structures.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/D8wzIAt.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Capacitate Antrepriză', labelEn: 'Contracting Role', value: 'Antreprenor General' },
@@ -404,7 +404,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Companie dinamică de transport și depozitare, oferind soluții logistice rapide și sigure. Cu o flotă modernă și rețele de distribuție optimizate, Urban Street Express garantează trasabilitate completă și livrare la timp pentru clienți industriali și comerciali.',
     extendedOverviewEn: 'A dynamic freight and logistics company providing swift, secure supply chain operations. Equipped with a modern fleet and optimized distribution channels, Urban Street Express delivers full tracking and punctuality for enterprise clients.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/UPlG0O3.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Tip Transport', labelEn: 'Transport Mode', value: 'Road & Express Freight' },
@@ -463,7 +463,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Birou de arhitectură și design creativ de înaltă linie. Prin combinarea esteticii atemporale cu soluții inginerești sustenabile, Premium Architecture Design creează concepte unice pentru reședințe private, spații de birouri reprezentative și dezvoltări urbane emblematice.',
     extendedOverviewEn: 'A high-end architectural studio merging timeless aesthetics with sustainable engineering. Premium Architecture Design crafts bespoke concepts for private residences, corporate headquarters, and landmark urban developments.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/79GQcsr.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Stil Arhitectural', labelEn: 'Design Philosophy', value: 'Timeless & Sustainable' },
@@ -522,7 +522,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Furnizor de încredere pentru servicii igienico-sanitare la cele mai înalte standarde de calitate. Cu echipamente de ultimă generație, soluții ecologice certificate și personal instruit, compania menține medii de lucru curate, sigure și sănătoase pentru corporații și instituții.',
     extendedOverviewEn: 'A trusted provider of facility sanitation and maintenance under strict quality standards. Using state-of-the-art equipment, eco-certified detergents, and vetted staff, the firm maintains spotless, safe, and healthy corporate environments.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/3NZg6NO.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Echipamente', labelEn: 'Equipment Standard', value: 'Industrial & Eco-Friendly' },
@@ -581,7 +581,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     extendedOverviewRo: 'Partenerul de încredere al companiilor pentru aprovizionarea completă a spațiilor de lucru. Smart Paper Office oferă un catalog extins de papetărie, consumabile IT, mobilier de birou și soluții de tipărire, garantând prețuri competitive, livrare rapidă și gestiune facilă a comenzilor.',
     extendedOverviewEn: 'A reliable corporate partner for workspace provisioning. Smart Paper Office offers an extensive catalog of office stationery, IT consumables, office ergonomics, and printing supplies, ensuring competitive B2B pricing and swift fulfillment.',
     contactEmail: 'contact@ragnareliteholding.com',
-    heroBgImage: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80',
+    heroBgImage: 'https://i.imgur.com/u9Gn2tT.jpeg',
     accentColor: '#38BDF8',
     stats: [
       { labelRo: 'Catalog Produse', labelEn: 'Product Catalog', value: '10,000+ SKUs' },

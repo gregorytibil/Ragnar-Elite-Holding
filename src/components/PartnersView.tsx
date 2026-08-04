@@ -160,7 +160,15 @@ export default function PartnersView({ currentLang, onSelectPartner }: PartnersV
 
                 <div>
                   {/* Logo Container Area */}
-                  <div className="w-full min-h-[105px] mb-4 sm:mb-5 rounded-xl bg-gradient-to-br from-[#050D1D] via-[#0B1B3D] to-[#08152E] border border-slate-800/80 p-4 sm:p-4.5 flex flex-col justify-between relative overflow-hidden shadow-inner group-hover:border-sky-500/40 transition-colors">
+                  <div className="w-full min-h-[115px] mb-4 sm:mb-5 rounded-xl bg-gradient-to-br from-[#050D1D] via-[#0B1B3D] to-[#08152E] border border-slate-800/80 p-4 sm:p-4.5 flex flex-col justify-between relative overflow-hidden shadow-inner group-hover:border-sky-500/40 transition-colors">
+                    {/* Background image overlay */}
+                    <img 
+                      src={p.heroBgImage} 
+                      alt="" 
+                      className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:opacity-40 transition-opacity mix-blend-overlay pointer-events-none" 
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050D1D] via-[#0B1B3D]/70 to-transparent pointer-events-none"></div>
                     <div className="absolute -right-6 -bottom-6 w-28 h-28 bg-sky-500/10 rounded-full blur-xl group-hover:bg-sky-500/20 transition-all pointer-events-none"></div>
                     
                     {/* Header Top Row: Icon */}
