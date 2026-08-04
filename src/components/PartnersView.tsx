@@ -255,98 +255,100 @@ export default function PartnersView({ currentLang, onSelectPartner, initialSect
           </div>
         </div>
 
-        {/* Group Subsidiaries & Active Subdomains Showcase */}
-        <div>
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-            <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-2 sm:mb-3 font-bold">
-              {isRo ? 'SUBSIDIARELE GRUPULUI & SUBDOMENII ACTIVE' : 'GROUP SUBSIDIARIES & ACTIVE SUBDOMAINS'}
-            </span>
-            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#0B1B3D] tracking-tight uppercase">
-              {isRo ? 'Portofoliul Integrat al Ragnar Elite Holding' : 'Ragnar Elite Holding Integrated Portfolio'}
-            </h2>
-            <p className="font-sans font-light text-slate-600 text-xs sm:text-sm md:text-base mt-2">
-              {isRo 
-                ? 'Fiecare subsidiară deținută 100% operează independent sub umbrela holdingului și dispune de un subdomeniu oficial securizat SSL (*.ragnareliteholding.com).'
-                : 'Each 100% owned subsidiary operates independently under the holding umbrella with an SSL-secured official subdomain (*.ragnareliteholding.com).'}
-            </p>
-          </div>
+        {/* Group Subsidiaries & Active Subdomains Showcase (Shown on Subsidiare page only) */}
+        {!isAlliances && (
+          <div className="mb-16 sm:mb-24">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-2 sm:mb-3 font-bold">
+                {isRo ? 'SUBSIDIARELE GRUPULUI & SUBDOMENII ACTIVE' : 'GROUP SUBSIDIARIES & ACTIVE SUBDOMAINS'}
+              </span>
+              <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#0B1B3D] tracking-tight uppercase">
+                {isRo ? 'Portofoliul Integrat al Ragnar Elite Holding' : 'Ragnar Elite Holding Integrated Portfolio'}
+              </h2>
+              <p className="font-sans font-light text-slate-600 text-xs sm:text-sm md:text-base mt-2">
+                {isRo 
+                  ? 'Fiecare subsidiară deținută 100% operează independent sub umbrela holdingului și dispune de un subdomeniu oficial securizat SSL (*.ragnareliteholding.com).'
+                  : 'Each 100% owned subsidiary operates independently under the holding umbrella with an SSL-secured official subdomain (*.ragnareliteholding.com).'}
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            {PARTNERS_DATA.map((p) => (
-              <motion.div
-                key={p.id}
-                whileHover={{ y: -5 }}
-                className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-sky-400 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-              >
-                {/* Subtle top indicator bar */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0B1B3D] via-sky-500 to-[#0B1B3D] opacity-80 group-hover:opacity-100 transition-opacity"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+              {PARTNERS_DATA.map((p) => (
+                <motion.div
+                  key={p.id}
+                  whileHover={{ y: -5 }}
+                  className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-sky-400 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                >
+                  {/* Subtle top indicator bar */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0B1B3D] via-sky-500 to-[#0B1B3D] opacity-80 group-hover:opacity-100 transition-opacity"></div>
 
-                <div>
-                  {/* Logo Container Area */}
-                  <div className="w-full min-h-[115px] mb-4 sm:mb-5 rounded-xl bg-gradient-to-br from-[#050D1D] via-[#0B1B3D] to-[#08152E] border border-slate-800/80 p-4 sm:p-4.5 flex flex-col justify-between relative overflow-hidden shadow-inner group-hover:border-sky-500/40 transition-colors">
-                    {/* Background image overlay */}
-                    <img 
-                      src={p.heroBgImage} 
-                      alt="" 
-                      className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:opacity-40 transition-opacity mix-blend-overlay pointer-events-none" 
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050D1D] via-[#0B1B3D]/70 to-transparent pointer-events-none"></div>
-                    <div className="absolute -right-6 -bottom-6 w-28 h-28 bg-sky-500/10 rounded-full blur-xl group-hover:bg-sky-500/20 transition-all pointer-events-none"></div>
-                    
-                    {/* Header Top Row: Icon */}
-                    <div className="flex items-center justify-between gap-2 mb-2 sm:mb-3 z-10">
-                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-sky-300 group-hover:scale-105 transition-transform shrink-0 shadow-md">
-                        {getPartnerIcon(p.id)}
+                  <div>
+                    {/* Logo Container Area */}
+                    <div className="w-full min-h-[115px] mb-4 sm:mb-5 rounded-xl bg-gradient-to-br from-[#050D1D] via-[#0B1B3D] to-[#08152E] border border-slate-800/80 p-4 sm:p-4.5 flex flex-col justify-between relative overflow-hidden shadow-inner group-hover:border-sky-500/40 transition-colors">
+                      {/* Background image overlay */}
+                      <img 
+                        src={p.heroBgImage} 
+                        alt="" 
+                        className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:opacity-40 transition-opacity mix-blend-overlay pointer-events-none" 
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#050D1D] via-[#0B1B3D]/70 to-transparent pointer-events-none"></div>
+                      <div className="absolute -right-6 -bottom-6 w-28 h-28 bg-sky-500/10 rounded-full blur-xl group-hover:bg-sky-500/20 transition-all pointer-events-none"></div>
+                      
+                      {/* Header Top Row: Icon */}
+                      <div className="flex items-center justify-between gap-2 mb-2 sm:mb-3 z-10">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-sky-300 group-hover:scale-105 transition-transform shrink-0 shadow-md">
+                          {getPartnerIcon(p.id)}
+                        </div>
+                      </div>
+
+                      {/* Header Bottom Area: Full Business Title & Category */}
+                      <div className="z-10">
+                        <h3 className="font-serif font-bold text-xs sm:text-sm md:text-base text-white tracking-wide leading-snug group-hover:text-sky-300 transition-colors">
+                          {isRo ? p.nameRo : p.nameEn}
+                        </h3>
+                        <div className="font-mono text-[9px] text-sky-200/80 uppercase tracking-wider mt-1 font-medium leading-tight">
+                          {isRo ? p.categoryRo : p.categoryEn}
+                        </div>
                       </div>
                     </div>
 
-                    {/* Header Bottom Area: Full Business Title & Category */}
-                    <div className="z-10">
-                      <h3 className="font-serif font-bold text-xs sm:text-sm md:text-base text-white tracking-wide leading-snug group-hover:text-sky-300 transition-colors">
-                        {isRo ? p.nameRo : p.nameEn}
-                      </h3>
-                      <div className="font-mono text-[9px] text-sky-200/80 uppercase tracking-wider mt-1 font-medium leading-tight">
-                        {isRo ? p.categoryRo : p.categoryEn}
-                      </div>
+                    {/* Subdomain Pill */}
+                    <div className="flex items-center justify-between gap-2 mb-3">
+                      <span className="font-mono text-[10px] text-sky-800 bg-sky-50 px-2 py-1 rounded-md border border-sky-100 font-bold truncate max-w-[160px] xs:max-w-[210px] sm:max-w-[250px]" title={`https://${p.subdomain}`}>
+                        https://{p.subdomain}
+                      </span>
+                      <span className="font-mono text-[9px] sm:text-[10px] text-slate-400 shrink-0">Ragnar Elite</span>
                     </div>
+
+                    <p className="font-sans text-xs text-slate-600 line-clamp-3 font-light mb-4 sm:mb-6 leading-relaxed">
+                      {isRo ? p.descriptionRo : p.descriptionEn}
+                    </p>
                   </div>
 
-                  {/* Subdomain Pill */}
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="font-mono text-[10px] text-sky-800 bg-sky-50 px-2 py-1 rounded-md border border-sky-100 font-bold truncate max-w-[160px] xs:max-w-[210px] sm:max-w-[250px]" title={`https://${p.subdomain}`}>
-                      https://{p.subdomain}
-                    </span>
-                    <span className="font-mono text-[9px] sm:text-[10px] text-slate-400 shrink-0">Ragnar Elite</span>
-                  </div>
-
-                  <p className="font-sans text-xs text-slate-600 line-clamp-3 font-light mb-4 sm:mb-6 leading-relaxed">
-                    {isRo ? p.descriptionRo : p.descriptionEn}
-                  </p>
-                </div>
-
-                {/* Card Action Button */}
-                <div className="pt-3.5 border-t border-slate-100">
-                  <a
-                    href={`https://${p.subdomain}`}
-                    onClick={(e) => {
-                      if (typeof window !== 'undefined' && !window.location.hostname.includes('ragnareliteholding.com')) {
-                        e.preventDefault();
-                        if (onSelectPartner) {
-                          onSelectPartner(p);
+                  {/* Card Action Button */}
+                  <div className="pt-3.5 border-t border-slate-100">
+                    <a
+                      href={`https://${p.subdomain}`}
+                      onClick={(e) => {
+                        if (typeof window !== 'undefined' && !window.location.hostname.includes('ragnareliteholding.com')) {
+                          e.preventDefault();
+                          if (onSelectPartner) {
+                            onSelectPartner(p);
+                          }
                         }
-                      }
-                    }}
-                    className="w-full py-2.5 px-3.5 bg-[#0B1B3D] hover:bg-sky-700 text-white font-mono text-xs font-semibold rounded-lg shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 group/btn min-h-[44px] cursor-pointer"
-                  >
-                    <span>{isRo ? 'Deschide Subdomeniul Oficial' : 'Open Official Subdomain'}</span>
-                    <ArrowRight className="w-4 h-4 text-sky-300 group-hover/btn:translate-x-1 transition-transform shrink-0" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
+                      }}
+                      className="w-full py-2.5 px-3.5 bg-[#0B1B3D] hover:bg-sky-700 text-white font-mono text-xs font-semibold rounded-lg shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 group/btn min-h-[44px] cursor-pointer"
+                    >
+                      <span>{isRo ? 'Deschide Subdomeniul Oficial' : 'Open Official Subdomain'}</span>
+                      <ArrowRight className="w-4 h-4 text-sky-300 group-hover/btn:translate-x-1 transition-transform shrink-0" />
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Global Operational Synergy & Institutional Governance Section (Integrated with Corporate Handshake Photo) */}
         <div className="mt-20 sm:mt-28">

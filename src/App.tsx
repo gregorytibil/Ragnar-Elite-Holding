@@ -210,8 +210,8 @@ export default function App() {
       case 'divisions-governance':
         return <DivisionsGovernanceView currentLang={lang} />;
       case 'subsidiaries':
+        return <PartnersView currentLang={lang} onSelectPartner={(p) => setActivePartner(p)} initialSection="subsidiaries" />;
       case 'partners':
-        return <PartnersView currentLang={lang} onSelectPartner={(p) => setActivePartner(p)} />;
       case 'alliances':
         return <PartnersView currentLang={lang} onSelectPartner={(p) => setActivePartner(p)} initialSection="alliances" />;
       case 'contact':
