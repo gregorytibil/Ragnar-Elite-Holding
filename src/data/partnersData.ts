@@ -100,54 +100,54 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     aliases: ['gildedstars', 'studio-gilded-stars', 'gilded-stars', 'film-production', 'entertainment'],
     nameRo: 'Studio Gilded Stars',
     nameEn: 'Studio Gilded Stars',
-    categoryRo: 'Producție Film, Casting, Branding Vizual & Reprezentare Media',
-    categoryEn: 'Film Production, Casting, Visual Branding & Media Representation',
-    taglineRo: 'Producție de film, reclame, videoclipuri muzicale, casting global, fotografie și training pentru talente.',
-    taglineEn: 'Film, commercial & music video production, global casting, talent management, photography & training.',
-    descriptionRo: 'Studio Gilded Stars este o casă de producție și agenție media ce oferă producție film/reclame/videoclipuri, casting (self-tapes), fotografie profesională, reprezentare media și training pentru talente pe piețe precum Hollywood, Bollywood, Dubai, Londra, Seul, Istanbul, Nollywood și Estonia.',
-    descriptionEn: 'Studio Gilded Stars is a production house and media agency delivering film/commercial/music video production, casting (self-tapes), professional photography, media representation, and talent training across markets including Hollywood, Bollywood, Dubai, London, Seoul, Istanbul, Nollywood, and Estonia.',
-    extendedOverviewRo: 'Studio Gilded Stars oferă servicii de producție cinematografică și de divertisment la nivel internațional:\n\n• Film, Commercial & Music Video Production: Soluții complete de casting, realizare de probe audio-video (self-tapes), videoclipuri muzicale și reclame digitale (producție și post-producție).\n• Advertising & Media Representation: Servicii boutique de publicitate, campanii social media, influencer marketing și sinergie între branduri și talente.\n• Photography & Visual Branding: Fotografie profesională în studio pentru book-uri de talente și portofolii conforme cu standardele estetice internaționale.\n• Event & Performing Arts Support: Managementul talentelor pentru spectacole live, prezentări de modă și gale corporative.\n• Professional Development & Training: Ateliere specializate de acting și modeling pentru Fresh Faces.\n• Focus pe Piețe Strategice Globale: Furnizăm talente pentru piețe active: India (Bollywood), EAU (Dubai), SUA (Hollywood) & Canada (Hollywood North), Marea Britanie (Londra), Turcia (Istanbul), Coreea de Sud (Seul), Nigeria (Nollywood) și Estonia.',
-    extendedOverviewEn: 'Studio Gilded Stars offers comprehensive film production and entertainment services worldwide:\n\n• Film, Commercial & Music Video Production: Full casting solutions and production of high-quality audition tapes (self-tapes), music videos, and digital commercials (production & post-production).\n• Advertising & Media Representation: Boutique advertising services, brand-talent synergy, influencer marketing, and social media campaigns.\n• Photography & Visual Branding: In-house professional photography for talent books and portfolios meeting international aesthetic standards.\n• Event & Performing Arts Support: Organizing and managing talent for live performances, fashion shows, and corporate galas.\n• Professional Development & Training: Specialized acting and modeling workshops for Fresh Faces entering the global market.\n• Global Strategic Market Focus: Connecting talent with key international markets: India (Bollywood), UAE (Dubai), USA (Hollywood) & Canada (Hollywood North), UK (London), Turkey (Istanbul), South Korea (Seoul), Nigeria (Nollywood), and Estonia.',
+    categoryRo: 'Agenție de Casting, Recrutare Talente & Reprezentare Media',
+    categoryEn: 'Casting Agency, Talent Recruitment & Media Representation',
+    taglineRo: 'Agenție de casting, recrutare și intermediere talente (actori, modele, figurație) pentru producții de film, reclame și media.',
+    taglineEn: 'Casting agency, talent recruitment & intermediation (actors, models, extras) for films, commercials, and global media.',
+    descriptionRo: 'Studio Gilded Stars este o agenție specializată în casting, recrutare și intermediere de talente (actori, modele, figurație, fresh faces) pentru proiecte internaționale de film, reclame și evenimente, oferind de asemenea probe video (self-tapes), fotografie și training.',
+    descriptionEn: 'Studio Gilded Stars is a specialized casting, talent recruitment, and representation agency connecting actors, models, extras, and fresh faces with international film, commercial, and media productions.',
+    extendedOverviewRo: 'Studio Gilded Stars funcționează ca o agenție de casting, recrutare și management al talentelor pe plan internațional:\n\n• Casting & Recrutare Talente: Selectăm, intermediem și reprezentăm actori, modele, figurație și "fresh faces" pentru case de producție de film, televiziune și agenții de publicitate.\n• Probe Audio-Video (Self-Tapes): Asistență tehnică și îndrumare profesională pentru realizarea de self-tapes și probe de casting conform cerințelor regizorilor internaționali.\n• Reprezentare & Intermediere Media: Servicii de reprezentare pentru talente în raport cu branduri, agenții de reclame și campanii digitale.\n• Fotografie & Portofolii (Book-uri): Fotografie profesională în studio pentru crearea de book-uri de casting conforme cu standardele din industrie.\n• Ateliere & Training Profesional: Cursuri și ghidaj practic pentru modele și actori aflați la început de drum.\n• Conexiune cu Piețe Strategice: Plasăm și promovăm talente pe piețe majore precum India (Bollywood), EAU (Dubai), SUA (Hollywood), Canada, Marea Britanie, Turcia, Coreea de Sud, Nigeria și Estonia.',
+    extendedOverviewEn: 'Studio Gilded Stars functions as a global talent recruitment, casting, and representation agency:\n\n• Talent Casting & Recruitment: Selecting, managing, and representing actors, models, extras, and fresh faces for international film, TV, and advertising productions.\n• Audition Self-Tapes: Professional guidance and technical execution of casting self-tapes meeting global directorial criteria.\n• Media Representation: Talent agency services connecting models and actors with top brand campaigns, commercials, and media projects.\n• Talent Book & Portfolio Photography: Professional studio photo sessions tailored for industry-standard talent portfolios.\n• Workshops & Fresh Faces Training: Practical coaching and guidance for emerging talent entering the entertainment market.\n• Global Market Reach: Connecting talent directly with active markets including India (Bollywood), UAE (Dubai), USA (Hollywood), UK, Turkey, South Korea, Nigeria, and Estonia.',
     contactEmail: 'contact@ragnareliteholding.com',
     heroBgImage: 'https://i.imgur.com/sLJ2N6K.jpeg',
     accentColor: '#38BDF8',
     stats: [
+      { labelRo: 'Domeniu Principal', labelEn: 'Core Field', value: 'Agenție de Casting' },
+      { labelRo: 'Intermediere Talente', labelEn: 'Talent Scope', value: 'Actori, Modele, Figurație' },
       { labelRo: 'Piețe Target', labelEn: 'Target Markets', value: 'Hollywood, Bollywood, Dubai+' },
-      { labelRo: 'Producție Video', labelEn: 'Video Production', value: 'Film, Reclame, Videoclipuri' },
-      { labelRo: 'Servicii Casting', labelEn: 'Casting Services', value: 'Self-Tapes & Book-uri' },
-      { labelRo: 'Grup Afiliat', labelEn: 'Group Division', value: 'Gilded Stars Entertainment' }
+      { labelRo: 'Grup Afiliat', labelEn: 'Group Division', value: 'Gilded Stars Agency' }
     ],
     services: [
       {
         id: 's1',
-        titleRo: 'Producție Film, Reclame & Videoclipuri Muzicale',
-        titleEn: 'Film, Commercial & Music Video Production',
-        descRo: 'Soluții complete de casting, probe audio-video (self-tapes), videoclipuri muzicale și reclame digitale (producție & post-producție).',
-        descEn: 'Full casting solutions, audition self-tapes, music videos, and digital commercial production & post-production.',
-        iconName: 'Sparkles'
-      },
-      {
-        id: 's2',
-        titleRo: 'Publicitate & Reprezentare Media',
-        titleEn: 'Advertising & Media Representation',
-        descRo: 'Servicii boutique de publicitate, influencer marketing, campanii social media și sinergie între branduri și talente.',
-        descEn: 'Boutique advertising services, influencer marketing, social media campaigns, and brand-talent synergy.',
+        titleRo: 'Recrutare & Selecție Casting',
+        titleEn: 'Talent Recruitment & Casting Selection',
+        descRo: 'Recrutare și selecție de actori, modele, figurație și talente noi pentru proiecte cinematografice și reclame.',
+        descEn: 'Recruitment and selection of actors, models, extras, and emerging talent for film and commercial projects.',
         iconName: 'Briefcase'
       },
       {
-        id: 's3',
-        titleRo: 'Fotografie Profesională & Branding Vizual',
-        titleEn: 'Photography & Visual Branding',
-        descRo: 'Ședințe foto în studio pentru portofolii și book-uri de talente la standarde estetice internaționale.',
-        descEn: 'In-house professional photography for talent books and portfolios meeting international aesthetic standards.',
+        id: 's2',
+        titleRo: 'Procurare & Producție Self-Tapes',
+        titleEn: 'Audition Self-Tapes & Casting Tapes',
+        descRo: 'Servicii de ghidaj și înregistrare a probelor de casting (self-tapes) la standarde cinematografice.',
+        descEn: 'Coaching and recording services for casting self-tapes meeting international production specs.',
         iconName: 'Sparkles'
       },
       {
+        id: 's3',
+        titleRo: 'Fotografie de Portofoliu & Book-uri',
+        titleEn: 'Portfolio Photography & Talent Books',
+        descRo: 'Realizarea de ședințe foto profesionale în studio pentru compunerea book-urilor de prezentare.',
+        descEn: 'In-house studio photography designed for industry-standard casting books and headshots.',
+        iconName: 'FileText'
+      },
+      {
         id: 's4',
-        titleRo: 'Evenimente, Performing Arts & Training',
-        titleEn: 'Event Support, Performing Arts & Training',
-        descRo: 'Management de talente pentru spectacole live, gale și workshop-uri specializate de acting și modeling pentru Fresh Faces.',
-        descEn: 'Talent management for live shows, corporate galas, and specialized acting/modeling workshops for Fresh Faces.',
+        titleRo: 'Reprezentare Media & Training Fresh Faces',
+        titleEn: 'Media Representation & Talent Workshops',
+        descRo: 'Impresariat, reprezentare în raport cu branduri și ateliere de pregătire pentru talente la început de drum.',
+        descEn: 'Talent representation for brand campaigns alongside beginner workshops in acting and modeling.',
         iconName: 'CheckCircle2'
       }
     ]
@@ -218,26 +218,34 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     aliases: ['vextadata', 'vexta-data', 'vexta', 'it-software'],
     nameRo: 'Vexta Data',
     nameEn: 'Vexta Data',
-    categoryRo: 'Software Personalizat & Servicii IT Administrate',
-    categoryEn: 'Custom Software & Managed IT Services',
-    taglineRo: 'Dezvoltare de software personalizat, consultanță IT, administrare sisteme și securitate cibernetică.',
-    taglineEn: 'Custom software development, IT consulting, systems administration, and IT infrastructure.',
-    descriptionRo: 'Vexta Data se ocupă cu dezvoltarea de software personalizat, consultanță în tehnologia informației, administrarea sistemelor informatice și furnizarea de servicii IT enterprise.',
-    descriptionEn: 'Vexta Data specializes in custom software development, information technology consulting, systems engineering, and enterprise IT services.',
-    extendedOverviewRo: 'Partener tehnologic de încredere pentru soluții digitale avansate. Vexta Data concepe, construiește și menține aplicații software complexe, arhitecturi Cloud securizate și infrastructuri IT critice pentru afaceri moderne, punând accent pe scalabilitate, securitate cibernetică și eficiență operațională.',
-    extendedOverviewEn: 'A trusted technology partner for advanced digital solutions. Vexta Data designs, engineers, and maintains enterprise software applications, secure Cloud architectures, and mission-critical IT infrastructure for modern businesses, prioritizing scalability and cyber resilience.',
+    categoryRo: 'Software Personalizat, Hosting, Server, Domenii & Servicii IT Administrate',
+    categoryEn: 'Custom Software, Hosting, Servers, Domain Registration & Managed IT',
+    taglineRo: 'Dezvoltare software personalizat, găzduire web, înregistrare domenii, servere dedicate & VPS, colocare echipamente și securitate cibernetică.',
+    taglineEn: 'Custom software development, web hosting, domain registration, dedicated & VPS servers, equipment colocation, and IT infrastructure.',
+    descriptionRo: 'Vexta Data se ocupă cu dezvoltarea de software personalizat, servicii de găzduire web (hosting), înregistrare domenii internet, furnizare și administrare servere (dedicate, VPS, cloud), colocare echipamente în data center, consultanță IT și securitate cibernetică.',
+    descriptionEn: 'Vexta Data specializes in custom software engineering, web hosting, domain registration, server management (dedicated, VPS, cloud), data center colocation, IT consulting, and enterprise cybersecurity.',
+    extendedOverviewRo: 'Partener tehnologic de încredere pentru soluții digitale avansate și infrastructură de date. Vexta Data furnizează servicii complete de găzduire (web hosting, servere dedicate, VPS, colocare în data center), înregistrare și administrare domenii web, dezvoltare software personalizat și arhitecturi Cloud securizate, punând accent pe scalabilitate, uptime garantat și securitate cibernetică.',
+    extendedOverviewEn: 'A trusted technology and data infrastructure partner. Vexta Data provides end-to-end web hosting services, dedicated server provisioning, VPS hosting, data center colocation, domain registration and management, custom software engineering, and secure Cloud architectures with high SLA uptime guarantees.',
     contactEmail: 'contact@ragnareliteholding.com',
     heroBgImage: 'https://i.imgur.com/JXKRCkU.jpeg',
     accentColor: '#38BDF8',
     stats: [
-      { labelRo: 'Tech Stack', labelEn: 'Tech Stack', value: 'Enterprise & Cloud' },
-      { labelRo: 'Disponibilitate', labelEn: 'Uptime Guarantee', value: '99.99% SLA' },
+      { labelRo: 'Hosting & Server', labelEn: 'Hosting & Servers', value: 'Dedicate, VPS & Colocare' },
+      { labelRo: 'Disponibilitate', labelEn: 'Uptime Guarantee', value: '99.99% SLA Data Center' },
       { labelRo: 'Securitate', labelEn: 'Security Standard', value: 'ISO/IEC 27001' },
-      { labelRo: 'Portofoliu', labelEn: 'Portfolio Group', value: 'Ragnar Elite Tech' }
+      { labelRo: 'Domenii & Cloud', labelEn: 'Domains & Cloud', value: 'Înregistrare & Management' }
     ],
     services: [
       {
         id: 's1',
+        titleRo: 'Găzduire Web, Server, Colocare & Domenii',
+        titleEn: 'Web Hosting, Servers, Colocation & Domains',
+        descRo: 'Servicii de găzduire web, înregistrare domenii, servere dedicate & VPS și colocare de echipamente IT în data center securizat.',
+        descEn: 'Web hosting, domain name registration, dedicated & VPS servers, and IT hardware colocation in secure data centers.',
+        iconName: 'Zap'
+      },
+      {
+        id: 's2',
         titleRo: 'Dezvoltare Software Personalizat',
         titleEn: 'Custom Software Engineering',
         descRo: 'Construirea de aplicații web, mobile și platforme SaaS dedicate proceselor specifice ale companiei dumneavoastră.',
@@ -245,24 +253,16 @@ export const PARTNERS_DATA: PartnerProfile[] = [
         iconName: 'Cpu'
       },
       {
-        id: 's2',
-        titleRo: 'Consultanță Tehnologică & Arhitectură IT',
-        titleEn: 'IT Architecture & Strategy Advisory',
-        descRo: 'Audit de sisteme, migrare în Cloud, optimizare procese digitale și selecția tehnologiilor scalabile.',
-        descEn: 'Systems auditing, Cloud migration strategies, digital workflow optimization, and scalable technology roadmaps.',
-        iconName: 'Compass'
-      },
-      {
         id: 's3',
         titleRo: 'Administrare Sisteme & Cloud Management',
         titleEn: 'Systems Administration & Managed Cloud',
         descRo: 'Monitorizare 24/7, administrare servere, rețele informatice și servicii DevOps pentru continuitate operațională.',
         descEn: '24/7 monitoring, server management, network infrastructure, and DevOps pipelines for uninterrupted operations.',
-        iconName: 'Zap'
+        iconName: 'Compass'
       },
       {
         id: 's4',
-        titleRo: 'Securitate Cibernetică & Support IT',
+        titleRo: 'Securitate Cibernetică & Support IT Enterprise',
         titleEn: 'Cybersecurity & Enterprise IT Support',
         descRo: 'Implementare de firewall-uri, criptare de date, audituri de securitate și asistență tehnică de nivel enterprise.',
         descEn: 'Firewall deployment, data encryption, vulnerability assessments, and dedicated enterprise IT support.',
@@ -277,55 +277,55 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     aliases: ['urbanenergetic', 'urban-energetic-service', 'energetic', 'urbanenergeticservice'],
     nameRo: 'Urban Energetic Service',
     nameEn: 'Urban Energetic Service',
-    categoryRo: 'Infrastructură Energetică, Montaj & Mentenanță',
-    categoryEn: 'Energy Infrastructure, Installation & Maintenance',
-    taglineRo: 'Servicii în domeniul energetic, instalarea și mentenanța sistemelor energetice, consultanță tehnică.',
-    taglineEn: 'Energy domain services, system installation, technical maintenance, and energy engineering.',
-    descriptionRo: 'Urban Energetic Service se ocupă cu servicii în domeniul energetic, instalarea și mentenanța sistemelor energetice complexe, precum și consultanță tehnică pentru proiecte energetice de anvergură.',
-    descriptionEn: 'Urban Energetic Service specializes in energy sector solutions, installation and maintenance of complex energy systems, and technical advisory for large-scale energy projects.',
-    extendedOverviewRo: 'Lider în soluții de inginerie energetică pentru clădiri comerciale, facilități industriale și rețele urbane. Compania oferă servicii de la proiectare tehnică, instalarea de echipamente de înaltă eficiență, până la planuri de mentenanță preventivă și consultanță în optimizarea consumului energetic.',
-    extendedOverviewEn: 'A leader in energy engineering solutions for commercial buildings, industrial facilities, and urban networks. The company provides end-to-end services from engineering design and installation of high-efficiency energy systems to preventive maintenance and energy consumption optimization.',
+    categoryRo: 'Proiectare & Construcții Linii Tensiune, Centrale, Hidrocentrale & Mentenanță Energetică',
+    categoryEn: 'Energy Design, High/Medium/Low Voltage Power Lines, Power Plants & Maintenance',
+    taglineRo: 'Proiectare energetică, construcții linii de înaltă, medie și joasă tensiune, centrale electrice, hidrocentrale și mentenanță.',
+    taglineEn: 'Energy engineering & design, construction of high/medium/low voltage power lines, power plants, hydro plants & maintenance.',
+    descriptionRo: 'Urban Energetic Service oferă servicii de proiectare tehnică și execuție pentru construcții de linii electrice de înaltă, medie și joasă tensiune, centrale electrice, hidrocentrale, precum și servicii de montaj, mentenanță și consultanță energetică.',
+    descriptionEn: 'Urban Energetic Service delivers specialized energy engineering design and construction of high, medium, and low voltage transmission lines, power plants, hydroelectric stations, as well as installation and ongoing technical maintenance.',
+    extendedOverviewRo: 'Lider în proiectare energetică și soluții de inginerie pentru infrastructura energetică critică. Compania oferă servicii complete de la proiectare tehnică și avizare, la construcția liniilor electrice aeriene și subterane (înaltă, medie și joasă tensiune), dezvoltarea de centrale electrice și hidrocentrale, până la planuri de mentenanță preventivă și optimizare energetică.',
+    extendedOverviewEn: 'A leader in energy system design and infrastructure engineering. The company provides end-to-end services including technical engineering design, construction of high, medium, and low voltage power lines, development of power stations and hydroelectric facilities, alongside preventive maintenance.',
     contactEmail: 'contact@ragnareliteholding.com',
     heroBgImage: 'https://i.imgur.com/axpTkAU.jpeg',
     accentColor: '#38BDF8',
     stats: [
-      { labelRo: 'Capacitate Tehnică', labelEn: 'Technical Capacity', value: 'High-Voltage & Smart Grid' },
-      { labelRo: 'Standard Siguranță', labelEn: 'Safety Standard', value: 'ANRE & ISO Certified' },
-      { labelRo: 'Eficiență Energetică', labelEn: 'Energy Efficiency', value: 'Maximized ROI' },
+      { labelRo: 'Proiectare & Execuție', labelEn: 'Design & Build', value: 'Linii IT / MT / JT' },
+      { labelRo: 'Centrale & Hidro', labelEn: 'Plants & Hydro', value: 'Centrale & Hidrocentrale' },
+      { labelRo: 'Standard Siguranță', labelEn: 'Safety Standard', value: 'Autorizat ANRE' },
       { labelRo: 'Divizie Afiliată', labelEn: 'Affiliated Division', value: 'Urban Infrastructure' }
     ],
     services: [
       {
         id: 's1',
-        titleRo: 'Instalare Sisteme Energetice & Electrice',
-        titleEn: 'Energy System Installation & Wiring',
-        descRo: 'Execuția lucrărilor de instalare pentru rețele electrice, posturi de transformare și surse regenerabile.',
-        descEn: 'Installation of electrical networks, transformer stations, HVAC energy grids, and renewable energy integrations.',
+        titleRo: 'Proiectare Energetică & Linii IT / MT / JT',
+        titleEn: 'Energy Design & Voltage Power Lines',
+        descRo: 'Proiectare tehnică și construcții de linii electrice de înaltă (IT), medie (MT) și joasă tensiune (JT), aeriene și subterane.',
+        descEn: 'Engineering design and construction of high (HV), medium (MV), and low voltage (LV) overhead & underground power transmission lines.',
         iconName: 'Zap'
       },
       {
         id: 's2',
-        titleRo: 'Mentenanță Preventivă & Intervenții',
-        titleEn: 'Preventive Maintenance & Repairs',
-        descRo: 'Inspecții periodice, diagnoză termografică și servicii de intervenție rapidă pentru eliminarea avariilor.',
-        descEn: 'Scheduled inspections, thermographic diagnostics, and rapid emergency intervention to prevent outages.',
+        titleRo: 'Centrale Electrice & Hidrocentrale',
+        titleEn: 'Power Plants & Hydroelectric Stations',
+        descRo: 'Proiectare și execuție de centrale de producție energie și amenajări hidroenergetice (hidrocentrale).',
+        descEn: 'Design, engineering, and construction of power generation facilities and hydroelectric power stations.',
         iconName: 'Building'
       },
       {
         id: 's3',
-        titleRo: 'Consultanță Tehnică & Audit Energetic',
-        titleEn: 'Technical Advisory & Energy Audit',
-        descRo: 'Analiză privind eficiența energetică, reducerea amprentei de carbon și soluții de stocare a energiei.',
-        descEn: 'Energy efficiency analysis, carbon footprint reduction strategies, and smart energy storage advisory.',
-        iconName: 'Compass'
+        titleRo: 'Instalare Posturi Transformare & Rețele',
+        titleEn: 'Transformer Stations & Grid Infrastructure',
+        descRo: 'Montaj posturi de transformare, stații electrice, tablouri de distribuție și integrarea surselor regenerabile.',
+        descEn: 'Installation of transformer substations, switchyards, distribution panels, and renewable grid connections.',
+        iconName: 'Cpu'
       },
       {
         id: 's4',
-        titleRo: 'Modernizare & Soluții Smart Grid',
-        titleEn: 'Modernization & Smart Grid Integration',
-        descRo: 'Retehnologizarea instalațiilor vechi și integrarea sistemelor inteligente de monitorizare a consumului.',
-        descEn: 'Retrofitted energy infrastructure and integration of automated smart metering and consumption analytics.',
-        iconName: 'Cpu'
+        titleRo: 'Mentenanță, Audit Energetic & Intervenții',
+        titleEn: 'Maintenance, Energy Auditing & Repairs',
+        descRo: 'Mentenanță preventivă, audituri de eficiență energetică, remediere avarii și intervenții tehnice de urgență.',
+        descEn: 'Preventive maintenance, energy efficiency audits, emergency fault repairs, and technical inspections.',
+        iconName: 'Compass'
       }
     ]
   },
@@ -395,26 +395,34 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     aliases: ['urbanedge', 'urban-edge-build', 'urbanedgebuild', 'constructii'],
     nameRo: 'Urban Edge Build',
     nameEn: 'Urban Edge Build',
-    categoryRo: 'Construcții Civile, Industriale & Infrastructură',
-    categoryEn: 'Civil, Industrial Construction & Infrastructure',
-    taglineRo: 'Construcții civile și industriale, renovări, proiecte de infrastructură și servicii de antrepriză.',
-    taglineEn: 'Civil and industrial construction, renovations, infrastructure projects, and general contracting.',
-    descriptionRo: 'Urban Edge Build se ocupă cu construcții civile și industriale, lucrări de renovare, proiecte de infrastructură și servicii de antrepriză generală la cheie.',
-    descriptionEn: 'Urban Edge Build specializes in civil and industrial construction, structural renovation works, infrastructure engineering, and general contracting.',
-    extendedOverviewRo: 'Antreprenor general în construcții recunoscut pentru rigoarea execuției, respectarea termenelor și utilizarea tehnologiilor moderne de zidărie, structură și finisaje. De la hală industrială la ansambluri rezidențiale, Urban Edge Build garantează calitate structurală de durată.',
-    extendedOverviewEn: 'A premier general contractor recognized for execution precision, deadline compliance, and modern structural engineering. From industrial warehouses to residential complexes, Urban Edge Build delivers enduring civil structures.',
+    categoryRo: 'Proiectare & Construcții Civile, Industriale & Infrastructură',
+    categoryEn: 'Engineering Design, Civil, Industrial Construction & Infrastructure',
+    taglineRo: 'Proiectare în construcții, construcții civile și industriale, renovări, infrastructură și servicii de antrepriză generală.',
+    taglineEn: 'Engineering design, civil & industrial construction, structural renovations, infrastructure & general contracting.',
+    descriptionRo: 'Urban Edge Build se ocupă cu servicii de proiectare în construcții, construcții civile și industriale, lucrări de renovare, proiecte de infrastructură și antrepriză generală la cheie.',
+    descriptionEn: 'Urban Edge Build specializes in construction engineering design, civil and industrial building, structural renovation, infrastructure engineering, and turnkey general contracting.',
+    extendedOverviewRo: 'Antreprenor general și birou de proiectare în construcții recunoscut pentru rigoarea execuției, proiectare tehnică de rezistență, respectarea termenelor și utilizarea tehnologiilor moderne. De la faza de proiectare și avizare până la execuția halei industriale sau a ansamblurilor rezidențiale, Urban Edge Build garantează calitate structurală de durată.',
+    extendedOverviewEn: 'A general contractor and construction engineering firm recognized for structural design, execution precision, and deadline compliance. From initial engineering drawings and permitting to full-scale build execution, Urban Edge Build delivers enduring civil structures.',
     contactEmail: 'contact@ragnareliteholding.com',
     heroBgImage: 'https://i.imgur.com/D8wzIAt.jpeg',
     accentColor: '#38BDF8',
     stats: [
+      { labelRo: 'Proiectare & Execuție', labelEn: 'Design & Build', value: 'Servicii Integrat EPC' },
       { labelRo: 'Capacitate Antrepriză', labelEn: 'Contracting Role', value: 'Antreprenor General' },
       { labelRo: 'Standard Inspecție', labelEn: 'Quality Control', value: 'ISO 9001 / 14001' },
-      { labelRo: 'Tipologie Lucrări', labelEn: 'Project Types', value: 'Civile & Industriale' },
-      { labelRo: 'Apartenență Grup', labelEn: 'Group Portfolio', value: 'Urban Infrastructure' }
+      { labelRo: 'Tipologie Lucrări', labelEn: 'Project Types', value: 'Civile & Industriale' }
     ],
     services: [
       {
         id: 's1',
+        titleRo: 'Proiectare Tehnică & Inginerie Structurală',
+        titleEn: 'Engineering Design & Structural Planning',
+        descRo: 'Servicii de proiectare de arhitectură, structură de rezistență, instalații și documentații tehnice pentru autorizare (DTAC/PTh).',
+        descEn: 'Architectural, structural, and MEP engineering design alongside full permitting documentation for civil/industrial projects.',
+        iconName: 'Compass'
+      },
+      {
+        id: 's2',
         titleRo: 'Construcții Civile & Rezidențiale',
         titleEn: 'Civil & Residential Construction',
         descRo: 'Execuția de clădiri de locuințe, centre comerciale și clădiri administrative la cheie.',
@@ -422,28 +430,20 @@ export const PARTNERS_DATA: PartnerProfile[] = [
         iconName: 'Building'
       },
       {
-        id: 's2',
-        titleRo: 'Construcții Industriale & Hale',
-        titleEn: 'Industrial Construction & Warehouses',
+        id: 's3',
+        titleRo: 'Construcții Industriale & Hale Metalice',
+        titleEn: 'Industrial Construction & Steel Structures',
         descRo: 'Construcția de hale de producție, depozite logistice și structuri metalice grele.',
         descEn: 'Construction of production facilities, logistics warehouses, and heavy steel structures.',
         iconName: 'Briefcase'
       },
       {
-        id: 's3',
-        titleRo: 'Lucrări de Renovare & Consolidare',
-        titleEn: 'Structural Renovation & Rehabilitation',
-        descRo: 'Consolidări seismice, renovări fațade, reabilitare clădiri istorice și modernizări interioare.',
-        descEn: 'Seismic reinforcement, facade restoration, historic building rehabilitation, and interior fit-outs.',
-        iconName: 'Sparkles'
-      },
-      {
         id: 's4',
-        titleRo: 'Proiecte de Infrastructură & Antrepriză',
-        titleEn: 'Infrastructure & EPC General Contracting',
-        descRo: 'Lucrări de drumuri, rețele de utilități urbane, parcări și management integrat de șantier.',
-        descEn: 'Road works, urban utility networks, parking facilities, and full EPC project management.',
-        iconName: 'Compass'
+        titleRo: 'Renovări, Consolidări & Infrastructură',
+        titleEn: 'Renovations, Retrofitting & Infrastructure',
+        descRo: 'Consolidări seismice, renovări fațade, reabilitare clădiri istorice și lucrări de infrastructură urbană.',
+        descEn: 'Seismic reinforcement, facade restoration, historic building rehabilitation, and urban infrastructure works.',
+        iconName: 'Sparkles'
       }
     ]
   },
@@ -454,54 +454,54 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     aliases: ['urbanstreet', 'urban-street-express', 'urbanstreetexpress', 'transport-logistica'],
     nameRo: 'Urban Street Express',
     nameEn: 'Urban Street Express',
-    categoryRo: 'Transport, Logistică, Distribuție & Comerț',
-    categoryEn: 'Transport, Logistics, Distribution & Trade',
-    taglineRo: 'Servicii de transport, logistică integrată, distribuție express și activități comerciale.',
-    taglineEn: 'Freight transport, integrated logistics, express distribution, and commercial trade services.',
-    descriptionRo: 'Urban Street Express se ocupă cu servicii de transport de marfă, logistică integrată, distribuție regională express și activități comerciale de intermediere.',
-    descriptionEn: 'Urban Street Express provides freight transport services, integrated supply chain logistics, express regional distribution, and commercial trading.',
-    extendedOverviewRo: 'Companie dinamică de transport și depozitare, oferind soluții logistice rapide și sigure. Cu o flotă modernă și rețele de distribuție optimizate, Urban Street Express garantează trasabilitate completă și livrare la timp pentru clienți industriali și comerciali.',
-    extendedOverviewEn: 'A dynamic freight and logistics company providing swift, secure supply chain operations. Equipped with a modern fleet and optimized distribution channels, Urban Street Express delivers full tracking and punctuality for enterprise clients.',
+    categoryRo: 'Curierat Express, Relocări & Mutări, Transport, Logistică & Taxe',
+    categoryEn: 'Express Courier, Residential & Corporate Relocations, Freight & Customs',
+    taglineRo: 'Servicii de curierat express, relocări și mutări profesionale, transport de marfă, depozitare și servicii conexe.',
+    taglineEn: 'Express courier, professional residential & corporate moving, freight transport, warehousing & tax/customs support.',
+    descriptionRo: 'Urban Street Express oferă servicii de curierat express, relocări și mutări de locuințe și sedii de firme, transport național și internațional de marfă, depozitare și gestionare taxe & formalități logistice.',
+    descriptionEn: 'Urban Street Express provides express courier services, residential and corporate relocations/moving, national & international freight, warehousing, and customs/logistics tax handling.',
+    extendedOverviewRo: 'Companie dinamică de curierat, relocări și servicii logistice integrate. Urban Street Express oferă soluții complete de curierat express, mutări rezidențiale și corporative (turnkey relocations), transport rutiere de marfă, gestiune taxe și formalități vamale, precum și depozitare securizată.',
+    extendedOverviewEn: 'A comprehensive courier, relocation, and logistics company. Urban Street Express provides turnkey residential & office moving, express courier delivery, national/international freight transport, customs & tax documentation handling, and secure storage solutions.',
     contactEmail: 'contact@ragnareliteholding.com',
     heroBgImage: 'https://i.imgur.com/UPlG0O3.jpeg',
     accentColor: '#38BDF8',
     stats: [
-      { labelRo: 'Tip Transport', labelEn: 'Transport Mode', value: 'Road & Express Freight' },
+      { labelRo: 'Curierat & Mutări', labelEn: 'Courier & Moving', value: 'Express & Relocări' },
+      { labelRo: 'Arie Servicii', labelEn: 'Service Coverage', value: 'Național & Internațional' },
       { labelRo: 'Trasabilitate', labelEn: 'Tracking System', value: 'GPS Live 24/7' },
-      { labelRo: 'Capacitate Depozitare', labelEn: 'Storage Logistics', value: 'Integrated Warehousing' },
       { labelRo: 'Apartenență Grup', labelEn: 'Group Affiliation', value: 'Urban Logistics' }
     ],
     services: [
       {
         id: 's1',
-        titleRo: 'Transport Rutiere de Marfă',
-        titleEn: 'Road Freight & Heavy Transport',
-        descRo: 'Transport național și internațional de marfă generală, frigorifică sau agabaritică.',
-        descEn: 'National and international road transport for standard, temperature-controlled, or oversized cargo.',
-        iconName: 'Truck'
+        titleRo: 'Curierat Express & Livrări Rapide',
+        titleEn: 'Express Courier & Fast Deliveries',
+        descRo: 'Servicii de curierat door-to-door, livrări urgente plicuri și colete B2B și B2C pe rute urbane și naționale.',
+        descEn: 'Door-to-door express courier, urgent parcel and document deliveries for B2B and B2C clients.',
+        iconName: 'Zap'
       },
       {
         id: 's2',
-        titleRo: 'Servicii de Logistică Integrată & Depozitare',
-        titleEn: 'Integrated Logistics & Warehousing',
-        descRo: 'Depozitare temporară sau pe termen lung, manipulare marfă, ambalare și gestiune stocuri.',
-        descEn: 'Short and long-term warehousing, cargo handling, cross-docking, and inventory management.',
+        titleRo: 'Relocări & Mutări (Rezidențial & Corporativ)',
+        titleEn: 'Relocations & Moving Services (Homes & Offices)',
+        descRo: 'Servicii complete de mutare și relocare pentru persoane fizice (apartamente, vile) și companii (sedii, echipamente).',
+        descEn: 'Full relocation and moving services for individuals (apartments, houses) and corporate offices/equipment.',
         iconName: 'Building'
       },
       {
         id: 's3',
-        titleRo: 'Distribuție Express Urbană & Regională',
-        titleEn: 'Urban & Regional Express Distribution',
-        descRo: 'Livrare rapidă B2B și B2C pe rute urbane și interurbane optimizate informatic.',
-        descEn: 'Rapid B2B and B2C last-mile delivery across software-optimized urban and regional routes.',
-        iconName: 'Zap'
+        titleRo: 'Transport Rutiere de Marfă',
+        titleEn: 'Road Freight & Heavy Cargo Transport',
+        descRo: 'Transport național și internațional de marfă generală, agabaritică sau produse voluminoase.',
+        descEn: 'National and international road freight for standard, oversized, or bulk commercial cargo.',
+        iconName: 'Truck'
       },
       {
         id: 's4',
-        titleRo: 'Activități Comerciale & Intermediere',
-        titleEn: 'Commercial Trade & Brokerage Services',
-        descRo: 'Intermediere comercială de marfă, servicii de vămuire și suport în lanțul de aprovizionare.',
-        descEn: 'Trade brokerage, customs clearance documentation, and end-to-end supply chain support.',
+        titleRo: 'Taxe, Formalități Vamale & Intermediere',
+        titleEn: 'Logistics Taxes, Customs & Brokerage',
+        descRo: 'Gestionarea taxelor de transport, întocmirea documentelor vamale, intermediere comercială și asistență logistică.',
+        descEn: 'Handling transport taxes, customs documentation, commercial freight brokerage, and supply chain support.',
         iconName: 'Briefcase'
       }
     ]
@@ -513,20 +513,20 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     aliases: ['premiumarchitecture', 'premium-architecture-design', 'architecturedesign', 'arhitectura'],
     nameRo: 'Premium Architecture Design',
     nameEn: 'Premium Architecture Design',
-    categoryRo: 'Proiectare Arhitecturală, Design Interior & Urbanism',
-    categoryEn: 'Architectural Design, Interior Design & Urban Planning',
-    taglineRo: 'Proiectare arhitecturală, design interior, urbanism și consultanță tehnică în construcții.',
-    taglineEn: 'Architectural design, interior architecture, urbanism, and construction consultancy.',
-    descriptionRo: 'Premium Architecture Design se ocupă cu proiectare arhitecturală de concept, design interior exclusivist, planificare urbanistică și consultanță de specialitate în construcții.',
-    descriptionEn: 'Premium Architecture Design specializes in conceptual architectural design, luxury interior architecture, urban master planning, and technical construction consulting.',
-    extendedOverviewRo: 'Birou de arhitectură și design creativ de înaltă linie. Prin combinarea esteticii atemporale cu soluții inginerești sustenabile, Premium Architecture Design creează concepte unice pentru reședințe private, spații de birouri reprezentative și dezvoltări urbane emblematice.',
-    extendedOverviewEn: 'A high-end architectural studio merging timeless aesthetics with sustainable engineering. Premium Architecture Design crafts bespoke concepts for private residences, corporate headquarters, and landmark urban developments.',
+    categoryRo: 'Proiectare Arhitecturală, Design Exterior, Design Peisagistic & Design Interior',
+    categoryEn: 'Architectural Design, Exterior Design, Landscape Architecture & Interior Design',
+    taglineRo: 'Proiectare arhitecturală, design exterior, design peisagistic (peisagistică), design interior și urbanism.',
+    taglineEn: 'Architectural design, exterior design, landscape design, interior design, and urban master planning.',
+    descriptionRo: 'Premium Architecture Design oferă servicii de proiectare arhitecturală, design exterior, design peisagistic și amenajări exterioare, design interior exclusivist și planificare urbanistică.',
+    descriptionEn: 'Premium Architecture Design specializes in comprehensive architectural engineering, exterior façade design, landscape design, luxury interior architecture, and urban planning.',
+    extendedOverviewRo: 'Birou de arhitectură, proiectare și design creativ de înaltă linie. Prin combinarea esteticii atemporale cu soluții inginerești sustenabile, Premium Architecture Design creează concepte unice de proiectare arhitecturală, design exterior și fațade, design peisagistic și amenajări exterioare, precum și design interior de lux pentru reședințe private, spații comerciale și dezvoltări urbane.',
+    extendedOverviewEn: 'A high-end architectural design studio merging timeless aesthetics with sustainable engineering. Premium Architecture Design crafts bespoke concepts spanning architectural design, exterior facade modeling, landscape design and outdoor space creation, alongside luxury interior design.',
     contactEmail: 'contact@ragnareliteholding.com',
     heroBgImage: 'https://i.imgur.com/79GQcsr.jpeg',
     accentColor: '#38BDF8',
     stats: [
-      { labelRo: 'Stil Arhitectural', labelEn: 'Design Philosophy', value: 'Timeless & Sustainable' },
-      { labelRo: 'Servicii Proiectare', labelEn: 'Project Scope', value: '3D BIM & Full Permitting' },
+      { labelRo: 'Domeniu Proiectare', labelEn: 'Design Scope', value: 'Arhitectură & Peisagistică' },
+      { labelRo: 'Design In & Out', labelEn: 'In & Exterior', value: 'Interior & Exterior Design' },
       { labelRo: 'Standard Portofoliu', labelEn: 'Portfolio Level', value: 'High-End & Commercial' },
       { labelRo: 'Apartenență Grup', labelEn: 'Group Studio', value: 'Ragnar Design' }
     ],
@@ -541,26 +541,26 @@ export const PARTNERS_DATA: PartnerProfile[] = [
       },
       {
         id: 's2',
-        titleRo: 'Design Interior & Fit-Out Comercial',
-        titleEn: 'Interior Design & Commercial Fit-Out',
-        descRo: 'Concepte personalizate de amenajare interioară pentru spații rezidențiale de lux, hoteluri și birouri.',
-        descEn: 'Tailored interior concepts for luxury residences, boutique hospitality, and corporate headquarters.',
+        titleRo: 'Design Exterior & Design Peisagistic',
+        titleEn: 'Exterior Design & Landscape Architecture',
+        descRo: 'Proiectare fațade, iluminat arhitectural exterior, design peisagistic, amenajare grădini, terase și spații verzi.',
+        descEn: 'Facade design, exterior architectural lighting, landscape architecture, garden planning, terraces, and green spaces.',
         iconName: 'Sparkles'
       },
       {
         id: 's3',
-        titleRo: 'Urbanism & Planificare Teritorială',
-        titleEn: 'Urban Master Planning & PUZ/PUD',
-        descRo: 'Elaborarea documentațiilor de urbanism (PUZ, PUD) și dezvoltarea masterplanurilor durabile.',
-        descEn: 'Drafting urban master plans (PUZ, PUD) and sustainable territorial development frameworks.',
+        titleRo: 'Design Interior & Fit-Out Comercial',
+        titleEn: 'Interior Design & Commercial Fit-Out',
+        descRo: 'Concepte personalizate de amenajare interioară pentru spații rezidențiale de lux, hoteluri, restaurante și birouri.',
+        descEn: 'Tailored interior concepts for luxury residences, hospitality, restaurants, and corporate headquarters.',
         iconName: 'Building'
       },
       {
         id: 's4',
-        titleRo: 'Consultanță Tehnică & Dirigenție de Șantier',
-        titleEn: 'Technical Advisory & Project Oversight',
-        descRo: 'Asistență tehnică din partea proiectantului, urmărire de șantier și control de calitate pe tot parcursul execuției.',
-        descEn: 'Technical assistance on-site, architectural supervision, and quality control during construction.',
+        titleRo: 'Urbanism & Consultanță Tehnică de Șantier',
+        titleEn: 'Urban Planning & On-Site Technical Advisory',
+        descRo: 'Elaborarea documentațiilor de urbanism (PUZ, PUD) și asistență tehnică din partea proiectantului pe șantier.',
+        descEn: 'Drafting urban master plans (PUZ, PUD) and providing direct architectural project oversight during construction.',
         iconName: 'CheckCircle2'
       }
     ]
@@ -572,55 +572,55 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     aliases: ['premiumcleaning', 'premium-cleaning-solutions', 'cleaningsolutions', 'curatenie'],
     nameRo: 'Premium Cleaning Solutions',
     nameEn: 'Premium Cleaning Solutions',
-    categoryRo: 'Curățenie Profesională Comercială & Industrială',
-    categoryEn: 'Professional Commercial & Industrial Cleaning',
-    taglineRo: 'Servicii profesionale de curățenie pentru spații comerciale, industriale și rezidențiale.',
-    taglineEn: 'Professional cleaning services for commercial, industrial, and residential spaces.',
-    descriptionRo: 'Premium Cleaning Solutions se ocupă cu furnizarea de servicii profesionale de curățenie, igienizare și mentenanță pentru clădiri de birouri, spații industriale, comerciale și rezidențiale.',
-    descriptionEn: 'Premium Cleaning Solutions delivers professional cleaning, sanitation, and facility maintenance for office buildings, industrial sites, retail centers, and residential complexes.',
-    extendedOverviewRo: 'Furnizor de încredere pentru servicii igienico-sanitare la cele mai înalte standarde de calitate. Cu echipamente de ultimă generație, soluții ecologice certificate și personal instruit, compania menține medii de lucru curate, sigure și sănătoase pentru corporații și instituții.',
-    extendedOverviewEn: 'A trusted provider of facility sanitation and maintenance under strict quality standards. Using state-of-the-art equipment, eco-certified detergents, and vetted staff, the firm maintains spotless, safe, and healthy corporate environments.',
+    categoryRo: 'Curățenie Profesională, Igienizare & Mentenanță Comercială & Medicală',
+    categoryEn: 'Professional Sanitation & Cleaning (Commercial, Medical, Hospitality & Residential)',
+    taglineRo: 'Servicii profesionale de curățenie pentru hoteluri, pensiuni, spitale, cabinete medicale, bănci, instituții publice, vile și apartamente.',
+    taglineEn: 'Professional cleaning & sanitation for hotels, guesthouses, hospitals, clinics, banks, public institutions, villas, & apartments.',
+    descriptionRo: 'Premium Cleaning Solutions furnizează servicii profesionale de curățenie și dezinfectare de nivel înalt pentru hoteluri, pensiuni, spitale, cabinete medicale, bănci, instituții publice, clădiri de birouri, precum și vile și apartamente rezidențiale.',
+    descriptionEn: 'Premium Cleaning Solutions delivers specialized cleaning and hospital-grade sanitation for hotels, guesthouses, hospitals, medical clinics, banks, public institutions, corporate offices, and luxury villas/apartments.',
+    extendedOverviewRo: 'Furnizor de încredere pentru servicii igienico-sanitare la cele mai înalte standarde. Cu echipamente profesionale, detergenți ecologici și soluții certificate de dezinfecție, compania deservește domeniul HoReCa (hoteluri, pensiuni), sectorul medical (spitale, cabinete medicale), sectorul financiar-public (bănci, instituții publice, sedii administrative) și domeniul rezidențial (vile, apartamente).',
+    extendedOverviewEn: 'A trusted partner for high-standard sanitation and deep cleaning. Equipped with industrial machinery and medical-grade disinfectants, the firm serves hospitality (hotels, guesthouses), medical sectors (hospitals, clinics), financial & public institutions (banks, government buildings), and residential properties (villas, apartments).',
     contactEmail: 'contact@ragnareliteholding.com',
     heroBgImage: 'https://i.imgur.com/3NZg6NO.jpeg',
     accentColor: '#38BDF8',
     stats: [
-      { labelRo: 'Echipamente', labelEn: 'Equipment Standard', value: 'Industrial & Eco-Friendly' },
-      { labelRo: 'Personal Instruit', labelEn: 'Staff Training', value: '100% Certified' },
-      { labelRo: 'Igienizare', labelEn: 'Sanitation Level', value: 'Hospital-Grade Available' },
+      { labelRo: 'Arie Acoperire', labelEn: 'Coverage Areas', value: 'HoReCa, Medical, Bănci & Locuințe' },
+      { labelRo: 'Acreditare', labelEn: 'Accreditation', value: 'Dezinfecție Nivel Medical' },
+      { labelRo: 'Personal Instruit', labelEn: 'Staff Training', value: '100% Certificat' },
       { labelRo: 'Grup Afiliat', labelEn: 'Affiliated Division', value: 'Premium Services' }
     ],
     services: [
       {
         id: 's1',
-        titleRo: 'Curățenie Clădiri de Birouri & Spații Comerciale',
-        titleEn: 'Office Building & Retail Space Cleaning',
-        descRo: 'Servicii zilnice sau periodice de curățenie întreținere pentru sedii de firme, sucursale și mall-uri.',
-        descEn: 'Daily or scheduled maintenance cleaning for corporate headquarters, bank branches, and retail centers.',
+        titleRo: 'Curățenie HoReCa: Hoteluri & Pensiuni',
+        titleEn: 'Hospitality Cleaning: Hotels & Guesthouses',
+        descRo: 'Igienizare completă camere, recepții, zone comune și restaurante pentru hoteluri, pensiuni și rețele de cazare.',
+        descEn: 'Full room housekeeping, lobby, common area, and restaurant cleaning for hotels, guesthouses, and resorts.',
         iconName: 'Sparkles'
       },
       {
         id: 's2',
-        titleRo: 'Curățenie Industrială & Spații Logistice',
-        titleEn: 'Industrial Facility & Warehouse Sanitation',
-        descRo: 'Curățarea suprafețelor mari, a halelor de producție și dezinfectarea echipamentelor industriale.',
-        descEn: 'Deep cleaning of large industrial floors, manufacturing plants, and machinery degreasing.',
-        iconName: 'Building'
+        titleRo: 'Sector Medical: Spitale & Cabinete Medicale',
+        titleEn: 'Medical Sector: Hospitals & Healthcare Clinics',
+        descRo: 'Dezinfecție și curățenie conform normelor sanitare stricte pentru spitale, clinici, cabinete stomatologice și medicale.',
+        descEn: 'Hospital-grade sanitization and specialized cleaning meeting strict healthcare regulations for clinics and hospitals.',
+        iconName: 'Shield'
       },
       {
         id: 's3',
-        titleRo: 'Curățenie Post-Construcție & Amenajare',
-        titleEn: 'Post-Construction & Fit-Out Deep Clean',
-        descRo: 'Îndepărtarea molozului fin, curățarea geamurilor la înălțime și pregătirea spațiilor pentru predare.',
-        descEn: 'Removal of post-build dust, high-rise window washing, and preparing premises for immediate occupation.',
-        iconName: 'CheckCircle2'
+        titleRo: 'Bănci, Instituții Publice & Birouri',
+        titleEn: 'Banks, Public Institutions & Corporate Offices',
+        descRo: 'Curățenie de întreținere și nebulizare periodice pentru sucursale bancare, sedii de instituții publice și complexe de birouri.',
+        descEn: 'Maintenance cleaning and periodic fogging for bank branches, government buildings, and corporate offices.',
+        iconName: 'Building'
       },
       {
         id: 's4',
-        titleRo: 'Tratamente Suprafețe & Igienizare Specială',
-        titleEn: 'Surface Treatments & Specialized Sanitation',
-        descRo: 'Cristalizare marmură, spălare mochete prin injecție-extracție și servicii de nebulizare/dezinfectare.',
-        descEn: 'Marble crystallization, carpet extraction cleaning, and certified space nebulization disinfection.',
-        iconName: 'Shield'
+        titleRo: 'Curățenie Rezidențială: Vile & Apartamente',
+        titleEn: 'Residential Cleaning: Villas & Apartments',
+        descRo: 'Curățenie generală, de întreținere sau post-constructor pentru vile, apartamente rezidențiale și complexe de locuințe.',
+        descEn: 'Deep cleaning, routine maid services, or post-construction cleanup for luxury villas, apartments, and estates.',
+        iconName: 'CheckCircle2'
       }
     ]
   },
@@ -631,21 +631,21 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     aliases: ['smartpaper', 'smart-paper-office', 'smartpaperoffice', 'birotica-papetarie'],
     nameRo: 'Smart Paper Office',
     nameEn: 'Smart Paper Office',
-    categoryRo: 'Papetărie, Birotică, Consumabile Birou & Servicii Conexe',
-    categoryEn: 'Stationery, B2B Office Supplies & Equipment',
-    taglineRo: 'Comercializarea produselor de papetărie și birotică, consumabile pentru birou și servicii conexe.',
-    taglineEn: 'Commercialization of stationery, office supplies, printing consumables, and corporate services.',
-    descriptionRo: 'Smart Paper Office se ocupă cu comercializarea de produse de papetărie și birotică B2B, consumabile de calitate pentru birouri și servicii conexe de livrare și consultanță.',
-    descriptionEn: 'Smart Paper Office specializes in B2B distribution of stationery, premium office supplies, printing consumables, and corporate office provisioning services.',
-    extendedOverviewRo: 'Partenerul de încredere al companiilor pentru aprovizionarea completă a spațiilor de lucru. Smart Paper Office oferă un catalog extins de papetărie, consumabile IT, mobilier de birou și soluții de tipărire, garantând prețuri competitive, livrare rapidă și gestiune facilă a comenzilor.',
-    extendedOverviewEn: 'A reliable corporate partner for workspace provisioning. Smart Paper Office offers an extensive catalog of office stationery, IT consumables, office ergonomics, and printing supplies, ensuring competitive B2B pricing and swift fulfillment.',
+    categoryRo: 'Papetărie, Birotică, Echipamente IT, Calculatoare, Monitoare & Protocol',
+    categoryEn: 'Stationery, B2B Office Supplies, IT Hardware, Computers & Pantry Solutions',
+    taglineRo: 'Papetărie, birotică, electronice & IT (calculatoare, laptopuri, monitoare, tablete), coolere de apă și consumabile de birou.',
+    taglineEn: 'Stationery, office supplies, IT hardware (computers, laptops, monitors, tablets), water coolers, and pantry essentials.',
+    descriptionRo: 'Smart Paper Office se ocupă cu comercializarea de produse de papetărie, birotică, echipamente IT & electronice (calculatoare, monitoare, laptopuri, tablete), coolere de apă și consumabile de birou B2B.',
+    descriptionEn: 'Smart Paper Office specializes in B2B distribution of stationery, office supplies, IT equipment & electronics (PCs, laptops, monitors, tablets), water coolers, and pantry consumables.',
+    extendedOverviewRo: 'Partenerul de încredere al companiilor pentru echiparea și aprovizionarea completă a spațiilor de lucru. Smart Paper Office oferă un catalog extins de papetărie, birotică, tehnică de calcul (calculatoare, monitoare, laptopuri, tablete), dispensere & coolere de apă, consumabile de birou și soluții de mobilier, garantând prețuri competitive, livrare rapidă și gestiune facilă B2B.',
+    extendedOverviewEn: 'A reliable corporate partner for workspace provisioning and equipment. Smart Paper Office offers an extensive catalog spanning office stationery, IT hardware (desktop PCs, monitors, laptops, tablets), water coolers & pantry dispensers, and office ergonomics with swift B2B fulfillment.',
     contactEmail: 'contact@ragnareliteholding.com',
     heroBgImage: 'https://i.imgur.com/u9Gn2tT.jpeg',
     accentColor: '#38BDF8',
     stats: [
-      { labelRo: 'Catalog Produse', labelEn: 'Product Catalog', value: '10,000+ SKUs' },
+      { labelRo: 'Catalog Produse', labelEn: 'Product Catalog', value: '15,000+ SKUs' },
+      { labelRo: 'Tehnică & IT', labelEn: 'IT & Electronics', value: 'Calculatoare, Monitoare & Coolere' },
       { labelRo: 'Timp Livrare B2B', labelEn: 'B2B Delivery Time', value: '24-48 Ore' },
-      { labelRo: 'Parteneriat B2B', labelEn: 'B2B Contracts', value: 'Corporate Discounts' },
       { labelRo: 'Apartenență Grup', labelEn: 'Group Affiliation', value: 'Smart Office Supplies' }
     ],
     services: [
@@ -659,26 +659,26 @@ export const PARTNERS_DATA: PartnerProfile[] = [
       },
       {
         id: 's2',
-        titleRo: 'Consumabile Tipărire & Echipamente',
-        titleEn: 'Print Consumables & Office Equipment',
-        descRo: 'Tonere originale și compatibile, cartușe, distrugătoare de documente, laminatoare și multifuncționale.',
-        descEn: 'OEM and compatible toners, cartridges, paper shredders, laminators, and multi-function printers.',
-        iconName: 'Calculator'
+        titleRo: 'Tehnică de Calcul: Calculatoare, Laptopuri, Monitoare & Tablete',
+        titleEn: 'IT Equipment: Desktop PCs, Laptops, Monitors & Tablets',
+        descRo: 'Calculatoare desktop, monitoare profesionale, laptopuri, tablete, periferice IT și echipamente de tipărire.',
+        descEn: 'Office desktop PCs, high-res monitors, corporate laptops, tablets, IT peripherals, and printing equipment.',
+        iconName: 'Cpu'
       },
       {
         id: 's3',
-        titleRo: 'Protocol Birou & Produse Igienico-Sanitare',
-        titleEn: 'Office Pantry, Coffee & Sanitation Essentials',
-        descRo: 'Produse de protocol (cafea, ceai, apă), consumabile pentru bucătăria biroului și detergenți.',
-        descEn: 'Pantry supplies (premium coffee, tea, water), breakroom paper goods, and cleaning detergents.',
-        iconName: 'Sparkles'
+        titleRo: 'Coolere de Apă, Protocol Birou & Cafea',
+        titleEn: 'Water Coolers, Pantry Essentials & Coffee Solutions',
+        descRo: 'Dispensere și coolere de apă pentru birouri, aparate de cafea, consumabile pentru bucătăria companiei și produse de igienă.',
+        descEn: 'Office water coolers & dispensers, coffee systems, breakroom refreshments, pantry paper goods, and sanitation.',
+        iconName: 'Zap'
       },
       {
         id: 's4',
-        titleRo: 'Mobilier Ergonomic & Management Stocuri',
+        titleRo: 'Mobilier Ergonomic & Management Stocuri B2B',
         titleEn: 'Ergonomic Office Furniture & Automated Stocking',
-        descRo: 'Scaune ergonomice, birouri reglabile, accesorii IT și abonamente lunare de refacere automată a stocului.',
-        descEn: 'Ergonomic chairs, height-adjustable desks, IT accessories, and automated monthly subscription restocking.',
+        descRo: 'Scaune ergonomice, birouri reglabile și abonamente lunare de refacere automată a stocurilor de birou.',
+        descEn: 'Ergonomic chairs, height-adjustable desks, and automated monthly B2B replenishment plans.',
         iconName: 'CheckCircle2'
       }
     ]
