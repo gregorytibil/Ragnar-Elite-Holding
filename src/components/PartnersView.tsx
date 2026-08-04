@@ -8,82 +8,26 @@ import {
   ArrowRight,
   ExternalLink,
   ChevronRight,
-  Users2
+  Users2,
+  Scale,
+  Calculator,
+  Cpu,
+  Zap,
+  Compass,
+  Truck,
+  FileText,
+  CheckCircle2,
+  Briefcase
 } from 'lucide-react';
 
-interface PartnerLogo {
-  name: string;
-  category: 'advisory' | 'financial' | 'legal' | 'tech';
-  descriptionEn: string;
-  descriptionRo: string;
-  // We'll render elegant stylized SVG/CSS representations for the logos to match the design language perfectly
-  logoType: 'mckinsey' | 'kpmg' | 'deloitte' | 'pwc' | 'ey' | 'linklaters' | 'clifford' | 'microsoft';
-}
-
-const partnersList: PartnerLogo[] = [
-  {
-    name: 'McKinsey & Company',
-    category: 'advisory',
-    descriptionEn: 'Global strategic management and operational advisory for cross-border acquisitions.',
-    descriptionRo: 'Consultanță strategică de management global și advisory operațional pentru achiziții transfrontaliere.',
-    logoType: 'mckinsey'
-  },
-  {
-    name: 'KPMG',
-    category: 'financial',
-    descriptionEn: 'Consolidated financial auditing, cross-border fiscal compliance, and advisory.',
-    descriptionRo: 'Audit financiar consolidat, conformitate fiscală transfrontalieră și servicii de advisory.',
-    logoType: 'kpmg'
-  },
-  {
-    name: 'Deloitte',
-    category: 'financial',
-    descriptionEn: 'International tax optimization and corporate restructuring transaction support.',
-    descriptionRo: 'Optimizare fiscală internațională și suport tranzacțional în restructurări corporative.',
-    logoType: 'deloitte'
-  },
-  {
-    name: 'PricewaterhouseCoopers (PwC)',
-    category: 'financial',
-    descriptionEn: 'Enterprise risk management, capital market advisory, and deep due diligence.',
-    descriptionRo: 'Managementul riscului de întreprindere, consultanță pe piețe de capital și due diligence profund.',
-    logoType: 'pwc'
-  },
-  {
-    name: 'Ernst & Young (EY)',
-    category: 'financial',
-    descriptionEn: 'Strategic valuation, financial modeling, and transaction integration services.',
-    descriptionRo: 'Evaluare strategică, modelare financiară și servicii de integrare a tranzacțiilor.',
-    logoType: 'ey'
-  },
-  {
-    name: 'Linklaters',
-    category: 'legal',
-    descriptionEn: 'Primary legal counsel for international mergers, acquisitions, and compliance.',
-    descriptionRo: 'Consilier juridic principal pentru fuziuni, achiziții și conformitate la nivel internațional.',
-    logoType: 'linklaters'
-  },
-  {
-    name: 'Clifford Chance',
-    category: 'legal',
-    descriptionEn: 'Global regulatory compliance, legal audit, and sovereign fund negotiations.',
-    descriptionRo: 'Conformitate reglementară globală, audit legal și negocieri cu fonduri suverane.',
-    logoType: 'clifford'
-  },
-  {
-    name: 'Microsoft Enterprise',
-    category: 'tech',
-    descriptionEn: 'Cloud infrastructure security, AI-powered predictive systems, and server networks.',
-    descriptionRo: 'Securitatea infrastructurii cloud, sisteme predictive bazate pe AI și rețele de servere.',
-    logoType: 'microsoft'
-  }
-];
+import { PARTNERS_DATA, PartnerProfile } from '../data/partnersData';
 
 interface PartnersViewProps {
   currentLang: Language;
+  onSelectPartner?: (partner: PartnerProfile) => void;
 }
 
-export default function PartnersView({ currentLang }: PartnersViewProps) {
+export default function PartnersView({ currentLang, onSelectPartner }: PartnersViewProps) {
   const isRo = currentLang === 'ro';
 
   const titleText = isRo 
@@ -95,80 +39,23 @@ export default function PartnersView({ currentLang }: PartnersViewProps) {
     : 'Elite collaborations ensuring operational excellence and absolute macroeconomic immunity';
 
   const introText = isRo
-    ? 'La Ragnar Elite Holding, excelența operațională este susținută de parteneriate strategice cu cele mai prestigioase instituții de consultanță, audit financiar, asistență juridică și tehnologie de pe mapamond. Colaborăm exclusiv cu lideri mondiali recunoscuți pentru a garanta tranzacții sigure, conformitate impecabilă și securitate structurală.'
-    : 'At Ragnar Elite Holding, operational excellence is bolstered by strategic partnerships with the world\'s most prestigious consulting, financial auditing, legal counsel, and technology institutions. We collaborate exclusively with recognized global leaders to guarantee secure transactions, flawless compliance, and structural security.';
+    ? 'La Ragnar Elite Holding, excelența operațională este susținută de parteneriate strategice cu cele mai prestigioase instituții de consultanță, audit financiar, asistență juridică și tehnologie din grup. Colaborăm exclusiv cu entități de încredere pentru a garanta tranzacții sigure, conformitate impecabilă și securitate structurală.'
+    : 'At Ragnar Elite Holding, operational excellence is bolstered by strategic partnerships with prestigious consulting, financial auditing, legal counsel, and technology group entities. We collaborate exclusively with trusted partners to guarantee secure transactions, flawless compliance, and structural security.';
 
-  const categoryLabels = {
-    all: isRo ? 'Toți Partenerii' : 'All Partners',
-    advisory: isRo ? 'Consultanță Strategică' : 'Strategic Advisory',
-    financial: isRo ? 'Audit & Servicii Financiare' : 'Audit & Financial',
-    legal: isRo ? 'Consultanță Juridică' : 'Legal & Compliance',
-    tech: isRo ? 'Infrastructură & Tehnologie' : 'Tech & Infrastructure'
-  };
-
-  // Helper to render stylized premium logos
-  const renderLogo = (logoType: string) => {
-    switch (logoType) {
-      case 'mckinsey':
-        return (
-          <div className="flex flex-col items-center">
-            <span className="font-serif text-lg sm:text-xl font-semibold tracking-wider text-[#0B1B3D]">McKinsey</span>
-            <span className="font-sans text-[8px] tracking-[0.4em] uppercase text-sky-600/80 -mt-1 font-medium">&amp; Company</span>
-          </div>
-        );
-      case 'kpmg':
-        return (
-          <div className="flex items-center gap-1.5 px-4 py-2 bg-[#0B1B3D]/5 rounded border border-[#0B1B3D]/10">
-            <span className="font-sans text-xl font-black tracking-widest text-blue-900">KPMG</span>
-          </div>
-        );
-      case 'deloitte':
-        return (
-          <div className="flex items-baseline font-sans text-lg sm:text-xl font-bold text-slate-800 tracking-tight">
-            <span>Deloitte</span>
-            <span className="text-emerald-500 font-black text-2xl leading-none">.</span>
-          </div>
-        );
-      case 'pwc':
-        return (
-          <div className="flex flex-col items-center">
-            <span className="font-sans text-xl font-extrabold text-amber-700/90 tracking-tighter">pwc</span>
-          </div>
-        );
-      case 'ey':
-        return (
-          <div className="flex items-center gap-1 font-sans text-lg sm:text-xl font-black tracking-tighter text-slate-900">
-            <span className="bg-yellow-400 text-black px-1.5 py-0.5 text-xs font-mono font-bold uppercase mr-1">EY</span>
-            <span className="text-sm font-medium tracking-wide">Building a better working world</span>
-          </div>
-        );
-      case 'linklaters':
-        return (
-          <div className="flex items-center font-sans text-lg sm:text-xl font-semibold text-rose-950 tracking-tight">
-            <span>Linklaters</span>
-          </div>
-        );
-      case 'clifford':
-        return (
-          <div className="flex flex-col items-start font-serif">
-            <span className="text-sm font-bold text-slate-900 tracking-wide uppercase">Clifford</span>
-            <span className="text-xs font-semibold text-sky-900 tracking-widest uppercase -mt-1">Chance</span>
-          </div>
-        );
-      case 'microsoft':
-        return (
-          <div className="flex items-center gap-2">
-            <div className="grid grid-cols-2 gap-0.5 w-6 h-6">
-              <div className="bg-[#F25022] w-2.5 h-2.5"></div>
-              <div className="bg-[#7FBA00] w-2.5 h-2.5"></div>
-              <div className="bg-[#00A4EF] w-2.5 h-2.5"></div>
-              <div className="bg-[#FFB900] w-2.5 h-2.5"></div>
-            </div>
-            <span className="font-sans text-sm sm:text-base font-semibold text-slate-700">Microsoft</span>
-          </div>
-        );
-      default:
-        return <Building className="w-8 h-8 text-[#0B1B3D]/70" />;
+  const getPartnerIcon = (id: string) => {
+    const props = { className: "w-6 h-6 text-[#38BDF8]" };
+    switch (id) {
+      case 'aoddfis': return <Scale {...props} />;
+      case 'pro-consult-audit': return <Calculator {...props} />;
+      case 'vexta-data': return <Cpu {...props} />;
+      case 'urban-energetic-service': return <Zap {...props} />;
+      case 'urban-platinum-estate': return <Building {...props} />;
+      case 'urban-edge-build': return <Compass {...props} />;
+      case 'urban-street-express': return <Truck {...props} />;
+      case 'premium-architecture-design': return <Sparkles {...props} />;
+      case 'premium-cleaning-solutions': return <CheckCircle2 {...props} />;
+      case 'smart-paper-office': return <FileText {...props} />;
+      default: return <Briefcase {...props} />;
     }
   };
 
@@ -234,7 +121,7 @@ export default function PartnersView({ currentLang }: PartnersViewProps) {
 
       {/* Intro Narrative Section */}
       <section className="py-16 sm:py-24 px-6 max-w-[1140px] mx-auto relative z-10">
-        <div className="bg-white border border-[#0B1B3D]/10 rounded-2xl p-8 sm:p-12 shadow-[0_4px_30px_rgba(11,27,61,0.01)] hover:shadow-[0_10px_40px_rgba(11,27,61,0.03)] transition-all duration-300 mb-16 sm:mb-24">
+        <div className="bg-white border border-[#0B1B3D]/10 rounded-2xl p-8 sm:p-12 shadow-[0_4px_30px_rgba(11,27,61,0.01)] hover:shadow-[0_10px_40px_rgba(11,27,61,0.03)] transition-all duration-300 mb-12 sm:mb-16">
           <div className="max-w-4xl">
             <span className="font-mono text-[9px] tracking-[0.25em] text-[#0B1B3D]/50 uppercase block mb-3 font-bold">
               {isRo ? 'IMUNITATE MACROECONOMICĂ PRIN REPUTAȚIE' : 'MACROECONOMIC IMMUNITY THROUGH REPUTATION'}
@@ -245,67 +132,83 @@ export default function PartnersView({ currentLang }: PartnersViewProps) {
           </div>
         </div>
 
-        {/* Dynamic Logos Grid Section */}
-        <div className="border-t border-[#0B1B3D]/10 pt-16 sm:pt-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center max-w-2xl mx-auto mb-16"
-          >
-            <span className="font-mono text-[9px] tracking-[0.25em] text-[#0B1B3D]/50 uppercase block mb-2 font-bold">
-              {isRo ? 'Showcase Instituțional' : 'Institutional Showcase'}
+        {/* Group Subsidiaries & Active Subdomains Showcase */}
+        <div>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-3 font-bold">
+              {isRo ? 'PORTALURI & SUBDOMENII ACTIVE' : 'ACTIVE GROUP SUBDOMAINS'}
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0B1B3D] uppercase tracking-wider">
-              {isRo ? 'REȚEAUA STRATEGICĂ DE LOGOURI' : 'STRATEGIC LOGO NETWORK'}
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#0B1B3D] tracking-tight uppercase">
+              {isRo ? 'Companii & Entități Partenere din Grup' : 'Partner Companies & Group Subsidiaries'}
             </h2>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#0B1B3D]/30 to-transparent mx-auto mt-4"></div>
-          </motion.div>
+            <p className="font-sans font-light text-slate-600 text-sm sm:text-base mt-3">
+              {isRo 
+                ? 'Fiecare entitate din grup dispune de o pagină dedicată și un subdomeniu oficial securizat SSL (*.ragnareliteholding.com).'
+                : 'Each group entity operates a dedicated 1-page profile and an SSL-secured official subdomain (*.ragnareliteholding.com).'}
+            </p>
+          </div>
 
-          {/* Luxury Grid of Partner Cards with Logos */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {partnersList.map((partner, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            {PARTNERS_DATA.map((p) => (
               <motion.div
-                key={partner.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08, duration: 0.5 }}
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="group relative bg-white border border-[#0B1B3D]/10 hover:border-[#0B1B3D]/25 p-8 rounded-xl shadow-[0_4px_25px_rgba(11,27,61,0.01)] hover:shadow-[0_12px_40px_rgba(11,27,61,0.04)] transition-all duration-300 flex flex-col justify-between items-center text-center min-h-[300px]"
+                key={p.id}
+                whileHover={{ y: -5 }}
+                className="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-sky-400 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
               >
                 {/* Subtle top indicator bar */}
-                <div className="absolute top-0 left-0 w-full h-[3px] bg-transparent group-hover:bg-[#0B1B3D]/80 transition-all duration-300 rounded-t-xl"></div>
-                
-                {/* Logo Area */}
-                <div className="h-28 w-full flex items-center justify-center border-b border-[#0B1B3D]/5 group-hover:border-[#0B1B3D]/10 transition-colors duration-300 mb-6">
-                  <div className="transform group-hover:scale-105 transition-transform duration-300">
-                    {renderLogo(partner.logoType)}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0B1B3D] via-sky-500 to-[#0B1B3D] opacity-80 group-hover:opacity-100 transition-opacity"></div>
+
+                <div>
+                  {/* Logo Container Area */}
+                  <div className="w-full min-h-[105px] mb-4 sm:mb-5 rounded-xl bg-gradient-to-br from-[#050D1D] via-[#0B1B3D] to-[#08152E] border border-slate-800/80 p-4 sm:p-4.5 flex flex-col justify-between relative overflow-hidden shadow-inner group-hover:border-sky-500/40 transition-colors">
+                    <div className="absolute -right-6 -bottom-6 w-28 h-28 bg-sky-500/10 rounded-full blur-xl group-hover:bg-sky-500/20 transition-all pointer-events-none"></div>
+                    
+                    {/* Header Top Row: Icon */}
+                    <div className="flex items-center justify-between gap-2 mb-2 sm:mb-3 z-10">
+                      <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-sky-300 group-hover:scale-105 transition-transform shrink-0 shadow-md">
+                        {getPartnerIcon(p.id)}
+                      </div>
+                    </div>
+
+                    {/* Header Bottom Area: Full Business Title & Category */}
+                    <div className="z-10">
+                      <h3 className="font-serif font-bold text-xs sm:text-sm md:text-base text-white tracking-wide leading-snug group-hover:text-sky-300 transition-colors">
+                        {isRo ? p.nameRo : p.nameEn}
+                      </h3>
+                      <div className="font-mono text-[9px] text-sky-200/80 uppercase tracking-wider mt-1 font-medium leading-tight">
+                        {isRo ? p.categoryRo : p.categoryEn}
+                      </div>
+                    </div>
                   </div>
+
+                  {/* Subdomain Pill */}
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="font-mono text-[10px] text-sky-800 bg-sky-50 px-2 py-1 rounded-md border border-sky-100 font-bold truncate max-w-[160px] xs:max-w-[210px] sm:max-w-[250px]" title={`https://${p.subdomain}`}>
+                      https://{p.subdomain}
+                    </span>
+                    <span className="font-mono text-[9px] sm:text-[10px] text-slate-400 shrink-0">Ragnar Elite</span>
+                  </div>
+
+                  <p className="font-sans text-xs text-slate-600 line-clamp-3 font-light mb-4 sm:mb-6 leading-relaxed">
+                    {isRo ? p.descriptionRo : p.descriptionEn}
+                  </p>
                 </div>
 
-                {/* Info Area */}
-                <div className="flex-1 flex flex-col justify-between w-full">
-                  <div>
-                    <span className="font-mono text-[8px] tracking-[0.2em] text-sky-600 uppercase font-semibold block mb-2">
-                      {categoryLabels[partner.category]}
-                    </span>
-                    <h3 className="font-serif text-sm font-bold text-[#0B1B3D] mb-3 tracking-tight">
-                      {partner.name}
-                    </h3>
-                    <p className="font-sans font-light text-[11px] sm:text-xs text-slate-500 leading-relaxed">
-                      {isRo ? partner.descriptionRo : partner.descriptionEn}
-                    </p>
-                  </div>
-                  
-                  {/* Subtle decorative dot/arrow anchor */}
-                  <div className="w-full flex justify-center mt-6">
-                    <span className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-widest text-[#0B1B3D]/40 group-hover:text-sky-600 transition-colors uppercase font-medium">
-                      <span>{isRo ? 'Validat' : 'Verified'}</span>
-                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                    </span>
-                  </div>
+                {/* Card Action Button */}
+                <div className="pt-3.5 border-t border-slate-100">
+                  <a
+                    href={`/partner/${p.slug}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (onSelectPartner) {
+                        onSelectPartner(p);
+                      }
+                    }}
+                    className="w-full py-2.5 px-3.5 bg-[#0B1B3D] hover:bg-sky-700 text-white font-mono text-xs font-semibold rounded-lg shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 group/btn min-h-[44px] cursor-pointer"
+                  >
+                    <span>{isRo ? 'Deschide Pagina Oficială' : 'Open Official Page'}</span>
+                    <ArrowRight className="w-4 h-4 text-sky-300 group-hover/btn:translate-x-1 transition-transform shrink-0" />
+                  </a>
                 </div>
               </motion.div>
             ))}

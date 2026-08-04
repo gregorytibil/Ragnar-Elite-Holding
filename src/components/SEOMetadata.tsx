@@ -1,16 +1,24 @@
 import { useEffect } from 'react';
 import { Language } from '../types';
+import { PartnerProfile } from '../data/partnersData';
+import { getPathForTab, getPathForPartner } from '../lib/router';
 
 interface SEOMetadataProps {
   activeTab: string;
+  activePartner?: PartnerProfile | null;
   lang: Language;
 }
 
-export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
+export default function SEOMetadata({ activeTab, activePartner, lang }: SEOMetadataProps) {
   useEffect(() => {
     const isRo = lang === 'ro';
     const baseUrl = 'https://ragnareliteholding.com';
-    const canonicalUrl = baseUrl + (activeTab === 'home' ? '' : `/#${activeTab}`);
+    
+    let canonicalPath = getPathForTab(activeTab);
+    if (activePartner) {
+      canonicalPath = getPathForPartner(activePartner.slug);
+    }
+    const canonicalUrl = baseUrl + (canonicalPath === '/' ? '' : canonicalPath);
 
     // Define page-specific metadata dictionary
     const metadataMap: Record<
@@ -144,7 +152,15 @@ export default function SEOMetadata({ activeTab, lang }: SEOMetadataProps) {
       },
     };
 
-    const currentMeta = metadataMap[activeTab] || metadataMap.home;
+    let currentMeta = metadataMap[activeTab] || metadataMap.home;
+    if (activePartner) {
+      currentMeta = {
+        title: (isRo ? activePartner.nameRo : activePartner.nameEn) + ' | Ragnar Elite Partner',
+        description: isRo ? activePartner.descriptionRo : activePartner.descriptionEn,
+        keywords: `${activePartner.slug}, ${activePartner.subdomain}, ${isRo ? activePartner.categoryRo : activePartner.categoryEn}, ragnar elite partner`,
+        ogType: 'website',
+      };
+    }
 
     // 1. Update Title and HTML Lang
     document.title = currentMeta.title;

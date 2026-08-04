@@ -2,6 +2,7 @@ import { Landmark, ShieldCheck } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
 import { trackCTA, trackEmailClick, trackOutboundLink, trackWhatsAppClick } from '../lib/analytics';
+import { getPathForTab } from '../lib/router';
 
 interface FooterProps {
   currentLang: Language;
@@ -125,8 +126,10 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
               { label: t.navLegal, tab: 'legal' },
             ].map((item) => (
               <li key={item.tab}>
-                <button
-                  onClick={() => {
+                <a
+                  href={getPathForTab(item.tab)}
+                  onClick={(e) => {
+                    e.preventDefault();
                     setActiveTab(item.tab);
                     trackCTA(`footer_nav_${item.tab}`, item.label);
                   }}
@@ -136,7 +139,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
                     {item.label}
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-sky-accent/50 transition-all duration-300 group-hover:w-full" />
                   </span>
-                </button>
+                </a>
               </li>
             ))}
           </ul>
@@ -149,8 +152,10 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
           </h4>
           <ul className="space-y-4 text-sm font-normal text-stone-300 list-none m-0 p-0">
             <li>
-              <button
-                onClick={() => {
+              <a
+                href={getPathForTab('terms')}
+                onClick={(e) => {
+                  e.preventDefault();
                   setActiveTab('terms');
                   trackCTA('footer_nav_terms', t.footerTerms);
                 }}
@@ -160,11 +165,13 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
                   {t.footerTerms}
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-sky-accent/50 transition-all duration-300 group-hover:w-full" />
                 </span>
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => {
+              <a
+                href={getPathForTab('legal')}
+                onClick={(e) => {
+                  e.preventDefault();
                   setActiveTab('legal');
                   trackCTA('footer_nav_legal', t.footerGdpr);
                 }}
@@ -174,11 +181,13 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
                   {t.footerGdpr}
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-sky-accent/50 transition-all duration-300 group-hover:w-full" />
                 </span>
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => {
+              <a
+                href={getPathForTab('contact')}
+                onClick={(e) => {
+                  e.preventDefault();
                   setActiveTab('contact');
                   trackCTA('footer_nav_secure_access', t.footerSecureAccess);
                 }}
@@ -189,7 +198,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
                   {t.footerSecureAccess}
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-sky-accent/50 transition-all duration-300 group-hover:w-full" />
                 </span>
-              </button>
+              </a>
             </li>
           </ul>
         </div>

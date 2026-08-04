@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Language } from '../types';
 import { translations } from '../translations';
 import { trackCTA, trackEmailClick, trackWhatsAppClick } from '../lib/analytics';
+import { getPathForTab } from '../lib/router';
 
 interface HeaderProps {
   currentLang: Language;
@@ -51,8 +52,10 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
         <div className="w-full max-w-[1240px] 2xl:max-w-[1360px] flex justify-between items-center gap-4">
           
           {/* Brand Logo - Responsive sizing */}
-          <button
-            onClick={() => {
+          <a
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
               setActiveTab('home');
               setIsOpen(false);
               trackCTA('header_logo', 'Home Logo Click');
@@ -75,25 +78,27 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                 HOLDING
               </span>
             </div>
-          </button>
+          </a>
 
           {/* Desktop Links and Language Selector - Optimized spacing for laptop screens */}
           <div className="hidden xl:flex items-center gap-5 2xl:gap-8">
             <ul className="flex gap-4 2xl:gap-6 list-none m-0 p-0">
               {navItems.map((item) => (
                 <li key={item.id} className="relative py-1">
-                  <button
-                    onClick={() => {
+                  <a
+                    href={getPathForTab(item.id)}
+                    onClick={(e) => {
+                      e.preventDefault();
                       setActiveTab(item.id);
                       trackCTA(`header_nav_${item.id}`, item.label);
                     }}
                     aria-current={activeTab === item.id ? 'page' : undefined}
-                    className={`text-[9.5px] 2xl:text-[11px] uppercase tracking-[0.12em] 2xl:tracking-[0.18em] font-medium transition-all duration-300 cursor-pointer hover:text-[#FAF6F0] ${
+                    className={`text-[9.5px] 2xl:text-[11px] uppercase tracking-[0.12em] 2xl:tracking-[0.18em] font-medium transition-all duration-300 cursor-pointer hover:text-[#FAF6F0] inline-block ${
                       activeTab === item.id ? 'text-[#C8D9E6] font-bold' : 'text-[#FAF6F0]/70'
                     }`}
                   >
                     {item.label}
-                  </button>
+                  </a>
                   {activeTab === item.id && (
                     <motion.div
                       layoutId="activeTabUnderline"
@@ -210,8 +215,10 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                   transition={{ delay: idx * 0.04 + 0.1, duration: 0.4 }}
                   className="w-full text-center"
                 >
-                  <button
-                    onClick={() => {
+                  <a
+                    href={getPathForTab(item.id)}
+                    onClick={(e) => {
+                      e.preventDefault();
                       setActiveTab(item.id);
                       setIsOpen(false);
                       trackCTA(`header_mobile_nav_${item.id}`, item.label);
@@ -224,7 +231,7 @@ export default function Header({ currentLang, setLang, activeTab, setActiveTab }
                     }`}
                   >
                     {item.label}
-                  </button>
+                  </a>
                 </motion.li>
               ))}
             </ul>

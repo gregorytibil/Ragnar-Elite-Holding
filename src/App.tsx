@@ -14,17 +14,16 @@ import ContactView from './components/ContactView';
 import LegalView from './components/LegalView';
 import TermsView from './components/TermsView';
 import SEOMetadata from './components/SEOMetadata';
+import PartnerLandingPage from './components/PartnerLandingPage';
+import { PartnerProfile } from './data/partnersData';
 import { initAnalytics, trackPageView, trackScrollDepth } from './lib/analytics';
+import { getRouteFromUrl, updateUrlForRoute, getPathForTab, getPathForPartner } from './lib/router';
 
 export default function App() {
   const [lang, setLang] = useState<Language>(() => {
     if (typeof navigator !== 'undefined') {
-      // Obținem limbile preferate ale utilizatorului setate în browser
-      // We retrieve the user's preferred languages configured in their browser
       const userLangs = navigator.languages || [navigator.language || (navigator as any).userLanguage || ''];
       
-      // Detecție automată a fusului orar din România sau Republica Moldova ca semnal de fallback
-      // Automatic detection of the Romanian/Moldovan timezone as a robust fallback signal
       let isRomanianTimezone = false;
       try {
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -33,25 +32,39 @@ export default function App() {
         }
       } catch (e) {}
 
-      // Verificăm dacă browserul are limba română în lista de preferințe
-      // Check if the browser has Romanian in its preference list
       const hasRo = userLangs.some(l => l.toLowerCase().startsWith('ro'));
       if (hasRo || isRomanianTimezone) {
         return 'ro';
       }
 
-      // Dacă utilizatorul preferă explicit engleza ca primă opțiune în browser
-      // If the user explicitly prefers English as their first choice in the browser
       const primaryLang = userLangs[0] || '';
       if (primaryLang.toLowerCase().startsWith('en')) {
         return 'en';
       }
     }
-    // Implicit revenim la limba română ca limbă nativă a platformei
-    // Default fallback to Romanian as the platform's native language
     return 'ro';
   });
-  const [activeTab, setActiveTab] = useState<string>('home');
+
+  const initialRoute = getRouteFromUrl();
+  const [activeTab, setActiveTab] = useState<string>(initialRoute.tab);
+  const [activePartner, setActivePartner] = useState<PartnerProfile | null>(initialRoute.partner);
+
+  // Synchronize browser address bar URL when tab or partner changes
+  useEffect(() => {
+    updateUrlForRoute(activeTab, activePartner);
+  }, [activeTab, activePartner]);
+
+  // Handle browser Back/Forward popstate events
+  useEffect(() => {
+    const handleUrlCheck = () => {
+      const route = getRouteFromUrl();
+      setActiveTab(route.tab);
+      setActivePartner(route.partner);
+    };
+
+    window.addEventListener('popstate', handleUrlCheck);
+    return () => window.removeEventListener('popstate', handleUrlCheck);
+  }, []);
 
   // Automatic Translation for other languages using Google Translate (behind the scenes)
   useEffect(() => {
@@ -197,7 +210,7 @@ export default function App() {
       case 'divisions-governance':
         return <DivisionsGovernanceView currentLang={lang} />;
       case 'partners':
-        return <PartnersView currentLang={lang} />;
+        return <PartnersView currentLang={lang} onSelectPartner={(p) => setActivePartner(p)} />;
       case 'contact':
         return <ContactView currentLang={lang} />;
       case 'legal':
@@ -208,6 +221,18 @@ export default function App() {
         return <HomeView currentLang={lang} setActiveTab={setActiveTab} />;
     }
   };
+
+  if (activePartner) {
+    return (
+      <PartnerLandingPage
+        partner={activePartner}
+        currentLang={lang}
+        setLang={setLang}
+        onReturnToHolding={() => setActivePartner(null)}
+        onSelectPartner={(p) => setActivePartner(p)}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-bej-bg flex flex-col justify-between selection:bg-sky-accent selection:text-navy-brand overflow-x-hidden relative notranslate">
@@ -239,7 +264,7 @@ export default function App() {
       </div>
 
       {/* Search Engine Optimization (SEO), Metadata, and JSON-LD Structured Data */}
-      <SEOMetadata activeTab={activeTab} lang={lang} />
+      <SEOMetadata activeTab={activeTab} activePartner={activePartner} lang={lang} />
 
       {/* Dynamic Header */}
       <div className="relative z-[50]">
