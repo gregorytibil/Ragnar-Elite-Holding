@@ -212,48 +212,50 @@ export default function PartnersView({ currentLang, onSelectPartner, initialSect
           </div>
         </div>
 
-        {/* STRATEGIC LOGOS & INSTITUTIONAL PARTNERS GRID (2 per row on mobile) */}
-        <div className="mb-16 sm:mb-24">
-          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-            <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-2 sm:mb-3 font-bold">
-              {isRo ? 'INSTITUȚII PARTENERE & REȚEA DE AUDIT' : 'PARTNER INSTITUTIONS & AUDIT NETWORK'}
-            </span>
-            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#0B1B3D] tracking-tight uppercase">
-              {isRo ? 'Alianțe Strategice & Consultanță Globală' : 'Strategic Alliances & Global Advisory'}
-            </h2>
-            <p className="font-sans font-light text-slate-600 text-xs sm:text-sm md:text-base mt-2">
-              {isRo
-                ? 'Rețeaua noastă instituțională este sprijinită de parteneri internaționali din domeniul financiar, juridic și audit.'
-                : 'Our corporate structure is reinforced by an international network of financial, legal, technology, and audit partners.'}
-            </p>
+        {/* STRATEGIC LOGOS & INSTITUTIONAL PARTNERS GRID (Shown on Alliances/Partners page only) */}
+        {isAlliances && (
+          <div className="mb-16 sm:mb-24">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+              <span className="font-mono text-[9px] tracking-[0.3em] text-sky-600 uppercase block mb-2 sm:mb-3 font-bold">
+                {isRo ? 'INSTITUȚII PARTENERE & REȚEA DE AUDIT' : 'PARTNER INSTITUTIONS & AUDIT NETWORK'}
+              </span>
+              <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#0B1B3D] tracking-tight uppercase">
+                {isRo ? 'Alianțe Strategice & Consultanță Globală' : 'Strategic Alliances & Global Advisory'}
+              </h2>
+              <p className="font-sans font-light text-slate-600 text-xs sm:text-sm md:text-base mt-2">
+                {isRo
+                  ? 'Rețeaua noastă instituțională este sprijinită de parteneri internaționali din domeniul financiar, juridic și audit.'
+                  : 'Our corporate structure is reinforced by an international network of financial, legal, technology, and audit partners.'}
+              </p>
+            </div>
+
+            {/* 2 logos per row on mobile (grid-cols-2), 3 on sm, 6 on lg */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+              {institutionalPartners.map((item, idx) => {
+                const IconComp = item.icon;
+                return (
+                  <motion.div
+                    key={idx}
+                    whileHover={{ y: -3 }}
+                    className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-sky-400 flex flex-col items-center justify-center text-center transition-all duration-300 group min-h-[110px] sm:min-h-[125px] relative overflow-hidden"
+                  >
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#0B1B3D]/5 border border-[#0B1B3D]/10 flex items-center justify-center text-[#0B1B3D] group-hover:bg-[#0B1B3D] group-hover:text-white transition-colors mb-2 shrink-0">
+                      <IconComp className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </div>
+
+                    <h3 className="font-serif text-xs font-bold text-[#0B1B3D] group-hover:text-sky-700 transition-colors line-clamp-2 leading-tight">
+                      {item.name}
+                    </h3>
+
+                    <span className="font-mono text-[8px] sm:text-[9px] text-sky-800 bg-sky-50 px-1.5 py-0.5 rounded border border-sky-100 font-bold uppercase tracking-wider mt-2 line-clamp-1">
+                      {item.badge}
+                    </span>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
-
-          {/* 2 logos per row on mobile (grid-cols-2), 3 on sm, 6 on lg */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-            {institutionalPartners.map((item, idx) => {
-              const IconComp = item.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  whileHover={{ y: -3 }}
-                  className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-sky-400 flex flex-col items-center justify-center text-center transition-all duration-300 group min-h-[110px] sm:min-h-[125px] relative overflow-hidden"
-                >
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#0B1B3D]/5 border border-[#0B1B3D]/10 flex items-center justify-center text-[#0B1B3D] group-hover:bg-[#0B1B3D] group-hover:text-white transition-colors mb-2 shrink-0">
-                    <IconComp className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </div>
-
-                  <h3 className="font-serif text-xs font-bold text-[#0B1B3D] group-hover:text-sky-700 transition-colors line-clamp-2 leading-tight">
-                    {item.name}
-                  </h3>
-
-                  <span className="font-mono text-[8px] sm:text-[9px] text-sky-800 bg-sky-50 px-1.5 py-0.5 rounded border border-sky-100 font-bold uppercase tracking-wider mt-2 line-clamp-1">
-                    {item.badge}
-                  </span>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
+        )}
 
         {/* Group Subsidiaries & Active Subdomains Showcase (Shown on Subsidiare page only) */}
         {!isAlliances && (
