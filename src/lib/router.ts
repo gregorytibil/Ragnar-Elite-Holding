@@ -118,7 +118,12 @@ export function updateUrlForRoute(tab: string, partner: PartnerProfile | null, r
   } else if (partner) {
     targetPath = `/partner/${partner.slug}`;
   } else {
-    targetPath = getPathForTab(tab);
+    const currentPath = window.location.pathname.toLowerCase().replace(/\/$/, '');
+    if (PATH_TO_TAB[currentPath || '/'] === tab) {
+      targetPath = window.location.pathname;
+    } else {
+      targetPath = getPathForTab(tab);
+    }
   }
 
   const currentPathWithSearch = window.location.pathname + window.location.search + window.location.hash;

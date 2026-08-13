@@ -15,9 +15,13 @@ export default function SEOMetadata({ activeTab, activePartner, lang }: SEOMetad
     const baseUrl = 'https://ragnareliteholding.com';
     
     let canonicalPath = getPathForTab(activeTab);
-    let canonicalUrl = baseUrl + (canonicalPath === '/' ? '' : canonicalPath);
+    let canonicalUrl = baseUrl + (canonicalPath === '/' ? '/' : canonicalPath);
     if (activePartner) {
-      canonicalUrl = `https://${activePartner.subdomain}`;
+      if (typeof window !== 'undefined' && window.location.hostname.includes('ragnareliteholding.com') && !window.location.hostname.startsWith(activePartner.subdomain.split('.')[0])) {
+        canonicalUrl = `${baseUrl}/partner/${activePartner.slug}`;
+      } else {
+        canonicalUrl = `https://${activePartner.subdomain}/`;
+      }
     }
 
     // Define page-specific metadata dictionary
