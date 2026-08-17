@@ -63,6 +63,7 @@ export default function PartnersView({ currentLang, onSelectPartner, initialSect
     switch (id) {
       case 'elite-capital-holding': return <Building {...props} />;
       case 'studio-gilded-stars': return <Sparkles {...props} />;
+      case 'neyvella':
       case 'nexus-terranova': return <Briefcase {...props} />;
       case 'vexta-data': return <Cpu {...props} />;
       case 'urban-energetic-service': return <Zap {...props} />;

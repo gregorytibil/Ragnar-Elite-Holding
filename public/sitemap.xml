@@ -93,14 +93,14 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- 3. Nexus Terranova -->
+  <!-- 3. NEYVELLA -->
   <url>
-    <loc>https://ragnareliteholding.com/partner/nexus-terranova</loc>
+    <loc>https://ragnareliteholding.com/partner/neyvella</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nexusterranova.ragnareliteholding.com/</loc>
+    <loc>https://neyvella.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

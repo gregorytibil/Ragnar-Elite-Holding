@@ -153,20 +153,20 @@ export const PARTNERS_DATA: PartnerProfile[] = [
     ]
   },
   {
-    id: 'nexus-terranova',
-    slug: 'nexus-terranova',
-    subdomain: 'nexusterranova.ragnareliteholding.com',
-    aliases: ['nexusterranova', 'nexus-terranova', 'nexus', 'terranova', 'thailand'],
-    nameRo: 'Nexus Terranova',
-    nameEn: 'Nexus Terranova',
+    id: 'neyvella',
+    slug: 'neyvella',
+    subdomain: 'neyvella.ragnareliteholding.com',
+    aliases: ['neyvella', 'nexusterranova', 'nexus-terranova', 'nexus', 'terranova', 'thailand'],
+    nameRo: 'NEYVELLA',
+    nameEn: 'NEYVELLA',
     categoryRo: 'E-Commerce Global, Export Angro & Detail, Fashion & Electrocasnice',
     categoryEn: 'Global E-Commerce, Wholesale & Retail Export, Apparel & Electronics',
     taglineRo: 'E-commerce global, export angro și detail de îmbrăcăminte, încălțăminte, parfumuri, accesorii, electronice și electrocasnice (Sediu în Thailanda).',
     taglineEn: 'Global e-commerce, wholesale & retail export of apparel, footwear, lingerie, perfumes, accessories, electronics & appliances (Thailand Hub).',
-    descriptionRo: 'Nexus Terranova este o companie internațională de e-commerce global și export (angro & detail) specializată în îmbrăcăminte, încălțăminte, lenjerie intimă, parfumuri, accesorii, electronice și electrocasnice, având ca nod principal Thailanda.',
-    descriptionEn: 'Nexus Terranova is an international global e-commerce and export enterprise (wholesale & retail) specializing in clothing, footwear, lingerie, perfumes, accessories, electronics, and home appliances, centered in Thailand.',
-    extendedOverviewRo: 'Nexus Terranova desfășoară activități de E-Commerce Global și export internațional în regim angro (wholesale) și detail (retail), având sediul operațional și hub-ul principal de lansare în Thailanda. Portofoliul de produse include:\n\n• Îmbrăcăminte și Încălțăminte\n• Lenjerie intimă\n• Parfumuri și produse de îngrijire personală\n• Accesorii de modă și lifestyle\n• Electronice și gadgeturi tech\n• Electrocasnice pentru locuințe moderne\n\nCu o infrastructură logistică globală și capacități solide de distribuție B2B (angro) și B2C (detail), Nexus Terranova livrează produse premium pe piețele internaționale.',
-    extendedOverviewEn: 'Nexus Terranova operates Global E-Commerce and international export channels across both wholesale (angro) and retail (detail) models, with primary launch and operational headquarters centered in Thailand. Product portfolio includes:\n\n• Apparel & Footwear\n• Fine Lingerie\n• Perfumes & Fragrances\n• Fashion & Lifestyle Accessories\n• Consumer Electronics & Tech Gadgets\n• Home Electrical Appliances\n\nEquipped with a global logistics network and B2B/B2C fulfillment capabilities, Nexus Terranova exports curated goods to international markets.',
+    descriptionRo: 'NEYVELLA este o companie internațională de e-commerce global și export (angro & detail) specializată în îmbrăcăminte, încălțăminte, lenjerie intimă, parfumuri, accesorii, electronice și electrocasnice, având ca nod principal Thailanda.',
+    descriptionEn: 'NEYVELLA is an international global e-commerce and export enterprise (wholesale & retail) specializing in clothing, footwear, lingerie, perfumes, accessories, electronics, and home appliances, centered in Thailand.',
+    extendedOverviewRo: 'NEYVELLA desfășoară activități de E-Commerce Global și export internațional în regim angro (wholesale) și detail (retail), având sediul operațional și hub-ul principal de lansare în Thailanda. Portofoliul de produse include:\n\n• Îmbrăcăminte și Încălțăminte\n• Lenjerie intimă\n• Parfumuri și produse de îngrijire personală\n• Accesorii de modă și lifestyle\n• Electronice și gadgeturi tech\n• Electrocasnice pentru locuințe moderne\n\nCu o infrastructură logistică globală și capacități solide de distribuție B2B (angro) și B2C (detail), NEYVELLA livrează produse premium pe piețele internaționale.',
+    extendedOverviewEn: 'NEYVELLA operates Global E-Commerce and international export channels across both wholesale (angro) and retail (detail) models, with primary launch and operational headquarters centered in Thailand. Product portfolio includes:\n\n• Apparel & Footwear\n• Fine Lingerie\n• Perfumes & Fragrances\n• Fashion & Lifestyle Accessories\n• Consumer Electronics & Tech Gadgets\n• Home Electrical Appliances\n\nEquipped with a global logistics network and B2B/B2C fulfillment capabilities, NEYVELLA exports curated goods to international markets.',
     contactEmail: 'contact@ragnareliteholding.com',
     heroBgImage: 'https://i.imgur.com/rcgZWZE.jpeg',
     accentColor: '#38BDF8',
@@ -174,7 +174,7 @@ export const PARTNERS_DATA: PartnerProfile[] = [
       { labelRo: 'Model de Afaceri', labelEn: 'Business Model', value: 'E-Commerce Global' },
       { labelRo: 'Tip Vânzare', labelEn: 'Export Type', value: 'Export Angro & Detail' },
       { labelRo: 'Hub Operațional', labelEn: 'Operational Hub', value: 'Thailanda (Global Shipping)' },
-      { labelRo: 'Grup Afiliat', labelEn: 'Group Division', value: 'Nexus Global Retail' }
+      { labelRo: 'Grup Afiliat', labelEn: 'Group Division', value: 'NEYVELLA Global Retail' }
     ],
     services: [
       {
