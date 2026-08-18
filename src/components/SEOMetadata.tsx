@@ -221,15 +221,20 @@ export default function SEOMetadata({ activeTab, activePartner, lang }: SEOMetad
       'alternateName': 'Ragnar Elite',
       'url': baseUrl,
       'logo': 'https://i.imgur.com/InRDrMr.png',
+      'telephone': '+852 4736 6189',
       'contactPoint': {
         '@type': 'ContactPoint',
+        'telephone': '+852 4736 6189',
         'email': 'contact@ragnareliteholding.com',
         'contactType': 'corporate partnerships',
         'availableLanguage': ['Romanian', 'English'],
       },
       'address': {
         '@type': 'PostalAddress',
-        'addressCountry': 'RO',
+        'streetAddress': 'Office C, Level 7, World Trust Tower, 50 Stanley Street',
+        'addressLocality': 'Central',
+        'addressRegion': 'Hong Kong Island',
+        'addressCountry': 'HK',
       },
       'description': 'Ragnar Elite Holding is an elite investment holding company managing critical infrastructure, real estate, disruptive tech, lifesciences, and financial portfolios.',
     };

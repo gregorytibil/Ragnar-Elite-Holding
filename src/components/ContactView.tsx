@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { CheckCircle, Loader2 } from 'lucide-react';
+import { CheckCircle, Loader2, Phone } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
-import { trackFormSubmission } from '../lib/analytics';
+import { trackFormSubmission, trackPhoneClick } from '../lib/analytics';
 
 interface ContactViewProps {
   currentLang: Language;
@@ -146,6 +146,17 @@ export default function ContactView({ currentLang }: ContactViewProps) {
                 <div className="space-y-3">
                   <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.hqLabel}</strong>
                   <span className="font-sans text-base text-[#FAF6F0] font-light leading-relaxed block max-w-xs">{t.hqAddress}</span>
+                </div>
+                <div className="space-y-3">
+                  <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.phoneLabel}</strong>
+                  <a 
+                    href="tel:+85247366189" 
+                    onClick={() => trackPhoneClick('+852 4736 6189')}
+                    className="font-mono text-sm text-white hover:text-[#A2D2FF] transition-colors border-b border-white/20 pb-1 inline-flex items-center gap-2"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-[#A2D2FF]" />
+                    {t.phoneCentral}
+                  </a>
                 </div>
                 <div className="space-y-3">
                   <strong className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#A2D2FF] font-bold">{t.mailSecured}</strong>

@@ -1,7 +1,7 @@
-import { Landmark, ShieldCheck } from 'lucide-react';
+import { Landmark, ShieldCheck, Phone } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
-import { trackCTA, trackEmailClick, trackOutboundLink, trackWhatsAppClick } from '../lib/analytics';
+import { trackCTA, trackEmailClick, trackOutboundLink, trackPhoneClick, trackWhatsAppClick } from '../lib/analytics';
 import { getPathForTab } from '../lib/router';
 
 interface FooterProps {
@@ -20,7 +20,7 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
         </svg>
       ),
       label: 'WhatsApp',
-      url: 'https://wa.me/40773485717',
+      url: 'https://wa.me/85247366189',
     },
     {
       icon: (
@@ -105,6 +105,16 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
               Office C, Level 7, World Trust Tower,<br />
               50 Stanley Street, Central, Hong Kong
             </p>
+            <div className="mt-2.5">
+              <a 
+                href="tel:+85247366189" 
+                onClick={() => trackPhoneClick('+852 4736 6189')}
+                className="font-mono text-xs text-sky-accent hover:text-white transition-colors duration-300 inline-flex items-center gap-1.5"
+              >
+                <Phone className="w-3 h-3 text-sky-accent" />
+                +852 4736 6189
+              </a>
+            </div>
           </div>
         </div>
 
@@ -216,9 +226,17 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
           </p>
           <div className="flex flex-col gap-1.5 pb-2">
             <a 
+              href="tel:+85247366189" 
+              onClick={() => trackPhoneClick('+852 4736 6189')}
+              className="font-mono text-sm text-sky-accent hover:text-white transition-colors duration-300 tracking-wider border-b border-sky-accent/30 hover:border-white pb-0.5 inline-flex items-center gap-1.5 w-fit"
+            >
+              <Phone className="w-3.5 h-3.5 text-sky-accent" />
+              +852 4736 6189
+            </a>
+            <a 
               href="mailto:contact@ragnareliteholding.com" 
               onClick={() => trackEmailClick('contact@ragnareliteholding.com')}
-              className="font-mono text-sm text-sky-accent hover:text-white transition-colors duration-300 tracking-wider border-b border-sky-accent/30 hover:border-white pb-0.5 inline-block w-fit"
+              className="font-mono text-xs text-stone-300 hover:text-white transition-colors duration-300 tracking-wider border-b border-white/10 hover:border-white pb-0.5 inline-block w-fit"
             >
               contact@ragnareliteholding.com
             </a>

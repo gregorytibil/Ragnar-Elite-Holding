@@ -378,7 +378,7 @@ export default function PartnerLandingPage({
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+40 700 000 000"
+                      placeholder="+852 0000 0000"
                       className="w-full bg-[#0B1B3D] border border-white/15 focus:border-[#38BDF8] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-white placeholder-white/30 outline-none transition-colors"
                     />
                   </div>
