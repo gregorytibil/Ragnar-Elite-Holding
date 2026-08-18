@@ -25,15 +25,6 @@ export default function Footer({ currentLang, setActiveTab }: FooterProps) {
     {
       icon: (
         <svg className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.74-3.95-1.72-.1-.09-.17-.14-.23-.2v3.7c-.02 3.01-.89 6.13-3.41 7.76-2.58 1.74-6.12 1.74-8.75-.01C3.39 17.7 2.22 14.36 2.7 11.13c.42-3.24 2.94-6.13 6.18-6.66.93-.16 1.88-.13 2.82-.13v4.11c-.96.09-1.95.34-2.73.94-.96.72-1.38 1.95-1.26 3.14.11 1.41.97 2.76 2.29 3.25 1.44.57 3.2.14 4.14-1.07.6-.74.74-1.72.73-2.65V0h.03z"/>
-        </svg>
-      ),
-      label: 'TikTok',
-      url: 'https://www.tiktok.com/@ragnareliteholding',
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M21.94 3.717L2.21 11.233c-1.343.486-1.336 1.161-.247 1.462l5.058 1.42 11.702-6.645c.553-.303 1.059-.14.642.193l-9.481 7.7-.178 3.511c.361 0 .521-.224.723-.489l1.731-1.688 3.6 2.671c.664.495 1.141.24 1.306-.823l2.361-15.01c.242-1.306-.583-1.9-.111.312z" />
         </svg>
       ),
