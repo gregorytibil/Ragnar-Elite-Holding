@@ -124,20 +124,28 @@ export default function HomeView({ currentLang, setActiveTab }: HomeViewProps) {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 justify-center w-full"
           >
-            <button
-              onClick={() => setActiveTab('portfolio')}
+            <a
+              href="/portfolio"
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveTab('portfolio');
+              }}
               className="group inline-flex items-center gap-3 px-8 py-4 bg-sky-accent hover:bg-transparent text-navy-brand hover:text-white font-semibold text-xs uppercase tracking-[2px] rounded-[8px] border border-sky-accent transition-all duration-350 cursor-pointer shadow-[0_4px_20px_rgba(162,210,255,0.2)] hover:shadow-[0_0_30px_rgba(162,210,255,0.35)] active:scale-95 w-full sm:w-auto justify-center"
             >
               <span>{t.heroBtn}</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
-            </button>
-            <button
-              onClick={() => setActiveTab('contact')}
+            </a>
+            <a
+              href="/contact"
+              onClick={(e) => {
+                e.preventDefault();
+                setActiveTab('contact');
+              }}
               className="group inline-flex items-center gap-3 px-8 py-4 bg-transparent hover:bg-white/[0.04] text-white/90 hover:text-white font-semibold text-xs uppercase tracking-[2px] rounded-[8px] border border-white/20 hover:border-white/60 transition-all duration-350 cursor-pointer active:scale-95 w-full sm:w-auto justify-center"
             >
               <span>{t.heroSecondaryBtn}</span>
               <MessageSquare className="w-4 h-4 text-sky-accent group-hover:text-[#C8D9E6] group-hover:scale-110 transition-all duration-300" />
-            </button>
+            </a>
           </motion.div>
         </div>
       </section>

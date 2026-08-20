@@ -6,13 +6,13 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Business Philosophy & Heritage -->
+  <!-- Business Philosophy & Corporate Heritage -->
   <url>
     <loc>https://ragnareliteholding.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- Active Investment Divisions (13 Active Divisions) -->
+  <!-- Active Investment Portfolio & Divisions -->
   <url>
     <loc>https://ragnareliteholding.com/portfolio</loc>
     <changefreq>weekly</changefreq>
@@ -24,31 +24,41 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Core Operating Divisions -->
+  <!-- Corporate Governance, Finance & Management -->
   <url>
-    <loc>https://ragnareliteholding.com/divizii</loc>
+    <loc>https://ragnareliteholding.com/divisions-governance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Governance & Institutional Advisory -->
   <url>
     <loc>https://ragnareliteholding.com/management</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Subsidiaries & Group Companies -->
+  <!-- Core Operating & Industrial Divisions -->
+  <url>
+    <loc>https://ragnareliteholding.com/divisions-core</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ragnareliteholding.com/divizii</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 100% Owned Subsidiaries & Group Companies -->
   <url>
     <loc>https://ragnareliteholding.com/subsidiare</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- Strategic Alliances & Partners -->
+  <!-- Strategic Alliances & Institutional Partners -->
   <url>
     <loc>https://ragnareliteholding.com/parteneri</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- Strategic Inquiries & Contact -->
+  <!-- Strategic Inquiries & Direct Dossier Proposal -->
   <url>
     <loc>https://ragnareliteholding.com/contact</loc>
     <changefreq>monthly</changefreq>
@@ -60,21 +70,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  <!-- Terms & Conditions of Use -->
+  <!-- Terms & Conditions of Engagement -->
   <url>
     <loc>https://ragnareliteholding.com/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
-  <!-- Partner Landing Pages & Official Subdomains -->
+  <!-- Official Indexable Partner Subdomains -->
 
   <!-- 1. Elite Capital Holding -->
-  <url>
-    <loc>https://ragnareliteholding.com/partner/elite-capital-holding</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <url>
     <loc>https://elitecapital.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
@@ -83,11 +88,6 @@
 
   <!-- 2. Studio Gilded Stars -->
   <url>
-    <loc>https://ragnareliteholding.com/partner/studio-gilded-stars</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://gildedstars.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -95,106 +95,61 @@
 
   <!-- 3. NEYVELLA -->
   <url>
-    <loc>https://ragnareliteholding.com/partner/neyvella</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://neyvella.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 3. Vexta Data -->
-  <url>
-    <loc>https://ragnareliteholding.com/partner/vexta-data</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- 4. Vexta Data -->
   <url>
     <loc>https://vextadata.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 4. Urban Energetic Service -->
-  <url>
-    <loc>https://ragnareliteholding.com/partner/urban-energetic-service</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- 5. Urban Energetic Service -->
   <url>
     <loc>https://urbanenergetic.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 5. Urban Platinum Estate -->
-  <url>
-    <loc>https://ragnareliteholding.com/partner/urban-platinum-estate</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- 6. Urban Platinum Estate -->
   <url>
     <loc>https://urbanplatinum.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 6. Urban Edge Build -->
-  <url>
-    <loc>https://ragnareliteholding.com/partner/urban-edge-build</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- 7. Urban Edge Build -->
   <url>
     <loc>https://urbanedge.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 7. Urban Street Express -->
-  <url>
-    <loc>https://ragnareliteholding.com/partner/urban-street-express</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- 8. Urban Street Express -->
   <url>
     <loc>https://urbanstreet.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 8. Premium Architecture Design -->
-  <url>
-    <loc>https://ragnareliteholding.com/partner/premium-architecture-design</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- 9. Premium Architecture Design -->
   <url>
     <loc>https://premiumarchitecture.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 9. Premium Cleaning Solutions -->
-  <url>
-    <loc>https://ragnareliteholding.com/partner/premium-cleaning-solutions</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- 10. Premium Cleaning Solutions -->
   <url>
     <loc>https://premiumcleaning.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- 10. Smart Paper Office -->
-  <url>
-    <loc>https://ragnareliteholding.com/partner/smart-paper-office</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- 11. Smart Paper Office -->
   <url>
     <loc>https://smartpaper.ragnareliteholding.com/</loc>
     <changefreq>weekly</changefreq>

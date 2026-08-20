@@ -14,14 +14,22 @@ export default function SEOMetadata({ activeTab, activePartner, lang }: SEOMetad
     const isRo = lang === 'ro';
     const baseUrl = 'https://ragnareliteholding.com';
     
-    let canonicalPath = getPathForTab(activeTab);
-    let canonicalUrl = baseUrl + (canonicalPath === '/' ? '/' : canonicalPath);
+    // Precise canonical determination
+    let canonicalUrl = baseUrl + '/';
     if (activePartner) {
-      if (typeof window !== 'undefined' && window.location.hostname.includes('ragnareliteholding.com') && !window.location.hostname.startsWith(activePartner.subdomain.split('.')[0])) {
-        canonicalUrl = `${baseUrl}/partner/${activePartner.slug}`;
+      // For all partner profiles, the official subdomain is the indexable, self-referencing canonical entity
+      canonicalUrl = `https://${activePartner.subdomain}/`;
+    } else if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname.toLowerCase().replace(/\/$/, '');
+      if (currentPath === '' || currentPath === '/') {
+        canonicalUrl = baseUrl + '/';
       } else {
-        canonicalUrl = `https://${activePartner.subdomain}/`;
+        // If the path corresponds to a valid known route, maintain self-referencing canonical
+        canonicalUrl = `${baseUrl}${currentPath}`;
       }
+    } else {
+      const canonicalPath = getPathForTab(activeTab);
+      canonicalUrl = baseUrl + (canonicalPath === '/' ? '/' : canonicalPath);
     }
 
     // Define page-specific metadata dictionary
@@ -198,11 +206,12 @@ export default function SEOMetadata({ activeTab, activePartner, lang }: SEOMetad
     canonicalLink.setAttribute('href', canonicalUrl);
 
     // 5. Update Open Graph Tags
+    const previewImage = activePartner?.heroBgImage || 'https://i.imgur.com/InRDrMr.png';
     setMeta('og:title', currentMeta.title, true);
     setMeta('og:description', currentMeta.description, true);
     setMeta('og:type', currentMeta.ogType, true);
     setMeta('og:url', canonicalUrl, true);
-    setMeta('og:image', 'https://i.imgur.com/InRDrMr.png', true); // Brand Logo or Custom Card Image
+    setMeta('og:image', previewImage, true);
     setMeta('og:site_name', 'Ragnar Elite Holding', true);
     setMeta('og:locale', isRo ? 'ro_RO' : 'en_US', true);
 
@@ -210,7 +219,7 @@ export default function SEOMetadata({ activeTab, activePartner, lang }: SEOMetad
     setMeta('twitter:card', 'summary_large_image');
     setMeta('twitter:title', currentMeta.title);
     setMeta('twitter:description', currentMeta.description);
-    setMeta('twitter:image', 'https://i.imgur.com/InRDrMr.png');
+    setMeta('twitter:image', previewImage);
 
     // 7. Inject JSON-LD Schema
     const baseCorporationSchema = {
@@ -241,7 +250,67 @@ export default function SEOMetadata({ activeTab, activePartner, lang }: SEOMetad
 
     let schemaObject: Record<string, any> = {};
 
-    if (activeTab === 'home') {
+    if (activePartner) {
+      const partnerSubdomainUrl = `https://${activePartner.subdomain}/`;
+      schemaObject = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          baseCorporationSchema,
+          {
+            '@type': 'Organization',
+            '@id': `${partnerSubdomainUrl}#organization`,
+            'name': isRo ? activePartner.nameRo : activePartner.nameEn,
+            'url': partnerSubdomainUrl,
+            'logo': 'https://i.imgur.com/InRDrMr.png',
+            'image': activePartner.heroBgImage,
+            'description': isRo ? activePartner.descriptionRo : activePartner.descriptionEn,
+            'telephone': '+852 4736 6189',
+            'email': activePartner.contactEmail,
+            'parentOrganization': {
+              '@type': 'Corporation',
+              '@id': `${baseUrl}/#corporation`,
+              'name': 'Ragnar Elite Holding',
+              'url': baseUrl,
+            },
+            'hasOfferCatalog': {
+              '@type': 'OfferCatalog',
+              'name': isRo ? 'Servicii Specializate' : 'Specialized Services',
+              'itemListElement': activePartner.services.map((svc, idx) => ({
+                '@type': 'Offer',
+                'itemOffered': {
+                  '@type': 'Service',
+                  'name': isRo ? svc.titleRo : svc.titleEn,
+                  'description': isRo ? svc.descRo : svc.descEn,
+                },
+                'position': idx + 1,
+              })),
+            },
+          },
+          {
+            '@type': 'WebSite',
+            '@id': `${partnerSubdomainUrl}#website`,
+            'url': partnerSubdomainUrl,
+            'name': isRo ? activePartner.nameRo : activePartner.nameEn,
+            'publisher': {
+              '@id': `${partnerSubdomainUrl}#organization`,
+            },
+          },
+          {
+            '@type': 'WebPage',
+            '@id': `${partnerSubdomainUrl}#webpage`,
+            'url': partnerSubdomainUrl,
+            'name': currentMeta.title,
+            'description': currentMeta.description,
+            'isPartOf': {
+              '@id': `${partnerSubdomainUrl}#website`,
+            },
+            'about': {
+              '@id': `${partnerSubdomainUrl}#organization`,
+            },
+          },
+        ],
+      };
+    } else if (activeTab === 'home') {
       schemaObject = {
         '@context': 'https://schema.org',
         '@graph': [

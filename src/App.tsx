@@ -15,7 +15,7 @@ import LegalView from './components/LegalView';
 import TermsView from './components/TermsView';
 import SEOMetadata from './components/SEOMetadata';
 import PartnerLandingPage from './components/PartnerLandingPage';
-import { PartnerProfile } from './data/partnersData';
+import { PartnerProfile, detectPartnerFromHostname } from './data/partnersData';
 import { initAnalytics, trackPageView, trackScrollDepth } from './lib/analytics';
 import { getRouteFromUrl, updateUrlForRoute, getPathForTab, getPathForPartner } from './lib/router';
 
@@ -227,13 +227,22 @@ export default function App() {
 
   if (activePartner) {
     return (
-      <PartnerLandingPage
-        partner={activePartner}
-        currentLang={lang}
-        setLang={setLang}
-        onReturnToHolding={() => setActivePartner(null)}
-        onSelectPartner={(p) => setActivePartner(p)}
-      />
+      <>
+        <SEOMetadata activeTab="partners" activePartner={activePartner} lang={lang} />
+        <PartnerLandingPage
+          partner={activePartner}
+          currentLang={lang}
+          setLang={setLang}
+          onReturnToHolding={() => {
+            if (typeof window !== 'undefined' && detectPartnerFromHostname()) {
+              window.location.href = 'https://ragnareliteholding.com';
+            } else {
+              setActivePartner(null);
+            }
+          }}
+          onSelectPartner={(p) => setActivePartner(p)}
+        />
+      </>
     );
   }
 
