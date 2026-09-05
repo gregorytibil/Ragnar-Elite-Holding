@@ -234,7 +234,7 @@ export const translations = {
     footerTerms: 'Termeni și Condiții',
     footerGdpr: 'Politica GDPR',
     footerSecureAccess: 'Solicitare Acces Securizat',
-    footerCopyright: '© 2026 Ragnar Elite Holding Limited. Înregistrată în Hong Kong. Nr. Înregistrare: 3410294.',
+    footerCopyright: '© 2026 Ragnar Elite Holding Limited. Înregistrată în Hong Kong.',
     
     // Insights Section (Gândire Strategică)
     insightsHeaderTitle: 'Insights Strategic',
@@ -484,7 +484,7 @@ export const translations = {
     footerTerms: 'Terms & Conditions',
     footerGdpr: 'GDPR Policy',
     footerSecureAccess: 'Request Secure Access',
-    footerCopyright: '© 2026 Ragnar Elite Holding Limited. Registered in Hong Kong. Company No. 3410294.',
+    footerCopyright: '© 2026 Ragnar Elite Holding Limited. Registered in Hong Kong.',
     
     // Insights Section (Strategic Thinking)
     insightsHeaderTitle: 'Strategic Insights',
